@@ -1,8 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Assembly Properties -->
     <TargetFrameworks>net48;net6.0;net7.0;net8.0</TargetFrameworks>
     <RuntimeIdentifiers>win-x86;win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <Version>1.1.0</Version>
+
+    <!-- Package Properties -->
     <Authors>Matt Nadareski</Authors>
     <Description>Common models used by other SabreTools projects</Description>
     <Copyright>Copyright (c) Matt Nadareski 2023</Copyright>
