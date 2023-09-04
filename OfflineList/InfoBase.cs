@@ -7,25 +7,45 @@ namespace SabreTools.Models.OfflineList
     {
         /// <remarks>Boolean</remarks>
         [XmlAttribute("visible")]
+#if NET48
+        public string Visible { get; set; }
+#else
         public string? Visible { get; set; }
+#endif
 
         /// <remarks>Boolean</remarks>
         [XmlAttribute("inNamingOption")]
+#if NET48
+        public string InNamingOption { get; set; }
+#else
         public string? InNamingOption { get; set; }
+#endif
 
         /// <remarks>Boolean</remarks>
         [XmlAttribute("default")]
+#if NET48
+        public string Default { get; set; }
+#else
         public string? Default { get; set; }
+#endif
 
         #region DO NOT USE IN PRODUCTION
 
         /// <remarks>Should be empty</remarks>
         [XmlAnyAttribute]
+#if NET48
+        public XmlAttribute[] ADDITIONAL_ATTRIBUTES { get; set; }
+#else
         public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
+#endif
 
         /// <remarks>Should be empty</remarks>
         [XmlAnyElement]
+#if NET48
+        public object[] ADDITIONAL_ELEMENTS { get; set; }
+#else
         public object[]? ADDITIONAL_ELEMENTS { get; set; }
+#endif
 
         #endregion
     }

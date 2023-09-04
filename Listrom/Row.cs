@@ -15,17 +15,37 @@ namespace SabreTools.Models.Listrom
     public class Row
     {
         [Required]
+#if NET48
+        public string Name { get; set; }
+#else
         public string? Name { get; set; }
+#endif
 
+#if NET48
+        public string Size { get; set; }
+#else
         public string? Size { get; set; }
+#endif
 
         public bool Bad { get; set; }
 
+#if NET48
+        public string CRC { get; set; }
+#else
         public string? CRC { get; set; }
+#endif
 
+#if NET48
+        public string MD5 { get; set; }
+#else
         public string? MD5 { get; set; }
+#endif
 
+#if NET48
+        public string SHA1 { get; set; }
+#else
         public string? SHA1 { get; set; }
+#endif
 
         public bool NoGoodDumpKnown { get; set; }
     }

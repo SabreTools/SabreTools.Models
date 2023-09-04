@@ -6,9 +6,17 @@ namespace SabreTools.Models.Hashfile
     public class SHA512
     {
         [Required]
+#if NET48
+        public string Hash { get; set; }
+#else
         public string? Hash { get; set; }
+#endif
 
         [Required]
+#if NET48
+        public string File { get; set; }
+#else
         public string? File { get; set; }
+#endif
     }
 }

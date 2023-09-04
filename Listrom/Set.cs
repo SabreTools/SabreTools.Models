@@ -12,10 +12,22 @@ namespace SabreTools.Models.Listrom
     /// </summary>
     public class Set
     {
+#if NET48
+        public string Driver { get; set; }
+#else
         public string? Driver { get; set; }
+#endif
 
+#if NET48
+        public string Device { get; set; }
+#else
         public string? Device { get; set; }
+#endif
 
+#if NET48
+        public Row[] Row { get; set; }
+#else
         public Row[]? Row { get; set; }
+#endif
     }
 }
