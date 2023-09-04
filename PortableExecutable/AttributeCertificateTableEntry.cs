@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Attribute certificates can be associated with an image by adding an attribute

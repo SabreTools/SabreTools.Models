@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Every image file has an optional header that provides information to the loader.

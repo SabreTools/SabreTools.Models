@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The segmented EXE header contains general information about the EXE

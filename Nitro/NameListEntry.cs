@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Nitro
+namespace SabreTools.Models.Nitro
 {
     /// <summary>
     /// The name list holds the names of the folders, and their contents

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// The HET table is present if the HetTablePos64 member of MPQ header is

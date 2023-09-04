@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.AACS
+namespace SabreTools.Models.AACS
 {
     /// <summary>
     /// A Media Key Block is formatted as a sequence of contiguous Records.

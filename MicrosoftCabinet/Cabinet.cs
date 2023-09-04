@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.MicrosoftCabinet
+﻿namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// Cabinet files are compressed packages containing a

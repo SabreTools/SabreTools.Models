@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Defines a menu item in an extended menu template. This structure definition is for

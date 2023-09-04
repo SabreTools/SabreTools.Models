@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.BFPK
+namespace SabreTools.Models.BFPK
 {
     /// <summary>
     /// Header

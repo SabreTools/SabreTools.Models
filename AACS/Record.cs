@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.AACS
+namespace SabreTools.Models.AACS
 {
     /// <summary>
     /// Each Record begins with a one-byte Record Type field, followed by a

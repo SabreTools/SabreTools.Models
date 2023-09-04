@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// An import lookup table is an array of 32-bit numbers for PE32 or an array of

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.GCF
+namespace SabreTools.Models.GCF
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/GCFFile.h"/>
     public sealed class BlockEntryHeader

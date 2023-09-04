@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZ
+namespace SabreTools.Models.Compression.LZ
 {
     /// <summary>
     /// Format of first 14 byte of LZ compressed file

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.LinearExecutable
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Object page table provides information about a logical page in an object.

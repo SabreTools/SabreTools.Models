@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Nitro
+namespace SabreTools.Models.Nitro
 {
     /// <summary>
     /// Each folder in the file system has a 8 byte long entry.

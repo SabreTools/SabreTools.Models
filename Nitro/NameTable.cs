@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Nitro
+namespace SabreTools.Models.Nitro
 {
     /// <summary>
     /// The name table stores the names of the files and the structure

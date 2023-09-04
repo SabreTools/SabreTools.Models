@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// All image files that import symbols, including virtually all executable (EXE) files,

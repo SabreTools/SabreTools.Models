@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.LinearExecutable
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The resident and non-resident name tables define the ASCII names and ordinal

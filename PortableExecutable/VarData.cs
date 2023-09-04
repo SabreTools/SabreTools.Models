@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Represents the organization of data in a file-version resource. It typically contains a

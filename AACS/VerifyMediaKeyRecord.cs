@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.AACS
+namespace SabreTools.Models.AACS
 {
     /// <summary>
     /// A properly formatted MKB shall have exactly one Verify Media Key Record

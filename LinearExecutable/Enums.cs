@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryObjectScanner.Models.LinearExecutable
+namespace SabreTools.Models.LinearExecutable
 {
     [Flags]
     public enum BundleType : byte

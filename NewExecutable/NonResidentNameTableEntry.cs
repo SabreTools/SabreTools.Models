@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The nonresident-name table follows the entry table, and contains a

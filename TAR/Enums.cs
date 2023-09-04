@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.TAR
+namespace SabreTools.Models.TAR
 {
     [Flags]
     public enum Mode : ushort

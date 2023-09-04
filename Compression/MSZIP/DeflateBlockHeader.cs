@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.MSZIP
 {
     /// <see href="https://www.rfc-editor.org/rfc/rfc1951"/>
     public class DeflateBlockHeader

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZX
+namespace SabreTools.Models.Compression.LZX
 {
     /// <summary>
     /// An LZXD block represents a sequence of compressed data that is encoded with the same set of

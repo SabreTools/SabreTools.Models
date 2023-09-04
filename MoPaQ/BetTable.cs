@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// The BET table is present if the BetTablePos64 member of MPQ header is set

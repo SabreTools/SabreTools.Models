@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Nitro
+namespace SabreTools.Models.Nitro
 {
     /// <summary>
     /// The structure of the file allocation table is very simple,

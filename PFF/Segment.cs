@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PFF
+namespace SabreTools.Models.PFF
 {
     /// <summary>
     /// PFF segment identifier

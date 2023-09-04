@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Contains version information for the menu resource. The structure definition provided

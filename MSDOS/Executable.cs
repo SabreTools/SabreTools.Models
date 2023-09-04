@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.MSDOS
+namespace SabreTools.Models.MSDOS
 {
     /// <summary>
     /// The MS-DOS EXE format, also known as MZ after its signature (the initials of Microsoft engineer Mark Zbykowski),

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.AACS
+namespace SabreTools.Models.AACS
 {
     /// <summary>
     /// This record gives the associated encrypted media key data for the

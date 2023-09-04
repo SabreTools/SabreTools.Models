@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Defines the header for an extended menu template. This structure definition is for

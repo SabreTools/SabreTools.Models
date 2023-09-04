@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// ExeFS or Executable Filesystem contains information related to the

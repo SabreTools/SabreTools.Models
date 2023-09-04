@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.BDPlus
+namespace SabreTools.Models.BDPlus
 {
     /// <see href="https://github.com/mwgoldsmith/bdplus/blob/master/src/libbdplus/bdsvm/loader.c"/>
     public sealed class SVM

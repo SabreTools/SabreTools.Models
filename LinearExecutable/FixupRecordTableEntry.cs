@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.LinearExecutable
+﻿namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Fixup Record Table contains entries for all fixups in the linear EXE module.

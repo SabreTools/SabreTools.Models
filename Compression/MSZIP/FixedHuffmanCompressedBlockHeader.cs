@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.MSZIP
 {
     /// <summary>
     /// Compression with fixed Huffman codes (BTYPE=01)

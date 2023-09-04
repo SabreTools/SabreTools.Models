@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// At the beginning of an object file, or immediately after the signature

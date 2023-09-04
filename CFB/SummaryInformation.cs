@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     /// <see href="https://github.com/GNOME/msitools/blob/master/libmsi/libmsi-summary-info.c"/>
     public sealed class SummaryInformation

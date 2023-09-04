@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     public static class Constants
     {

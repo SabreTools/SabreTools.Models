@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.MSZIP
 {
     /// <see href="https://github.com/wine-mirror/wine/blob/master/dlls/cabinet/cabinet.h"/>
     public static class Constants

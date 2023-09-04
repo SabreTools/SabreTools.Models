@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.SFFS
+namespace SabreTools.Models.SFFS
 {
     /// <summary>
     /// Header

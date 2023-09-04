@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// A table of relocation records follows. The following is the format

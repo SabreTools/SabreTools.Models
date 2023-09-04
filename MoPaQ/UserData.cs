@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// MPQ User Data are optional, and is commonly used in custom maps for

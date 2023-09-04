@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.BMP
+namespace SabreTools.Models.BMP
 {
     /// <summary>
     /// The BITMAPINFOHEADER structure contains information about the dimensions and

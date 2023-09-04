@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// There are two known specialisations of the NCSD container format:

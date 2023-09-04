@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PAK
+namespace SabreTools.Models.PAK
 {
     /// <summary>
     /// Half-Life Package File

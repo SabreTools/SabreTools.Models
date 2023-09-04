@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The entry table follows the imported-name table. This table contains

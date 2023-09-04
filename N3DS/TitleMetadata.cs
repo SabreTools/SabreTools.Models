@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.N3DS
+namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// A format used to store information about a title (installed title, DLC, etc.)

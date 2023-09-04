@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.LinearExecutable
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Verify Record Directive Table is an optional table. It maintains a record

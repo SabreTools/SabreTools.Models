@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.LinearExecutable
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The import module name table defines the module name strings imported through

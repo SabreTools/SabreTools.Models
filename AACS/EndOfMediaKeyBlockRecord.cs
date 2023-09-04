@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.AACS
+namespace SabreTools.Models.AACS
 {
     /// <summary>
     /// A properly formatted MKB shall contain an End of Media Key Block Record.

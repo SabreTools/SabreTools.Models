@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace BinaryObjectScanner.Models.Compression.LZ
+namespace SabreTools.Models.Compression.LZ
 {
     public sealed class State
     {

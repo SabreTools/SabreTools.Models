@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.VBSP
+namespace SabreTools.Models.VBSP
 {
     public static class Constants
     {

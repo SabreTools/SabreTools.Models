@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.NCF
+namespace SabreTools.Models.NCF
 {
     [Flags]
     public enum HL_NCF_FLAG : uint

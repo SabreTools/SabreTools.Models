@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The following list describes the Microsoft PE executable format, with the

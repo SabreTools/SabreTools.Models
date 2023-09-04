@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PlayJ
+namespace SabreTools.Models.PlayJ
 {
     /// <summary>
     /// Embedded data file (V2 only?)

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The resident-name table follows the resource table, and contains this

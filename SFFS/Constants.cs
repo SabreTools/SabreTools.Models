@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.SFFS
+namespace SabreTools.Models.SFFS
 {
     public static class Constants
     {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MSDOS
+namespace SabreTools.Models.MSDOS
 {
     /// <summary>
     /// Each pointer in the relocation table looks as such

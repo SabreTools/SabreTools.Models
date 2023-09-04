@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.VBSP
+namespace SabreTools.Models.VBSP
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/VBSPFile.h"/>
     public sealed class LumpHeader

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The NE header is a relatively large structure with multiple characteristics.

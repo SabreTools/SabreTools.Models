@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// Hash table is used for searching files by name. The file name is converted to

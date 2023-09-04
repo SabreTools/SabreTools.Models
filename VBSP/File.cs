@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.VBSP
+namespace SabreTools.Models.VBSP
 {
     /// <summary>
     /// Half-Life 2 Level

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZ
+namespace SabreTools.Models.Compression.LZ
 {
     public static class Constants
     {

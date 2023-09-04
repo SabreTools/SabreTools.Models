@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.MSZIP
 {
     /// <summary>
     /// Non-compressed blocks (BTYPE=00)

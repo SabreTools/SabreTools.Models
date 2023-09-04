@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     public enum ColorFlag : byte
     {

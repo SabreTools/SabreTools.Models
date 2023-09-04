@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MicrosoftCabinet
+namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// The CFHEADER structure shown in the following packet diagram provides information about this

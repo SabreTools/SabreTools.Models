@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZX
+namespace SabreTools.Models.Compression.LZX
 {
     /// <summary>
     /// The fields of a verbatim block that follow the generic block header

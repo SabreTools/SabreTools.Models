@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// RomFS (or Read-Only Filesystem) is part of the NCCH format, and is

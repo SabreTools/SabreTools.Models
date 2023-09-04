@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.InstallShieldCabinet
+namespace SabreTools.Models.InstallShieldCabinet
 {
     public static class Constants
     {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MicrosoftCabinet
+namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// Each CFDATA structure describes some amount of compressed data, as shown in the following

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PlayJ
+namespace SabreTools.Models.PlayJ
 {
     /// <summary>
     /// PlayJ audio header / CDS entry header

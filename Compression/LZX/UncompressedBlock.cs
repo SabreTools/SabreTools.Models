@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZX
+namespace SabreTools.Models.Compression.LZX
 {
     /// <summary>
     /// Following the generic block header, an uncompressed block begins with 1 to 16 bits of zero padding

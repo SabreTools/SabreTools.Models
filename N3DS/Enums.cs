@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryObjectScanner.Models.N3DS
+namespace SabreTools.Models.N3DS
 {
     // TODO: Fix this, I don't think it's correct
     [Flags]

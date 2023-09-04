@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     /// <summary>
     /// Microsoft Compound File Binary (CFB) file format, also known as the

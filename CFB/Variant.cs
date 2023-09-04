@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     /// <summary>
     /// VARIANT is a container for a union that can hold many types of data.

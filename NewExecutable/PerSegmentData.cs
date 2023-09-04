@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The location and size of the per-segment data is defined in the

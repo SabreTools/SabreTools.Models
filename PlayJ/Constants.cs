@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PlayJ
+namespace SabreTools.Models.PlayJ
 {
     public static class Constants
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BinaryObjectScanner.Models.SGA
+namespace SabreTools.Models.SGA
 {
     /// <summary>
     /// Specialization File7 and up where the CRC moved to the header and the CRC is of the compressed data and there are stronger hashes.

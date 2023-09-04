@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.SGA
+namespace SabreTools.Models.SGA
 {
     /// <summary>
     /// SGA game archive

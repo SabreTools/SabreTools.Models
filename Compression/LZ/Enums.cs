@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZ
+namespace SabreTools.Models.Compression.LZ
 {
     /// <see href="https://github.com/wine-mirror/wine/blob/master/include/lzexpand.h"/>
     public enum LZERROR

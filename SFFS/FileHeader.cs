@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.SFFS
+namespace SabreTools.Models.SFFS
 {
     /// <see href="https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
     [StructLayout(LayoutKind.Sequential)]

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The resource table follows the segment table and contains entries for

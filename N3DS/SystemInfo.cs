@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <see href="https://www.3dbrew.org/wiki/NCCH/Extended_Header#System_Info"/>
     public sealed class SystemInfo

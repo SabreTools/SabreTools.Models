@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     public sealed class TLSDirectory

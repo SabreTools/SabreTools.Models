@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PAK
+namespace SabreTools.Models.PAK
 {
     public static class Constants
     {

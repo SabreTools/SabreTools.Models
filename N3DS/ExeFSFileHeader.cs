@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// There are a maximum of 10 file headers in the ExeFS format. (This maximum

@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     public static class Constants
     {

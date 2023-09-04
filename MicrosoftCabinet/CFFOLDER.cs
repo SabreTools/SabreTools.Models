@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MicrosoftCabinet
+namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// Each CFFOLDER structure contains information about one of the folders or partial folders stored in

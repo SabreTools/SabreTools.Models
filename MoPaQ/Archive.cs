@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// MPQ (MoPaQ) is an archive format developed by Blizzard Entertainment,

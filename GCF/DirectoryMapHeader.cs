@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.GCF
+namespace SabreTools.Models.GCF
 {
     /// <remarks>
     /// Added in version 4 or version 5.

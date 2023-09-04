@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PAK
+namespace SabreTools.Models.PAK
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/PAKFile.h"/>
     public sealed class DirectoryItem

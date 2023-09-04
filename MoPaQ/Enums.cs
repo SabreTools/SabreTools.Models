@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryObjectScanner.Models.MoPaQ
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// Compression types for multiple compressions

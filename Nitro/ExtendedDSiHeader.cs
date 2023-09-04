@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Nitro
+namespace SabreTools.Models.Nitro
 {
     /// <summary>
     /// Nintendo DSi extended cart header

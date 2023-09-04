@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BinaryObjectScanner.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Contains information about formatted text for display as an error message or in a message

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     [Flags]
     public enum FixedSegmentEntryFlag : byte

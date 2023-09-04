@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.DVD
+namespace SabreTools.Models.DVD
 {
     public static class Constants
     {

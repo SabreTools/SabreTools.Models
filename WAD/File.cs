@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.WAD
+namespace SabreTools.Models.WAD
 {
     /// <summary>
     /// Half-Life Texture Package File

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.TAR
+namespace SabreTools.Models.TAR
 {
     public sealed class Archive
     {

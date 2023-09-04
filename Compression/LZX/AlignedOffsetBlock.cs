@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZX
+namespace SabreTools.Models.Compression.LZX
 {
     /// <summary>
     /// An aligned offset block is identical to the verbatim block except for the presence of the aligned offset

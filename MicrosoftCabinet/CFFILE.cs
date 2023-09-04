@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.MicrosoftCabinet
+namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// Each CFFILE structure contains information about one of the files stored (or at least partially

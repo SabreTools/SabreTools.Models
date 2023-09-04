@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.GCF
+namespace SabreTools.Models.GCF
 {
     [Flags]
     public enum HL_GCF_FLAG : uint

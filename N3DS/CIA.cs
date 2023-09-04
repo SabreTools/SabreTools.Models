@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.N3DS
+namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// CIA stands for CTR Importable Archive. This format allows the installation of

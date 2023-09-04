@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     public static class Constants
     {

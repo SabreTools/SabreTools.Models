@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.DVD
+namespace SabreTools.Models.DVD
 {
     /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo_vmg.html"/>
     public sealed class ParentalManagementMasksTableEntry

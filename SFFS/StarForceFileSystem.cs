@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.SFFS
+﻿namespace SabreTools.Models.SFFS
 {
     /// <summary>
     /// SFFS consists of 2 major parts: the container files that contain the game

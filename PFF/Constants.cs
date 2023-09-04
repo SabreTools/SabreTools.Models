@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PFF
+namespace SabreTools.Models.PFF
 {
     /// <see href="https://devilsclaws.net/download/file-pff-new-bz2"/>
     public static class Constants

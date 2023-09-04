@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.DVD
+namespace SabreTools.Models.DVD
 {
     /// <summary>
     /// The VMG_PTL_MAIT is searched by country, and points to

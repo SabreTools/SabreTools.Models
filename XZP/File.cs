@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.XZP
+namespace SabreTools.Models.XZP
 {
     /// <summary>
     /// XBox Package File

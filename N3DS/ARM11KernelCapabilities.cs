@@ -1,4 +1,4 @@
-﻿namespace BinaryObjectScanner.Models.N3DS
+﻿namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// The kernel capability descriptors are passed to svcCreateProcess.

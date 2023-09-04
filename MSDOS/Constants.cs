@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.MSDOS
+namespace SabreTools.Models.MSDOS
 {
     public static class Constants
     {

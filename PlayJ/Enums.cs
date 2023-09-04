@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PlayJ
+namespace SabreTools.Models.PlayJ
 {
     /// <see href="http://www.playj.com/static/genreindex_XX.html"/>
     public enum Genre

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryObjectScanner.Models.MicrosoftCabinet
+namespace SabreTools.Models.MicrosoftCabinet
 {
     public enum CompressionType : ushort
     {

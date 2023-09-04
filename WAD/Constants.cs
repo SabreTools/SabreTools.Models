@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.WAD
+namespace SabreTools.Models.WAD
 {
     public static class Constants
     {

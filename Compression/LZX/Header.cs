@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.LZX
+namespace SabreTools.Models.Compression.LZX
 {
     public class Header
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace BinaryObjectScanner.Models.CFB
+namespace SabreTools.Models.CFB
 {
     /// <see href="https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-CFB/%5bMS-CFB%5d.pdf"/>
     public sealed class FileHeader

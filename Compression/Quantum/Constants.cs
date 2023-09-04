@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.Compression.Quantum
+namespace SabreTools.Models.Compression.Quantum
 {
     public static class Constants
     {

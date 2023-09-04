@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.PlayJ
+namespace SabreTools.Models.PlayJ
 {
     /// <summary>
     /// Data referred to by <see cref="AudioHeaderV1.UnknownOffset1"/> or <see cref="AudioHeaderV2.UnknownOffset1"/>

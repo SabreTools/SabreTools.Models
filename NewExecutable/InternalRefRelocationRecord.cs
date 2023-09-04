@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BinaryObjectScanner.Models.NewExecutable
+namespace SabreTools.Models.NewExecutable
 {
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     [StructLayout(LayoutKind.Sequential)]

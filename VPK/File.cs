@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.VPK
+namespace SabreTools.Models.VPK
 {
     /// <summary>
     /// Valve Package File

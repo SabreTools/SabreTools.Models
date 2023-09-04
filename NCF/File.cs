@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BinaryObjectScanner.Models.NCF
+namespace SabreTools.Models.NCF
 {
     /// <summary>
     /// Half-Life No Cache File

@@ -1,4 +1,4 @@
-namespace BinaryObjectScanner.Models.BFPK
+namespace SabreTools.Models.BFPK
 {
     public static class Constants
     {
