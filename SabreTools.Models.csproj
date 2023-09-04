@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFrameworks>net48;net6.0;net7.0;net8.0</TargetFrameworks>
+    <RuntimeIdentifiers>win-x86;win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <Authors>Matt Nadareski</Authors>
+    <Description>Common models used by other SabreTools projects</Description>
+    <Copyright>Copyright (c) Matt Nadareski 2023</Copyright>
+    <PackageProjectUrl>https://github.com/SabreTools/</PackageProjectUrl>
+    <PackageReadmeFile>README.MD</PackageReadmeFile>
+    <RepositoryUrl>PLACEHOLDER</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>model models executable protection archive</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'!='net48'">
