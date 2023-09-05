@@ -2,6 +2,8 @@
 
 This library comprises of models that represent either directly serializable or representative structures for all SabreTools projects. All of the main models representing metadata files should have parsers created outside of the current code.
 
+Find the link to the Nuget package [here](https://www.nuget.org/packages/SabreTools.Models).
+
 In most completed models for serialization, there is a section that looks like the following:
 
 ```c#
