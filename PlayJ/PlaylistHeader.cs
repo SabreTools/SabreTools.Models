@@ -13,6 +13,10 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// 52 bytes of unknown data
         /// </summary>
+#if NET48
         public byte[] Data;
+#else
+        public byte[]? Data;
+#endif
     }
 }

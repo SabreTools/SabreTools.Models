@@ -37,24 +37,40 @@ namespace SabreTools.Models.NewExecutable
         /// INTERNALREF
         /// </summary>
         /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.INTERNALREF"/></remarks>
+#if NET48
         public InternalRefRelocationRecord InternalRefRelocationRecord;
+#else
+        public InternalRefRelocationRecord? InternalRefRelocationRecord;
+#endif
 
         /// <summary>
         /// IMPORTNAME
         /// </summary>
         /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTNAME"/></remarks>
+#if NET48
         public ImportNameRelocationRecord ImportNameRelocationRecord;
+#else
+        public ImportNameRelocationRecord? ImportNameRelocationRecord;
+#endif
 
         /// <summary>
         /// IMPORTORDINAL
         /// </summary>
         /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTORDINAL"/></remarks>
+#if NET48
         public ImportOrdinalRelocationRecord ImportOrdinalRelocationRecord;
+#else
+        public ImportOrdinalRelocationRecord? ImportOrdinalRelocationRecord;
+#endif
 
         /// <summary>
         /// IMPORTORDINAL
         /// </summary>
         /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.OSFIXUP"/></remarks>
+#if NET48
         public OSFixupRelocationRecord OSFixupRelocationRecord;
+#else
+        public OSFixupRelocationRecord? OSFixupRelocationRecord;
+#endif
     }
 }

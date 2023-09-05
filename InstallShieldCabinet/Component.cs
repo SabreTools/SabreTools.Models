@@ -13,7 +13,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Component identifier
         /// </summary>
+#if NET48
         public string Identifier;
+#else
+        public string? Identifier;
+#endif
 
         /// <summary>
         /// Offset to the component descriptor
@@ -28,12 +32,20 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Display name
         /// </summary>
+#if NET48
         public string DisplayName;
+#else
+        public string? DisplayName;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved0;
+#else
+        public byte[]? Reserved0;
+#endif
 
         /// <summary>
         /// Reserved offset
@@ -58,7 +70,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Component name
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Reserved offset
@@ -78,7 +94,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved1;
+#else
+        public byte[]? Reserved1;
+#endif
 
         /// <summary>
         /// Offset to the component CLSID
@@ -93,12 +113,20 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved3;
+#else
+        public byte[]? Reserved3;
+#endif
 
         /// <summary>
         /// Number of depends(?)
@@ -123,7 +151,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File group names
         /// </summary>
+#if NET48
         public string[] FileGroupNames;
+#else
+        public string[]? FileGroupNames;
+#endif
 
         /// <summary>
         /// Number of X3(?)

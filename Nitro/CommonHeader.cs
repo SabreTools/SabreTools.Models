@@ -9,7 +9,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Game Title
         /// </summary>
+#if NET48
         public string GameTitle;
+#else
+        public string? GameTitle;
+#endif
 
         /// <summary>
         /// Gamecode
@@ -19,7 +23,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Makercode
         /// </summary>
+#if NET48
         public string MakerCode;
+#else
+        public string? MakerCode;
+#endif
 
         /// <summary>
         /// Unitcode
@@ -39,7 +47,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved1;
+#else
+        public byte[]? Reserved1;
+#endif
 
         /// <summary>
         /// Game Revision (used by DSi titles)
@@ -174,7 +186,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Secure disable
         /// </summary>
+#if NET48
         public byte[] SecureDisable;
+#else
+        public byte[]? SecureDisable;
+#endif
 
         /// <summary>
         /// NTR region ROM size (excluding DSi area)
@@ -189,12 +205,20 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         ///Reserved (0x88, 0x8C, 0x90 = Unknown, used by DSi)
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Nintendo Logo
         /// </summary>
+#if NET48
         public byte[] NintendoLogo;
+#else
+        public byte[]? NintendoLogo;
+#endif
 
         /// <summary>
         /// Nintendo Logo CRC
@@ -209,6 +233,10 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Debugger reserved
         /// </summary>
+#if NET48
         public byte[] DebuggerReserved;
+#else
+        public byte[]? DebuggerReserved;
+#endif
     }
 }

@@ -34,11 +34,19 @@
         /// 13	Process has access to CPU core 2 (New3DS only)
         /// </summary>
         /// TODO: Make enum for flag values
+#if NET48
         public uint[] Descriptors;
+#else
+        public uint[]? Descriptors;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
     }
 }

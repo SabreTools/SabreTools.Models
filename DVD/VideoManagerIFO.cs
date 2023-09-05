@@ -6,7 +6,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// "DVDVIDEO-VMG"
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Last sector of VMG set (last sector of BUP)
@@ -55,7 +59,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Provider ID
         /// </summary>
+#if NET48
         public byte[] ProviderID;
+#else
+        public byte[]? ProviderID;
+#endif
 
         /// <summary>
         /// VMG POS
@@ -115,7 +123,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Video attributes of VMGM_VOBS
         /// </summary>
+#if NET48
         public byte[] VideoAttributes;
+#else
+        public byte[]? VideoAttributes;
+#endif
 
         /// <summary>
         /// Number of audio streams in VMGM_VOBS
@@ -125,12 +137,20 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Audio attributes of VMGM_VOBS
         /// </summary>
+#if NET48
         public byte[][] AudioAttributes;
+#else
+        public byte[][]? AudioAttributes;
+#endif
 
         /// <summary>
         /// Unknown
         /// </summary>
+#if NET48
         public byte[] Unknown;
+#else
+        public byte[]? Unknown;
+#endif
 
         /// <summary>
         /// Number of subpicture streams in VMGM_VOBS (0 or 1)
@@ -140,11 +160,19 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Subpicture attributes of VMGM_VOBS
         /// </summary>
+#if NET48
         public byte[] SubpictureAttributes;
+#else
+        public byte[]? SubpictureAttributes;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
     }
 }

@@ -49,12 +49,20 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// MD5 of the original (unpached) file
         /// </summary>
+#if NET48
         public byte[] Md5BeforePatch { get; private set; } = new byte[0x10];
+#else
+        public byte[]? Md5BeforePatch { get; private set; } = new byte[0x10];
+#endif
 
         /// <summary>
         /// MD5 of the patched file
         /// </summary>
+#if NET48
         public byte[] Md5AfterPatch { get; private set; } = new byte[0x10];
+#else
+        public byte[]? Md5AfterPatch { get; private set; } = new byte[0x10];
+#endif
 
         #endregion
 
@@ -111,7 +119,11 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// File data are simply replaced by the data in the patch.
         /// </summary>
+#if NET48
         public byte[] PatchDataCopy { get; private set; }
+#else
+        public byte[]? PatchDataCopy { get; private set; }
+#endif
 
         #endregion
     }

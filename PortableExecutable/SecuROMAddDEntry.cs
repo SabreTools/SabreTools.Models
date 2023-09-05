@@ -64,7 +64,11 @@ namespace SabreTools.Models.PortableExecutable
         /// Entry file name (null-terminated)
         /// </summary>
         /// <remarks>12 bytes long in the sample (all 3 entries) in 4.47.00.0039</remarks>
+#if NET48
         public string FileName;
+#else
+        public string? FileName;
+#endif
 
         /// <summary>
         /// Unknown (0x2C)

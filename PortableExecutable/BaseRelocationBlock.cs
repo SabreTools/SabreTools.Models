@@ -46,6 +46,10 @@
         ///                    in the Page RVA field for the block. This offset
         ///                    specifies where the base relocation is to be applied. 
         /// </summary>
+#if NET48
         public BaseRelocationTypeOffsetFieldEntry[] TypeOffsetFieldEntries;
+#else
+        public BaseRelocationTypeOffsetFieldEntry[]? TypeOffsetFieldEntries;
+#endif
     }
 }

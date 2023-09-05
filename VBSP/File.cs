@@ -9,6 +9,10 @@ namespace SabreTools.Models.VBSP
         /// <summary>
         /// Directory header data
         /// </summary>
+#if NET48
         public Header Header { get; set; }
+#else
+        public Header? Header { get; set; }
+#endif
     }
 }

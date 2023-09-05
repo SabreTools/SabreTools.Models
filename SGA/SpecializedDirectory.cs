@@ -16,31 +16,55 @@ namespace SabreTools.Models.SGA
         /// <summary>
         /// Source SGA file
         /// </summary>
+#if NET48
         public File File { get; set; }
+#else
+        public File? File { get; set; }
+#endif
 
         /// <summary>
         /// Directory header data
         /// </summary>
+#if NET48
         public TDirectoryHeader DirectoryHeader { get; set; }
+#else
+        public TDirectoryHeader? DirectoryHeader { get; set; }
+#endif
 
         /// <summary>
         /// Sections data
         /// </summary>
+#if NET48
         public TSection[] Sections { get; set; }
+#else
+        public TSection[]? Sections { get; set; }
+#endif
 
         /// <summary>
         /// Folders data
         /// </summary>
+#if NET48
         public TFolder[] Folders { get; set; }
+#else
+        public TFolder[]? Folders { get; set; }
+#endif
 
         /// <summary>
         /// Files data
         /// </summary>
+#if NET48
         public TFile[] Files { get; set; }
+#else
+        public TFile[]? Files { get; set; }
+#endif
 
         /// <summary>
         /// String table data
         /// </summary>
+#if NET48
         public Dictionary<long, string> StringTable { get; set; }
+#else
+        public Dictionary<long, string?>? StringTable { get; set; }
+#endif
     }
 }

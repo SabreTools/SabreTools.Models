@@ -46,6 +46,10 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Content Index
         /// </summary>
+#if NET48
         public byte[] ContentIndex;
+#else
+        public byte[]? ContentIndex;
+#endif
     }
 }

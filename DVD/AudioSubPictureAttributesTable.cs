@@ -11,7 +11,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
 
         /// <summary>
         /// End address (last byte of last VTS_ATRT)
@@ -21,11 +25,19 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Offset to VTS_ATRT n
         /// </summary>
+#if NET48
         public uint[] Offsets;
+#else
+        public uint[]? Offsets;
+#endif
 
         /// <summary>
         /// Entries
         /// </summary>
+#if NET48
         public AudioSubPictureAttributesTableEntry[] Entries;
+#else
+        public AudioSubPictureAttributesTableEntry[]? Entries;
+#endif
     }
 }

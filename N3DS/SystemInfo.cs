@@ -16,6 +16,10 @@
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
     }
 }

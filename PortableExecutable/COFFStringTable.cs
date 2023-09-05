@@ -20,6 +20,10 @@
         /// Following the size are null-terminated strings that are pointed to by symbols
         /// in the COFF symbol table.
         /// </summary>
+#if NET48
         public string[] Strings;
+#else
+        public string[]? Strings;
+#endif
     }
 }

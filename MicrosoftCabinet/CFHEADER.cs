@@ -14,7 +14,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// Contains the characters "M", "S", "C", and "F" (bytes 0x4D, 0x53, 0x43,
         /// 0x46). This field is used to ensure that the file is a cabinet (.cab) file.
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Reserved field; MUST be set to 0 (zero).
@@ -110,7 +114,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// cbCFHeader field is non-zero, this field contains per-cabinet-file application information. This field
         /// is defined by the application, and is used for application-defined purposes.
         /// </summary>
+#if NET48
         public byte[] ReservedData;
+#else
+        public byte[]? ReservedData;
+#endif
 
         /// <summary>
         /// If the flags.cfhdrPREV_CABINET field is not set, this
@@ -122,7 +130,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// reported to begin in the "previous cabinet," the szCabinetPrev field would indicate the name of the
         /// cabinet to examine.
         /// </summary>
+#if NET48
         public string CabinetPrev;
+#else
+        public string? CabinetPrev;
+#endif
 
         /// <summary>
         /// If the flags.cfhdrPREV_CABINET field is not set, then this
@@ -131,7 +143,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// This string can be used when prompting the user to insert a disk. The string can contain up to 255
         /// bytes, plus the null byte.
         /// </summary>
+#if NET48
         public string DiskPrev;
+#else
+        public string? DiskPrev;
+#endif
 
         /// <summary>
         /// If the flags.cfhdrNEXT_CABINET field is not set, this
@@ -139,7 +155,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// cabinet file in a set. The string can contain up to 255 bytes, plus the null byte. Files that extend
         /// beyond the end of the current cabinet file are continued in the named cabinet file.
         /// </summary>
+#if NET48
         public string CabinetNext;
+#else
+        public string? CabinetNext;
+#endif
 
         /// <summary>
         /// If the flags.cfhdrNEXT_CABINET field is not set, this field is
@@ -148,6 +168,10 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// string can contain up to 255 bytes, plus the null byte. This string can be used when prompting the
         /// user to insert a disk.
         /// </summary>
+#if NET48
         public string DiskNext;
+#else
+        public string? DiskNext;
+#endif
     }
 }

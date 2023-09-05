@@ -110,7 +110,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
+#if NET48
         public string MenuResource;
+#else
+        public string? MenuResource;
+#endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
@@ -128,7 +132,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
+#if NET48
         public string ClassResource;
+#else
+        public string? ClassResource;
+#endif
 
         /// <summary>
         /// The ordinal value of a predefined system window class.
@@ -143,7 +151,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
+#if NET48
         public string TitleResource;
+#else
+        public string? TitleResource;
+#endif
 
         /// <summary>
         /// The point size of the font to use for the text in the dialog box and its controls.
@@ -183,6 +195,10 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
+#if NET48
         public string Typeface;
+#else
+        public string? Typeface;
+#endif
     }
 }

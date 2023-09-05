@@ -18,6 +18,10 @@
         /// <summary>
         /// A table of relocation records follows.
         /// </summary>
+#if NET48
         public RelocationRecord[] RelocationRecords;
+#else
+        public RelocationRecord[]? RelocationRecords;
+#endif
     }
 }

@@ -32,6 +32,10 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// A table of resources for this type follows.
         /// </summary>
+#if NET48
         public ResourceTypeResourceEntry[] Resources;
+#else
+        public ResourceTypeResourceEntry[]? Resources;
+#endif
     }
 }

@@ -13,6 +13,10 @@ namespace SabreTools.Models.AACS
         /// record. This 16 bytes is the ciphertext value C in the media
         /// key calculation.
         /// </summary>
+#if NET48
         public byte[][] MediaKeyData;
+#else
+        public byte[][]? MediaKeyData;
+#endif
     }
 }

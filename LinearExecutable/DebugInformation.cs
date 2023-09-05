@@ -19,7 +19,11 @@ namespace SabreTools.Models.LinearExecutable
         /// <summary>
         /// The signature consists of a string of three (3) ASCII characters: "NB0"
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// This defines the type of debugger data that exists in the remainder of the
@@ -33,6 +37,10 @@ namespace SabreTools.Models.LinearExecutable
         /// the responsibility of the linker or debugging tools to follow the convention
         /// for the type field that is defined here.
         /// </summary>
+#if NET48
         public byte[] DebuggerData;
+#else
+        public byte[]? DebuggerData;
+#endif
     }
 }

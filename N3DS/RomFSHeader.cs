@@ -11,7 +11,11 @@
         /// <summary>
         /// Magic "IVFC"
         /// </summary>
+#if NET48
         public string MagicString;
+#else
+        public string? MagicString;
+#endif
 
         /// <summary>
         /// Magic number 0x10000
@@ -41,7 +45,11 @@
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved1;
+#else
+        public byte[]? Reserved1;
+#endif
 
         /// <summary>
         /// Level 2 logical offset
@@ -61,7 +69,11 @@
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Level 3 logical offset
@@ -81,12 +93,20 @@
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved3;
+#else
+        public byte[]? Reserved3;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved4;
+#else
+        public byte[]? Reserved4;
+#endif
 
         /// <summary>
         /// Optional info size.

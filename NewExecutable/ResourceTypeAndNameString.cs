@@ -21,6 +21,10 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// ASCII text of the type or name string.
         /// </summary>
+#if NET48
         public byte[] Text;
+#else
+        public byte[]? Text;
+#endif
     }
 }

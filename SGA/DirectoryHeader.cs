@@ -5,18 +5,34 @@ namespace SabreTools.Models.SGA
     {
         public uint SectionOffset;
 
+#if NET48
         public T SectionCount;
+#else
+        public T? SectionCount;
+#endif
 
         public uint FolderOffset;
 
+#if NET48
         public T FolderCount;
+#else
+        public T? FolderCount;
+#endif
 
         public uint FileOffset;
 
+#if NET48
         public T FileCount;
+#else
+        public T? FileCount;
+#endif
 
         public uint StringTableOffset;
 
+#if NET48
         public T StringTableCount;
+#else
+        public T? StringTableCount;
+#endif
     }
 }

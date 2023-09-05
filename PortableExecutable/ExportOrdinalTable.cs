@@ -37,6 +37,10 @@
         /// <summary>
         /// An array of 16-bit unbiased indexes into the export address table
         /// </summary>
+#if NET48
         public ushort[] Indexes;
+#else
+        public ushort[]? Indexes;
+#endif
     }
 }

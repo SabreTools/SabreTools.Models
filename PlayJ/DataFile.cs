@@ -13,7 +13,11 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Data file name
         /// </summary>
+#if NET48
         public string FileName;
+#else
+        public string? FileName;
+#endif
 
         /// <summary>
         /// Length of the data
@@ -23,7 +27,11 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Data
         /// </summary>
+#if NET48
         public byte[] Data;
+#else
+        public byte[]? Data;
+#endif
 
         // Notes about Data:
         // - Each data block in the samples contains a GIF header

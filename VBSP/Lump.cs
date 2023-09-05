@@ -15,6 +15,10 @@ namespace SabreTools.Models.VBSP
         /// <summary>
         /// Default to (char)0, (char)0, (char)0, (char)0.
         /// </summary>
+#if NET48
         public char[] FourCC;
+#else
+        public char[]? FourCC;
+#endif
     }
 }

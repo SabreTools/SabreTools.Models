@@ -31,6 +31,10 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// zero terminated UTF8 path and file name
         /// </summary>
+#if NET48
         public string PathAndFileName;
+#else
+        public string? PathAndFileName;
+#endif
     }
 }

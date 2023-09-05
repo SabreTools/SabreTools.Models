@@ -17,7 +17,11 @@ namespace SabreTools.Models.MSDOS
         /// 0x5A4D (ASCII for 'M' and 'Z')
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+#if NET48
         public string Magic;
+#else
+        public string? Magic;
+#endif
 
         /// <summary>
         /// Number of bytes in the last page.
@@ -102,7 +106,11 @@ namespace SabreTools.Models.MSDOS
         /// Reserved words
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+#if NET48
         public ushort[] Reserved1;
+#else
+        public ushort[]? Reserved1;
+#endif
 
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
@@ -118,7 +126,11 @@ namespace SabreTools.Models.MSDOS
         /// Reserved words
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
+#if NET48
         public ushort[] Reserved2;
+#else
+        public ushort[]? Reserved2;
+#endif
 
         /// <summary>
         /// Starting address of the PE header

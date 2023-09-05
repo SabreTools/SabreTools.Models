@@ -17,7 +17,11 @@ namespace SabreTools.Models.NewExecutable
         /// "E" is high-order byte.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+#if NET48
         public string Magic;
+#else
+        public string? Magic;
+#endif
 
         /// <summary>
         /// Version number of the linker.

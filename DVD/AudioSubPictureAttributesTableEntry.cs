@@ -18,6 +18,10 @@ namespace SabreTools.Models.DVD
         /// Copy of VTS attributes (offset 100 and on from the VTS IFO
         /// file, usually 0x300 bytes long)
         /// </summary>
+#if NET48
         public byte[] AttributesCopy;
+#else
+        public byte[]? AttributesCopy;
+#endif
     }
 }

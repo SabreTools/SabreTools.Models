@@ -7,7 +7,11 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// Internal backing stream
         /// </summary>
+#if NET48
         public Stream Source { get; set; }
+#else
+        public Stream? Source { get; set; }
+#endif
 
         /// <summary>
         /// The last char of the filename for replacement
@@ -32,7 +36,11 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// The rotating LZ table
         /// </summary>
+#if NET48
         public byte[] Table { get; set; }
+#else
+        public byte[]? Table { get; set; }
+#endif
 
         /// <summary>
         /// CURrent TABle ENTry
@@ -57,7 +65,11 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// GETLEN bytes
         /// </summary>
+#if NET48
         public byte[] Window { get; set; }
+#else
+        public byte[]? Window { get; set; }
+#endif
 
         /// <summary>
         /// Current read

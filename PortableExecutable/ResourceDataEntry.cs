@@ -27,7 +27,11 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// The resource data that is pointed to by the Data RVA field.
         /// </summary>
+#if NET48
         public byte[] Data;
+#else
+        public byte[]? Data;
+#endif
 
         /// <summary>
         /// The code page that is used to decode code point values within the

@@ -20,6 +20,10 @@
         /// <summary>
         /// Pointer to an array that contains the error message or message box display text.
         /// </summary>
+#if NET48
         public string Text;
+#else
+        public string? Text;
+#endif
     }
 }

@@ -42,7 +42,11 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// ASCII string that contains the name of the DLL.
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// The RVA of the import address table. The contents of this table are identical

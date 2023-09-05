@@ -11,7 +11,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
 
         /// <summary>
         /// Offset to PTL_MAIT

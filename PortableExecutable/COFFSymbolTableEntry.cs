@@ -29,7 +29,11 @@ namespace SabreTools.Models.PortableExecutable
         /// the name is less than 8 bytes long.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+#if NET48
         public byte[] ShortName;
+#else
+        public byte[]? ShortName;
+#endif
 
         /// <summary>
         /// A field that is set to all zeros if the name is longer than 8 bytes.
@@ -162,7 +166,11 @@ namespace SabreTools.Models.PortableExecutable
         /// Unused
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
+#if NET48
         public byte[] AuxFormat2Unused2;
+#else
+        public byte[]? AuxFormat2Unused2;
+#endif
 
         /// <summary>
         /// The symbol-table index of the next .bf symbol record. If the function is the
@@ -214,7 +222,11 @@ namespace SabreTools.Models.PortableExecutable
         /// Unused
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
+#if NET48
         public byte[] AuxFormat3Unused;
+#else
+        public byte[]? AuxFormat3Unused;
+#endif
 
         #endregion
 
@@ -229,7 +241,11 @@ namespace SabreTools.Models.PortableExecutable
         /// with nulls if it is less than the maximum length.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 18)]
+#if NET48
         public byte[] AuxFormat4FileName;
+#else
+        public byte[]? AuxFormat4FileName;
+#endif
 
         #endregion
 
@@ -278,7 +294,11 @@ namespace SabreTools.Models.PortableExecutable
         /// Unused
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
+#if NET48
         public byte[] AuxFormat5Unused;
+#else
+        public byte[]? AuxFormat5Unused;
+#endif
 
         #endregion
 
@@ -306,7 +326,11 @@ namespace SabreTools.Models.PortableExecutable
         /// Reserved, must be zero.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)]
+#if NET48
         public byte[] AuxFormat6Reserved2;
+#else
+        public byte[]? AuxFormat6Reserved2;
+#endif
 
         #endregion
 

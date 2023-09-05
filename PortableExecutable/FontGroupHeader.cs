@@ -16,6 +16,10 @@
         /// A structure that contains a unique ordinal identifier for each font in the resource. The DE
         /// member is a placeholder for the variable-length array of DIRENTRY structures.
         /// </summary>
+#if NET48
         public DirEntry[] DE;
+#else
+        public DirEntry[]? DE;
+#endif
     }
 }

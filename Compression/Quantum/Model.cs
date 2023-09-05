@@ -8,8 +8,16 @@ namespace SabreTools.Models.Compression.Quantum
 
         public int Entries;
 
+#if NET48
         public ModelSymbol[] Symbols;
+#else
+        public ModelSymbol[]? Symbols;
+#endif
 
+#if NET48
         public ushort[] LookupTable = new ushort[256];
+#else
+        public ushort[]? LookupTable = new ushort[256];
+#endif
     }
 }

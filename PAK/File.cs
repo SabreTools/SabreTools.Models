@@ -9,11 +9,19 @@ namespace SabreTools.Models.PAK
         /// <summary>
         /// Deserialized directory header data
         /// </summary>
+#if NET48
         public Header Header { get; set; }
+#else
+        public Header? Header { get; set; }
+#endif
 
         /// <summary>
         /// Deserialized directory items data
         /// </summary>
+#if NET48
         public DirectoryItem[] DirectoryItems { get; set; }
+#else
+        public DirectoryItem[]? DirectoryItems { get; set; }
+#endif
     }
 }

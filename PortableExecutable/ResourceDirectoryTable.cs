@@ -57,6 +57,10 @@ namespace SabreTools.Models.PortableExecutable
         /// strings to identify Type, Name, or Language entries (depending on the
         /// level of the table).
         /// </summary>
+#if NET48
         public ResourceDirectoryEntry[] Entries;
+#else
+        public ResourceDirectoryEntry[]? Entries;
+#endif
     }
 }

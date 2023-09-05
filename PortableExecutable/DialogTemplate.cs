@@ -99,7 +99,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
+#if NET48
         public string MenuResource;
+#else
+        public string? MenuResource;
+#endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
@@ -118,7 +122,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
+#if NET48
         public string ClassResource;
+#else
+        public string? ClassResource;
+#endif
 
         /// <summary>
         /// The ordinal value of a predefined system class.
@@ -134,7 +142,11 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
+#if NET48
         public string TitleResource;
+#else
+        public string? TitleResource;
+#endif
 
         /// <summary>
         /// The 16-bit point size value and the typeface array follow the title array, but only if the
@@ -158,6 +170,10 @@ namespace SabreTools.Models.PortableExecutable
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
+#if NET48
         public string Typeface;
+#else
+        public string? Typeface;
+#endif
     }
 }

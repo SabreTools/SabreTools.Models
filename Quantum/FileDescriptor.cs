@@ -14,7 +14,11 @@ namespace SabreTools.Models.Quantum
         /// <summary>
         /// File name, variable length string, not zero-terminated
         /// </summary>
+#if NET48
         public string FileName;
+#else
+        public string? FileName;
+#endif
 
         /// <summary>
         /// Length of comment field
@@ -24,7 +28,11 @@ namespace SabreTools.Models.Quantum
         /// <summary>
         /// Comment field, variable length string, not zero-terminated
         /// </summary>
+#if NET48
         public string CommentField;
+#else
+        public string? CommentField;
+#endif
 
         /// <summary>
         /// Fully expanded file size in bytes

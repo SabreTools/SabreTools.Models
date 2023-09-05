@@ -14,12 +14,20 @@
         /// <summary>
         /// Dialog box header structure
         /// </summary>
+#if NET48
         public DialogTemplate DialogTemplate;
+#else
+        public DialogTemplate? DialogTemplate;
+#endif
 
         /// <summary>
         /// Dialog box extended header structure
         /// </summary>
+#if NET48
         public DialogTemplateExtended ExtendedDialogTemplate;
+#else
+        public DialogTemplateExtended? ExtendedDialogTemplate;
+#endif
 
         #endregion
 
@@ -31,7 +39,11 @@
         /// box. The cdit member specifies the number of DLGITEMTEMPLATE structures in the template.
         /// These DLGITEMTEMPLATE structures must be aligned on DWORD boundaries.
         /// </summary>
+#if NET48
         public DialogItemTemplate[] DialogItemTemplates;
+#else
+        public DialogItemTemplate[]? DialogItemTemplates;
+#endif
 
         /// <summary>
         /// Following the DLGTEMPLATEEX header in an extended dialog box template is one or more
@@ -39,7 +51,11 @@
         /// member of the DLGITEMTEMPLATEEX structure specifies the number of DLGITEMTEMPLATEEX
         /// structures that follow in the template.
         /// </summary>
+#if NET48
         public DialogItemTemplateExtended[] ExtendedDialogItemTemplates;
+#else
+        public DialogItemTemplateExtended[]? ExtendedDialogItemTemplates;
+#endif
 
         #endregion
     }

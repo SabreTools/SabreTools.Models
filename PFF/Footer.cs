@@ -19,6 +19,10 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// King tag
         /// </summary>
+#if NET48
         public string KingTag;
+#else
+        public string? KingTag;
+#endif
     }
 }

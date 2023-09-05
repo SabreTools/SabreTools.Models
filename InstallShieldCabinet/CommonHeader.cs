@@ -6,7 +6,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// "ISc("
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Encoded version

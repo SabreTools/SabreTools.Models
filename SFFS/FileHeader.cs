@@ -15,6 +15,10 @@ namespace SabreTools.Models.SFFS
         /// File info (timestamps, size, data position, encrypted)
         /// </summary>
         /// <remarks>Unknown format</remarks>
+#if NET48
         public byte[] FileInfo;
+#else
+        public byte[]? FileInfo;
+#endif
     }
 }

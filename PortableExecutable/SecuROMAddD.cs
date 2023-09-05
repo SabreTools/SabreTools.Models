@@ -30,12 +30,20 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Version, always 8 bytes?
         /// </summary>
+#if NET48
         public string Version;
+#else
+        public string? Version;
+#endif
 
         /// <summary>
         /// Unknown (Build? Formatted as a string)
         /// </summary>
+#if NET48
         public char[] Build;
+#else
+        public char[]? Build;
+#endif
 
         /// <summary>
         /// Unknown (0x14h), Variable number of bytes before entry table
@@ -50,11 +58,19 @@ namespace SabreTools.Models.PortableExecutable
         /// "554900-001" in 4.84.76.7968
         /// "548520-001" in 4.85.07.0009
         /// </remarks>
+#if NET48
         public byte[] Unknown14h;
+#else
+        public byte[]? Unknown14h;
+#endif
 
         /// <summary>
         /// Entry table
         /// </summary>
+#if NET48
         public SecuROMAddDEntry[] Entries;
+#else
+        public SecuROMAddDEntry[]? Entries;
+#endif
     }
 }

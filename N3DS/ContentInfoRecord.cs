@@ -19,6 +19,10 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// SHA-256 hash of the next k content records that have not been hashed yet
         /// </summary>
+#if NET48
         public byte[] UnhashedContentRecordsSHA256Hash;
+#else
+        public byte[]? UnhashedContentRecordsSHA256Hash;
+#endif
     }
 }

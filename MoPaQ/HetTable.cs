@@ -18,7 +18,11 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// 'HET\x1A'
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Version. Seems to be always 1
@@ -76,12 +80,20 @@ namespace SabreTools.Models.MoPaQ
         /// HET hash table. Each entry is 8 bits.
         /// </summary>
         /// <remarks>Size is derived from HashTableSize</remarks>
+#if NET48
         public byte[] HashTable;
+#else
+        public byte[]? HashTable;
+#endif
 
         /// <summary>
         /// Array of file indexes. Bit size of each entry is taken from dwTotalIndexSize.
         /// Table size is taken from dwHashTableSize.
         /// </summary>
+#if NET48
         public byte[][] FileIndexes;
+#else
+        public byte[][]? FileIndexes;
+#endif
     }
 }

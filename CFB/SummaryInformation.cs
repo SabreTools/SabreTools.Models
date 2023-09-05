@@ -36,7 +36,11 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// 4 bytes of reserved data
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
 
         #endregion
 
@@ -50,7 +54,11 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// 16 bytes of unknown data
         /// </summary>
+#if NET48
         public byte[] Unknown;
+#else
+        public byte[]? Unknown;
+#endif
 
         #endregion
 
@@ -75,7 +83,11 @@ namespace SabreTools.Models.CFB
         /// Properties
         /// </summary>
         /// <remarks>Each Variant might be followed by an index and offset value</remarks>
+#if NET48
         public Variant[] Properties;
+#else
+        public Variant[]? Properties;
+#endif
 
         #endregion
     }

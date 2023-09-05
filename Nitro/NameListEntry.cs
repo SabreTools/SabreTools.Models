@@ -17,7 +17,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// The variable length name (UTF-8)
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Only there if it is a folder. Refers to the the index of it

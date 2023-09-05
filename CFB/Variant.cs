@@ -40,6 +40,10 @@ namespace SabreTools.Models.CFB
         /// MUST contain an instance of the type, according to the value
         /// in the <see cref="VariantType"/> field.
         /// </summary>
+#if NET48
         public object Union;
+#else
+        public object? Union;
+#endif
     }
 }

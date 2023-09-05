@@ -11,7 +11,11 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Directory item name from the end of the directory items.
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Size of the item.  (If file, file size.  If folder, num items.)

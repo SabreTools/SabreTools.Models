@@ -16,7 +16,11 @@ namespace SabreTools.Models.CFB
         /// The following characters are illegal and MUST NOT be part of the
         /// name: '/', '\', ':', '!'.
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// This field MUST be 0x00, 0x01, 0x02, or 0x05, depending on the

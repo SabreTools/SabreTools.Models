@@ -12,7 +12,11 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// Compound file header
         /// </summary>
+#if NET48
         public FileHeader Header { get; set; }
+#else
+        public FileHeader? Header { get; set; }
+#endif
 
         /// <summary>
         /// The FAT is the main allocator for space within a compound file.
@@ -25,7 +29,11 @@ namespace SabreTools.Models.CFB
         /// 
         /// If Header Major Version is 4, there MUST be 1,024 fields specified to fill a 4,096-byte sector
         /// </remarks>
+#if NET48
         public SectorNumber[] FATSectorNumbers { get; set; }
+#else
+        public SectorNumber[]? FATSectorNumbers { get; set; }
+#endif
 
         /// <summary>
         /// The mini FAT is used to allocate space in the mini stream.
@@ -38,7 +46,11 @@ namespace SabreTools.Models.CFB
         /// 
         /// If Header Major Version is 4, there MUST be 1,024 fields specified to fill a 4,096-byte sector
         /// </remarks>
+#if NET48
         public SectorNumber[] MiniFATSectorNumbers { get; set; }
+#else
+        public SectorNumber[]? MiniFATSectorNumbers { get; set; }
+#endif
 
         /// <summary>
         /// The DIFAT array is used to represent storage of the FAT sectors.
@@ -55,7 +67,11 @@ namespace SabreTools.Models.CFB
         /// If Header Major Version is 4, there MUST be 1,023 fields specified
         /// to fill a 4,096-byte sector minus the "Next DIFAT Sector Location" field.
         /// </remarks>
+#if NET48
         public SectorNumber[] DIFATSectorNumbers { get; set; }
+#else
+        public SectorNumber[]? DIFATSectorNumbers { get; set; }
+#endif
 
         /// <summary>
         /// The directory entry array is an array of directory entries that
@@ -87,6 +103,10 @@ namespace SabreTools.Models.CFB
         /// all zeroes. The Modified Time field in the root storage directory
         /// entry MAY be all zeroes.
         /// <remarks>
+#if NET48
         public DirectoryEntry[] DirectoryEntries { get; set; }
+#else
+        public DirectoryEntry[]? DirectoryEntries { get; set; }
+#endif
     }
 }

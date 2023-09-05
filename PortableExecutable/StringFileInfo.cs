@@ -26,7 +26,11 @@
         /// <summary>
         /// The Unicode string L"StringFileInfo".
         /// </summary>
+#if NET48
         public string Key;
+#else
+        public string? Key;
+#endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
@@ -38,6 +42,10 @@
         /// member indicates the appropriate language and code page for displaying the text in
         /// that StringTable structure.
         /// </summary>
+#if NET48
         public StringTable[] Children;
+#else
+        public StringTable[]? Children;
+#endif
     }
 }

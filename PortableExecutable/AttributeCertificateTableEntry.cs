@@ -58,6 +58,10 @@
         /// Contains a certificate, such as an Authenticode signature.
         /// </summary>
         /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#certificate-data"/>
+#if NET48
         public byte[] Certificate;
+#else
+        public byte[]? Certificate;
+#endif
     }
 }

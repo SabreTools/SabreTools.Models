@@ -18,6 +18,10 @@
         /// <summary>
         /// The variable-length Unicode string data, word-aligned.
         /// </summary>
+#if NET48
         public byte[] UnicodeString;
+#else
+        public byte[]? UnicodeString;
+#endif
     }
 }

@@ -14,7 +14,11 @@
         /// <summary>
         /// Name
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Uncompressed size

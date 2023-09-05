@@ -11,7 +11,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File group name
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Size of the expanded data
@@ -21,7 +25,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved0;
+#else
+        public byte[]? Reserved0;
+#endif
 
         /// <summary>
         /// Size of the compressed data
@@ -31,12 +39,20 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved1;
+#else
+        public byte[]? Reserved1;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Attribute(?)
@@ -101,26 +117,46 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved3;
+#else
+        public byte[]? Reserved3;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved4;
+#else
+        public byte[]? Reserved4;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved5;
+#else
+        public byte[]? Reserved5;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved6;
+#else
+        public byte[]? Reserved6;
+#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved7;
+#else
+        public byte[]? Reserved7;
+#endif
     }
 }

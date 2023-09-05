@@ -13,7 +13,11 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Unknown data
         /// </summary>
+#if NET48
         public byte[] Data;
+#else
+        public byte[]? Data;
+#endif
 
         // Notes about Data:
         // - Might be UInt16 offset and UInt16 length pairs

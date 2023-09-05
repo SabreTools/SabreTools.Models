@@ -11,26 +11,46 @@
         /// <summary>
         /// SCI
         /// </summary>
+#if NET48
         public SystemControlInfo SCI;
+#else
+        public SystemControlInfo? SCI;
+#endif
 
         /// <summary>
         /// ACI
         /// </summary>
+#if NET48
         public AccessControlInfo ACI;
+#else
+        public AccessControlInfo? ACI;
+#endif
 
         /// <summary>
         /// AccessDesc signature (RSA-2048-SHA256)
         /// </summary>
+#if NET48
         public byte[] AccessDescSignature;
+#else
+        public byte[]? AccessDescSignature;
+#endif
 
         /// <summary>
         /// NCCH HDR RSA-2048 public key
         /// </summary>
+#if NET48
         public byte[] NCCHHDRPublicKey;
+#else
+        public byte[]? NCCHHDRPublicKey;
+#endif
 
         /// <summary>
         /// ACI (for limitation of first ACI)
         /// </summary>
+#if NET48
         public AccessControlInfo ACIForLimitations;
+#else
+        public AccessControlInfo? ACIForLimitations;
+#endif
     }
 }

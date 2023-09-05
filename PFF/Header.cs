@@ -16,7 +16,11 @@ namespace SabreTools.Models.PFF
         /// Signature
         /// </summary>
         /// <remarks>Versions 2 and 3 share the same signature but different header sizes</remarks>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Number of files

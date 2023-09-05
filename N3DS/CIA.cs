@@ -17,7 +17,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// CIA header
         /// </summary>
+#if NET48
         public CIAHeader Header { get; set; }
+#else
+        public CIAHeader? Header { get; set; }
+#endif
 
         /// <summary>
         /// Certificate chain
@@ -25,32 +29,56 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/CIA#Certificate_Chain
         /// </remarks>
+#if NET48
         public Certificate[] CertificateChain { get; set; }
+#else
+        public Certificate[]? CertificateChain { get; set; }
+#endif
 
         /// <summary>
         /// Ticket
         /// </summary>
+#if NET48
         public Ticket Ticket { get; set; }
+#else
+        public Ticket? Ticket { get; set; }
+#endif
 
         /// <summary>
         /// TMD file data
         /// </summary>
+#if NET48
         public TitleMetadata TMDFileData { get; set; }
+#else
+        public TitleMetadata? TMDFileData { get; set; }
+#endif
 
         /// <summary>
         /// Content file data
         /// </summary>
+#if NET48
         public NCCHHeader[] Partitions { get; set; }
+#else
+        public NCCHHeader[]? Partitions { get; set; }
+#endif
 
         /// <summary>
         /// Content file data
         /// </summary>
         /// TODO: Parse the content file data
+#if NET48
         public byte[] ContentFileData { get; set; }
+#else
+        public byte[]? ContentFileData { get; set; }
+#endif
 
         /// <summary>
         /// Meta file data (Not a necessary component)
         /// </summary>
+#if NET48
         public MetaData MetaData { get; set; }
+#else
+        public MetaData? MetaData { get; set; }
+#endif
     }
 }

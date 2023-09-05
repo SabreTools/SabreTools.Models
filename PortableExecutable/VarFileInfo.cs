@@ -26,7 +26,11 @@
         /// <summary>
         /// The Unicode string L"VarFileInfo".
         /// </summary>
+#if NET48
         public string Key;
+#else
+        public string? Key;
+#endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
@@ -36,6 +40,10 @@
         /// <summary>
         /// Typically contains a list of languages that the application or DLL supports.
         /// </summary>
+#if NET48
         public VarData[] Children;
+#else
+        public VarData[]? Children;
+#endif
     }
 }

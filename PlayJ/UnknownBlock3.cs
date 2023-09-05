@@ -8,7 +8,11 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Unknown data
         /// </summary>
+#if NET48
         public byte[] Data;
+#else
+        public byte[]? Data;
+#endif
 
         // Notes about Data:
         // - This may be where the encrypted audio samples live

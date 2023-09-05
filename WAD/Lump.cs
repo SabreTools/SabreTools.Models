@@ -17,6 +17,10 @@ namespace SabreTools.Models.WAD
 
         public byte Padding1;
 
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
     }
 }

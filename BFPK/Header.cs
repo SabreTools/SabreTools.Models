@@ -12,7 +12,11 @@ namespace SabreTools.Models.BFPK
         /// <summary>
         /// "BFPK"
         /// </summary>
+#if NET48
         public string Magic;
+#else
+        public string? Magic;
+#endif
 
         /// <summary>
         /// Version

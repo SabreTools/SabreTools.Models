@@ -33,7 +33,11 @@
         /// <summary>
         /// Describes keyboard accelerator characteristics.
         /// </summary>
+#if NET48
         public NewHeader NEWHEADER;
+#else
+        public NewHeader? NEWHEADER;
+#endif
 
         // TODO: Add array of entries in the resource
     }

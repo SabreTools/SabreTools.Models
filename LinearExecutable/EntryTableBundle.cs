@@ -54,6 +54,10 @@ namespace SabreTools.Models.LinearExecutable
         /// <summary>
         /// Table entries in the bundle
         /// </summary>
+#if NET48
         public EntryTableEntry[] TableEntries;
+#else
+        public EntryTableEntry[]? TableEntries;
+#endif
     }
 }

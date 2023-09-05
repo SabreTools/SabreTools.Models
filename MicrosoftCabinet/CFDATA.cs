@@ -37,7 +37,11 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// and the <see cref="CFHEADER.DataReservedSize"/> field value is non-zero, this field contains per-datablock application information.
         /// This field is defined by the application, and it is used for application-defined purposes.
         /// </summary>
+#if NET48
         public byte[] ReservedData;
+#else
+        public byte[]? ReservedData;
+#endif
 
         /// <summary>
         /// The compressed data bytes, compressed by using the <see cref="CFFOLDER.CompressionType"/>
@@ -47,6 +51,10 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// uncompressed data bytes. In this case, the <see cref="CompressedSize"/> and <see cref="UncompressedSize"/> field values will be equal unless
         /// this CFDATA structure entry crosses a cabinet file boundary.
         /// </summary>
+#if NET48
         public byte[] CompressedData;
+#else
+        public byte[]? CompressedData;
+#endif
     }
 }

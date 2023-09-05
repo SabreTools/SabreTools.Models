@@ -11,7 +11,11 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved;
+#else
+        public byte[]? Reserved;
+#endif
 
         /// <summary>
         /// End address (last byte of last PGC in last LU)
@@ -22,11 +26,19 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Language Units
         /// </summary>
+#if NET48
         public LanguageUnitTableEntry[] Entries;
+#else
+        public LanguageUnitTableEntry[]? Entries;
+#endif
 
         /// <summary>
         /// Program Chains
         /// </summary>
+#if NET48
         public ProgramChainTable[] ProgramChains;
+#else
+        public ProgramChainTable[]? ProgramChains;
+#endif
     }
 }

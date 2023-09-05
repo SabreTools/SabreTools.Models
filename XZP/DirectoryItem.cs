@@ -7,7 +7,11 @@ namespace SabreTools.Models.XZP
 
         public uint NameOffset;
 
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         public uint TimeCreated;
     }

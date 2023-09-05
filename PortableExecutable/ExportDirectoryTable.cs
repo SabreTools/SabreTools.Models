@@ -42,7 +42,11 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// ASCII string that contains the name of the DLL.
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// The starting ordinal number for exports in this image. This field specifies

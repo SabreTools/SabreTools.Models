@@ -6,7 +6,11 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Name
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
     
         /// <summary>
         /// Width
@@ -21,12 +25,20 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Offsets
         /// </summary>
+#if NET48
         public uint[] Offsets;
+#else
+        public uint[]? Offsets;
+#endif
 
         /// <summary>
         /// Texture data
         /// </summary>
+#if NET48
         public byte[] TextureData;
+#else
+        public byte[]? TextureData;
+#endif
 
         /// <summary>
         /// Palette size
@@ -36,6 +48,10 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Palette data
         /// </summary>
+#if NET48
         public byte[] PaletteData;
+#else
+        public byte[]? PaletteData;
+#endif
     }
 }

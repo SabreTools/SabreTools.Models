@@ -25,22 +25,38 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Signature
         /// </summary>
+#if NET48
         public byte[] Signature;
+#else
+        public byte[]? Signature;
+#endif
 
         /// <summary>
         /// Padding
         /// </summary>
+#if NET48
         public byte[] Padding;
+#else
+        public byte[]? Padding;
+#endif
 
         /// <summary>
         /// Issuer
         /// </summary>
+#if NET48
         public string Issuer;
+#else
+        public string? Issuer;
+#endif
 
         /// <summary>
         /// ECC PublicKey
         /// </summary>
+#if NET48
         public byte[] ECCPublicKey;
+#else
+        public byte[]? ECCPublicKey;
+#endif
 
         /// <summary>
         /// Version (For 3DS this is always 1)
@@ -71,7 +87,11 @@ namespace SabreTools.Models.N3DS
         /// The titlekey is used to decrypt content downloaded from the CDN using 128-bit AES-CBC with
         /// the content index (as big endian u16, padded with trailing zeroes) as the IV.
         /// </remarks>
+#if NET48
         public byte[] TitleKey;
+#else
+        public byte[]? TitleKey;
+#endif
 
         /// <summary>
         /// Reserved
@@ -96,7 +116,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Ticket title version
@@ -110,7 +134,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved3;
+#else
+        public byte[]? Reserved3;
+#endif
 
         /// <summary>
         /// License Type
@@ -125,7 +153,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved4;
+#else
+        public byte[]? Reserved4;
+#endif
 
         /// <summary>
         /// eShop Account ID?
@@ -145,7 +177,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved6;
+#else
+        public byte[]? Reserved6;
+#endif
 
         /// <summary>
         /// Limits
@@ -153,7 +189,11 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// In demos, the first u32 in the "Limits" section is 0x4, then the second u32 is the max-playcount.
         /// </remarks>
+#if NET48
         public uint[] Limits;
+#else
+        public uint[]? Limits;
+#endif
 
         /// <summary>
         /// The Content Index of a ticket has its own size defined within itself,
@@ -165,7 +205,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Content Index
         /// </summary>
+#if NET48
         public byte[] ContentIndex;
+#else
+        public byte[]? ContentIndex;
+#endif
 
         /// <summary>
         /// Certificate chain
@@ -173,6 +217,10 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/Ticket#Certificate_Chain
         /// </remarks>
+#if NET48
         public Certificate[] CertificateChain;
+#else
+        public Certificate[]? CertificateChain;
+#endif
     }
 }

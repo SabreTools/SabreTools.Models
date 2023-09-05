@@ -6,7 +6,11 @@ namespace SabreTools.Models.PAK
         /// <summary>
         /// Signature
         /// </summary>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Directory Offset

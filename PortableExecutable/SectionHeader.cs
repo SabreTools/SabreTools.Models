@@ -33,7 +33,11 @@ namespace SabreTools.Models.PortableExecutable
         /// to an executable file. 
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+#if NET48
         public byte[] Name;
+#else
+        public byte[]? Name;
+#endif
 
         /// <summary>
         /// The total size of the section when loaded into memory. If this value is
@@ -104,11 +108,19 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// COFF Relocations (Object Only)
         /// </summary>
+#if NET48
         public COFFRelocation[] COFFRelocations;
+#else
+        public COFFRelocation[]? COFFRelocations;
+#endif
 
         /// <summary>
         /// COFF Line Numbers (Deprecated)
         /// </summary>
+#if NET48
         public COFFLineNumber[] COFFLineNumbers;
+#else
+        public COFFLineNumber[]? COFFLineNumbers;
+#endif
     }
 }

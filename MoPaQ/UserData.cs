@@ -15,7 +15,11 @@ namespace SabreTools.Models.MoPaQ
         /// The user data signature
         /// </summary>
         /// <see cref="SignatureValue"/>
+#if NET48
         public string Signature;
+#else
+        public string? Signature;
+#endif
 
         /// <summary>
         /// Maximum size of the user data

@@ -16,7 +16,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved1;
+#else
+        public byte[]? Reserved1;
+#endif
 
         /// <summary>
         /// Filled size of cartridge
@@ -26,7 +30,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved2;
+#else
+        public byte[]? Reserved2;
+#endif
 
         /// <summary>
         /// Title version
@@ -41,12 +49,20 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved3;
+#else
+        public byte[]? Reserved3;
+#endif
 
         /// <summary>
         /// Title ID of CVer in included update partition
         /// </summary>
+#if NET48
         public byte[] CVerTitleID;
+#else
+        public byte[]? CVerTitleID;
+#endif
 
         /// <summary>
         /// Version number of CVer in included update partition
@@ -56,6 +72,10 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
+#if NET48
         public byte[] Reserved4;
+#else
+        public byte[]? Reserved4;
+#endif
     }
 }

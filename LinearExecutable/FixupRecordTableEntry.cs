@@ -356,7 +356,11 @@
         /// field. The source offsets are relative to the beginning of the page where the
         /// fixups are to be made.
         /// </remarks>
+#if NET48
         public ushort[] SourceOffsetList;
+#else
+        public ushort[]? SourceOffsetList;
+#endif
 
         #endregion
     }

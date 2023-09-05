@@ -6,7 +6,11 @@
         /// <summary>
         /// Descriptors
         /// </summary>
+#if NET48
         public byte[] Descriptors;
+#else
+        public byte[]? Descriptors;
+#endif
 
         /// <summary>
         /// ARM9 Descriptor Version. Originally this value had to be ≥ 2.

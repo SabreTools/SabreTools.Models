@@ -5,7 +5,11 @@ namespace SabreTools.Models.TAR
         /// <summary>
         /// File name
         /// </summary>
+#if NET48
         public string FileName;
+#else
+        public string? FileName;
+#endif
 
         /// <summary>
         /// File mode
@@ -45,41 +49,73 @@ namespace SabreTools.Models.TAR
         /// <summary>
         /// Name of linked file
         /// </summary>
+#if NET48
         public string LinkName;
+#else
+        public string? LinkName;
+#endif
 
         /// <summary>
         /// UStar indicator, "ustar", then NUL
         /// </summary>
+#if NET48
         public string Magic;
+#else
+        public string? Magic;
+#endif
 
         /// <summary>
         /// UStar version, "00"
         /// </summary>
+#if NET48
         public string Version;
+#else
+        public string? Version;
+#endif
 
         /// <summary>
         /// Owner user name
         /// </summary>
+#if NET48
         public string UserName;
+#else
+        public string? UserName;
+#endif
 
         /// <summary>
         /// Owner group name
         /// </summary>
+#if NET48
         public string GroupName;
+#else
+        public string? GroupName;
+#endif
 
         /// <summary>
         /// Device major number
         /// </summary>
+#if NET48
         public string DevMajor;
+#else
+        public string? DevMajor;
+#endif
 
         /// <summary>
         /// Device minor number
         /// </summary>
+#if NET48
         public string DevMinor;
+#else
+        public string? DevMinor;
+#endif
 
         /// <summary>
         /// Filename prefix
         /// </summary>
+#if NET48
         public string Prefix;
+#else
+        public string? Prefix;
+#endif
     }
 }

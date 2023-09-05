@@ -275,37 +275,65 @@
         /// <summary>
         /// The export table address and size.
         /// </summary>
+#if NET48
         public DataDirectory ExportTable;
+#else
+        public DataDirectory? ExportTable;
+#endif
 
         /// <summary>
         /// The import table address and size.
         /// </summary>
+#if NET48
         public DataDirectory ImportTable;
+#else
+        public DataDirectory? ImportTable;
+#endif
 
         /// <summary>
         /// The resource table address and size.
         /// </summary>
+#if NET48
         public DataDirectory ResourceTable;
+#else
+        public DataDirectory? ResourceTable;
+#endif
 
         /// <summary>
         /// The exception table address and size.
         /// </summary>
+#if NET48
         public DataDirectory ExceptionTable;
+#else
+        public DataDirectory? ExceptionTable;
+#endif
 
         /// <summary>
         /// The attribute certificate table address and size.
         /// </summary>
+#if NET48
         public DataDirectory CertificateTable;
+#else
+        public DataDirectory? CertificateTable;
+#endif
 
         /// <summary>
         /// The base relocation table address and size.
         /// </summary>
+#if NET48
         public DataDirectory BaseRelocationTable;
+#else
+        public DataDirectory? BaseRelocationTable;
+#endif
 
         /// <summary>
         /// The debug data starting address and size.
         /// </summary>
+#if NET48
         public DataDirectory Debug;
+#else
+        public DataDirectory? Debug;
+#endif
 
         /// <summary>
         /// Reserved, must be 0
@@ -316,37 +344,65 @@
         /// The RVA of the value to be stored in the global pointer register.
         /// The size member of this structure must be set to zero.
         /// </summary>
+#if NET48
         public DataDirectory GlobalPtr;
+#else
+        public DataDirectory? GlobalPtr;
+#endif
 
         /// <summary>
         /// The thread local storage (TLS) table address and size.
         /// </summary>
+#if NET48
         public DataDirectory ThreadLocalStorageTable;
+#else
+        public DataDirectory? ThreadLocalStorageTable;
+#endif
 
         /// <summary>
         /// The load configuration table address and size.
         /// </summary>
+#if NET48
         public DataDirectory LoadConfigTable;
+#else
+        public DataDirectory? LoadConfigTable;
+#endif
 
         /// <summary>
         /// The bound import table address and size.
         /// </summary>
+#if NET48
         public DataDirectory BoundImport;
+#else
+        public DataDirectory? BoundImport;
+#endif
 
         /// <summary>
         /// The import address table address and size
         /// </summary>
+#if NET48
         public DataDirectory ImportAddressTable;
+#else
+        public DataDirectory? ImportAddressTable;
+#endif
 
         /// <summary>
         /// The delay import descriptor address and size.
         /// </summary>
+#if NET48
         public DataDirectory DelayImportDescriptor;
+#else
+        public DataDirectory? DelayImportDescriptor;
+#endif
 
         /// <summary>
         /// The CLR runtime header address and size.
         /// </summary>
+#if NET48
         public DataDirectory CLRRuntimeHeader;
+#else
+        public DataDirectory? CLRRuntimeHeader;
+#endif
 
         /// <summary>
         /// Reserved, must be zero

@@ -27,17 +27,29 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Signature
         /// </summary>
+#if NET48
         public byte[] Signature;
+#else
+        public byte[]? Signature;
+#endif
 
         /// <summary>
         /// Padding to align next data to 0x40 bytes
         /// </summary>
+#if NET48
         public byte[] Padding;
+#else
+        public byte[]? Padding;
+#endif
 
         /// <summary>
         /// Issuer
         /// </summary>
+#if NET48
         public string Issuer;
+#else
+        public string? Issuer;
+#endif
 
         /// <summary>
         /// Key Type
@@ -47,7 +59,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Name
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
 
         /// <summary>
         /// Expiration time as UNIX Timestamp, used at least for CTCert
@@ -60,7 +76,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Modulus
         /// </summary>
+#if NET48
         public byte[] RSAModulus;
+#else
+        public byte[]? RSAModulus;
+#endif
 
         /// <summary>
         /// Public Exponent
@@ -70,7 +90,11 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Padding
         /// </summary>
+#if NET48
         public byte[] RSAPadding;
+#else
+        public byte[]? RSAPadding;
+#endif
 
         #endregion
 
@@ -80,12 +104,20 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Public Key
         /// </summary>
+#if NET48
         public byte[] ECCPublicKey;
+#else
+        public byte[]? ECCPublicKey;
+#endif
 
         /// <summary>
         /// Padding
         /// </summary>
+#if NET48
         public byte[] ECCPadding;
+#else
+        public byte[]? ECCPadding;
+#endif
 
         #endregion
     }

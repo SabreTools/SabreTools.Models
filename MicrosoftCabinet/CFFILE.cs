@@ -63,6 +63,10 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// CFFILE.szName field, but the _A_NAME_IS_UTF attribute is not set, the characters SHOULD be
         /// interpreted according to the current location.
         /// </summary>
+#if NET48
         public string Name;
+#else
+        public string? Name;
+#endif
     }
 }

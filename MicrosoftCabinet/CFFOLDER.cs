@@ -50,11 +50,19 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// and the cbCFFolder field is non-zero, then this field contains per-folder application information.
         /// This field is defined by the application, and is used for application-defined purposes.
         /// </summary>
+#if NET48
         public byte[] ReservedData;
+#else
+        public byte[]? ReservedData;
+#endif
 
         /// <summary>
         /// Data blocks associated with this folder
         /// </summary>
+#if NET48
         public CFDATA[] DataBlocks;
+#else
+        public CFDATA[]? DataBlocks;
+#endif
     }
 }
