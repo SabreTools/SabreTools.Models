@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Defines the header for an extended menu template. This structure definition is for
     /// explanation only; it is not present in any standard header file.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/menuex-template-header"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class MenuHeaderExtended
     {
         /// <summary>

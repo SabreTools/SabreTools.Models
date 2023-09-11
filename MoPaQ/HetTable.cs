@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// The HET table is present if the HetTablePos64 member of MPQ header is
@@ -9,7 +7,6 @@ namespace SabreTools.Models.MoPaQ
     /// table. HET table can be encrypted and compressed.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class HetTable
     {
         // TODO: Extract this out and make in common between HET and BET

@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
@@ -8,7 +6,6 @@ namespace SabreTools.Models.NewExecutable
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     /// <see href="https://github.com/libyal/libexe/blob/main/documentation/Executable%20(EXE)%20file%20format.asciidoc#24-ne-extended-header"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ExecutableHeader
     {
         /// <summary>
@@ -16,7 +13,6 @@ namespace SabreTools.Models.NewExecutable
         /// "N" is low-order byte.
         /// "E" is high-order byte.
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
 #if NET48
         public string Magic;
 #else

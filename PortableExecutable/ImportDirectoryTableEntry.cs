@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The import information begins with the import directory table, which
@@ -12,7 +10,6 @@ namespace SabreTools.Models.PortableExecutable
     /// which indicates the end of the directory table.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ImportDirectoryTableEntry
     {
         /// <summary>

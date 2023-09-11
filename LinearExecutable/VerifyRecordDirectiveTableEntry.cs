@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.LinearExecutable
+﻿namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Verify Record Directive Table is an optional table. It maintains a record
@@ -11,7 +9,6 @@ namespace SabreTools.Models.LinearExecutable
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class VerifyRecordDirectiveTableEntry
     {
         /// <summary>

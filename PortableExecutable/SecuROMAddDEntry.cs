@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Overlay data associated with SecuROM executables
@@ -10,7 +8,6 @@ namespace SabreTools.Models.PortableExecutable
     /// environment by using sample from legally obtained software that
     /// is protected by SecuROM.
     /// </remarks>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class SecuROMAddDEntry
     {
         /// <summary>

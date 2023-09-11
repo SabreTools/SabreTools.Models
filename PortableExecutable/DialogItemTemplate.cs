@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Defines the dimensions and style of a control in a dialog box. One or more of these
@@ -8,7 +6,6 @@ namespace SabreTools.Models.PortableExecutable
     /// for a dialog box.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-dlgitemtemplate"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class DialogItemTemplate
     {
         /// <summary>

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Image files contain an optional debug directory that indicates what form
@@ -19,7 +17,6 @@ namespace SabreTools.Models.PortableExecutable
     /// RVA is its address.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class DebugDirectoryEntry
     {
         /// <summary>

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The segment table contains an entry for each segment in the executable
@@ -9,7 +7,6 @@ namespace SabreTools.Models.NewExecutable
     /// The following is the structure of a segment table entry.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class SegmentTableEntry
     {
         /// <summary>

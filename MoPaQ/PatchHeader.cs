@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// Each incremental patch file in a patch MPQ starts with a header. It is supposed
     /// to be a structure with variable length.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class PatchHeader
     {
         #region PATCH Header

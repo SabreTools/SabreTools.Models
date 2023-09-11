@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MicrosoftCabinet
+﻿namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// Each CFDATA structure describes some amount of compressed data, as shown in the following
@@ -9,7 +7,6 @@ namespace SabreTools.Models.MicrosoftCabinet
     /// contiguous.
     /// </summary>
     /// <see href="http://download.microsoft.com/download/5/0/1/501ED102-E53F-4CE0-AA6B-B0F93629DDC6/Exchange/%5BMS-CAB%5D.pdf"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class CFDATA
     {
         /// <summary>

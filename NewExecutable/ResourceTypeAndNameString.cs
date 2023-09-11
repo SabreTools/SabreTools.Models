@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// Resource type and name strings are stored at the end of the
@@ -8,7 +6,6 @@ namespace SabreTools.Models.NewExecutable
     /// are case sensitive.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeAndNameString
     {
         /// <summary>

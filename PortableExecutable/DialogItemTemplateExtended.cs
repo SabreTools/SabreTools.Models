@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// A block of text used by an extended dialog box template to describe the extended dialog box.
     /// For a description of the format of an extended dialog box template, see DLGTEMPLATEEX.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/dlgbox/dlgitemtemplateex"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class DialogItemTemplateExtended
     {
         /// <summary>

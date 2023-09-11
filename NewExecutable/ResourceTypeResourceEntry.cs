@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// A table of resources for this type follows. The following is
     /// the format of each resource (8 bytes each):
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeResourceEntry
     {
         /// <summary>

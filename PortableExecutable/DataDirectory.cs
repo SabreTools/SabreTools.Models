@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Each data directory gives the address and size of a table or string that Windows uses.
@@ -11,7 +9,6 @@ namespace SabreTools.Models.PortableExecutable
     /// that the sections that contain specific tables have specific names.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class DataDirectory
     {
         /// <summary>

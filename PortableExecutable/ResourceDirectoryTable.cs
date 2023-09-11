@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Each directory table is followed by a series of directory entries that
@@ -15,7 +13,6 @@ namespace SabreTools.Models.PortableExecutable
     /// actually consists of directory entries.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceDirectoryTable
     {
         /// <summary>

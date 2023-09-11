@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// The BET table is present if the BetTablePos64 member of MPQ header is set
@@ -8,7 +6,6 @@ namespace SabreTools.Models.MoPaQ
     /// replace it. It is also supposed to be more effective.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class BetTable
     {
         // TODO: Extract this out and make in common between HET and BET

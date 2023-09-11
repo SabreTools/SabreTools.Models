@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Each row of the section table is, in effect, a section header. This table
@@ -20,7 +18,6 @@ namespace SabreTools.Models.PortableExecutable
     /// SectionAlignment value in the optional header.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class SectionHeader
     {
         /// <summary>
@@ -32,11 +29,10 @@ namespace SabreTools.Models.PortableExecutable
         /// characters. Long names in object files are truncated if they are emitted
         /// to an executable file. 
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
 #if NET48
-        public byte[] Name;
+        public byte[] Name { get; set; } = new byte[8];
 #else
-        public byte[]? Name;
+        public byte[]? Name { get; set; } = new byte[8];
 #endif
 
         /// <summary>

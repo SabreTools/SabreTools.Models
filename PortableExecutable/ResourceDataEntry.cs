@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The resource directory string area consists of Unicode strings, which
@@ -10,7 +8,6 @@ namespace SabreTools.Models.PortableExecutable
     /// alignment of the fixed-size directory entries.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceDataEntry
     {
         /// <summary>

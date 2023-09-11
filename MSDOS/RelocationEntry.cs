@@ -1,12 +1,9 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MSDOS
+﻿namespace SabreTools.Models.MSDOS
 {
     /// <summary>
     /// Each pointer in the relocation table looks as such
     /// </summary>
     /// <see href="https://wiki.osdev.org/MZ"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class RelocationEntry
     {
         /// <summary>

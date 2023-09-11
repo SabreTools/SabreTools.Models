@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Describes the data in an individual accelerator table resource. The structure definition
     /// provided here is for explanation only; it is not present in any standard header file.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/acceltableentry"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class AcceleratorTableEntry
     {
         /// <summary>

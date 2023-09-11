@@ -1,12 +1,9 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// MoPaQ archive header
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ArchiveHeader
     {
         #region V1 Properties

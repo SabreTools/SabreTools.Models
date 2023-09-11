@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// An extended dialog box template begins with a DLGTEMPLATEEX header that describes
@@ -13,7 +11,6 @@ namespace SabreTools.Models.PortableExecutable
     /// for a dialog box.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/dlgbox/dlgtemplateex"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class DialogTemplateExtended
     {
         /// <summary>

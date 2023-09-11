@@ -1,12 +1,9 @@
-using System.Runtime.InteropServices;
-
 namespace SabreTools.Models.Quantum
 {
     /// <summary>
     /// Quantum archive file header
     /// </summary>
     /// <see href="https://handwiki.org/wiki/Software:Quantum_compression"/>
-    [StructLayout(LayoutKind.Sequential)]
     public class Header
     {
         /// <summary>

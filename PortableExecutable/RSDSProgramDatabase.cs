@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace SabreTools.Models.PortableExecutable
 {
@@ -8,7 +7,6 @@ namespace SabreTools.Models.PortableExecutable
     /// or "DS" type which are emitted by Miscrosoft's link.exe from version 7 and above.
     /// </summary>
     /// <see href="http://www.godevtool.com/Other/pdb.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class RSDSProgramDatabase
     {
         /// <summary>

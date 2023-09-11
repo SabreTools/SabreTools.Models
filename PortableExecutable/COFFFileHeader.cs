@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// At the beginning of an object file, or immediately after the signature
@@ -8,7 +6,6 @@ namespace SabreTools.Models.PortableExecutable
     /// Note that the Windows loader limits the number of sections to 96.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class COFFFileHeader
     {
         /// <summary>

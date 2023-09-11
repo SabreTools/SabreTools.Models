@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The module-reference table follows the resident-name table. Each entry
@@ -8,7 +6,6 @@ namespace SabreTools.Models.NewExecutable
     /// names table; each entry is 2 bytes long.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ModuleReferenceTableEntry
     {
         /// <summary>

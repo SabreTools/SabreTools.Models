@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// Block table contains informations about file sizes and way of their storage within
@@ -8,7 +6,6 @@ namespace SabreTools.Models.MoPaQ
     /// of block table entry is (like hash table entry). The block table is also encrypted.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class BlockEntry
     {
         /// <summary>

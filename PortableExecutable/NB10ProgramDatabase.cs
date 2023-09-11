@@ -1,12 +1,9 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// PDB 2.0 files
     /// </summary>
     /// <see href="https://www.debuginfo.com/articles/debuginfomatch.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class NB10ProgramDatabase
     {
         /// <summary>

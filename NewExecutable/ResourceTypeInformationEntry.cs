@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// A table of resource type information blocks follows. The following
     /// is the format of each type information block:
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeInformationEntry
     {
         /// <summary>

@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace SabreTools.Models.MSDOS
 {
     /// <summary>
@@ -8,7 +6,6 @@ namespace SabreTools.Models.MSDOS
     /// </summary>
     /// <see href="https://wiki.osdev.org/MZ"/>
     /// <see href="http://www.pinvoke.net/default.aspx/Structures.IMAGE_DOS_HEADER"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ExecutableHeader
     {
         #region Standard Fields
@@ -16,11 +13,10 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// 0x5A4D (ASCII for 'M' and 'Z')
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
 #if NET48
-        public string Magic;
+        public string Magic { get; set; }
 #else
-        public string? Magic;
+        public string? Magic { get; set; }
 #endif
 
         /// <summary>
@@ -105,11 +101,10 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Reserved words
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
 #if NET48
-        public ushort[] Reserved1;
+        public ushort[] Reserved1 { get; set; } = new ushort[4];
 #else
-        public ushort[]? Reserved1;
+        public ushort[]? Reserved1 { get; set; } = new ushort[4];
 #endif
 
         /// <summary>
@@ -125,11 +120,10 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Reserved words
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
 #if NET48
-        public ushort[] Reserved2;
+        public ushort[] Reserved2 { get; set; } = new ushort[10];
 #else
-        public ushort[]? Reserved2;
+        public ushort[]? Reserved2 { get; set; } = new ushort[10];
 #endif
 
         /// <summary>

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// Hash table is used for searching files by name. The file name is converted to
@@ -10,7 +8,6 @@ namespace SabreTools.Models.MoPaQ
     /// table is 16 bytes.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class HashEntry
     {
         /// <summary>

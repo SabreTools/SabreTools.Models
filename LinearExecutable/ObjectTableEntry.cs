@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.LinearExecutable
+﻿namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The object table contains information that describes each segment in
@@ -14,7 +12,6 @@ namespace SabreTools.Models.LinearExecutable
     /// </remarks>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ObjectTableEntry
     {
         /// <summary>

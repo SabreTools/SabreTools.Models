@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The nonresident-name table follows the entry table, and contains a
@@ -11,7 +9,6 @@ namespace SabreTools.Models.NewExecutable
     /// table.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class NonResidentNameTableEntry
     {
         /// <summary>

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.NewExecutable
+﻿namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The resident-name table follows the resource table, and contains this
@@ -10,7 +8,6 @@ namespace SabreTools.Models.NewExecutable
     /// describes the format of the name strings:
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResidentNameTableEntry
     {
         /// <summary>

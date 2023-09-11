@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The export symbol information begins with the export directory table,
@@ -9,7 +7,6 @@ namespace SabreTools.Models.PortableExecutable
     /// imports to the entry points within this image.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class ExportDirectoryTable
     {
         /// <summary>

@@ -1,9 +1,6 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.SFFS
+﻿namespace SabreTools.Models.SFFS
 {
     /// <see href="https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class FileEntry
     {
         /// <summary>

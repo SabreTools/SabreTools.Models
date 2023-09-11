@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Contains the number of icon or cursor components in a resource group. The
@@ -8,7 +6,6 @@ namespace SabreTools.Models.PortableExecutable
     /// in any standard header file.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/newheader"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class NewHeader
     {
         /// <summary>

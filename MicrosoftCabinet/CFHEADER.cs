@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MicrosoftCabinet
+﻿namespace SabreTools.Models.MicrosoftCabinet
 {
     /// <summary>
     /// The CFHEADER structure shown in the following packet diagram provides information about this
     /// cabinet (.cab) file.
     /// </summary>
     /// <see href="http://download.microsoft.com/download/5/0/1/501ED102-E53F-4CE0-AA6B-B0F93629DDC6/Exchange/%5BMS-CAB%5D.pdf"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class CFHEADER
     {
         /// <summary>

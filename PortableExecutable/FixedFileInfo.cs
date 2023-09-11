@@ -1,13 +1,10 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Contains version information for a file. This information is language and
     /// code page independent.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class FixedFileInfo
     {
         /// <summary>

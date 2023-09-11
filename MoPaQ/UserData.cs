@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.MoPaQ
+﻿namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// MPQ User Data are optional, and is commonly used in custom maps for
@@ -8,7 +6,6 @@ namespace SabreTools.Models.MoPaQ
     /// from where the MPQ header should be searched.
     /// </summary>
     /// <see href="http://zezula.net/en/mpq/mpqformat.html"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class UserData
     {
         /// <summary>
