@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The symbol table in this section is inherited from the traditional
@@ -28,11 +26,10 @@ namespace SabreTools.Models.PortableExecutable
         /// An array of 8 bytes. This array is padded with nulls on the right if
         /// the name is less than 8 bytes long.
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
 #if NET48
-        public byte[] ShortName;
+        public byte[] ShortName { get; set; } = new byte[8];
 #else
-        public byte[]? ShortName;
+        public byte[]? ShortName { get; set; } = new byte[8];
 #endif
 
         /// <summary>
@@ -165,11 +162,10 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Unused
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
 #if NET48
-        public byte[] AuxFormat2Unused2;
+        public byte[] AuxFormat2Unused2 { get; set; } = new byte[6];
 #else
-        public byte[]? AuxFormat2Unused2;
+        public byte[]? AuxFormat2Unused2 { get; set; } = new byte[6];
 #endif
 
         /// <summary>
@@ -221,11 +217,10 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Unused
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
 #if NET48
-        public byte[] AuxFormat3Unused;
+        public byte[] AuxFormat3Unused { get; set; } = new byte[10];
 #else
-        public byte[]? AuxFormat3Unused;
+        public byte[]? AuxFormat3Unused { get; set; } = new byte[10];
 #endif
 
         #endregion
@@ -240,11 +235,10 @@ namespace SabreTools.Models.PortableExecutable
         /// An ANSI string that gives the name of the source file. This is padded
         /// with nulls if it is less than the maximum length.
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 18)]
 #if NET48
-        public byte[] AuxFormat4FileName;
+        public byte[] AuxFormat4FileName { get; set; } = new byte[18];
 #else
-        public byte[]? AuxFormat4FileName;}
+        public byte[]? AuxFormat4FileName { get; set; } = new byte[18];
 #endif
 
         #endregion
@@ -293,11 +287,10 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Unused
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
 #if NET48
-        public byte[] AuxFormat5Unused;
+        public byte[] AuxFormat5Unused { get; set; } = new byte[3];
 #else
-        public byte[]? AuxFormat5Unused;
+        public byte[]? AuxFormat5Unused { get; set; } = new byte[3];
 #endif
 
         #endregion
@@ -325,11 +318,10 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Reserved, must be zero.
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)]
 #if NET48
-        public byte[] AuxFormat6Reserved2;
+        public byte[] AuxFormat6Reserved2 { get; set; } = new byte[12];
 #else
-        public byte[]? AuxFormat6Reserved2;
+        public byte[]? AuxFormat6Reserved2 { get; set; } = new byte[12];
 #endif
 
         #endregion
