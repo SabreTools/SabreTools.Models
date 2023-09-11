@@ -38,7 +38,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public NCCHHeader[] Partitions { get; set; }
 #else
-        public NCCHHeader[]? Partitions { get; set; }
+        public NCCHHeader?[]? Partitions { get; set; }
 #endif
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public NCCHExtendedHeader[] ExtendedHeaders { get; set; }
 #else
-        public NCCHExtendedHeader[]? ExtendedHeaders { get; set; }
+        public NCCHExtendedHeader?[]? ExtendedHeaders { get; set; }
 #endif
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public ExeFSHeader[] ExeFSHeaders { get; set; }
 #else
-        public ExeFSHeader[]? ExeFSHeaders { get; set; }
+        public ExeFSHeader?[]? ExeFSHeaders { get; set; }
 #endif
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public RomFSHeader[] RomFSHeaders { get; set; }
 #else
-        public RomFSHeader[]? RomFSHeaders { get; set; }
+        public RomFSHeader?[]? RomFSHeaders { get; set; }
 #endif
     }
 }

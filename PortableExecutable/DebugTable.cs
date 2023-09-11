@@ -36,7 +36,7 @@
 #if NET48
         public DebugDirectoryEntry[] DebugDirectoryTable;
 #else
-        public DebugDirectoryEntry[]? DebugDirectoryTable;
+        public DebugDirectoryEntry?[]? DebugDirectoryTable;
 #endif
     }
 }

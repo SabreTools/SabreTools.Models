@@ -30,7 +30,7 @@
 #if NET48
         public FileEntry[] Files { get; set; }
 #else
-        public FileEntry[]? Files { get; set; }
+        public FileEntry?[]? Files { get; set; }
 #endif
 
         /// <summary>
@@ -39,7 +39,7 @@
 #if NET48
         public FileHeader[] FileHeaders { get; set; }
 #else
-        public FileHeader[]? FileHeaders { get; set; }
+        public FileHeader?[]? FileHeaders { get; set; }
 #endif
     }
 }

@@ -39,7 +39,7 @@
 #if NET48
         public MenuItem[] MenuItems;
 #else
-        public MenuItem[]? MenuItems;
+        public MenuItem?[]? MenuItems;
 #endif
 
         /// <summary>
@@ -48,7 +48,7 @@
 #if NET48
         public MenuItemExtended[] ExtendedMenuItems;
 #else
-        public MenuItemExtended[]? ExtendedMenuItems;
+        public MenuItemExtended?[]? ExtendedMenuItems;
 #endif
 
         #endregion

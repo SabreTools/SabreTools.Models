@@ -47,7 +47,7 @@ namespace SabreTools.Models.Nitro
 #if NET48
         public FileAllocationTableEntry[] FileAllocationTable { get; set; }
 #else
-        public FileAllocationTableEntry[]? FileAllocationTable { get; set; }
+        public FileAllocationTableEntry?[]? FileAllocationTable { get; set; }
 #endif
     }
 }

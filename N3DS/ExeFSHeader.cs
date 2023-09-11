@@ -19,7 +19,7 @@
 #if NET48
         public ExeFSFileHeader[] FileHeaders;
 #else
-        public ExeFSFileHeader[]? FileHeaders;
+        public ExeFSFileHeader?[]? FileHeaders;
 #endif
 
         /// <summary>

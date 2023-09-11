@@ -28,7 +28,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public ResourceTypeInformationEntry[] ResourceTypes;
 #else
-        public ResourceTypeInformationEntry[]? ResourceTypes;
+        public ResourceTypeInformationEntry?[]? ResourceTypes;
 #endif
 
         /// <summary>

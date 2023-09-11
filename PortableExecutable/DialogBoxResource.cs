@@ -42,7 +42,7 @@
 #if NET48
         public DialogItemTemplate[] DialogItemTemplates;
 #else
-        public DialogItemTemplate[]? DialogItemTemplates;
+        public DialogItemTemplate?[]? DialogItemTemplates;
 #endif
 
         /// <summary>
@@ -54,7 +54,7 @@
 #if NET48
         public DialogItemTemplateExtended[] ExtendedDialogItemTemplates;
 #else
-        public DialogItemTemplateExtended[]? ExtendedDialogItemTemplates;
+        public DialogItemTemplateExtended?[]? ExtendedDialogItemTemplates;
 #endif
 
         #endregion

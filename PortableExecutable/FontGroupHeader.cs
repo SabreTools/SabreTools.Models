@@ -19,7 +19,7 @@
 #if NET48
         public DirEntry[] DE;
 #else
-        public DirEntry[]? DE;
+        public DirEntry?[]? DE;
 #endif
     }
 }

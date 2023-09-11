@@ -65,7 +65,7 @@
 #if NET48
         public PartitionTableEntry[] PartitionsTable;
 #else
-        public PartitionTableEntry[]? PartitionsTable;
+        public PartitionTableEntry?[]? PartitionsTable;
 #endif
 
         #endregion

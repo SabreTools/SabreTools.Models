@@ -28,7 +28,7 @@ namespace SabreTools.Models.VBSP
 #if NET48
         public Lump[] Lumps;
 #else
-        public Lump[]? Lumps;
+        public Lump?[]? Lumps;
 #endif
 
         /// <summary>

@@ -45,7 +45,7 @@
 #if NET48
         public StringTable[] Children;
 #else
-        public StringTable[]? Children;
+        public StringTable?[]? Children;
 #endif
     }
 }

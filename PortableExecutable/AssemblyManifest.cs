@@ -19,14 +19,14 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyIdentity[] AssemblyIdentities;
 #else
-        public AssemblyIdentity[]? AssemblyIdentities;
+        public AssemblyIdentity?[]? AssemblyIdentities;
 #endif
 
         [XmlElement("noInheritable")]
 #if NET48
         public AssemblyNoInheritable[] NoInheritables;
 #else
-        public AssemblyNoInheritable[]? NoInheritables;
+        public AssemblyNoInheritable?[]? NoInheritables;
 #endif
 
         #endregion
@@ -54,35 +54,35 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyCOMInterfaceExternalProxyStub[] COMInterfaceExternalProxyStub;
 #else
-        public AssemblyCOMInterfaceExternalProxyStub[]? COMInterfaceExternalProxyStub;
+        public AssemblyCOMInterfaceExternalProxyStub?[]? COMInterfaceExternalProxyStub;
 #endif
 
         [XmlElement("dependency")]
 #if NET48
         public AssemblyDependency[] Dependency;
 #else
-        public AssemblyDependency[]? Dependency;
+        public AssemblyDependency?[]? Dependency;
 #endif
 
         [XmlElement("file")]
 #if NET48
         public AssemblyFile[] File;
 #else
-        public AssemblyFile[]? File;
+        public AssemblyFile?[]? File;
 #endif
 
         [XmlElement("clrClass")]
 #if NET48
         public AssemblyCommonLanguageRuntimeClass[] CLRClass;
 #else
-        public AssemblyCommonLanguageRuntimeClass[]? CLRClass;
+        public AssemblyCommonLanguageRuntimeClass?[]? CLRClass;
 #endif
 
         [XmlElement("clrSurrogate")]
 #if NET48
         public AssemblyCommonLanguageSurrogateClass[] CLRSurrogate;
 #else
-        public AssemblyCommonLanguageSurrogateClass[]? CLRSurrogate;
+        public AssemblyCommonLanguageSurrogateClass?[]? CLRSurrogate;
 #endif
 
         #endregion
@@ -177,7 +177,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyProgID[] ProgIDs;
 #else
-        public AssemblyProgID[]? ProgIDs;
+        public AssemblyProgID?[]? ProgIDs;
 #endif
     }
 
@@ -329,7 +329,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyProgID[] ProgIDs;
 #else
-        public AssemblyProgID[]? ProgIDs;
+        public AssemblyProgID?[]? ProgIDs;
 #endif
     }
 
@@ -390,7 +390,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyBindingRedirect[] BindingRedirect;
 #else
-        public AssemblyBindingRedirect[]? BindingRedirect;
+        public AssemblyBindingRedirect?[]? BindingRedirect;
 #endif
     }
 
@@ -486,28 +486,28 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AssemblyCOMClass[] COMClass;
 #else
-        public AssemblyCOMClass[]? COMClass;
+        public AssemblyCOMClass?[]? COMClass;
 #endif
 
         [XmlElement("comInterfaceProxyStub")]
 #if NET48
         public AssemblyCOMInterfaceProxyStub[] COMInterfaceProxyStub;
 #else
-        public AssemblyCOMInterfaceProxyStub[]? COMInterfaceProxyStub;
+        public AssemblyCOMInterfaceProxyStub?[]? COMInterfaceProxyStub;
 #endif
 
         [XmlElement("typelib")]
 #if NET48
         public AssemblyTypeLib[] Typelib;
 #else
-        public AssemblyTypeLib[]? Typelib;
+        public AssemblyTypeLib?[]? Typelib;
 #endif
 
         [XmlElement("windowClass")]
 #if NET48
         public AssemblyWindowClass[] WindowClass;
 #else
-        public AssemblyWindowClass[]? WindowClass;
+        public AssemblyWindowClass?[]? WindowClass;
 #endif
 
         #endregion

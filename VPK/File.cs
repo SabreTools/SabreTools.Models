@@ -30,7 +30,7 @@ namespace SabreTools.Models.VPK
 #if NET48
         public ArchiveHash[] ArchiveHashes { get; set; }
 #else
-        public ArchiveHash[]? ArchiveHashes { get; set; }
+        public ArchiveHash?[]? ArchiveHashes { get; set; }
 #endif
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace SabreTools.Models.VPK
 #if NET48
         public DirectoryItem[] DirectoryItems { get; set; }
 #else
-        public DirectoryItem[]? DirectoryItems { get; set; }
+        public DirectoryItem?[]? DirectoryItems { get; set; }
 #endif
     }
 }

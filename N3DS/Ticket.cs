@@ -220,7 +220,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public Certificate[] CertificateChain;
 #else
-        public Certificate[]? CertificateChain;
+        public Certificate?[]? CertificateChain;
 #endif
     }
 }

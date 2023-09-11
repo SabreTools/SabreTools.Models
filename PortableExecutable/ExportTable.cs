@@ -34,7 +34,7 @@
 #if NET48
         public ExportAddressTableEntry[] ExportAddressTable;
 #else
-        public ExportAddressTableEntry[]? ExportAddressTable;
+        public ExportAddressTableEntry?[]? ExportAddressTable;
 #endif
 
         /// <summary>

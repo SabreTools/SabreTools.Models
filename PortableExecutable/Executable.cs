@@ -59,7 +59,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public SectionHeader[] SectionTable { get; set; }
 #else
-        public SectionHeader[]? SectionTable { get; set; }
+        public SectionHeader?[]? SectionTable { get; set; }
 #endif
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public COFFSymbolTableEntry[] COFFSymbolTable { get; set; }
 #else
-        public COFFSymbolTableEntry[]? COFFSymbolTable { get; set; }
+        public COFFSymbolTableEntry?[]? COFFSymbolTable { get; set; }
 #endif
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public AttributeCertificateTableEntry[] AttributeCertificateTable { get; set; }
 #else
-        public AttributeCertificateTableEntry[]? AttributeCertificateTable { get; set; }
+        public AttributeCertificateTableEntry?[]? AttributeCertificateTable { get; set; }
 #endif
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public BaseRelocationBlock[] BaseRelocationTable { get; set; }
 #else
-        public BaseRelocationBlock[]? BaseRelocationTable { get; set; }
+        public BaseRelocationBlock?[]? BaseRelocationTable { get; set; }
 #endif
 
         /// <summary>

@@ -20,7 +20,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public MessageResourceBlock[] Blocks;
 #else
-        public MessageResourceBlock[]? Blocks;
+        public MessageResourceBlock?[]? Blocks;
 #endif
 
         /// <summary>

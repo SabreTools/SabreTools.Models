@@ -21,7 +21,7 @@ namespace SabreTools.Models.Quantum
 #if NET48
         public FileDescriptor[] FileList { get; set; }
 #else
-        public FileDescriptor[]? FileList { get; set; }
+        public FileDescriptor?[]? FileList { get; set; }
 #endif
 
         /// <summary>

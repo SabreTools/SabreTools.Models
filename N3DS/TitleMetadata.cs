@@ -167,7 +167,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public ContentInfoRecord[] ContentInfoRecords;
 #else
-        public ContentInfoRecord[]? ContentInfoRecords;
+        public ContentInfoRecord?[]? ContentInfoRecords;
 #endif
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public ContentChunkRecord[] ContentChunkRecords;
 #else
-        public ContentChunkRecord[]? ContentChunkRecords;
+        public ContentChunkRecord?[]? ContentChunkRecords;
 #endif
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public Certificate[] CertificateChain;
 #else
-        public Certificate[]? CertificateChain;
+        public Certificate?[]? CertificateChain;
 #endif
     }
 }

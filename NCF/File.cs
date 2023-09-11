@@ -32,7 +32,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public DirectoryEntry[] DirectoryEntries { get; set; }
 #else
-        public DirectoryEntry[]? DirectoryEntries { get; set; }
+        public DirectoryEntry?[]? DirectoryEntries { get; set; }
 #endif
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public DirectoryInfo1Entry[] DirectoryInfo1Entries { get; set; }
 #else
-        public DirectoryInfo1Entry[]? DirectoryInfo1Entries { get; set; }
+        public DirectoryInfo1Entry?[]? DirectoryInfo1Entries { get; set; }
 #endif
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public DirectoryInfo2Entry[] DirectoryInfo2Entries { get; set; }
 #else
-        public DirectoryInfo2Entry[]? DirectoryInfo2Entries { get; set; }
+        public DirectoryInfo2Entry?[]? DirectoryInfo2Entries { get; set; }
 #endif
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public DirectoryCopyEntry[] DirectoryCopyEntries { get; set; }
 #else
-        public DirectoryCopyEntry[]? DirectoryCopyEntries { get; set; }
+        public DirectoryCopyEntry?[]? DirectoryCopyEntries { get; set; }
 #endif
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public DirectoryLocalEntry[] DirectoryLocalEntries { get; set; }
 #else
-        public DirectoryLocalEntry[]? DirectoryLocalEntries { get; set; }
+        public DirectoryLocalEntry?[]? DirectoryLocalEntries { get; set; }
 #endif
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public UnknownEntry[] UnknownEntries { get; set; }
 #else
-        public UnknownEntry[]? UnknownEntries { get; set; }
+        public UnknownEntry?[]? UnknownEntries { get; set; }
 #endif
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public ChecksumMapEntry[] ChecksumMapEntries { get; set; }
 #else
-        public ChecksumMapEntry[]? ChecksumMapEntries { get; set; }
+        public ChecksumMapEntry?[]? ChecksumMapEntries { get; set; }
 #endif
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace SabreTools.Models.NCF
 #if NET48
         public ChecksumEntry[] ChecksumEntries { get; set; }
 #else
-        public ChecksumEntry[]? ChecksumEntries { get; set; }
+        public ChecksumEntry?[]? ChecksumEntries { get; set; }
 #endif
     }
 }

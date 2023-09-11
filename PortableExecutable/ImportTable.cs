@@ -26,7 +26,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public ImportDirectoryTableEntry[] ImportDirectoryTable;
 #else
-        public ImportDirectoryTableEntry[]? ImportDirectoryTable;
+        public ImportDirectoryTableEntry?[]? ImportDirectoryTable;
 #endif
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public HintNameTableEntry[] HintNameTable;
 #else
-        public HintNameTableEntry[]? HintNameTable;
+        public HintNameTableEntry?[]? HintNameTable;
 #endif
     }
 }

@@ -48,7 +48,7 @@
 #if NET48
         public StringData[] Children;
 #else
-        public StringData[]? Children;
+        public StringData?[]? Children;
 #endif
     }
 }

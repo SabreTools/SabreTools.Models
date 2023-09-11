@@ -49,7 +49,7 @@
 #if NET48
         public BaseRelocationTypeOffsetFieldEntry[] TypeOffsetFieldEntries;
 #else
-        public BaseRelocationTypeOffsetFieldEntry[]? TypeOffsetFieldEntries;
+        public BaseRelocationTypeOffsetFieldEntry?[]? TypeOffsetFieldEntries;
 #endif
     }
 }

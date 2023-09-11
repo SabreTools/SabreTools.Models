@@ -111,7 +111,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public COFFRelocation[] COFFRelocations;
 #else
-        public COFFRelocation[]? COFFRelocations;
+        public COFFRelocation?[]? COFFRelocations;
 #endif
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public COFFLineNumber[] COFFLineNumbers;
 #else
-        public COFFLineNumber[]? COFFLineNumbers;
+        public COFFLineNumber?[]? COFFLineNumbers;
 #endif
     }
 }

@@ -60,7 +60,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public ResourceDirectoryEntry[] Entries;
 #else
-        public ResourceDirectoryEntry[]? Entries;
+        public ResourceDirectoryEntry?[]? Entries;
 #endif
     }
 }

@@ -70,7 +70,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public SecuROMAddDEntry[] Entries;
 #else
-        public SecuROMAddDEntry[]? Entries;
+        public SecuROMAddDEntry?[]? Entries;
 #endif
     }
 }

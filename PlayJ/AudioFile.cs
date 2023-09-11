@@ -55,7 +55,7 @@ namespace SabreTools.Models.PlayJ
 #if NET48
         public DataFile[] DataFiles { get; set; }
 #else
-        public DataFile[]? DataFiles { get; set; }
+        public DataFile?[]? DataFiles { get; set; }
 #endif
 
         // After the data files is a block starting with 0x00000001

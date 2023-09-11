@@ -21,7 +21,7 @@
 #if NET48
         public RelocationRecord[] RelocationRecords;
 #else
-        public RelocationRecord[]? RelocationRecords;
+        public RelocationRecord?[]? RelocationRecords;
 #endif
     }
 }

@@ -21,7 +21,7 @@ namespace SabreTools.Models.PAK
 #if NET48
         public DirectoryItem[] DirectoryItems { get; set; }
 #else
-        public DirectoryItem[]? DirectoryItems { get; set; }
+        public DirectoryItem?[]? DirectoryItems { get; set; }
 #endif
     }
 }

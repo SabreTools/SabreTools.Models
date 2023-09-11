@@ -21,7 +21,7 @@ namespace SabreTools.Models.XZP
 #if NET48
         public DirectoryEntry[] DirectoryEntries { get; set; }
 #else
-        public DirectoryEntry[]? DirectoryEntries { get; set; }
+        public DirectoryEntry?[]? DirectoryEntries { get; set; }
 #endif
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace SabreTools.Models.XZP
 #if NET48
         public DirectoryEntry[] PreloadDirectoryEntries { get; set; }
 #else
-        public DirectoryEntry[]? PreloadDirectoryEntries { get; set; }
+        public DirectoryEntry?[]? PreloadDirectoryEntries { get; set; }
 #endif
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace SabreTools.Models.XZP
 #if NET48
         public DirectoryMapping[] PreloadDirectoryMappings { get; set; }
 #else
-        public DirectoryMapping[]? PreloadDirectoryMappings { get; set; }
+        public DirectoryMapping?[]? PreloadDirectoryMappings { get; set; }
 #endif
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace SabreTools.Models.XZP
 #if NET48
         public DirectoryItem[] DirectoryItems { get; set; }
 #else
-        public DirectoryItem[]? DirectoryItems { get; set; }
+        public DirectoryItem?[]? DirectoryItems { get; set; }
 #endif
 
         /// <summary>

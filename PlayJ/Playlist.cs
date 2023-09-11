@@ -20,7 +20,7 @@ namespace SabreTools.Models.PlayJ
 #if NET48
         public AudioFile[] AudioFiles { get; set; }
 #else
-        public AudioFile[]? AudioFiles { get; set; }
+        public AudioFile?[]? AudioFiles { get; set; }
 #endif
     }
 }

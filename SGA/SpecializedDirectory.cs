@@ -37,7 +37,7 @@ namespace SabreTools.Models.SGA
 #if NET48
         public TSection[] Sections { get; set; }
 #else
-        public TSection[]? Sections { get; set; }
+        public TSection?[]? Sections { get; set; }
 #endif
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace SabreTools.Models.SGA
 #if NET48
         public TFolder[] Folders { get; set; }
 #else
-        public TFolder[]? Folders { get; set; }
+        public TFolder?[]? Folders { get; set; }
 #endif
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace SabreTools.Models.SGA
 #if NET48
         public TFile[] Files { get; set; }
 #else
-        public TFile[]? Files { get; set; }
+        public TFile?[]? Files { get; set; }
 #endif
 
         /// <summary>

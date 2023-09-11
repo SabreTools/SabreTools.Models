@@ -21,7 +21,7 @@ namespace SabreTools.Models.PFF
 #if NET48
         public Segment[] Segments { get; set; }
 #else
-        public Segment[]? Segments { get; set; }
+        public Segment?[]? Segments { get; set; }
 #endif
 
         /// <summary>

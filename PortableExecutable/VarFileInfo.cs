@@ -43,7 +43,7 @@
 #if NET48
         public VarData[] Children;
 #else
-        public VarData[]? Children;
+        public VarData?[]? Children;
 #endif
     }
 }

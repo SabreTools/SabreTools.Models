@@ -37,7 +37,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public SegmentTableEntry[] SegmentTable { get; set; }
 #else
-        public SegmentTableEntry[]? SegmentTable { get; set; }
+        public SegmentTableEntry?[]? SegmentTable { get; set; }
 #endif
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public ResidentNameTableEntry[] ResidentNameTable { get; set; }
 #else
-        public ResidentNameTableEntry[]? ResidentNameTable { get; set; }
+        public ResidentNameTableEntry?[]? ResidentNameTable { get; set; }
 #endif
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public ModuleReferenceTableEntry[] ModuleReferenceTable { get; set; }
 #else
-        public ModuleReferenceTableEntry[]? ModuleReferenceTable { get; set; }
+        public ModuleReferenceTableEntry?[]? ModuleReferenceTable { get; set; }
 #endif
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public EntryTableBundle[] EntryTable { get; set; }
 #else
-        public EntryTableBundle[]? EntryTable { get; set; }
+        public EntryTableBundle?[]? EntryTable { get; set; }
 #endif
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace SabreTools.Models.NewExecutable
 #if NET48
         public NonResidentNameTableEntry[] NonResidentNameTable { get; set; }
 #else
-        public NonResidentNameTableEntry[]? NonResidentNameTable { get; set; }
+        public NonResidentNameTableEntry?[]? NonResidentNameTable { get; set; }
 #endif
     }
 }

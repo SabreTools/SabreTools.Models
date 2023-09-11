@@ -32,7 +32,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public Certificate[] CertificateChain { get; set; }
 #else
-        public Certificate[]? CertificateChain { get; set; }
+        public Certificate?[]? CertificateChain { get; set; }
 #endif
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace SabreTools.Models.N3DS
 #if NET48
         public NCCHHeader[] Partitions { get; set; }
 #else
-        public NCCHHeader[]? Partitions { get; set; }
+        public NCCHHeader?[]? Partitions { get; set; }
 #endif
 
         /// <summary>

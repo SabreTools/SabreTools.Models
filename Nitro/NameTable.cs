@@ -18,7 +18,7 @@ namespace SabreTools.Models.Nitro
 #if NET48
         public FolderAllocationTableEntry[] FolderAllocationTable;
 #else
-        public FolderAllocationTableEntry[]? FolderAllocationTable;
+        public FolderAllocationTableEntry?[]? FolderAllocationTable;
 #endif
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace SabreTools.Models.Nitro
 #if NET48
         public NameListEntry[] NameList;
 #else
-        public NameListEntry[]? NameList;
+        public NameListEntry?[]? NameList;
 #endif
     }
 }
