@@ -13,7 +13,7 @@ namespace SabreTools.Models.ClrMamePro
 #if NET48
         public GameBase[] Game { get; set; }
 #else
-        public GameBase[]? Game { get; set; }
+        public GameBase?[]? Game { get; set; }
 #endif
 
         #region DO NOT USE IN PRODUCTION

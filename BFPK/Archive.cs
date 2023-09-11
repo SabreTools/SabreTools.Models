@@ -21,7 +21,7 @@
 #if NET48
         public FileEntry[] Files { get; set; }
 #else
-        public FileEntry[]? Files { get; set; }
+        public FileEntry?[]? Files { get; set; }
 #endif
     }
 }

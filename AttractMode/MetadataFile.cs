@@ -15,7 +15,7 @@ namespace SabreTools.Models.AttractMode
 #if NET48
         public Row[] Row { get; set; }
 #else
-        public Row[]? Row { get; set; }
+        public Row?[]? Row { get; set; }
 #endif
     }
 }

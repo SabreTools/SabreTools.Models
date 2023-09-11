@@ -28,7 +28,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public ParentalManagementMasksTableEntry[] Entries;
 #else
-        public ParentalManagementMasksTableEntry[]? Entries;
+        public ParentalManagementMasksTableEntry?[]? Entries;
 #endif
 
         /// <summary>

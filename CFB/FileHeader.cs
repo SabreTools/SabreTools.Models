@@ -129,7 +129,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public SectorNumber[] DIFAT;
 #else
-        public SectorNumber[]? DIFAT;
+        public SectorNumber?[]? DIFAT;
 #endif
     }
 }

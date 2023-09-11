@@ -11,7 +11,7 @@ namespace SabreTools.Models.Compression.Quantum
 #if NET48
         public ModelSymbol[] Symbols;
 #else
-        public ModelSymbol[]? Symbols;
+        public ModelSymbol?[]? Symbols;
 #endif
 
 #if NET48

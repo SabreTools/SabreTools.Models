@@ -27,7 +27,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public HostRevocationSignatureBlock[] SignatureBlocks;
 #else
-        public HostRevocationSignatureBlock[]? SignatureBlocks;
+        public HostRevocationSignatureBlock?[]? SignatureBlocks;
 #endif
     }
 }

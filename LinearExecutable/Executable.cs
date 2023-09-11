@@ -34,7 +34,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ObjectTableEntry[] ObjectTable { get; set; }
 #else
-        public ObjectTableEntry[]? ObjectTable { get; set; }
+        public ObjectTableEntry?[]? ObjectTable { get; set; }
 #endif
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ObjectPageMapEntry[] ObjectPageMap { get; set; }
 #else
-        public ObjectPageMapEntry[]? ObjectPageMap { get; set; }
+        public ObjectPageMapEntry?[]? ObjectPageMap { get; set; }
 #endif
 
         // TODO: Object iterate data map table (Undefined)
@@ -54,7 +54,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ResourceTableEntry[] ResourceTable { get; set; }
 #else
-        public ResourceTableEntry[]? ResourceTable { get; set; }
+        public ResourceTableEntry?[]? ResourceTable { get; set; }
 #endif
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ResidentNamesTableEntry[] ResidentNamesTable { get; set; }
 #else
-        public ResidentNamesTableEntry[]? ResidentNamesTable { get; set; }
+        public ResidentNamesTableEntry?[]? ResidentNamesTable { get; set; }
 #endif
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public EntryTableBundle[] EntryTable { get; set; }
 #else
-        public EntryTableBundle[]? EntryTable { get; set; }
+        public EntryTableBundle?[]? EntryTable { get; set; }
 #endif
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ModuleFormatDirectivesTableEntry[] ModuleFormatDirectivesTable { get; set; }
 #else
-        public ModuleFormatDirectivesTableEntry[]? ModuleFormatDirectivesTable { get; set; }
+        public ModuleFormatDirectivesTableEntry?[]? ModuleFormatDirectivesTable { get; set; }
 #endif
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public VerifyRecordDirectiveTableEntry[] VerifyRecordDirectiveTable { get; set; }
 #else
-        public VerifyRecordDirectiveTableEntry[]? VerifyRecordDirectiveTable { get; set; }
+        public VerifyRecordDirectiveTableEntry?[]? VerifyRecordDirectiveTable { get; set; }
 #endif
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public FixupPageTableEntry[] FixupPageTable { get; set; }
 #else
-        public FixupPageTableEntry[]? FixupPageTable { get; set; }
+        public FixupPageTableEntry?[]? FixupPageTable { get; set; }
 #endif
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public FixupRecordTableEntry[] FixupRecordTable { get; set; }
 #else
-        public FixupRecordTableEntry[]? FixupRecordTable { get; set; }
+        public FixupRecordTableEntry?[]? FixupRecordTable { get; set; }
 #endif
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ImportModuleNameTableEntry[] ImportModuleNameTable { get; set; }
 #else
-        public ImportModuleNameTableEntry[]? ImportModuleNameTable { get; set; }
+        public ImportModuleNameTableEntry?[]? ImportModuleNameTable { get; set; }
 #endif
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public ImportModuleProcedureNameTableEntry[] ImportModuleProcedureNameTable { get; set; }
 #else
-        public ImportModuleProcedureNameTableEntry[]? ImportModuleProcedureNameTable { get; set; }
+        public ImportModuleProcedureNameTableEntry?[]? ImportModuleProcedureNameTable { get; set; }
 #endif
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public PerPageChecksumTableEntry[] PerPageChecksumTable { get; set; }
 #else
-        public PerPageChecksumTableEntry[]? PerPageChecksumTable { get; set; }
+        public PerPageChecksumTableEntry?[]? PerPageChecksumTable { get; set; }
 #endif
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace SabreTools.Models.LinearExecutable
 #if NET48
         public NonResidentNamesTableEntry[] NonResidentNamesTable { get; set; }
 #else
-        public NonResidentNamesTableEntry[]? NonResidentNamesTable { get; set; }
+        public NonResidentNamesTableEntry?[]? NonResidentNamesTable { get; set; }
 #endif
 
         // TODO: Non-resident directives data (Undefined)

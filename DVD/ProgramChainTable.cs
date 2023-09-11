@@ -29,7 +29,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public ProgramChainTableEntry[] Entries;
 #else
-        public ProgramChainTableEntry[]? Entries;
+        public ProgramChainTableEntry?[]? Entries;
 #endif
     }
 }

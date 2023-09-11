@@ -28,7 +28,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public CellAddressTableEntry[] Entries;
 #else
-        public CellAddressTableEntry[]? Entries;
+        public CellAddressTableEntry?[]? Entries;
 #endif
     }
 }

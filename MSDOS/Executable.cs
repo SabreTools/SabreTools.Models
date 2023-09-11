@@ -31,7 +31,7 @@ namespace SabreTools.Models.MSDOS
 #if NET48
         public RelocationEntry[] RelocationTable { get; set; }
 #else
-        public RelocationEntry[]? RelocationTable { get; set; }
+        public RelocationEntry?[]? RelocationTable { get; set; }
 #endif
     }
 }

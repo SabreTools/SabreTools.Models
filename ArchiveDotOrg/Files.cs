@@ -10,7 +10,7 @@ namespace SabreTools.Models.ArchiveDotOrg
 #if NET48
         public File[] File { get; set; }
 #else
-        public File[]? File { get; set; }
+        public File?[]? File { get; set; }
 #endif
 
         #region DO NOT USE IN PRODUCTION

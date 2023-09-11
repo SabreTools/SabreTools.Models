@@ -15,7 +15,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public HostRevocationListEntry[] EntryFields;
 #else
-        public HostRevocationListEntry[]? EntryFields;
+        public HostRevocationListEntry?[]? EntryFields;
 #endif
     }
 }

@@ -29,7 +29,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public LanguageUnitTableEntry[] Entries;
 #else
-        public LanguageUnitTableEntry[]? Entries;
+        public LanguageUnitTableEntry?[]? Entries;
 #endif
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public ProgramChainTable[] ProgramChains;
 #else
-        public ProgramChainTable[]? ProgramChains;
+        public ProgramChainTable?[]? ProgramChains;
 #endif
     }
 }

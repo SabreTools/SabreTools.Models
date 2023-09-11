@@ -12,7 +12,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public Record[] Records { get; set; }
 #else
-        public Record[]? Records { get; set; }
+        public Record?[]? Records { get; set; }
 #endif
     }
 }

@@ -28,7 +28,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public TitlesTableEntry[] Entries;
 #else
-        public TitlesTableEntry[]? Entries;
+        public TitlesTableEntry?[]? Entries;
 #endif
     }
 }

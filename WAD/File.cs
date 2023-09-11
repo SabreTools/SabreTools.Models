@@ -21,7 +21,7 @@ namespace SabreTools.Models.WAD
 #if NET48
         public Lump[] Lumps { get; set; }
 #else
-        public Lump[]? Lumps { get; set; }
+        public Lump?[]? Lumps { get; set; }
 #endif
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace SabreTools.Models.WAD
 #if NET48
         public LumpInfo[] LumpInfos { get; set; }
 #else
-        public LumpInfo[]? LumpInfos { get; set; }
+        public LumpInfo?[]? LumpInfos { get; set; }
 #endif
     }
 }

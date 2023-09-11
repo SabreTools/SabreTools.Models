@@ -15,7 +15,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public DriveRevocationListEntry[] EntryFields;
 #else
-        public DriveRevocationListEntry[]? EntryFields;
+        public DriveRevocationListEntry?[]? EntryFields;
 #endif
     }
 }

@@ -37,7 +37,7 @@ namespace SabreTools.Models.DVD
 #if NET48
         public AudioSubPictureAttributesTableEntry[] Entries;
 #else
-        public AudioSubPictureAttributesTableEntry[]? Entries;
+        public AudioSubPictureAttributesTableEntry?[]? Entries;
 #endif
     }
 }

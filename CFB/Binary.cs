@@ -32,7 +32,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public SectorNumber[] FATSectorNumbers { get; set; }
 #else
-        public SectorNumber[]? FATSectorNumbers { get; set; }
+        public SectorNumber?[]? FATSectorNumbers { get; set; }
 #endif
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public SectorNumber[] MiniFATSectorNumbers { get; set; }
 #else
-        public SectorNumber[]? MiniFATSectorNumbers { get; set; }
+        public SectorNumber?[]? MiniFATSectorNumbers { get; set; }
 #endif
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public SectorNumber[] DIFATSectorNumbers { get; set; }
 #else
-        public SectorNumber[]? DIFATSectorNumbers { get; set; }
+        public SectorNumber?[]? DIFATSectorNumbers { get; set; }
 #endif
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public DirectoryEntry[] DirectoryEntries { get; set; }
 #else
-        public DirectoryEntry[]? DirectoryEntries { get; set; }
+        public DirectoryEntry?[]? DirectoryEntries { get; set; }
 #endif
     }
 }

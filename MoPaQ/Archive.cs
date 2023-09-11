@@ -56,7 +56,7 @@
 #if NET48
         public HashEntry[] HashTable { get; set; }
 #else
-        public HashEntry[]? HashTable { get; set; }
+        public HashEntry?[]? HashTable { get; set; }
 #endif
 
         /// <summary>
@@ -65,7 +65,7 @@
 #if NET48
         public BlockEntry[] BlockTable { get; set; }
 #else
-        public BlockEntry[]? BlockTable { get; set; }
+        public BlockEntry?[]? BlockTable { get; set; }
 #endif
 
         /// <summary>

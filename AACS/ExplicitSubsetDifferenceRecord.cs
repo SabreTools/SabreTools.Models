@@ -9,7 +9,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public SubsetDifference[] SubsetDifferences;
 #else
-        public SubsetDifference[]? SubsetDifferences;
+        public SubsetDifference?[]? SubsetDifferences;
 #endif
     }
 }

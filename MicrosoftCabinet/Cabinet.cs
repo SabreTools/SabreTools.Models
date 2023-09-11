@@ -24,7 +24,7 @@
 #if NET48
         public CFFOLDER[] Folders { get; set; }
 #else
-        public CFFOLDER[]? Folders { get; set; }
+        public CFFOLDER?[]? Folders { get; set; }
 #endif
 
         /// <summary>
@@ -33,7 +33,7 @@
 #if NET48
         public CFFILE[] Files { get; set; }
 #else
-        public CFFILE[]? Files { get; set; }
+        public CFFILE?[]? Files { get; set; }
 #endif
     }
 }

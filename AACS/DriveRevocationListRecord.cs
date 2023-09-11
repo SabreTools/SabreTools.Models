@@ -24,7 +24,7 @@ namespace SabreTools.Models.AACS
 #if NET48
         public DriveRevocationSignatureBlock[] SignatureBlocks;
 #else
-        public DriveRevocationSignatureBlock[]? SignatureBlocks;
+        public DriveRevocationSignatureBlock?[]? SignatureBlocks;
 #endif
     }
 }

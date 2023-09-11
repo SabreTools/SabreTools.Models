@@ -62,7 +62,7 @@ namespace SabreTools.Models.MicrosoftCabinet
 #if NET48
         public CFDATA[] DataBlocks;
 #else
-        public CFDATA[]? DataBlocks;
+        public CFDATA?[]? DataBlocks;
 #endif
     }
 }

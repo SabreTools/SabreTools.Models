@@ -86,7 +86,7 @@ namespace SabreTools.Models.CFB
 #if NET48
         public Variant[] Properties;
 #else
-        public Variant[]? Properties;
+        public Variant?[]? Properties;
 #endif
 
         #endregion

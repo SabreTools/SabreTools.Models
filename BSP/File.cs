@@ -21,7 +21,7 @@ namespace SabreTools.Models.BSP
 #if NET48
         public Lump[] Lumps { get; set; }
 #else
-        public Lump[]? Lumps { get; set; }
+        public Lump?[]? Lumps { get; set; }
 #endif
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace SabreTools.Models.BSP
 #if NET48
         public Texture[] Textures { get; set; }
 #else
-        public Texture[]? Textures { get; set; }
+        public Texture?[]? Textures { get; set; }
 #endif
     }
 }
