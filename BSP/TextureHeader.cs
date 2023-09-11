@@ -6,15 +6,15 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Texture count
         /// </summary>
-        public uint TextureCount;
+        public uint TextureCount { get; set; }
 
         /// <summary>
         /// Offsets
         /// </summary>
 #if NET48
-        public uint[] Offsets;
+        public uint[] Offsets { get; set; }
 #else
-        public uint[]? Offsets;
+        public uint[]? Offsets { get; set; }
 #endif
     }
 }

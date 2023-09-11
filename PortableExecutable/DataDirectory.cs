@@ -19,11 +19,11 @@ namespace SabreTools.Models.PortableExecutable
         /// is the address of the table relative to the base address of the image when
         /// the table is loaded.
         /// </summary>
-        public uint VirtualAddress;
+        public uint VirtualAddress { get; set; }
 
         /// <summary>
         /// The second field gives the size in bytes.
         /// </summary>
-        public uint Size;
+        public uint Size { get; set; }
     }
 }

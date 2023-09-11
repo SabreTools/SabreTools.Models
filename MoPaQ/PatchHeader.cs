@@ -15,22 +15,22 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// 'PTCH'
         /// </summary>
-        public uint PatchSignature { get; private set; }
+        public uint PatchSignature { get; set; }
 
         /// <summary>
         /// Size of the entire patch (decompressed)
         /// </summary>
-        public int SizeOfPatchData { get; private set; }
+        public int SizeOfPatchData { get; set; }
 
         /// <summary>
         /// Size of the file before patch
         /// </summary>
-        public int SizeBeforePatch { get; private set; }
+        public int SizeBeforePatch { get; set; }
 
         /// <summary>
         /// Size of file after patch
         /// </summary>
-        public int SizeAfterPatch { get; private set; }
+        public int SizeAfterPatch { get; set; }
 
         #endregion
 
@@ -39,29 +39,29 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// 'MD5_'
         /// </summary>
-        public uint Md5Signature { get; private set; }
+        public uint Md5Signature { get; set; }
 
         /// <summary>
         /// Size of the MD5 block, including the signature and size itself
         /// </summary>
-        public int Md5BlockSize { get; private set; }
+        public int Md5BlockSize { get; set; }
 
         /// <summary>
         /// MD5 of the original (unpached) file
         /// </summary>
 #if NET48
-        public byte[] Md5BeforePatch { get; private set; } = new byte[0x10];
+        public byte[] Md5BeforePatch { get; set; } = new byte[0x10];
 #else
-        public byte[]? Md5BeforePatch { get; private set; } = new byte[0x10];
+        public byte[]? Md5BeforePatch { get; set; } = new byte[0x10];
 #endif
 
         /// <summary>
         /// MD5 of the patched file
         /// </summary>
 #if NET48
-        public byte[] Md5AfterPatch { get; private set; } = new byte[0x10];
+        public byte[] Md5AfterPatch { get; set; } = new byte[0x10];
 #else
-        public byte[]? Md5AfterPatch { get; private set; } = new byte[0x10];
+        public byte[]? Md5AfterPatch { get; set; } = new byte[0x10];
 #endif
 
         #endregion
@@ -71,17 +71,17 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// 'XFRM'
         /// </summary>
-        public uint XfrmSignature { get; private set; }
+        public uint XfrmSignature { get; set; }
 
         /// <summary>
         /// Size of the XFRM block, includes XFRM header and patch data
         /// </summary>
-        public int XfrmBlockSize { get; private set; }
+        public int XfrmBlockSize { get; set; }
 
         /// <summary>
         /// Type of patch ('BSD0' or 'COPY')
         /// </summary>
-        public PatchType PatchType { get; private set; }
+        public PatchType PatchType { get; set; }
 
         #endregion
 
@@ -90,22 +90,22 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// 'BSDIFF40' signature
         /// </summary>
-        public ulong BsdiffSignature { get; private set; }
+        public ulong BsdiffSignature { get; set; }
 
         /// <summary>
         /// Size of CTRL block (in bytes)
         /// </summary>
-        public long CtrlBlockSize { get; private set; }
+        public long CtrlBlockSize { get; set; }
 
         /// <summary>
         /// Size of DATA block (in bytes)
         /// </summary>
-        public long DataBlockSize { get; private set; }
+        public long DataBlockSize { get; set; }
 
         /// <summary>
         /// Size of file after applying the patch (in bytes)
         /// </summary>
-        public long NewFileSize { get; private set; }
+        public long NewFileSize { get; set; }
 
         // TODO: Fill rest of data from http://zezula.net/en/mpq/patchfiles.html
         // CTRL block
@@ -120,9 +120,9 @@ namespace SabreTools.Models.MoPaQ
         /// File data are simply replaced by the data in the patch.
         /// </summary>
 #if NET48
-        public byte[] PatchDataCopy { get; private set; }
+        public byte[] PatchDataCopy { get; set; }
 #else
-        public byte[]? PatchDataCopy { get; private set; }
+        public byte[]? PatchDataCopy { get; set; }
 #endif
 
         #endregion

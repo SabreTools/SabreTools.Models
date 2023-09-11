@@ -26,7 +26,7 @@
         /// are either moveable or refer to the same fixed segment. A zero
         /// value in this field indicates the end of the entry table.
         /// </summary>
-        public byte EntryCount;
+        public byte EntryCount { get; set; }
 
         /// <summary>
         /// Segment indicator for this bundle. This defines the type of
@@ -41,19 +41,19 @@
         ///          segment number for the entry points. A moveable segment
         ///          entry is 6 bytes long.
         /// </summary>
-        public byte SegmentIndicator;
+        public byte SegmentIndicator { get; set; }
 
         #region Fixed Segment Entry
 
         /// <summary>
         /// Flag word.
         /// </summary>
-        public FixedSegmentEntryFlag FixedFlagWord;
+        public FixedSegmentEntryFlag FixedFlagWord { get; set; }
 
         /// <summary>
         /// Offset within segment to entry point.
         /// </summary>
-        public ushort FixedOffset;
+        public ushort FixedOffset { get; set; }
 
         #endregion
 
@@ -62,22 +62,22 @@
         /// <summary>
         /// Flag word.
         /// </summary>
-        public MoveableSegmentEntryFlag MoveableFlagWord;
+        public MoveableSegmentEntryFlag MoveableFlagWord { get; set; }
 
         /// <summary>
         /// INT 3FH.
         /// </summary>
-        public ushort MoveableReserved;
+        public ushort MoveableReserved { get; set; }
 
         /// <summary>
         /// Segment number.
         /// </summary>
-        public byte MoveableSegmentNumber;
+        public byte MoveableSegmentNumber { get; set; }
 
         /// <summary>
         /// Offset within segment to entry point.
         /// </summary>
-        public ushort MoveableOffset;
+        public ushort MoveableOffset { get; set; }
 
         #endregion
     }

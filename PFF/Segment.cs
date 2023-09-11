@@ -9,42 +9,42 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// Deleted flag
         /// </summary>
-        public uint Deleted;
+        public uint Deleted { get; set; }
 
         /// <summary>
         /// File location
         /// </summary>
-        public uint FileLocation;
+        public uint FileLocation { get; set; }
 
         /// <summary>
         /// File size
         /// </summary>
-        public uint FileSize;
+        public uint FileSize { get; set; }
 
         /// <summary>
         /// Packed date
         /// </summary>
-        public uint PackedDate;
+        public uint PackedDate { get; set; }
 
         /// <summary>
         /// File name
         /// </summary>
 #if NET48
-        public string FileName;
+        public string FileName { get; set; }
 #else
-        public string? FileName;
+        public string? FileName { get; set; }
 #endif
 
         /// <summary>
         /// Modified date
         /// </summary>
         /// <remarks>Only for versions 3 and 4</remarks>
-        public uint ModifiedDate;
+        public uint ModifiedDate { get; set; }
 
         /// <summary>
         /// Compression level
         /// </summary>
         /// <remarks>Only for version 4</remarks>
-        public uint CompressionLevel;
+        public uint CompressionLevel { get; set; }
     }
 }

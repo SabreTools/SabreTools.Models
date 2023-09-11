@@ -12,7 +12,7 @@
         /// address is not an RVA; it is an address for which there should be a base
         /// relocation in the .reloc section.
         /// </summary>
-        public uint RawDataStartVA_PE32;
+        public uint RawDataStartVA_PE32 { get; set; }
 
         /// <summary>
         /// The starting address of the TLS template. The template is a block of data
@@ -21,7 +21,7 @@
         /// address is not an RVA; it is an address for which there should be a base
         /// relocation in the .reloc section.
         /// </summary>
-        public ulong RawDataStartVA_PE32Plus;
+        public ulong RawDataStartVA_PE32Plus { get; set; }
 
         #endregion
 
@@ -31,13 +31,13 @@
         /// The address of the last byte of the TLS, except for the zero fill. As
         /// with the Raw Data Start VA field, this is a VA, not an RVA.
         /// </summary>
-        public uint RawDataEndVA_PE32;
+        public uint RawDataEndVA_PE32 { get; set; }
 
         /// <summary>
         /// The address of the last byte of the TLS, except for the zero fill. As
         /// with the Raw Data Start VA field, this is a VA, not an RVA.
         /// </summary>
-        public ulong RawDataEndVA_PE32Plus;
+        public ulong RawDataEndVA_PE32Plus { get; set; }
 
         #endregion
 
@@ -48,14 +48,14 @@
         /// location is in an ordinary data section, so it can be given a symbolic
         /// name that is accessible to the program.
         /// </summary>
-        public uint AddressOfIndex_PE32;
+        public uint AddressOfIndex_PE32 { get; set; }
 
         /// <summary>
         /// The location to receive the TLS index, which the loader assigns. This
         /// location is in an ordinary data section, so it can be given a symbolic
         /// name that is accessible to the program.
         /// </summary>
-        public ulong AddressOfIndex_PE32Plus;
+        public ulong AddressOfIndex_PE32Plus { get; set; }
 
         #endregion
 
@@ -66,14 +66,14 @@
         /// null-terminated, so if no callback function is supported, this field
         /// points to 4 bytes set to zero.
         /// </summary>
-        public uint AddressOfCallbacks_PE32;
+        public uint AddressOfCallbacks_PE32 { get; set; }
 
         /// <summary>
         /// The pointer to an array of TLS callback functions. The array is
         /// null-terminated, so if no callback function is supported, this field
         /// points to 4 bytes set to zero.
         /// </summary>
-        public ulong AddressOfCallbacks_PE32Plus;
+        public ulong AddressOfCallbacks_PE32Plus { get; set; }
 
         #endregion
 
@@ -84,13 +84,13 @@
         /// The zero fill is the amount of data that comes after the initialized
         /// nonzero data.
         /// </summary>
-        public uint SizeOfZeroFill;
+        public uint SizeOfZeroFill { get; set; }
 
         /// <summary>
         /// The four bits [23:20] describe alignment info. Possible values are those
         /// defined as IMAGE_SCN_ALIGN_*, which are also used to describe alignment
         /// of section in object files. The other 28 bits are reserved for future use.
         /// </summary>
-        public uint Characteristics;
+        public uint Characteristics { get; set; }
     }
 }

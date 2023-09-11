@@ -7,15 +7,15 @@
         /// Descriptors
         /// </summary>
 #if NET48
-        public byte[] Descriptors;
+        public byte[] Descriptors { get; set; }
 #else
-        public byte[]? Descriptors;
+        public byte[]? Descriptors { get; set; }
 #endif
 
         /// <summary>
         /// ARM9 Descriptor Version. Originally this value had to be ≥ 2.
         /// Starting with 9.3.0-X this value has to be either value 2 or value 3.
         /// </summary>
-        public byte DescriptorVersion;
+        public byte DescriptorVersion { get; set; }
     }
 }

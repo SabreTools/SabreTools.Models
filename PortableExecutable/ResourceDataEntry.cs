@@ -16,32 +16,32 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// The address of a unit of resource data in the Resource Data area.
         /// </summary>
-        public uint DataRVA;
+        public uint DataRVA { get; set; }
 
         /// <summary>
         /// The size, in bytes, of the resource data that is pointed to by the
         /// Data RVA field.
         /// </summary>
-        public uint Size;
+        public uint Size { get; set; }
 
         /// <summary>
         /// The resource data that is pointed to by the Data RVA field.
         /// </summary>
 #if NET48
-        public byte[] Data;
+        public byte[] Data { get; set; }
 #else
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
 #endif
 
         /// <summary>
         /// The code page that is used to decode code point values within the
         /// resource data. Typically, the code page would be the Unicode code page.
         /// </summary>
-        public uint Codepage;
+        public uint Codepage { get; set; }
 
         /// <summary>
         /// Reserved, must be 0.
         /// </summary>
-        public uint Reserved;
+        public uint Reserved { get; set; }
     }
 }

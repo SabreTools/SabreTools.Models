@@ -10,13 +10,13 @@
         /// Stored in the high 4 bits of the WORD, a value that indicates the type
         /// of base relocation to be applied. For more information, see <see cref="BaseRelocationTypes"/>
         /// </summary>
-        public BaseRelocationTypes BaseRelocationType;
+        public BaseRelocationTypes BaseRelocationType { get; set; }
 
         /// <summary>
         /// Stored in the remaining 12 bits of the WORD, an offset from the starting
         /// address that was specified in the Page RVA field for the block. This
         /// offset specifies where the base relocation is to be applied.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
     }
 }

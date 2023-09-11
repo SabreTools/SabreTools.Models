@@ -27,7 +27,7 @@ namespace SabreTools.Models.PortableExecutable
         /// For example, if the first byte of the section has an address of 0x10,
         /// the third byte has an address of 0x12.
         /// </summary>
-        public uint VirtualAddress;
+        public uint VirtualAddress { get; set; }
 
         /// <summary>
         /// A zero-based index into the symbol table. This symbol gives the address
@@ -35,12 +35,12 @@ namespace SabreTools.Models.PortableExecutable
         /// storage class, then the symbol's address is the address with the first
         /// section of the same name.
         /// </summary>
-        public uint SymbolTableIndex;
+        public uint SymbolTableIndex { get; set; }
 
         /// <summary>
         /// A value that indicates the kind of relocation that should be performed.
         /// Valid relocation types depend on machine type.
         /// </summary>
-        public RelocationType TypeIndicator;
+        public RelocationType TypeIndicator { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace SabreTools.Models.AACS
         /// controlling access to AACS Content on pre- recorded media. In
         /// this case, the device shall not use the KCD.
         /// </summary>
-        public MediaKeyBlockType MediaKeyBlockType;
+        public MediaKeyBlockType MediaKeyBlockType { get; set; }
 
         /// <summary>
         /// The Version Number is a 32-bit unsigned integer. Each time the
@@ -27,6 +27,6 @@ namespace SabreTools.Models.AACS
         /// Version Numbers begin at 1; 0 is a special value used for test
         /// Media Key Blocks.
         /// </summary>
-        public uint VersionNumber;
+        public uint VersionNumber { get; set; }
     }
 }

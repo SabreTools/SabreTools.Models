@@ -10,16 +10,16 @@
         /// <summary>
         /// The number of individual fonts associated with this resource.
         /// </summary>
-        public ushort NumberOfFonts;
+        public ushort NumberOfFonts { get; set; }
 
         /// <summary>
         /// A structure that contains a unique ordinal identifier for each font in the resource. The DE
         /// member is a placeholder for the variable-length array of DIRENTRY structures.
         /// </summary>
 #if NET48
-        public DirEntry[] DE;
+        public DirEntry[] DE { get; set; }
 #else
-        public DirEntry?[]? DE;
+        public DirEntry?[]? DE { get; set; }
 #endif
     }
 }

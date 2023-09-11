@@ -4,13 +4,13 @@ namespace SabreTools.Models.WAD
     public sealed class Header
     {
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
         
-        public uint LumpCount;
+        public uint LumpCount { get; set; }
         
-        public uint LumpOffset;
+        public uint LumpOffset { get; set; }
     }
 }

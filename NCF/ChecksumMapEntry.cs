@@ -6,11 +6,11 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Number of checksums.
         /// </summary>
-        public uint ChecksumCount;
+        public uint ChecksumCount { get; set; }
 
         /// <summary>
         /// Index of first checksum.
         /// </summary>
-        public uint FirstChecksumIndex;
+        public uint FirstChecksumIndex { get; set; }
     }
 }

@@ -12,24 +12,24 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// The number of MESSAGE_RESOURCE_BLOCK structures.
         /// </summary>
-        public uint NumberOfBlocks;
+        public uint NumberOfBlocks { get; set; }
 
         /// <summary>
         /// An array of structures. The array is the size indicated by the NumberOfBlocks member.
         /// </summary>
 #if NET48
-        public MessageResourceBlock[] Blocks;
+        public MessageResourceBlock[] Blocks { get; set; }
 #else
-        public MessageResourceBlock?[]? Blocks;
+        public MessageResourceBlock?[]? Blocks { get; set; }
 #endif
 
         /// <summary>
         /// Message resource entries
         /// </summary>
 #if NET48
-        public Dictionary<uint, MessageResourceEntry> Entries;
+        public Dictionary<uint, MessageResourceEntry> Entries { get; set; }
 #else
-        public Dictionary<uint, MessageResourceEntry?>? Entries;
+        public Dictionary<uint, MessageResourceEntry?>? Entries { get; set; }
 #endif
     }
 }

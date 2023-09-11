@@ -14,9 +14,9 @@ namespace SabreTools.Models.AACS
         /// key calculation.
         /// </summary>
 #if NET48
-        public byte[][] MediaKeyData;
+        public byte[][] MediaKeyData { get; set; }
 #else
-        public byte[][]? MediaKeyData;
+        public byte[][]? MediaKeyData { get; set; }
 #endif
     }
 }

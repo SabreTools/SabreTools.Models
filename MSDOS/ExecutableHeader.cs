@@ -26,18 +26,18 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Number of bytes in the last page.
         /// </summary>
-        public ushort LastPageBytes;
+        public ushort LastPageBytes { get; set; }
 
         /// <summary>
         /// Number of whole/partial pages.
         /// </summary>
         /// <remarks>A page (or block) is 512 bytes long.</remarks>
-        public ushort Pages;
+        public ushort Pages { get; set; }
 
         /// <summary>
         /// Number of entries in the relocation table.
         /// </summary>
-        public ushort RelocationItems;
+        public ushort RelocationItems { get; set; }
 
         /// <summary>
         /// The number of paragraphs taken up by the header. It can be any value, as the loader
@@ -46,57 +46,57 @@ namespace SabreTools.Models.MSDOS
         /// own header metadata, or put the relocation table there, or use it for any other purpose. [08]
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort HeaderParagraphSize;
+        public ushort HeaderParagraphSize { get; set; }
 
         /// <summary>
         /// The number of paragraphs required by the program, excluding the PSP and program image.
         /// If no free block is big enough, the loading stops.
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort MinimumExtraParagraphs;
+        public ushort MinimumExtraParagraphs { get; set; }
 
         /// <summary>
         /// The number of paragraphs requested by the program.
         /// If no free block is big enough, the biggest one possible is allocated.
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort MaximumExtraParagraphs;
+        public ushort MaximumExtraParagraphs { get; set; }
 
         /// <summary>
         /// Relocatable segment address for SS.
         /// </summary>
-        public ushort InitialSSValue;
+        public ushort InitialSSValue { get; set; }
 
         /// <summary>
         /// Initial value for SP.
         /// </summary>
-        public ushort InitialSPValue;
+        public ushort InitialSPValue { get; set; }
 
         /// <summary>
         /// When added to the sum of all other words in the file, the result should be zero.
         /// </summary>
-        public ushort Checksum;
+        public ushort Checksum { get; set; }
 
         /// <summary>
         /// Initial value for IP. [14]
         /// </summary>
-        public ushort InitialIPValue;
+        public ushort InitialIPValue { get; set; }
 
         /// <summary>
         /// Relocatable segment address for CS.
         /// </summary>
-        public ushort InitialCSValue;
+        public ushort InitialCSValue { get; set; }
 
         /// <summary>
         /// The (absolute) offset to the relocation table.
         /// </summary>
-        public ushort RelocationTableAddr;
+        public ushort RelocationTableAddr { get; set; }
 
         /// <summary>
         /// Value used for overlay management.
         /// If zero, this is the main executable.
         /// </summary>
-        public ushort OverlayNumber;
+        public ushort OverlayNumber { get; set; }
 
         #endregion
 
@@ -115,12 +115,12 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
         /// </summary>
-        public ushort OEMIdentifier;
+        public ushort OEMIdentifier { get; set; }
 
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
         /// </summary>
-        public ushort OEMInformation;
+        public ushort OEMInformation { get; set; }
 
         /// <summary>
         /// Reserved words
@@ -135,7 +135,7 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Starting address of the PE header
         /// </summary>
-        public uint NewExeHeaderAddr;
+        public uint NewExeHeaderAddr { get; set; }
 
         #endregion
     }

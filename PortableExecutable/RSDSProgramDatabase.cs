@@ -14,27 +14,27 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// "RSDS" signature
         /// </summary>
-        public uint Signature;
+        public uint Signature { get; set; }
 
         /// <summary>
         /// 16-byte Globally Unique Identifier
         /// </summary>
-        public Guid GUID;
+        public Guid GUID { get; set; }
 
         /// <summary>
         /// Ever-incrementing value, which is initially set to 1 and
         /// incremented every time when a part of the PDB file is updated
         /// without rewriting the whole file. 
         /// </summary>
-        public uint Age;
+        public uint Age { get; set; }
 
         /// <summary>
         /// zero terminated UTF8 path and file name
         /// </summary>
 #if NET48
-        public string PathAndFileName;
+        public string PathAndFileName { get; set; }
 #else
-        public string? PathAndFileName;
+        public string? PathAndFileName { get; set; }
 #endif
     }
 }

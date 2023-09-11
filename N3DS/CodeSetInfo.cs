@@ -6,16 +6,16 @@
         /// <summary>
         /// Address
         /// </summary>
-        public uint Address;
+        public uint Address { get; set; }
 
         /// <summary>
         /// Physical region size (in page-multiples)
         /// </summary>
-        public uint PhysicalRegionSizeInPages;
+        public uint PhysicalRegionSizeInPages { get; set; }
 
         /// <summary>
         /// Size (in bytes)
         /// </summary>
-        public uint SizeInBytes;
+        public uint SizeInBytes { get; set; }
     }
 }

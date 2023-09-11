@@ -9,11 +9,11 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Index into module reference table for the imported module.
         /// </summary>
-        public ushort Index;
+        public ushort Index { get; set; }
 
         /// <summary>
         /// Offset within Imported Names Table to procedure name string.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
     }
 }

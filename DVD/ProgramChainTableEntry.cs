@@ -6,21 +6,21 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// PGC category
         /// </summary>
-        public ProgramChainCategory Category;
+        public ProgramChainCategory Category { get; set; }
 
         /// <summary>
         /// Unknown
         /// </summary>
-        public byte Unknown;
+        public byte Unknown { get; set; }
 
         /// <summary>
         /// Parental management mask
         /// </summary>
-        public ushort ParentalManagementMask;
+        public ushort ParentalManagementMask { get; set; }
 
         /// <summary>
         /// Offset to VMGM_PGC, relative to VMGM_LU
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
     }
 }

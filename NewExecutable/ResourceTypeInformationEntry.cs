@@ -17,25 +17,25 @@ namespace SabreTools.Models.NewExecutable
         /// table. A zero type ID marks the end of the resource type
         /// information blocks.
         /// </summary>
-        public ushort TypeID;
+        public ushort TypeID { get; set; }
 
         /// <summary>
         /// Number of resources for this type.
         /// </summary>
-        public ushort ResourceCount;
+        public ushort ResourceCount { get; set; }
 
         /// <summary>
         /// Reserved.
         /// </summary>
-        public uint Reserved;
+        public uint Reserved { get; set; }
 
         /// <summary>
         /// A table of resources for this type follows.
         /// </summary>
 #if NET48
-        public ResourceTypeResourceEntry[] Resources;
+        public ResourceTypeResourceEntry[] Resources { get; set; }
 #else
-        public ResourceTypeResourceEntry?[]? Resources;
+        public ResourceTypeResourceEntry?[]? Resources { get; set; }
 #endif
     }
 }

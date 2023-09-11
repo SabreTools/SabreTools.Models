@@ -6,6 +6,6 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Checksum.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
     }
 }

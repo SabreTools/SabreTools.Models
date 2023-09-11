@@ -4,45 +4,45 @@ namespace SabreTools.Models.SGA
     public abstract class Section<T>
     {
 #if NET48
-        public string Alias;
+        public string Alias { get; set; }
 #else
-        public string? Alias;
+        public string? Alias { get; set; }
 #endif
 
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
 #if NET48
-        public T FolderStartIndex;
+        public T FolderStartIndex { get; set; }
 #else
-        public T? FolderStartIndex;
+        public T? FolderStartIndex { get; set; }
 #endif
 
 #if NET48
-        public T FolderEndIndex;
+        public T FolderEndIndex { get; set; }
 #else
-        public T? FolderEndIndex;
+        public T? FolderEndIndex { get; set; }
 #endif
 
 #if NET48
-        public T FileStartIndex;
+        public T FileStartIndex { get; set; }
 #else
-        public T? FileStartIndex;
+        public T? FileStartIndex { get; set; }
 #endif
 
 #if NET48
-        public T FileEndIndex;
+        public T FileEndIndex { get; set; }
 #else
-        public T? FileEndIndex;
+        public T? FileEndIndex { get; set; }
 #endif
 
 #if NET48
-        public T FolderRootIndex;
+        public T FolderRootIndex { get; set; }
 #else
-        public T? FolderRootIndex;
+        public T? FolderRootIndex { get; set; }
 #endif
     }
 }

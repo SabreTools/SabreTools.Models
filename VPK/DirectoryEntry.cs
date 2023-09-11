@@ -3,19 +3,19 @@ namespace SabreTools.Models.VPK
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/VPKFile.h"/>
     public sealed class DirectoryEntry
     {
-        public uint CRC;
+        public uint CRC { get; set; }
 
-        public ushort PreloadBytes;
+        public ushort PreloadBytes { get; set; }
 
-        public ushort ArchiveIndex;
+        public ushort ArchiveIndex { get; set; }
 
-        public uint EntryOffset;
+        public uint EntryOffset { get; set; }
 
-        public uint EntryLength;
+        public uint EntryLength { get; set; }
 
         /// <summary>
         /// Always 0xffff.
         /// </summary>
-        public ushort Dummy0;
+        public ushort Dummy0 { get; set; }
     }
 }

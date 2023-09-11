@@ -25,42 +25,42 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Reserved, must be zero. 
         /// </summary>
-        public uint Characteristics;
+        public uint Characteristics { get; set; }
 
         /// <summary>
         /// The time and date that the debug data was created.
         /// </summary>
-        public uint TimeDateStamp;
+        public uint TimeDateStamp { get; set; }
 
         /// <summary>
         /// The major version number of the debug data format.
         /// </summary>
-        public ushort MajorVersion;
+        public ushort MajorVersion { get; set; }
 
         /// <summary>
         /// The minor version number of the debug data format.
         /// </summary>
-        public ushort MinorVersion;
+        public ushort MinorVersion { get; set; }
 
         /// <summary>
         /// The format of debugging information. This field enables support
         /// of multiple debuggers.
         /// </summary>
-        public DebugType DebugType;
+        public DebugType DebugType { get; set; }
 
         /// <summary>
         /// The size of the debug data (not including the debug directory itself).
         /// </summary>
-        public uint SizeOfData;
+        public uint SizeOfData { get; set; }
 
         /// <summary>
         /// The address of the debug data when loaded, relative to the image base.
         /// </summary>
-        public uint AddressOfRawData;
+        public uint AddressOfRawData { get; set; }
 
         /// <summary>
         /// The file pointer to the debug data.
         /// </summary>
-        public uint PointerToRawData;
+        public uint PointerToRawData { get; set; }
     }
 }

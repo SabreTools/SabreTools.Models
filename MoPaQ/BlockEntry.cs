@@ -14,21 +14,21 @@ namespace SabreTools.Models.MoPaQ
         /// <summary>
         /// Offset of the beginning of the file data, relative to the beginning of the archive.
         /// </summary>
-        public uint FilePosition;
+        public uint FilePosition { get; set; }
 
         /// <summary>
         /// Compressed file size
         /// </summary>
-        public uint CompressedSize;
+        public uint CompressedSize { get; set; }
 
         /// <summary>
         /// Size of uncompressed file
         /// </summary>
-        public uint UncompressedSize;
+        public uint UncompressedSize { get; set; }
 
         /// <summary>
         /// Flags for the file.
         /// </summary>
-        public FileFlags Flags;
+        public FileFlags Flags { get; set; }
     }
 }

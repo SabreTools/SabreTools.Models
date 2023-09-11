@@ -12,17 +12,17 @@
         /// The length, in bytes, of this StringTable structure, including all structures
         /// indicated by the Children member.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// This member is always equal to zero.
         /// </summary>
-        public ushort ValueLength;
+        public ushort ValueLength { get; set; }
 
         /// <summary>
         /// The type of data in the version resource.
         /// </summary>
-        public VersionResourceType ResourceType;
+        public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
         /// An 8-digit hexadecimal number stored as a Unicode string. The four most significant
@@ -32,23 +32,23 @@
         /// and the high-order 6 bits specify the sublanguage.
         /// </summary>
 #if NET48
-        public string Key;
+        public string Key { get; set; }
 #else
-        public string? Key;
+        public string? Key { get; set; }
 #endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
         /// </summary>
-        public ushort Padding;
+        public ushort Padding { get; set; }
 
         /// <summary>
         /// An array of one or more StringData structures.
         /// </summary>
 #if NET48
-        public StringData[] Children;
+        public StringData[] Children { get; set; }
 #else
-        public StringData?[]? Children;
+        public StringData?[]? Children { get; set; }
 #endif
     }
 }

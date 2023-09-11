@@ -4,36 +4,36 @@ namespace SabreTools.Models.InstallShieldCabinet
     /// TODO: Should standard and high values be combined?
     public sealed class VolumeHeader
     {
-        public uint DataOffset;
+        public uint DataOffset { get; set; }
 
-        public uint DataOffsetHigh;
+        public uint DataOffsetHigh { get; set; }
 
-        public uint FirstFileIndex;
+        public uint FirstFileIndex { get; set; }
 
-        public uint LastFileIndex;
+        public uint LastFileIndex { get; set; }
 
-        public uint FirstFileOffset;
+        public uint FirstFileOffset { get; set; }
 
-        public uint FirstFileOffsetHigh;
+        public uint FirstFileOffsetHigh { get; set; }
 
-        public uint FirstFileSizeExpanded;
+        public uint FirstFileSizeExpanded { get; set; }
 
-        public uint FirstFileSizeExpandedHigh;
+        public uint FirstFileSizeExpandedHigh { get; set; }
 
-        public uint FirstFileSizeCompressed;
+        public uint FirstFileSizeCompressed { get; set; }
 
-        public uint FirstFileSizeCompressedHigh;
+        public uint FirstFileSizeCompressedHigh { get; set; }
 
-        public uint LastFileOffset;
+        public uint LastFileOffset { get; set; }
 
-        public uint LastFileOffsetHigh;
+        public uint LastFileOffsetHigh { get; set; }
 
-        public uint LastFileSizeExpanded;
+        public uint LastFileSizeExpanded { get; set; }
 
-        public uint LastFileSizeExpandedHigh;
+        public uint LastFileSizeExpandedHigh { get; set; }
 
-        public uint LastFileSizeCompressed;
+        public uint LastFileSizeCompressed { get; set; }
         
-        public uint LastFileSizeCompressedHigh;
+        public uint LastFileSizeCompressedHigh { get; set; }
     }
 }

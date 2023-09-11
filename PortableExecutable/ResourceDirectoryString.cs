@@ -13,15 +13,15 @@
         /// <summary>
         /// The size of the string, not including length field itself.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// The variable-length Unicode string data, word-aligned.
         /// </summary>
 #if NET48
-        public byte[] UnicodeString;
+        public byte[] UnicodeString { get; set; }
 #else
-        public byte[]? UnicodeString;
+        public byte[]? UnicodeString { get; set; }
 #endif
     }
 }

@@ -38,7 +38,7 @@ namespace SabreTools.Models.LinearExecutable
         /// The logical page number (Object Page Table index), is used to index the Fixup
         /// Page Table to find any fixups associated with the logical page. 
         /// </remarks>
-        public uint PageDataOffset;
+        public uint PageDataOffset { get; set; }
 
         /// <summary>
         /// Number of bytes of data for this page.
@@ -50,11 +50,11 @@ namespace SabreTools.Models.LinearExecutable
         /// bytes are to be filled with zeros. If the FLAGS field indicates an Iterated Data
         /// Page, the iterated data records will completely fill out the remainder. 
         /// </remarks>
-        public ushort DataSize;
+        public ushort DataSize { get; set; }
 
         /// <summary>
         /// Attributes specifying characteristics of this logical page.
         /// </summary>
-        public ObjectPageFlags Flags;
+        public ObjectPageFlags Flags { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Content id
         /// </summary>
-        public uint ContentId;
+        public uint ContentId { get; set; }
 
         /// <summary>
         /// Content index
@@ -18,25 +18,25 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// This does not apply to DLC.
         /// </remarks>
-        public ContentIndex ContentIndex;
+        public ContentIndex ContentIndex { get; set; }
 
         /// <summary>
         /// Content type
         /// </summary>
-        public TMDContentType ContentType;
+        public TMDContentType ContentType { get; set; }
 
         /// <summary>
         /// Content size
         /// </summary>
-        public ulong ContentSize;
+        public ulong ContentSize { get; set; }
 
         /// <summary>
         /// SHA-256 hash
         /// </summary>
 #if NET48
-        public byte[] SHA256Hash;
+        public byte[] SHA256Hash { get; set; }
 #else
-        public byte[]? SHA256Hash;
+        public byte[]? SHA256Hash { get; set; }
 #endif
     }
 }

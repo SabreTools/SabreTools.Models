@@ -6,37 +6,37 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Title type
         /// </summary>
-        public TitleType TitleType;
+        public TitleType TitleType { get; set; }
 
         /// <summary>
         /// Number of angles
         /// </summary>
-        public byte NumberOfAngles;
+        public byte NumberOfAngles { get; set; }
 
         /// <summary>
         /// Number of chapters (PTTs)
         /// </summary>
-        public ushort NumberOfChapters;
+        public ushort NumberOfChapters { get; set; }
 
         /// <summary>
         /// Parental management mask
         /// </summary>
-        public ushort ParentalManagementMask;
+        public ushort ParentalManagementMask { get; set; }
 
         /// <summary>
         /// Video Title Set number (VTSN)
         /// </summary>
-        public byte VideoTitleSetNumber;
+        public byte VideoTitleSetNumber { get; set; }
 
         /// <summary>
         /// Title number within VTS (VTS_TTN)
         /// </summary>
-        public byte TitleNumberWithinVTS;
+        public byte TitleNumberWithinVTS { get; set; }
 
         /// <summary>
         /// Start sector for VTS, referenced to whole disk
         /// (video_ts.ifo starts at sector 00000000)
         /// </summary>
-        public uint VTSStartSector;
+        public uint VTSStartSector { get; set; }
     }
 }

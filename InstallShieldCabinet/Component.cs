@@ -8,198 +8,198 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Offset to the component identifier
         /// </summary>
-        public uint IdentifierOffset;
+        public uint IdentifierOffset { get; set; }
 
         /// <summary>
         /// Component identifier
         /// </summary>
 #if NET48
-        public string Identifier;
+        public string Identifier { get; set; }
 #else
-        public string? Identifier;
+        public string? Identifier { get; set; }
 #endif
 
         /// <summary>
         /// Offset to the component descriptor
         /// </summary>
-        public uint DescriptorOffset;
+        public uint DescriptorOffset { get; set; }
 
         /// <summary>
         /// Offset to the display name
         /// </summary>
-        public uint DisplayNameOffset;
+        public uint DisplayNameOffset { get; set; }
 
         /// <summary>
         /// Display name
         /// </summary>
 #if NET48
-        public string DisplayName;
+        public string DisplayName { get; set; }
 #else
-        public string? DisplayName;
+        public string? DisplayName { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved0;
+        public byte[] Reserved0 { get; set; }
 #else
-        public byte[]? Reserved0;
+        public byte[]? Reserved0 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset0;
+        public uint ReservedOffset0 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset1;
+        public uint ReservedOffset1 { get; set; }
 
         /// <summary>
         /// Component index
         /// </summary>
-        public ushort ComponentIndex;
+        public ushort ComponentIndex { get; set; }
 
         /// <summary>
         /// Offset to the component name
         /// </summary>
-        public uint NameOffset;
+        public uint NameOffset { get; set; }
 
         /// <summary>
         /// Component name
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset2;
+        public uint ReservedOffset2 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset3;
+        public uint ReservedOffset3 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset4;
+        public uint ReservedOffset4 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved1;
+        public byte[] Reserved1 { get; set; }
 #else
-        public byte[]? Reserved1;
+        public byte[]? Reserved1 { get; set; }
 #endif
 
         /// <summary>
         /// Offset to the component CLSID
         /// </summary>
-        public uint CLSIDOffset;
+        public uint CLSIDOffset { get; set; }
 
         /// <summary>
         /// Component CLSID
         /// </summary>
-        public Guid CLSID;
+        public Guid CLSID { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved2;
+        public byte[] Reserved2 { get; set; }
 #else
-        public byte[]? Reserved2;
+        public byte[]? Reserved2 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved3;
+        public byte[] Reserved3 { get; set; }
 #else
-        public byte[]? Reserved3;
+        public byte[]? Reserved3 { get; set; }
 #endif
 
         /// <summary>
         /// Number of depends(?)
         /// </summary>
-        public ushort DependsCount;
+        public ushort DependsCount { get; set; }
 
         /// <summary>
         /// Offset to depends(?)
         /// </summary>
-        public uint DependsOffset;
+        public uint DependsOffset { get; set; }
 
         /// <summary>
         /// Number of file groups
         /// </summary>
-        public uint FileGroupCount;
+        public uint FileGroupCount { get; set; }
 
         /// <summary>
         /// Offset to the file group names
         /// </summary>
-        public uint FileGroupNamesOffset;
+        public uint FileGroupNamesOffset { get; set; }
 
         /// <summary>
         /// File group names
         /// </summary>
 #if NET48
-        public string[] FileGroupNames;
+        public string[] FileGroupNames { get; set; }
 #else
-        public string[]? FileGroupNames;
+        public string[]? FileGroupNames { get; set; }
 #endif
 
         /// <summary>
         /// Number of X3(?)
         /// </summary>
-        public ushort X3Count;
+        public ushort X3Count { get; set; }
 
         /// <summary>
         /// Offset to X3(?)
         /// </summary>
-        public uint X3Offset;
+        public uint X3Offset { get; set; }
 
         /// <summary>
         /// Number of sub-components
         /// </summary>
-        public ushort SubComponentsCount;
+        public ushort SubComponentsCount { get; set; }
 
         /// <summary>
         /// Offset to the sub-components
         /// </summary>
-        public uint SubComponentsOffset;
+        public uint SubComponentsOffset { get; set; }
 
         /// <summary>
         /// Offset to the next component
         /// </summary>
-        public uint NextComponentOffset;
+        public uint NextComponentOffset { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset5;
+        public uint ReservedOffset5 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset6;
+        public uint ReservedOffset6 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset7;
+        public uint ReservedOffset7 { get; set; }
 
         /// <summary>
         /// Reserved offset
         /// </summary>
-        public uint ReservedOffset8;
+        public uint ReservedOffset8 { get; set; }
     }
 }

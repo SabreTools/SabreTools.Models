@@ -8,15 +8,15 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Length of the following data block
         /// </summary>
-        public uint Length;
+        public uint Length { get; set; }
 
         /// <summary>
         /// Unknown data
         /// </summary>
 #if NET48
-        public byte[] Data;
+        public byte[] Data { get; set; }
 #else
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
 #endif
 
         // Notes about Data:

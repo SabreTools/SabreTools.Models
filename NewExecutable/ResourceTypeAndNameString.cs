@@ -16,15 +16,15 @@ namespace SabreTools.Models.NewExecutable
         /// indicates the end of the resource type and name string, also
         /// the end of the resource table.
         /// </summary>
-        public byte Length;
+        public byte Length { get; set; }
 
         /// <summary>
         /// ASCII text of the type or name string.
         /// </summary>
 #if NET48
-        public byte[] Text;
+        public byte[] Text { get; set; }
 #else
-        public byte[]? Text;
+        public byte[]? Text { get; set; }
 #endif
     }
 }

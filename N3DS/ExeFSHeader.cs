@@ -17,18 +17,18 @@
         /// File headers (10 headers maximum, 16 bytes each)
         /// </summary>
 #if NET48
-        public ExeFSFileHeader[] FileHeaders;
+        public ExeFSFileHeader[] FileHeaders { get; set; }
 #else
-        public ExeFSFileHeader?[]? FileHeaders;
+        public ExeFSFileHeader?[]? FileHeaders { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         /// <summary>
@@ -36,9 +36,9 @@
         /// </summary>
         /// <remarks>SHA-256 hashes</remarks>
 #if NET48
-        public byte[][] FileHashes;
+        public byte[][] FileHashes { get; set; }
 #else
-        public byte[][]? FileHashes;
+        public byte[][]? FileHashes { get; set; }
 #endif
     }
 }

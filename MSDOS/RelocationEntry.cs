@@ -12,11 +12,11 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Offset of the relocation within provided segment.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
 
         /// <summary>
         /// Segment of the relocation, relative to the load segment address.
         /// </summary>
-        public ushort Segment;
+        public ushort Segment { get; set; }
     }
 }

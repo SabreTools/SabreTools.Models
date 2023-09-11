@@ -27,7 +27,7 @@ namespace SabreTools.Models.LinearExecutable
         /// file for the object. This memory size must also be large enough to
         /// contain all of the iterated data and uninitialized data in the EXE file. 
         /// </remarks>
-        public uint VirtualSegmentSize;
+        public uint VirtualSegmentSize { get; set; }
 
         /// <summary>
         /// Relocation Base Address.
@@ -37,12 +37,12 @@ namespace SabreTools.Models.LinearExecutable
         /// internal relocation fixups for the module have been removed, this is the
         /// address the object will be allocated at by the loader.
         /// </remarks>
-        public uint RelocationBaseAddress;
+        public uint RelocationBaseAddress { get; set; }
 
         /// <summary>
         /// Flag bits for the object.
         /// </summary>
-        public ObjectFlags ObjectFlags;
+        public ObjectFlags ObjectFlags { get; set; }
 
         /// <summary>
         /// Object Page Table Index.
@@ -56,7 +56,7 @@ namespace SabreTools.Models.LinearExecutable
         /// other words the object table entries are sorted based on the object page table
         /// index value.
         /// </remarks>
-        public uint PageTableIndex;
+        public uint PageTableIndex { get; set; }
 
         /// <summary>
         /// # of object page table entries for this object.
@@ -72,11 +72,11 @@ namespace SabreTools.Models.LinearExecutable
         /// was neither a zero filled or invalid page, then the additional pages are treated
         /// as zero filled pages.
         /// </remarks>
-        public uint PageTableEntries;
+        public uint PageTableEntries { get; set; }
 
         /// <summary>
         /// Reserved for future use. Must be set to zero.
         /// </summary>
-        public uint Reserved;
+        public uint Reserved { get; set; }
     }
 }

@@ -11,31 +11,31 @@
         /// <summary>
         /// The length, in bytes, of the Var structure.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// The size, in words, of the Value member.
         /// </summary>
-        public ushort ValueLength;
+        public ushort ValueLength { get; set; }
 
         /// <summary>
         /// The type of data in the version resource.
         /// </summary>
-        public VersionResourceType ResourceType;
+        public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
         /// The Unicode string L"Translation".
         /// </summary>
 #if NET48
-        public string Key;
+        public string Key { get; set; }
 #else
-        public string? Key;
+        public string? Key { get; set; }
 #endif
 
         /// <summary>
         /// As many zero words as necessary to align the Value member on a 32-bit boundary.
         /// </summary>
-        public ushort Padding;
+        public ushort Padding { get; set; }
 
         /// <summary>
         /// An array of one or more values that are language and code page identifier pairs.
@@ -50,9 +50,9 @@
         /// language and code page independent.
         /// </summary>
 #if NET48
-        public uint[] Value;
+        public uint[] Value { get; set; }
 #else
-        public uint[]? Value;
+        public uint[]? Value { get; set; }
 #endif
     }
 }

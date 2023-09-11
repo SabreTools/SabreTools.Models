@@ -14,7 +14,7 @@
         /// <summary>
         /// Flags that indicate attributes of the file, currently unused.
         /// </summary>
-        public uint Characteristics;
+        public uint Characteristics { get; set; }
 
         /// <summary>
         /// Date and time stamp value. The value is represented in the number of
@@ -22,47 +22,47 @@
         /// Universal Coordinated Time, according to the system clock. The time
         /// stamp can be printed by using the C runtime (CRT) time function.
         /// </summary>
-        public uint TimeDateStamp;
+        public uint TimeDateStamp { get; set; }
 
         /// <summary>
         /// Major version number.
         /// </summary>
-        public ushort MajorVersion;
+        public ushort MajorVersion { get; set; }
 
         /// <summary>
         /// Minor version number.
         /// </summary>
-        public ushort MinorVersion;
+        public ushort MinorVersion { get; set; }
 
         /// <summary>
         /// The global loader flags to clear for this process as the loader starts
         /// the process. 
         /// </summary>
-        public uint GlobalFlagsClear;
+        public uint GlobalFlagsClear { get; set; }
 
         /// <summary>
         /// The global loader flags to set for this process as the loader starts
         /// the process.
         /// </summary>
-        public uint GlobalFlagsSet;
+        public uint GlobalFlagsSet { get; set; }
 
         /// <summary>
         /// The default timeout value to use for this process's critical sections
         /// that are abandoned.
         /// </summary>
-        public uint CriticalSectionDefaultTimeout;
+        public uint CriticalSectionDefaultTimeout { get; set; }
 
         #region DeCommitFreeBlockThreshold
 
         /// <summary>
         /// Memory that must be freed before it is returned to the system, in bytes.
         /// </summary>
-        public uint DeCommitFreeBlockThreshold_PE32;
+        public uint DeCommitFreeBlockThreshold_PE32 { get; set; }
 
         /// <summary>
         /// Memory that must be freed before it is returned to the system, in bytes.
         /// </summary>
-        public ulong DeCommitFreeBlockThreshold_PE32Plus;
+        public ulong DeCommitFreeBlockThreshold_PE32Plus { get; set; }
 
         #endregion
 
@@ -71,12 +71,12 @@
         /// <summary>
         /// Total amount of free memory, in bytes.
         /// </summary>
-        public uint DeCommitTotalFreeThreshold_PE32;
+        public uint DeCommitTotalFreeThreshold_PE32 { get; set; }
 
         /// <summary>
         /// Total amount of free memory, in bytes.
         /// </summary>
-        public ulong DeCommitTotalFreeThreshold_PE32Plus;
+        public ulong DeCommitTotalFreeThreshold_PE32Plus { get; set; }
 
         #endregion
 
@@ -86,13 +86,13 @@
         /// [x86 only] The VA of a list of addresses where the LOCK prefix is used so
         /// that they can be replaced with NOP on single processor machines.
         /// </summary>
-        public uint LockPrefixTable_PE32;
+        public uint LockPrefixTable_PE32 { get; set; }
 
         /// <summary>
         /// [x86 only] The VA of a list of addresses where the LOCK prefix is used so
         /// that they can be replaced with NOP on single processor machines.
         /// </summary>
-        public ulong LockPrefixTable_PE32Plus;
+        public ulong LockPrefixTable_PE32Plus { get; set; }
 
         #endregion
 
@@ -101,12 +101,12 @@
         /// <summary>
         /// Maximum allocation size, in bytes.
         /// </summary>
-        public uint MaximumAllocationSize_PE32;
+        public uint MaximumAllocationSize_PE32 { get; set; }
 
         /// <summary>
         /// Maximum allocation size, in bytes.
         /// </summary>
-        public ulong MaximumAllocationSize_PE32Plus;
+        public ulong MaximumAllocationSize_PE32Plus { get; set; }
 
         #endregion
 
@@ -115,12 +115,12 @@
         /// <summary>
         /// Maximum virtual memory size, in bytes.
         /// </summary>
-        public uint VirtualMemoryThreshold_PE32;
+        public uint VirtualMemoryThreshold_PE32 { get; set; }
 
         /// <summary>
         /// Maximum virtual memory size, in bytes.
         /// </summary>
-        public ulong VirtualMemoryThreshold_PE32Plus;
+        public ulong VirtualMemoryThreshold_PE32Plus { get; set; }
 
         #endregion
 
@@ -130,13 +130,13 @@
         /// Setting this field to a non-zero value is equivalent to calling
         /// SetProcessAffinityMask with this value during process startup (.exe only)
         /// </summary>
-        public uint ProcessAffinityMask_PE32;
+        public uint ProcessAffinityMask_PE32 { get; set; }
 
         /// <summary>
         /// Setting this field to a non-zero value is equivalent to calling
         /// SetProcessAffinityMask with this value during process startup (.exe only)
         /// </summary>
-        public ulong ProcessAffinityMask_PE32Plus;
+        public ulong ProcessAffinityMask_PE32Plus { get; set; }
 
         #endregion
 
@@ -145,29 +145,29 @@
         /// HeapCreate function. These flags apply to the process heap that
         /// is created during process startup.
         /// </summary>
-        public uint ProcessHeapFlags;
+        public uint ProcessHeapFlags { get; set; }
 
         /// <summary>
         /// The service pack version identifier.
         /// </summary>
-        public ushort CSDVersion;
+        public ushort CSDVersion { get; set; }
 
         /// <summary>
         /// Must be zero.
         /// </summary>
-        public ushort Reserved;
+        public ushort Reserved { get; set; }
 
         #region EditList
 
         /// <summary>
         /// Reserved for use by the system.
         /// </summary>
-        public uint EditList_PE32;
+        public uint EditList_PE32 { get; set; }
 
         /// <summary>
         /// Reserved for use by the system.
         /// </summary>
-        public ulong EditList_PE32Plus;
+        public ulong EditList_PE32Plus { get; set; }
 
         #endregion
 
@@ -176,12 +176,12 @@
         /// <summary>
         /// A pointer to a cookie that is used by Visual C++ or GS implementation.
         /// </summary>
-        public uint SecurityCookie_PE32;
+        public uint SecurityCookie_PE32 { get; set; }
 
         /// <summary>
         /// A pointer to a cookie that is used by Visual C++ or GS implementation.
         /// </summary>
-        public ulong SecurityCookie_PE32Plus;
+        public ulong SecurityCookie_PE32Plus { get; set; }
 
         #endregion
 
@@ -191,13 +191,13 @@
         /// [x86 only] The VA of the sorted table of RVAs of each valid, unique
         /// SE handler in the image.
         /// </summary>
-        public uint SEHandlerTable_PE32;
+        public uint SEHandlerTable_PE32 { get; set; }
 
         /// <summary>
         /// [x86 only] The VA of the sorted table of RVAs of each valid, unique
         /// SE handler in the image.
         /// </summary>
-        public ulong SEHandlerTable_PE32Plus;
+        public ulong SEHandlerTable_PE32Plus { get; set; }
 
         #endregion
 
@@ -206,12 +206,12 @@
         /// <summary>
         /// [x86 only] The count of unique handlers in the table.
         /// </summary>
-        public uint SEHandlerCount_PE32;
+        public uint SEHandlerCount_PE32 { get; set; }
 
         /// <summary>
         /// [x86 only] The count of unique handlers in the table.
         /// </summary>
-        public ulong SEHandlerCount_PE32Plus;
+        public ulong SEHandlerCount_PE32Plus { get; set; }
 
         #endregion
 
@@ -220,12 +220,12 @@
         /// <summary>
         /// The VA where Control Flow Guard check-function pointer is stored.
         /// </summary>
-        public uint GuardCFCheckFunctionPointer_PE32;
+        public uint GuardCFCheckFunctionPointer_PE32 { get; set; }
 
         /// <summary>
         /// The VA where Control Flow Guard check-function pointer is stored.
         /// </summary>
-        public ulong GuardCFCheckFunctionPointer_PE32Plus;
+        public ulong GuardCFCheckFunctionPointer_PE32Plus { get; set; }
 
         #endregion
 
@@ -234,12 +234,12 @@
         /// <summary>
         /// The VA where Control Flow Guard dispatch-function pointer is stored.
         /// </summary>
-        public uint GuardCFDispatchFunctionPointer_PE32;
+        public uint GuardCFDispatchFunctionPointer_PE32 { get; set; }
 
         /// <summary>
         /// The VA where Control Flow Guard dispatch-function pointer is stored.
         /// </summary>
-        public ulong GuardCFDispatchFunctionPointer_PE32Plus;
+        public ulong GuardCFDispatchFunctionPointer_PE32Plus { get; set; }
 
         #endregion
 
@@ -249,13 +249,13 @@
         /// The VA of the sorted table of RVAs of each Control Flow Guard
         /// function in the image.
         /// </summary>
-        public uint GuardCFFunctionTable_PE32;
+        public uint GuardCFFunctionTable_PE32 { get; set; }
 
         /// <summary>
         /// The VA of the sorted table of RVAs of each Control Flow Guard
         /// function in the image.
         /// </summary>
-        public ulong GuardCFFunctionTable_PE32Plus;
+        public ulong GuardCFFunctionTable_PE32Plus { get; set; }
 
         #endregion
 
@@ -264,28 +264,28 @@
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public uint GuardCFFunctionCount_PE32;
+        public uint GuardCFFunctionCount_PE32 { get; set; }
 
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public ulong GuardCFFunctionCount_PE32Plus;
+        public ulong GuardCFFunctionCount_PE32Plus { get; set; }
 
         #endregion
 
         /// <summary>
         /// Control Flow Guard related flags.
         /// </summary>
-        public GuardFlags GuardFlags;
+        public GuardFlags GuardFlags { get; set; }
 
         /// <summary>
         /// Code integrity information.
         /// </summary>
         /// <remarks>12 bytes</remarks>
 #if NET48
-        public byte[] CodeIntegrity;
+        public byte[] CodeIntegrity { get; set; }
 #else
-        public byte[]? CodeIntegrity;
+        public byte[]? CodeIntegrity { get; set; }
 #endif
 
         #region GuardAddressTakenIatEntryTable
@@ -293,12 +293,12 @@
         /// <summary>
         /// The VA where Control Flow Guard address taken IAT table is stored.
         /// </summary>
-        public uint GuardAddressTakenIatEntryTable_PE32;
+        public uint GuardAddressTakenIatEntryTable_PE32 { get; set; }
 
         /// <summary>
         /// The VA where Control Flow Guard address taken IAT table is stored.
         /// </summary>
-        public ulong GuardAddressTakenIatEntryTable_PE32Plus;
+        public ulong GuardAddressTakenIatEntryTable_PE32Plus { get; set; }
 
         #endregion
 
@@ -307,12 +307,12 @@
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public uint GuardAddressTakenIatEntryCount_PE32;
+        public uint GuardAddressTakenIatEntryCount_PE32 { get; set; }
 
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public ulong GuardAddressTakenIatEntryCount_PE32Plus;
+        public ulong GuardAddressTakenIatEntryCount_PE32Plus { get; set; }
 
         #endregion
 
@@ -321,12 +321,12 @@
         /// <summary>
         /// The VA where Control Flow Guard long jump target table is stored.
         /// </summary>
-        public uint GuardLongJumpTargetTable_PE32;
+        public uint GuardLongJumpTargetTable_PE32 { get; set; }
 
         /// <summary>
         /// The VA where Control Flow Guard long jump target table is stored.
         /// </summary>
-        public ulong GuardLongJumpTargetTable_PE32Plus;
+        public ulong GuardLongJumpTargetTable_PE32Plus { get; set; }
 
         #endregion
 
@@ -335,12 +335,12 @@
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public uint GuardLongJumpTargetCount_PE32;
+        public uint GuardLongJumpTargetCount_PE32 { get; set; }
 
         /// <summary>
         /// The count of unique RVAs in the above table.
         /// </summary>
-        public ulong GuardLongJumpTargetCount_PE32Plus;
+        public ulong GuardLongJumpTargetCount_PE32Plus { get; set; }
 
         #endregion
     }

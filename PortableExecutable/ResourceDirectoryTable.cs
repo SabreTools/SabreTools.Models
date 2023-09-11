@@ -22,35 +22,35 @@ namespace SabreTools.Models.PortableExecutable
         /// Resource flags. This field is reserved for future use. It is currently
         /// set to zero.
         /// </summary>
-        public uint Characteristics;
+        public uint Characteristics { get; set; }
 
         /// <summary>
         /// The time that the resource data was created by the resource compiler.
         /// </summary>
-        public uint TimeDateStamp;
+        public uint TimeDateStamp { get; set; }
 
         /// <summary>
         /// The major version number, set by the user.
         /// </summary>
-        public ushort MajorVersion;
+        public ushort MajorVersion { get; set; }
 
         /// <summary>
         /// The minor version number, set by the user.
         /// </summary>
-        public ushort MinorVersion;
+        public ushort MinorVersion { get; set; }
 
         /// <summary>
         /// The number of directory entries immediately following the table that use
         /// strings to identify Type, Name, or Language entries (depending on the
         /// level of the table).
         /// </summary>
-        public ushort NumberOfNameEntries;
+        public ushort NumberOfNameEntries { get; set; }
 
         /// <summary>
         /// The number of directory entries immediately following the Name entries that
         /// use numeric IDs for Type, Name, or Language entries.
         /// </summary>
-        public ushort NumberOfIDEntries;
+        public ushort NumberOfIDEntries { get; set; }
 
         /// <summary>
         /// Directory entries immediately following the table that use
@@ -58,9 +58,9 @@ namespace SabreTools.Models.PortableExecutable
         /// level of the table).
         /// </summary>
 #if NET48
-        public ResourceDirectoryEntry[] Entries;
+        public ResourceDirectoryEntry[] Entries { get; set; }
 #else
-        public ResourceDirectoryEntry?[]? Entries;
+        public ResourceDirectoryEntry?[]? Entries { get; set; }
 #endif
     }
 }

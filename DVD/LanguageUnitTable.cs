@@ -6,39 +6,39 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Number of Language Units
         /// </summary>
-        public ushort NumberOfLanguageUnits;
+        public ushort NumberOfLanguageUnits { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         /// <summary>
         /// End address (last byte of last PGC in last LU)
         /// relative to VMGM_PGCI_UT
         /// </summary>
-        public uint EndAddress;
+        public uint EndAddress { get; set; }
 
         /// <summary>
         /// Language Units
         /// </summary>
 #if NET48
-        public LanguageUnitTableEntry[] Entries;
+        public LanguageUnitTableEntry[] Entries { get; set; }
 #else
-        public LanguageUnitTableEntry?[]? Entries;
+        public LanguageUnitTableEntry?[]? Entries { get; set; }
 #endif
 
         /// <summary>
         /// Program Chains
         /// </summary>
 #if NET48
-        public ProgramChainTable[] ProgramChains;
+        public ProgramChainTable[] ProgramChains { get; set; }
 #else
-        public ProgramChainTable?[]? ProgramChains;
+        public ProgramChainTable?[]? ProgramChains { get; set; }
 #endif
     }
 }

@@ -10,11 +10,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Start offset of file
         /// </summary>
-        public uint StartOffset;
+        public uint StartOffset { get; set; }
 
         /// <summary>
         /// End offset of file (after this is padding)
         /// </summary>
-        public uint EndOffset;
+        public uint EndOffset { get; set; }
     }
 }

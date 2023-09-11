@@ -9,24 +9,24 @@
         /// <summary>
         /// Extdata ID
         /// </summary>
-        public ulong ExtdataID;
+        public ulong ExtdataID { get; set; }
 
         /// <summary>
         /// System savedata IDs
         /// </summary>
 #if NET48
-        public byte[] SystemSavedataIDs;
+        public byte[] SystemSavedataIDs { get; set; }
 #else
-        public byte[]? SystemSavedataIDs;
+        public byte[]? SystemSavedataIDs { get; set; }
 #endif
 
         /// <summary>
         /// Storage accessible unique IDs
         /// </summary>
 #if NET48
-        public byte[] StorageAccessibleUniqueIDs;
+        public byte[] StorageAccessibleUniqueIDs { get; set; }
 #else
-        public byte[]? StorageAccessibleUniqueIDs;
+        public byte[]? StorageAccessibleUniqueIDs { get; set; }
 #endif
 
         /// <summary>
@@ -35,14 +35,14 @@
         /// TODO: Create enum for the flag values
         /// TODO: Combine with "other attributes"
 #if NET48
-        public byte[] FileSystemAccessInfo;
+        public byte[] FileSystemAccessInfo { get; set; }
 #else
-        public byte[]? FileSystemAccessInfo;
+        public byte[]? FileSystemAccessInfo { get; set; }
 #endif
 
         /// <summary>
         /// Other attributes
         /// </summary>
-        public StorageInfoOtherAttributes OtherAttributes;
+        public StorageInfoOtherAttributes OtherAttributes { get; set; }
     }
 }

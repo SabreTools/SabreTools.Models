@@ -9,30 +9,30 @@ namespace SabreTools.Models.CFB
         /// Iddentification signature for the compound file structure, and MUST be
         /// set to the value 0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1.
         /// </summary>
-        public ulong Signature;
+        public ulong Signature { get; set; }
 
         /// <summary>
         /// Reserved and unused class ID that MUST be set to all zeroes (CLSID_NULL)
         /// </summary>
-        public Guid CLSID;
+        public Guid CLSID { get; set; }
 
         /// <summary>
         /// Version number for nonbreaking changes. This field SHOULD be set to
         /// 0x003E if the major version field is either 0x0003 or 0x0004.
         /// </summary>
-        public ushort MinorVersion;
+        public ushort MinorVersion { get; set; }
 
         /// <summary>
         /// Version number for breaking changes. This field MUST be set to either
         /// 0x0003 (version 3) or 0x0004 (version 4).
         /// </summary>
-        public ushort MajorVersion;
+        public ushort MajorVersion { get; set; }
 
         /// <summary>
         /// This field MUST be set to 0xFFFE. This field is a byte order mark for
         /// all integer fields, specifying little-endian byte order.
         /// </summary>
-        public ushort ByteOrder;
+        public ushort ByteOrder { get; set; }
 
         /// <summary>
         /// This field MUST be set to 0x0009, or 0x000c, depending on the Major
@@ -45,22 +45,22 @@ namespace SabreTools.Models.CFB
         /// If Major Version is 4, the Sector Shift MUST be 0x000C, specifying a
         /// sector size of 4096 bytes.
         /// </summary>
-        public ushort SectorShift;
+        public ushort SectorShift { get; set; }
 
         /// <summary>
         /// This field MUST be set to 0x0006. This field specifies the sector size
         /// of the Mini Stream as a power of 2. The sector size of the Mini Stream
         /// MUST be 64 bytes.
         /// </summary>
-        public ushort MiniSectorShift;
+        public ushort MiniSectorShift { get; set; }
 
         /// <summary>
         /// This field MUST be set to all zeroes.
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         /// <summary>
@@ -70,18 +70,18 @@ namespace SabreTools.Models.CFB
         /// If Major Version is 3, the Number of Directory Sectors MUST be zero. This
         /// field is not supported for version 3 compound files.
         /// </summary>
-        public uint NumberOfDirectorySectors;
+        public uint NumberOfDirectorySectors { get; set; }
 
         /// <summary>
         /// This integer field contains the count of the number of FAT sectors in the
         /// compound file.
         /// </summary>
-        public uint NumberOfFATSectors;
+        public uint NumberOfFATSectors { get; set; }
 
         /// <summary>
         /// This integer field contains the starting sector number for the directory stream.
         /// </summary>
-        public uint FirstDirectorySectorLocation;
+        public uint FirstDirectorySectorLocation { get; set; }
 
         /// <summary>
         /// This integer field MAY contain a sequence number that is incremented every time
@@ -89,7 +89,7 @@ namespace SabreTools.Models.CFB
         /// This is the field that MUST be set to all zeroes if file transactions are not
         /// implemented.
         /// </summary>
-        public uint TransactionSignatureNumber;
+        public uint TransactionSignatureNumber { get; set; }
 
         /// <summary>
         /// This integer field MUST be set to 0x00001000. This field specifies the maximum
@@ -98,38 +98,38 @@ namespace SabreTools.Models.CFB
         /// greater than or equal to this cutoff size must be allocated as normal sectors from
         /// the FAT.
         /// </summary>
-        public uint MiniStreamCutoffSize;
+        public uint MiniStreamCutoffSize { get; set; }
 
         /// <summary>
         /// This integer field contains the starting sector number for the mini FAT.
         /// </summary>
-        public uint FirstMiniFATSectorLocation;
+        public uint FirstMiniFATSectorLocation { get; set; }
 
         /// <summary>
         /// This integer field contains the count of the number of mini FAT sectors in the
         /// compound file.
         /// </summary>
-        public uint NumberOfMiniFATSectors;
+        public uint NumberOfMiniFATSectors { get; set; }
 
         /// <summary>
         /// This integer field contains the starting sector number for the DIFAT.
         /// </summary>
-        public uint FirstDIFATSectorLocation;
+        public uint FirstDIFATSectorLocation { get; set; }
 
         /// <summary>
         /// This integer field contains the count of the number of DIFAT sectors in the
         /// compound file.
         /// </summary>
-        public uint NumberOfDIFATSectors;
+        public uint NumberOfDIFATSectors { get; set; }
 
         /// <summary>
         /// This array of 32-bit integer fields contains the first 109 FAT sector
         /// locations of the compound file
         /// </summary>
 #if NET48
-        public SectorNumber[] DIFAT;
+        public SectorNumber[] DIFAT { get; set; }
 #else
-        public SectorNumber?[]? DIFAT;
+        public SectorNumber?[]? DIFAT { get; set; }
 #endif
     }
 }

@@ -6,6 +6,6 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
     }
 }

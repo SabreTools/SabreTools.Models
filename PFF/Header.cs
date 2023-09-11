@@ -10,31 +10,31 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// Size of the following header
         /// </summary>
-        public uint HeaderSize;
+        public uint HeaderSize { get; set; }
 
         /// <summary>
         /// Signature
         /// </summary>
         /// <remarks>Versions 2 and 3 share the same signature but different header sizes</remarks>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Number of files
         /// </summary>
-        public uint NumberOfFiles;
+        public uint NumberOfFiles { get; set; }
 
         /// <summary>
         /// File segment size
         /// </summary>
-        public uint FileSegmentSize;
+        public uint FileSegmentSize { get; set; }
 
         /// <summary>
         /// File list offset
         /// </summary>
-        public uint FileListOffset;
+        public uint FileListOffset { get; set; }
     }
 }

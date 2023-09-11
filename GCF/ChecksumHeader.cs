@@ -6,11 +6,11 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Size of LPGCFCHECKSUMHEADER & LPGCFCHECKSUMMAPHEADER & in bytes.
         /// </summary>
-        public uint ChecksumSize;
+        public uint ChecksumSize { get; set; }
     }
 }

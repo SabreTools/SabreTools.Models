@@ -25,22 +25,22 @@
         /// The offset of a string that gives the Type, Name, or Language ID entry,
         /// depending on level of table.
         /// </summary>
-        public uint NameOffset;
+        public uint NameOffset { get; set; }
 
         /// <summary>
         /// A string that gives the Type, Name, or Language ID entry, depending on
         /// level of table.
         /// </summary>
 #if NET48
-        public ResourceDirectoryString Name;
+        public ResourceDirectoryString Name { get; set; }
 #else
-        public ResourceDirectoryString? Name;
+        public ResourceDirectoryString? Name { get; set; }
 #endif
 
         /// <summary>
         /// A 32-bit integer that identifies the Type, Name, or Language ID entry.
         /// </summary>
-        public uint IntegerID;
+        public uint IntegerID { get; set; }
 
         #endregion
 
@@ -49,30 +49,30 @@
         /// <summary>
         /// High bit 0. Address of a Resource Data entry (a leaf).
         /// </summary>
-        public uint DataEntryOffset;
+        public uint DataEntryOffset { get; set; }
 
         /// <summary>
         /// Resource data entry (a leaf).
         /// </summary>
 #if NET48
-        public ResourceDataEntry DataEntry;
+        public ResourceDataEntry DataEntry { get; set; }
 #else
-        public ResourceDataEntry? DataEntry;
+        public ResourceDataEntry? DataEntry { get; set; }
 #endif
 
         /// <summary>
         /// High bit 1. The lower 31 bits are the address of another resource
         /// directory table (the next level down).
         /// </summary>
-        public uint SubdirectoryOffset;
+        public uint SubdirectoryOffset { get; set; }
 
         /// <summary>
         /// Another resource directory table (the next level down).
         /// </summary>
 #if NET48
-        public ResourceDirectoryTable Subdirectory;
+        public ResourceDirectoryTable Subdirectory { get; set; }
 #else
-        public ResourceDirectoryTable? Subdirectory;
+        public ResourceDirectoryTable? Subdirectory { get; set; }
 #endif
 
         #endregion

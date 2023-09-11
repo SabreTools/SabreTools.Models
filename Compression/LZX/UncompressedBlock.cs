@@ -20,48 +20,48 @@ namespace SabreTools.Models.Compression.LZX
         /// Generic block header
         /// </summary>
 #if NET48
-        public BlockHeader Header;
+        public BlockHeader Header { get; set; }
 #else
-        public BlockHeader? Header;
+        public BlockHeader? Header { get; set; }
 #endif
 
         /// <summary>
         /// Padding to align following field on 16-bit boundary
         /// </summary>
         /// <remarks>Bits have a value of zero</remarks>
-        public ushort PaddingBits;
+        public ushort PaddingBits { get; set; }
 
         /// <summary>
         /// Least significant to most significant byte (little-endian DWORD ([MS-DTYP]))
         /// </summary>
         /// <remarks>Encoded directly in the byte stream, not in the bitstream of byte-swapped 16-bit words</remarks>
-        public uint R0;
+        public uint R0 { get; set; }
 
         /// <summary>
         /// Least significant to most significant byte (little-endian DWORD)
         /// </summary>
         /// <remarks>Encoded directly in the byte stream, not in the bitstream of byte-swapped 16-bit words</remarks>
-        public uint R1;
+        public uint R1 { get; set; }
 
         /// <summary>
         /// Least significant to most significant byte (little-endian DWORD)
         /// </summary>
         /// <remarks>Encoded directly in the byte stream, not in the bitstream of byte-swapped 16-bit words</remarks>
-        public uint R2;
+        public uint R2 { get; set; }
 
         /// <summary>
         /// Can use the direct memcpy function, as specified in [IEEE1003.1]
         /// </summary>
         /// <remarks>Encoded directly in the byte stream, not in the bitstream of byte-swapped 16-bit words</remarks>
 #if NET48
-        public byte[] RawDataBytes;
+        public byte[] RawDataBytes { get; set; }
 #else
-        public byte[]? RawDataBytes;
+        public byte[]? RawDataBytes { get; set; }
 #endif
 
         /// <summary>
         /// Only if uncompressed size is odd
         /// </summary>
-        public byte AlignmentByte;
+        public byte AlignmentByte { get; set; }
     }
 }

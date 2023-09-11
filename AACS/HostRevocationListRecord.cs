@@ -19,15 +19,15 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// The total number of Host Revocation List Entry fields that follow.
         /// </summary>
-        public uint TotalNumberOfEntries;
+        public uint TotalNumberOfEntries { get; set; }
 
         /// <summary>
         /// Revocation list entries
         /// </summary>
 #if NET48
-        public HostRevocationSignatureBlock[] SignatureBlocks;
+        public HostRevocationSignatureBlock[] SignatureBlocks { get; set; }
 #else
-        public HostRevocationSignatureBlock?[]? SignatureBlocks;
+        public HostRevocationSignatureBlock?[]? SignatureBlocks { get; set; }
 #endif
     }
 }

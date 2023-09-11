@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace SabreTools.Models.MicrosoftCabinet
 {
@@ -29,7 +28,7 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// <summary>
         /// Specifies the absolute file offset of the first CFDATA field block for the folder.
         /// </summary>
-        public uint CabStartOffset;
+        public uint CabStartOffset { get; set; }
 
         /// <summary>
         /// Specifies the number of CFDATA structures for this folder that are actually in this cabinet.
@@ -37,13 +36,13 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// file.A folder can start in a previous cabinet.This number represents only the CFDATA structures for
         /// this folder that are at least partially recorded in this cabinet.
         /// </summary>
-        public ushort DataCount;
+        public ushort DataCount { get; set; }
 
         /// <summary>
         /// Indicates the compression method used for all CFDATA structure entries in this
         /// folder.
         /// </summary>
-        public CompressionType CompressionType;
+        public CompressionType CompressionType { get; set; }
 
         /// <summary>
         /// If the CFHEADER.flags.cfhdrRESERVE_PRESENT field is set
@@ -51,18 +50,18 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// This field is defined by the application, and is used for application-defined purposes.
         /// </summary>
 #if NET48
-        public byte[] ReservedData;
+        public byte[] ReservedData { get; set; }
 #else
-        public byte[]? ReservedData;
+        public byte[]? ReservedData { get; set; }
 #endif
 
         /// <summary>
         /// Data blocks associated with this folder
         /// </summary>
 #if NET48
-        public CFDATA[] DataBlocks;
+        public CFDATA[] DataBlocks { get; set; }
 #else
-        public CFDATA?[]? DataBlocks;
+        public CFDATA?[]? DataBlocks { get; set; }
 #endif
     }
 }

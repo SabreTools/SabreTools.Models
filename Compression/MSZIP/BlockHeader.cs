@@ -23,6 +23,6 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// 'CK'
         /// </summary>
-        public ushort Signature;
+        public ushort Signature { get; set; }
     }
 }

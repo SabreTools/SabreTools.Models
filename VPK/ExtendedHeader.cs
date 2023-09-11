@@ -9,21 +9,21 @@ namespace SabreTools.Models.VPK
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Archive hash length
         /// </summary>
-        public uint ArchiveHashLength;
+        public uint ArchiveHashLength { get; set; }
 
         /// <summary>
         /// Looks like some more MD5 hashes.
         /// </summary>
-        public uint ExtraLength;
+        public uint ExtraLength { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1;
+        public uint Dummy1 { get; set; }
     }
 }

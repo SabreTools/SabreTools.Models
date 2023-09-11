@@ -10,26 +10,26 @@ namespace SabreTools.Models.BMP
         /// <summary>
         /// The file type; must be BM.
         /// </summary>
-        public ushort Type;
+        public ushort Type { get; set; }
 
         /// <summary>
         /// The size, in bytes, of the bitmap file.
         /// </summary>
-        public uint Size;
+        public uint Size { get; set; }
 
         /// <summary>
         /// Reserved; must be zero.
         /// </summary>
-        public ushort Reserved1;
+        public ushort Reserved1 { get; set; }
 
         /// <summary>
         /// Reserved; must be zero.
         /// </summary>
-        public ushort Reserved2;
+        public ushort Reserved2 { get; set; }
 
         /// <summary>
         /// The offset, in bytes, from the beginning of the BITMAPFILEHEADER structure to the bitmap bits.
         /// </summary>
-        public uint OffBits;
+        public uint OffBits { get; set; }
     }
 }

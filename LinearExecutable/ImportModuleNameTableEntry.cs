@@ -27,7 +27,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This defines the length of the string in bytes. The length of each
         /// ascii name string is limited to 127 characters.
         /// </remarks>
-        public byte Length;
+        public byte Length { get; set; }
 
         /// <summary>
         /// ASCII String.
@@ -37,9 +37,9 @@ namespace SabreTools.Models.LinearExecutable
         /// the LEN field. The string is case sensitive and is not null terminated.
         /// </remarks>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
     }
 }

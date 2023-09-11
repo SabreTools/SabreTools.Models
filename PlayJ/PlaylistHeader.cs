@@ -8,15 +8,15 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Number of tracks contained within the playlist
         /// </summary>
-        public uint TrackCount;
+        public uint TrackCount { get; set; }
 
         /// <summary>
         /// 52 bytes of unknown data
         /// </summary>
 #if NET48
-        public byte[] Data;
+        public byte[] Data { get; set; }
 #else
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
 #endif
     }
 }

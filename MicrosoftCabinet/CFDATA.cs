@@ -16,13 +16,13 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// Checksum of this CFDATA structure, from the <see cref="CompressedSize"/> through the
         /// <see cref="CompressedData"/> fields. It can be set to 0 (zero) if the checksum is not supplied.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
 
         /// <summary>
         /// Number of bytes of compressed data in this CFDATA structure record. When the
         /// <see cref="UncompressedSize"/> field is zero, this field indicates only the number of bytes that fit into this cabinet file.
         /// </summary>
-        public ushort CompressedSize;
+        public ushort CompressedSize { get; set; }
 
         /// <summary>
         /// The uncompressed size of the data in this CFDATA structure entry in bytes. When this
@@ -30,7 +30,7 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// the <see cref="UncompressedSize"/> field in the first CFDATA structure entry in the next cabinet file will report the total
         /// uncompressed size of the data from both CFDATA structure blocks.
         /// </summary>
-        public ushort UncompressedSize;
+        public ushort UncompressedSize { get; set; }
 
         /// <summary>
         /// If the <see cref="HeaderFlags.RESERVE_PRESENT"/> flag is set
@@ -38,9 +38,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// This field is defined by the application, and it is used for application-defined purposes.
         /// </summary>
 #if NET48
-        public byte[] ReservedData;
+        public byte[] ReservedData { get; set; }
 #else
-        public byte[]? ReservedData;
+        public byte[]? ReservedData { get; set; }
 #endif
 
         /// <summary>
@@ -52,9 +52,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// this CFDATA structure entry crosses a cabinet file boundary.
         /// </summary>
 #if NET48
-        public byte[] CompressedData;
+        public byte[] CompressedData { get; set; }
 #else
-        public byte[]? CompressedData;
+        public byte[]? CompressedData { get; set; }
 #endif
     }
 }

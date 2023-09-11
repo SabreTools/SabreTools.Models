@@ -4,13 +4,13 @@ namespace SabreTools.Models.SGA
     public abstract class Header
     {
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
-        public ushort MajorVersion;
+        public ushort MajorVersion { get; set; }
 
-        public ushort MinorVersion;
+        public ushort MinorVersion { get; set; }
     }
 }

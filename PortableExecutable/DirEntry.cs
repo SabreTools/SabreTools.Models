@@ -10,16 +10,16 @@
         /// <summary>
         /// A unique ordinal identifier for an individual font in a font resource group.
         /// </summary>
-        public ushort FontOrdinal;
+        public ushort FontOrdinal { get; set; }
 
         /// <summary>
         /// The FONTDIRENTRY structure for the specified font directly follows the DIRENTRY structure
         /// for that font.
         /// </summary>
 #if NET48
-        public FontDirEntry Entry;
+        public FontDirEntry Entry { get; set; }
 #else
-        public FontDirEntry? Entry;
+        public FontDirEntry? Entry { get; set; }
 #endif
     }
 }

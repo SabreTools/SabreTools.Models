@@ -18,15 +18,15 @@ namespace SabreTools.Models.NewExecutable
         /// Length of the name string that follows. A zero value indicates
         /// the end of the name table.
         /// </summary>
-        public byte Length;
+        public byte Length { get; set; }
 
         /// <summary>
         /// ASCII text of the name string.
         /// </summary>
 #if NET48
-        public byte[] NameString;
+        public byte[] NameString { get; set; }
 #else
-        public byte[]? NameString;
+        public byte[]? NameString { get; set; }
 #endif
     }
 }

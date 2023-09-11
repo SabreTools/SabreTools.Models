@@ -14,12 +14,12 @@ namespace SabreTools.Models.PortableExecutable
         /// The version number of the menu template. This member must be equal to zero to indicate
         /// that this is an RT_MENU created with a standard menu template.
         /// </summary>
-        public ushort Version;
+        public ushort Version { get; set; }
 
         /// <summary>
         /// The size of the menu template header. This value is zero for menus you create with a
         /// standard menu template.
         /// </summary>
-        public ushort HeaderSize;
+        public ushort HeaderSize { get; set; }
     }
 }

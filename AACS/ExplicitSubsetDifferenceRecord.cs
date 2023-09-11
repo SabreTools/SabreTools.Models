@@ -7,9 +7,9 @@ namespace SabreTools.Models.AACS
         /// In this record, each subset-difference is encoded with 5 bytes.
         /// </summary>
 #if NET48
-        public SubsetDifference[] SubsetDifferences;
+        public SubsetDifference[] SubsetDifferences { get; set; }
 #else
-        public SubsetDifference?[]? SubsetDifferences;
+        public SubsetDifference?[]? SubsetDifferences { get; set; }
 #endif
     }
 }

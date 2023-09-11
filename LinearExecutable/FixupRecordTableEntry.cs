@@ -20,7 +20,7 @@
         /// The source type specifies the size and type of the fixup to be performed
         /// on the fixup source.
         /// </remarks>
-        public FixupRecordSourceType SourceType;
+        public FixupRecordSourceType SourceType { get; set; }
 
         /// <summary>
         /// Target Flags.
@@ -28,7 +28,7 @@
         /// <remarks>
         /// The target flags specify how the target information is interpreted.
         /// </remarks>
-        public FixupRecordTargetFlags TargetFlags;
+        public FixupRecordTargetFlags TargetFlags { get; set; }
 
         #region Source List Flag
 
@@ -52,7 +52,7 @@
         /// address is on the page to be fixed up, then the offset would have a value
         /// of -3.)
         /// </remarks>
-        public ushort SourceOffset;
+        public ushort SourceOffset { get; set; }
 
         #endregion
 
@@ -76,7 +76,7 @@
         /// address is on the page to be fixed up, then the offset would have a value
         /// of -3.)
         /// </remarks>
-        public byte SourceOffsetListCount;
+        public byte SourceOffsetListCount { get; set; }
 
         #endregion
 
@@ -97,7 +97,7 @@
         /// Ordinal Flag' bit in the target flags field is clear and a Word value when
         /// the bit is set.
         /// </remarks>
-        public ushort TargetObjectNumberWORD;
+        public ushort TargetObjectNumberWORD { get; set; }
 
         #endregion
 
@@ -112,7 +112,7 @@
         /// Ordinal Flag' bit in the target flags field is clear and a Word value when
         /// the bit is set.
         /// </remarks>
-        public byte TargetObjectNumberByte;
+        public byte TargetObjectNumberByte { get; set; }
 
         #endregion
 
@@ -131,7 +131,7 @@
         /// is a Word value when the '32-bit Target Offset Flag' bit in the target
         /// flags field is clear and a Dword value when the bit is set.
         /// </remarks>
-        public uint TargetOffsetDWORD;
+        public uint TargetOffsetDWORD { get; set; }
 
         #endregion
 
@@ -146,7 +146,7 @@
         /// is a Word value when the '32-bit Target Offset Flag' bit in the target
         /// flags field is clear and a Dword value when the bit is set.
         /// </remarks>
-        public ushort TargetOffsetWORD;
+        public ushort TargetOffsetWORD { get; set; }
 
         #endregion
 
@@ -171,7 +171,7 @@
         /// by the loader to index into this table created by the loader to locate
         /// the referenced module.
         /// </remarks>
-        public ushort OrdinalIndexImportModuleNameTableWORD;
+        public ushort OrdinalIndexImportModuleNameTableWORD { get; set; }
 
         #endregion
 
@@ -190,7 +190,7 @@
         /// by the loader to index into this table created by the loader to locate
         /// the referenced module.
         /// </remarks>
-        public byte OrdinalIndexImportModuleNameTableByte;
+        public byte OrdinalIndexImportModuleNameTableByte { get; set; }
 
         #endregion
 
@@ -210,7 +210,7 @@
         /// a Word value when the '32-bit Target Offset Flag' bit in the target
         /// flags field is clear and a Dword value when the bit is set. 
         /// </remarks>
-        public uint OffsetImportProcedureNameTableDWORD;
+        public uint OffsetImportProcedureNameTableDWORD { get; set; }
 
         #endregion
 
@@ -224,7 +224,7 @@
         /// a Word value when the '32-bit Target Offset Flag' bit in the target
         /// flags field is clear and a Dword value when the bit is set. 
         /// </remarks>
-        public ushort OffsetImportProcedureNameTableWORD;
+        public ushort OffsetImportProcedureNameTableWORD { get; set; }
 
         #endregion
 
@@ -247,7 +247,7 @@
         /// when the '32-bit Target Offset Flag' bit in the target flags field is clear and a
         /// Dword value when the bit is set. 
         /// </remarks>
-        public byte ImportedOrdinalNumberByte;
+        public byte ImportedOrdinalNumberByte { get; set; }
 
         #endregion
 
@@ -266,7 +266,7 @@
         /// when the '32-bit Target Offset Flag' bit in the target flags field is clear and a
         /// Dword value when the bit is set. 
         /// </remarks>
-        public uint ImportedOrdinalNumberDWORD;
+        public uint ImportedOrdinalNumberDWORD { get; set; }
 
         #endregion
 
@@ -281,7 +281,7 @@
         /// when the '32-bit Target Offset Flag' bit in the target flags field is clear and a
         /// Dword value when the bit is set. 
         /// </remarks>
-        public uint ImportedOrdinalNumberWORD;
+        public uint ImportedOrdinalNumberWORD { get; set; }
 
         #endregion
 
@@ -315,7 +315,7 @@
         /// This field is a Word value when the '32-bit Additive Flag' bit in the
         /// target flags field is clear and a Dword value when the bit is set.
         /// </remarks>
-        public uint AdditiveFixupValueDWORD;
+        public uint AdditiveFixupValueDWORD { get; set; }
 
         #endregion
 
@@ -335,7 +335,7 @@
         /// This field is a Word value when the '32-bit Additive Flag' bit in the
         /// target flags field is clear and a Dword value when the bit is set.
         /// </remarks>
-        public ushort AdditiveFixupValueWORD;
+        public ushort AdditiveFixupValueWORD { get; set; }
 
         #endregion
 
@@ -357,9 +357,9 @@
         /// fixups are to be made.
         /// </remarks>
 #if NET48
-        public ushort[] SourceOffsetList;
+        public ushort[] SourceOffsetList { get; set; }
 #else
-        public ushort[]? SourceOffsetList;
+        public ushort[]? SourceOffsetList { get; set; }
 #endif
 
         #endregion

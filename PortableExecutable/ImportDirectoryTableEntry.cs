@@ -20,38 +20,38 @@ namespace SabreTools.Models.PortableExecutable
         /// for each import. (The name "Characteristics" is used in Winnt.h, but no
         /// longer describes this field.)
         /// </summary>
-        public uint ImportLookupTableRVA;
+        public uint ImportLookupTableRVA { get; set; }
 
         /// <summary>
         /// The stamp that is set to zero until the image is bound. After the image is
         /// bound, this field is set to the time/data stamp of the DLL.
         /// </summary>
-        public uint TimeDateStamp;
+        public uint TimeDateStamp { get; set; }
 
         /// <summary>
         /// The index of the first forwarder reference.
         /// </summary>
-        public uint ForwarderChain;
+        public uint ForwarderChain { get; set; }
 
         /// <summary>
         /// The address of an ASCII string that contains the name of the DLL. This address
         /// is relative to the image base.
         /// </summary>
-        public uint NameRVA;
+        public uint NameRVA { get; set; }
 
         /// <summary>
         /// ASCII string that contains the name of the DLL.
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// The RVA of the import address table. The contents of this table are identical
         /// to the contents of the import lookup table until the image is bound.
         /// </summary>
-        public uint ImportAddressTableRVA;
+        public uint ImportAddressTableRVA { get; set; }
     }
 }

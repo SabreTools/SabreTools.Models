@@ -34,9 +34,9 @@
         /// the RVA is its address.
         /// </summary>
 #if NET48
-        public DebugDirectoryEntry[] DebugDirectoryTable;
+        public DebugDirectoryEntry[] DebugDirectoryTable { get; set; }
 #else
-        public DebugDirectoryEntry?[]? DebugDirectoryTable;
+        public DebugDirectoryEntry?[]? DebugDirectoryTable { get; set; }
 #endif
     }
 }

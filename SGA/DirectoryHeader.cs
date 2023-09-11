@@ -3,36 +3,36 @@ namespace SabreTools.Models.SGA
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/SGAFile.h"/>
     public abstract class DirectoryHeader<T>
     {
-        public uint SectionOffset;
+        public uint SectionOffset { get; set; }
 
 #if NET48
-        public T SectionCount;
+        public T SectionCount { get; set; }
 #else
-        public T? SectionCount;
+        public T? SectionCount { get; set; }
 #endif
 
-        public uint FolderOffset;
+        public uint FolderOffset { get; set; }
 
 #if NET48
-        public T FolderCount;
+        public T FolderCount { get; set; }
 #else
-        public T? FolderCount;
+        public T? FolderCount { get; set; }
 #endif
 
-        public uint FileOffset;
+        public uint FileOffset { get; set; }
 
 #if NET48
-        public T FileCount;
+        public T FileCount { get; set; }
 #else
-        public T? FileCount;
+        public T? FileCount { get; set; }
 #endif
 
-        public uint StringTableOffset;
+        public uint StringTableOffset { get; set; }
 
 #if NET48
-        public T StringTableCount;
+        public T StringTableCount { get; set; }
 #else
-        public T? StringTableCount;
+        public T? StringTableCount { get; set; }
 #endif
     }
 }

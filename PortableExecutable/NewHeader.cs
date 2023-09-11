@@ -14,18 +14,18 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Reserved; must be zero.
         /// </summary>
-        public ushort Reserved;
+        public ushort Reserved { get; set; }
 
         /// <summary>
         /// The resource type. This member must have one of the following values.
         /// - RES_ICON (1): Icon resource type.
         /// - RES_CURSOR (2): Cursor resource type.
         /// </summary>
-        public ushort ResType;
+        public ushort ResType { get; set; }
 
         /// <summary>
         /// The number of icon or cursor components in the resource group.
         /// </summary>
-        public ushort ResCount;
+        public ushort ResCount { get; set; }
     }
 }

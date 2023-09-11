@@ -9,9 +9,9 @@ namespace SabreTools.Models.PlayJ
         /// Unknown data
         /// </summary>
 #if NET48
-        public byte[] Data;
+        public byte[] Data { get; set; }
 #else
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
 #endif
 
         // Notes about Data:

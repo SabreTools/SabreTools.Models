@@ -6,6 +6,6 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// The index of the next data block.
         /// </summary>
-        public uint NextDataBlockIndex;
+        public uint NextDataBlockIndex { get; set; }
     }
 }

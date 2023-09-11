@@ -7,9 +7,9 @@ namespace SabreTools.Models.VBSP
         /// BSP file signature.
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
@@ -20,20 +20,20 @@ namespace SabreTools.Models.VBSP
         /// 21:				Source - The lump version property was moved to the start of the struct.
         /// 0x00040014:		Dark Messiah - Looks like the 32 bit version has been split into two 16 bit fields.
         /// </remarks>
-        public int Version;
+        public int Version { get; set; }
 
         /// <summary>
         /// Lumps.
         /// </summary>
 #if NET48
-        public Lump[] Lumps;
+        public Lump[] Lumps { get; set; }
 #else
-        public Lump?[]? Lumps;
+        public Lump?[]? Lumps { get; set; }
 #endif
 
         /// <summary>
         /// The map's revision (iteration, version) number.
         /// </summary>
-        public int MapRevision;
+        public int MapRevision { get; set; }
     }
 }

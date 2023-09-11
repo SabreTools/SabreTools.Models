@@ -6,21 +6,21 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount;
+        public uint BlockCount { get; set; }
 
         /// <summary>
         /// The index of the first unused fragmentation map entry.
         /// </summary>
-        public uint FirstUnusedEntry;
+        public uint FirstUnusedEntry { get; set; }
 
         /// <summary>
         /// The block entry terminator; 0 = 0x0000ffff or 1 = 0xffffffff.
         /// </summary>
-        public uint Terminator;
+        public uint Terminator { get; set; }
 
         /// <summary>
         /// Header checksum.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
     }
 }

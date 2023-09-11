@@ -12,22 +12,22 @@ namespace SabreTools.Models.Nitro
         /// Start offset of folder contents within Name List
         /// relative to start of NameTable
         /// </summary>
-        public uint StartOffset;
+        public uint StartOffset { get; set; }
 
         /// <summary>
         /// Index of first file within folder in File Allocation Table
         /// </summary>
-        public ushort FirstFileIndex;
+        public ushort FirstFileIndex { get; set; }
 
         /// <summary>
         /// Index of parent folder in current table; for root folder
         /// this holds the number of entries in the table
         /// </summary>
-        public byte ParentFolderIndex;
+        public byte ParentFolderIndex { get; set; }
 
         /// <summary>
         /// Unknown, always 0xF0 except for root folder
         /// </summary>
-        public byte Unknown;
+        public byte Unknown { get; set; }
     }
 }

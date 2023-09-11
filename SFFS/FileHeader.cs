@@ -9,16 +9,16 @@ namespace SabreTools.Models.SFFS
         /// <summary>
         /// Start of file content (encrypted with filename)
         /// </summary>
-        public ulong FileContentStart;
+        public ulong FileContentStart { get; set; }
 
         /// <summary>
         /// File info (timestamps, size, data position, encrypted)
         /// </summary>
         /// <remarks>Unknown format</remarks>
 #if NET48
-        public byte[] FileInfo;
+        public byte[] FileInfo { get; set; }
 #else
-        public byte[]? FileInfo;
+        public byte[]? FileInfo { get; set; }
 #endif
     }
 }

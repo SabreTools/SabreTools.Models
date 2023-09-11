@@ -25,7 +25,7 @@ namespace SabreTools.Models.LinearExecutable
         /// The directive number specifies the type of directive defined. This can be
         /// used to determine the format of the information in the directive data.
         /// </remarks>
-        public DirectiveNumber DirectiveNumber;
+        public DirectiveNumber DirectiveNumber { get; set; }
 
         /// <summary>
         /// Directive data length.
@@ -33,7 +33,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This specifies the length in byte of the directive data for this directive number.
         /// </remarks>
-        public ushort DirectiveDataLength;
+        public ushort DirectiveDataLength { get; set; }
 
         /// <summary>
         /// Directive data offset.
@@ -43,6 +43,6 @@ namespace SabreTools.Models.LinearExecutable
         /// to beginning of linear EXE header for a resident table, and relative to the
         /// beginning of the EXE file for non-resident tables.
         /// </remarks>
-        public uint DirectiveDataOffset;
+        public uint DirectiveDataOffset { get; set; }
     }
 }

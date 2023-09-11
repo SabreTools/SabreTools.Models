@@ -6,21 +6,21 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// 	ISO639 language code
         /// </summary>
-        public ushort ISO639LanguageCode;
+        public ushort ISO639LanguageCode { get; set; }
 
         /// <summary>
         /// Reserved for language code extension
         /// </summary>
-        public byte Reserved;
+        public byte Reserved { get; set; }
 
         /// <summary>
         /// Menu existence flag [80 = title]
         /// </summary>
-        public byte MenuExistenceFlag;
+        public byte MenuExistenceFlag { get; set; }
 
         /// <summary>
         /// Offset to VMGM_LU, relative to VMGM_PGCI_UT
         /// </summary>
-        public uint LanguageUnitOffset;
+        public uint LanguageUnitOffset { get; set; }
     }
 }

@@ -7,15 +7,15 @@ namespace SabreTools.Models.Compression.LZ
     public sealed class FileHeaader
     {
 #if NET48
-        public string Magic;
+        public string Magic { get; set; }
 #else
-        public string? Magic;
+        public string? Magic { get; set; }
 #endif
 
-        public byte CompressionType;
+        public byte CompressionType { get; set; }
 
-        public char LastChar;
+        public char LastChar { get; set; }
 
-        public uint RealLength;
+        public uint RealLength { get; set; }
     }
 }

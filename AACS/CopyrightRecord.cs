@@ -9,9 +9,9 @@ namespace SabreTools.Models.AACS
         /// Null-terminated ASCII string representing the copyright
         /// </summary>
 #if NET48
-        public string Copyright;
+        public string Copyright { get; set; }
 #else
-        public string? Copyright;
+        public string? Copyright { get; set; }
 #endif
     }
 }

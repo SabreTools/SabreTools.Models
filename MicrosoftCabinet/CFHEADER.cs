@@ -15,60 +15,60 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// 0x46). This field is used to ensure that the file is a cabinet (.cab) file.
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Reserved field; MUST be set to 0 (zero).
         /// </summary>
-        public uint Reserved1;
+        public uint Reserved1 { get; set; }
 
         /// <summary>
         /// Specifies the total size of the cabinet file, in bytes.
         /// </summary>
-        public uint CabinetSize;
+        public uint CabinetSize { get; set; }
 
         /// <summary>
         /// Reserved field; MUST be set to 0 (zero).
         /// </summary>
-        public uint Reserved2;
+        public uint Reserved2 { get; set; }
 
         /// <summary>
         /// Specifies the absolute file offset, in bytes, of the first CFFILE field entry.
         /// </summary>
-        public uint FilesOffset;
+        public uint FilesOffset { get; set; }
 
         /// <summary>
         /// Reserved field; MUST be set to 0 (zero).
         /// </summary>
-        public uint Reserved3;
+        public uint Reserved3 { get; set; }
 
         /// <summary>
         /// Specifies the minor cabinet file format version. This value MUST be set to 3 (three).
         /// </summary>
-        public byte VersionMinor;
+        public byte VersionMinor { get; set; }
 
         /// <summary>
         /// Specifies the major cabinet file format version. This value MUST be set to 1 (one).
         /// </summary>
-        public byte VersionMajor;
+        public byte VersionMajor { get; set; }
 
         /// <summary>
         /// Specifies the number of CFFOLDER field entries in this cabinet file.
         /// </summary>
-        public ushort FolderCount;
+        public ushort FolderCount { get; set; }
 
         /// <summary>
         /// Specifies the number of CFFILE field entries in this cabinet file.
         /// </summary>
-        public ushort FileCount;
+        public ushort FileCount { get; set; }
 
         /// <summary>
         /// Specifies bit-mapped values that indicate the presence of optional data.
         /// </summary>
-        public HeaderFlags Flags;
+        public HeaderFlags Flags { get; set; }
 
         /// <summary>
         /// Specifies an arbitrarily derived (random) value that binds a collection of linked cabinet files
@@ -76,14 +76,14 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// cabinet file extractors to ensure that cabinet files are not inadvertently mixed.This value has no
         /// meaning in a cabinet file that is not in a set.
         /// </summary>
-        public ushort SetID;
+        public ushort SetID { get; set; }
 
         /// <summary>
         /// Specifies the sequential number of this cabinet in a multicabinet set. The first cabinet has
         /// iCabinet=0. This field, along with the setID field, is used by cabinet file extractors to ensure that
         /// this cabinet is the correct continuation cabinet when spanning cabinet files.
         /// </summary>
-        public ushort CabinetIndex;
+        public ushort CabinetIndex { get; set; }
 
         /// <summary>
         /// If the flags.cfhdrRESERVE_PRESENT field is not set, this field is not
@@ -91,7 +91,7 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// abReserve field in this CFHEADER structure.Values for cbCFHeader field MUST be between 0-
         /// 60,000.
         /// </summary>
-        public ushort HeaderReservedSize;
+        public ushort HeaderReservedSize { get; set; }
 
         /// <summary>
         /// If the flags.cfhdrRESERVE_PRESENT field is not set, this field is not
@@ -99,7 +99,7 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// abReserve field in each CFFOLDER field entry.Values for fhe cbCFFolder field MUST be between
         /// 0-255.
         /// </summary>
-        public byte FolderReservedSize;
+        public byte FolderReservedSize { get; set; }
 
         /// <summary>
         /// If the flags.cfhdrRESERVE_PRESENT field is not set, this field is not
@@ -107,7 +107,7 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// size, in bytes, of the abReserve field in each CFDATA field entry. Values for the cbCFDATA field
         /// MUST be between 0 - 255.
         /// </summary>
-        public byte DataReservedSize;
+        public byte DataReservedSize { get; set; }
 
         /// <summary>
         /// If the flags.cfhdrRESERVE_PRESENT field is set and the
@@ -115,9 +115,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// is defined by the application, and is used for application-defined purposes.
         /// </summary>
 #if NET48
-        public byte[] ReservedData;
+        public byte[] ReservedData { get; set; }
 #else
-        public byte[]? ReservedData;
+        public byte[]? ReservedData { get; set; }
 #endif
 
         /// <summary>
@@ -131,9 +131,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// cabinet to examine.
         /// </summary>
 #if NET48
-        public string CabinetPrev;
+        public string CabinetPrev { get; set; }
 #else
-        public string? CabinetPrev;
+        public string? CabinetPrev { get; set; }
 #endif
 
         /// <summary>
@@ -144,9 +144,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// bytes, plus the null byte.
         /// </summary>
 #if NET48
-        public string DiskPrev;
+        public string DiskPrev { get; set; }
 #else
-        public string? DiskPrev;
+        public string? DiskPrev { get; set; }
 #endif
 
         /// <summary>
@@ -156,9 +156,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// beyond the end of the current cabinet file are continued in the named cabinet file.
         /// </summary>
 #if NET48
-        public string CabinetNext;
+        public string CabinetNext { get; set; }
 #else
-        public string? CabinetNext;
+        public string? CabinetNext { get; set; }
 #endif
 
         /// <summary>
@@ -169,9 +169,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// user to insert a disk.
         /// </summary>
 #if NET48
-        public string DiskNext;
+        public string DiskNext { get; set; }
 #else
-        public string? DiskNext;
+        public string? DiskNext { get; set; }
 #endif
     }
 }

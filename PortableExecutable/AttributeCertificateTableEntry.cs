@@ -42,26 +42,26 @@
         /// <summary>
         /// Specifies the length of the attribute certificate entry.
         /// </summary>
-        public uint Length;
+        public uint Length { get; set; }
 
         /// <summary>
         /// Contains the certificate version number.
         /// </summary>
-        public WindowsCertificateRevision Revision;
+        public WindowsCertificateRevision Revision { get; set; }
 
         /// <summary>
         /// Specifies the type of content in Certificate.
         /// </summary>
-        public WindowsCertificateType CertificateType;
+        public WindowsCertificateType CertificateType { get; set; }
 
         /// <summary>
         /// Contains a certificate, such as an Authenticode signature.
         /// </summary>
         /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#certificate-data"/>
 #if NET48
-        public byte[] Certificate;
+        public byte[] Certificate { get; set; }
 #else
-        public byte[]? Certificate;
+        public byte[]? Certificate { get; set; }
 #endif
     }
 }

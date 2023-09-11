@@ -24,9 +24,9 @@ namespace SabreTools.Models.PortableExecutable
         /// remainder of the import information. 
         /// </summary>
 #if NET48
-        public ImportDirectoryTableEntry[] ImportDirectoryTable;
+        public ImportDirectoryTableEntry[] ImportDirectoryTable { get; set; }
 #else
-        public ImportDirectoryTableEntry?[]? ImportDirectoryTable;
+        public ImportDirectoryTableEntry?[]? ImportDirectoryTable { get; set; }
 #endif
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace SabreTools.Models.PortableExecutable
         /// numbers for PE32+.
         /// </summary>
 #if NET48
-        public Dictionary<int, ImportLookupTableEntry[]> ImportLookupTables;
+        public Dictionary<int, ImportLookupTableEntry[]> ImportLookupTables { get; set; }
 #else
-        public Dictionary<int, ImportLookupTableEntry?[]?>? ImportLookupTables;
+        public Dictionary<int, ImportLookupTableEntry?[]?>? ImportLookupTables { get; set; }
 #endif
 
         /// <summary>
@@ -44,18 +44,18 @@ namespace SabreTools.Models.PortableExecutable
         /// they are still called "virtual addresses".
         /// </summary>
 #if NET48
-        public Dictionary<int, ImportAddressTableEntry[]> ImportAddressTables;
+        public Dictionary<int, ImportAddressTableEntry[]> ImportAddressTables { get; set; }
 #else
-        public Dictionary<int, ImportAddressTableEntry?[]?>? ImportAddressTables;
+        public Dictionary<int, ImportAddressTableEntry?[]?>? ImportAddressTables { get; set; }
 #endif
 
         /// <summary>
         /// One hint/name table suffices for the entire import section.
         /// </summary>
 #if NET48
-        public HintNameTableEntry[] HintNameTable;
+        public HintNameTableEntry[] HintNameTable { get; set; }
 #else
-        public HintNameTableEntry?[]? HintNameTable;
+        public HintNameTableEntry?[]? HintNameTable { get; set; }
 #endif
     }
 }

@@ -11,7 +11,7 @@
         /// with this value. If it fails, a binary search is performed on the DLL's
         /// export name pointer table.
         /// </summary>
-        public ushort Hint;
+        public ushort Hint { get; set; }
 
         /// <summary>
         /// An ASCII string that contains the name to import. This is the string that
@@ -19,9 +19,9 @@
         /// and terminated by a null byte.
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
     }
 }

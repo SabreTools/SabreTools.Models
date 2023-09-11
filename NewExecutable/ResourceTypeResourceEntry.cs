@@ -16,17 +16,17 @@ namespace SabreTools.Models.NewExecutable
         /// of the alignment shift count value specified at
         /// beginning of the resource table.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
 
         /// <summary>
         /// Length of the resource in the file (in bytes).
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// Flag word.
         /// </summary>
-        public ResourceTypeResourceFlag FlagWord;
+        public ResourceTypeResourceFlag FlagWord { get; set; }
 
         /// <summary>
         /// Resource ID. This is an integer type if the high-order
@@ -34,11 +34,11 @@ namespace SabreTools.Models.NewExecutable
         /// resource string, the offset is relative to the
         /// beginning of the resource table.
         /// </summary>
-        public ushort ResourceID;
+        public ushort ResourceID { get; set; }
 
         /// <summary>
         /// Reserved.
         /// </summary>
-        public uint Reserved;
+        public uint Reserved { get; set; }
     }
 }

@@ -25,9 +25,9 @@ namespace SabreTools.Models.LinearExecutable
         /// file as a valid 32-bit Linear Executable Module Format.
         /// </remarks>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This byte specifies the byte ordering for the linear EXE format.
         /// </remarks>
-        public ByteOrder ByteOrder;
+        public ByteOrder ByteOrder { get; set; }
 
         /// <summary>
         /// Word Ordering.
@@ -44,7 +44,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This byte specifies the Word ordering for the linear EXE format.
         /// </remarks>
-        public WordOrder WordOrder;
+        public WordOrder WordOrder { get; set; }
 
         /// <summary>
         /// Linear EXE Format Level.
@@ -56,7 +56,7 @@ namespace SabreTools.Models.LinearExecutable
         /// future EXE file versions so that an appropriate error message may be
         /// displayed if an attempt is made to load them. 
         /// </remarks>
-        public uint ExecutableFormatLevel;
+        public uint ExecutableFormatLevel { get; set; }
 
         /// <summary>
         /// Module CPU Type.
@@ -64,7 +64,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This field specifies the type of CPU required by this module to run.
         /// </remarks>
-        public CPUType CPUType;
+        public CPUType CPUType { get; set; }
 
         /// <summary>
         /// Module OS Type.
@@ -72,7 +72,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This field specifies the type of Operating system required to run this module.
         /// </remarks>
-        public OperatingSystem ModuleOS;
+        public OperatingSystem ModuleOS { get; set; }
 
         /// <summary>
         /// Module version
@@ -81,12 +81,12 @@ namespace SabreTools.Models.LinearExecutable
         /// This is useful for differentiating between revisions of dynamic linked modules.
         /// This value is specified at link time by the user. 
         /// </remarks>
-        public uint ModuleVersion;
+        public uint ModuleVersion { get; set; }
 
         /// <summary>
         /// Module type flags
         /// </summary>
-        public ModuleFlags ModuleTypeFlags;
+        public ModuleFlags ModuleTypeFlags { get; set; }
 
         /// <summary>
         /// Number of pages in module.
@@ -101,7 +101,7 @@ namespace SabreTools.Models.LinearExecutable
         /// EXE module. This is used to determine the size of the page information tables
         /// in the linear EXE module. 
         /// </remarks>
-        public uint ModuleNumberPages;
+        public uint ModuleNumberPages { get; set; }
 
         /// <summary>
         /// The Object number to which the Entry Address is relative.
@@ -116,7 +116,7 @@ namespace SabreTools.Models.LinearExecutable
         /// is set, then the object to which this field refers must be a 32-bit object (i.e.,
         /// the Big/Default bit must be set in the object flags; see below).
         /// </remarks>
-        public uint InitialObjectCS;
+        public uint InitialObjectCS { get; set; }
 
         /// <summary>
         /// Entry Address of module.
@@ -125,7 +125,7 @@ namespace SabreTools.Models.LinearExecutable
         /// The Entry Address is the starting address for program modules and the library
         /// initialization and Library termination address for library modules. 
         /// </remarks>
-        public uint InitialEIP;
+        public uint InitialEIP { get; set; }
 
         /// <summary>
         /// The Object number to which the ESP is relative.
@@ -135,7 +135,7 @@ namespace SabreTools.Models.LinearExecutable
         /// nonzero value for a program module to be correctly loaded. This field is ignored
         /// for a library module. 
         /// </remarks>
-        public uint InitialObjectSS;
+        public uint InitialObjectSS { get; set; }
 
         /// <summary>
         /// Starting stack address of module.
@@ -145,7 +145,7 @@ namespace SabreTools.Models.LinearExecutable
         /// value in this field indicates that the stack pointer is to be initialized to the
         /// highest address/offset in the object. This field is ignored for a library module. 
         /// </remarks>
-        public uint InitialESP;
+        public uint InitialESP { get; set; }
 
         /// <summary>
         /// The size of one page for this system.
@@ -155,7 +155,7 @@ namespace SabreTools.Models.LinearExecutable
         /// For the initial version of this linear EXE format the page size is 4Kbytes.
         /// (The 4K page size is specified by a value of 4096 in this field.)
         /// </remarks>
-        public uint MemoryPageSize;
+        public uint MemoryPageSize { get; set; }
 
         /// <summary>
         /// The shift left bits for page offsets.
@@ -169,7 +169,7 @@ namespace SabreTools.Models.LinearExecutable
         /// 512 byte (disk sector) basis. The default value for this field is 12 (decimal),
         /// which give a 4096 byte alignment. All other offsets are byte aligned.
         /// </remarks>
-        public uint BytesOnLastPage;
+        public uint BytesOnLastPage { get; set; }
 
         /// <summary>
         /// Total size of the fixup information in bytes.
@@ -181,7 +181,7 @@ namespace SabreTools.Models.LinearExecutable
         /// - Import Module name Table
         /// - Import Procedure Name Table
         /// </remarks>
-        public uint FixupSectionSize;
+        public uint FixupSectionSize { get; set; }
 
         /// <summary>
         /// Checksum for fixup information.
@@ -192,7 +192,7 @@ namespace SabreTools.Models.LinearExecutable
         /// not always loaded into main memory with the 'loader section'. If the checksum
         /// feature is not implemented, then the linker will set these fields to zero.
         /// </remarks>
-        public uint FixupSectionChecksum;
+        public uint FixupSectionChecksum { get; set; }
 
         /// <summary>
         /// Size of memory resident tables.
@@ -202,7 +202,7 @@ namespace SabreTools.Models.LinearExecutable
         /// for the module, while the module is in use. This total size includes all
         /// tables from the Object Table down to and including the Per-Page Checksum Table.
         /// </remarks>
-        public uint LoaderSectionSize;
+        public uint LoaderSectionSize { get; set; }
 
         /// <summary>
         /// Checksum for loader section.
@@ -212,7 +212,7 @@ namespace SabreTools.Models.LinearExecutable
         /// If the checksum feature is not implemented, then the linker will set these fields
         /// to zero.
         /// </remarks>
-        public uint LoaderSectionChecksum;
+        public uint LoaderSectionChecksum { get; set; }
 
         /// <summary>
         /// Object Table offset.
@@ -220,7 +220,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectTableOffset;
+        public uint ObjectTableOffset { get; set; }
 
         /// <summary>
         /// Object Table Count.
@@ -228,7 +228,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This defines the number of entries in Object Table.
         /// </remarks>
-        public uint ObjectTableCount;
+        public uint ObjectTableCount { get; set; }
 
         /// <summary>
         /// Object Page Table offset
@@ -236,7 +236,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectPageMapOffset;
+        public uint ObjectPageMapOffset { get; set; }
 
         /// <summary>
         /// Object Iterated Pages offset.
@@ -244,7 +244,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectIterateDataMapOffset;
+        public uint ObjectIterateDataMapOffset { get; set; }
 
         /// <summary>
         /// Resource Table offset
@@ -252,12 +252,12 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ResourceTableOffset;
+        public uint ResourceTableOffset { get; set; }
 
         /// <summary>
         /// Number of entries in Resource Table.
         /// </summary>
-        public uint ResourceTableCount;
+        public uint ResourceTableCount { get; set; }
 
         /// <summary>
         /// Resident Name Table offset.
@@ -265,7 +265,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ResidentNamesTableOffset;
+        public uint ResidentNamesTableOffset { get; set; }
 
         /// <summary>
         /// Entry Table offset.
@@ -273,7 +273,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint EntryTableOffset;
+        public uint EntryTableOffset { get; set; }
 
         /// <summary>
         /// Module Format Directives Table offset.
@@ -281,7 +281,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ModuleDirectivesTableOffset;
+        public uint ModuleDirectivesTableOffset { get; set; }
 
         /// <summary>
         /// Number of Module Format Directives in the Table.
@@ -290,7 +290,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This field specifies the number of entries in the
         /// Module Format Directives Table.
         /// </remarks>
-        public uint ModuleDirectivesCount;
+        public uint ModuleDirectivesCount { get; set; }
 
         /// <summary>
         /// Fixup Page Table offset.
@@ -298,7 +298,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint FixupPageTableOffset;
+        public uint FixupPageTableOffset { get; set; }
 
         /// <summary>
         /// Fixup Record Table offset.
@@ -306,7 +306,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint FixupRecordTableOffset;
+        public uint FixupRecordTableOffset { get; set; }
 
         /// <summary>
         /// Import Module Name Table offset.
@@ -314,12 +314,12 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ImportedModulesNameTableOffset;
+        public uint ImportedModulesNameTableOffset { get; set; }
 
         /// <summary>
         /// The number of entries in the Import Module Name Table.
         /// </summary>
-        public uint ImportedModulesCount;
+        public uint ImportedModulesCount { get; set; }
 
         /// <summary>
         /// Import Procedure Name Table offset.
@@ -327,7 +327,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ImportProcedureNameTableOffset;
+        public uint ImportProcedureNameTableOffset { get; set; }
 
         /// <summary>
         /// Per-page Checksum Table offset.
@@ -335,7 +335,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint PerPageChecksumTableOffset;
+        public uint PerPageChecksumTableOffset { get; set; }
 
         /// <summary>
         /// Data Pages Offset.
@@ -343,7 +343,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the EXE file.
         /// </remarks>
-        public uint DataPagesOffset;
+        public uint DataPagesOffset { get; set; }
 
         /// <summary>
         /// Number of Preload pages for this module.
@@ -352,7 +352,7 @@ namespace SabreTools.Models.LinearExecutable
         /// Note that OS/2 2.0 does not respect the preload of pages as specified
         /// in the executable file for performance reasons.
         /// </remarks>
-        public uint PreloadPageCount;
+        public uint PreloadPageCount { get; set; }
 
         /// <summary>
         /// Non-Resident Name Table offset.
@@ -360,12 +360,12 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the EXE file.
         /// </remarks>
-        public uint NonResidentNamesTableOffset;
+        public uint NonResidentNamesTableOffset { get; set; }
 
         /// <summary>
         /// Number of bytes in the Non-resident name table.
         /// </summary>
-        public uint NonResidentNamesTableLength;
+        public uint NonResidentNamesTableLength { get; set; }
 
         /// <summary>
         /// Non-Resident Name Table Checksum.
@@ -373,7 +373,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This is a cryptographic checksum of the Non-Resident Name Table.
         /// </remarks>
-        public uint NonResidentNamesTableChecksum;
+        public uint NonResidentNamesTableChecksum { get; set; }
 
         /// <summary>
         /// The Auto Data Segment Object number.
@@ -383,7 +383,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This field is supported for 16-bit compatibility only and is not used by
         /// 32-bit modules.
         /// </remarks>
-        public uint AutomaticDataObject;
+        public uint AutomaticDataObject { get; set; }
 
         /// <summary>
         /// Debug Information offset.
@@ -391,7 +391,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint DebugInformationOffset;
+        public uint DebugInformationOffset { get; set; }
 
         /// <summary>
         /// Debug Information length.
@@ -399,7 +399,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// The length of the debug information in bytes.
         /// </remarks>
-        public uint DebugInformationLength;
+        public uint DebugInformationLength { get; set; }
 
         /// <summary>
         /// Instance pages in preload section.
@@ -407,7 +407,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// The number of instance data pages found in the preload section.
         /// </remarks>
-        public uint PreloadInstancePagesNumber;
+        public uint PreloadInstancePagesNumber { get; set; }
 
         /// <summary>
         /// Instance pages in demand section.
@@ -415,7 +415,7 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// The number of instance data pages found in the demand section.
         /// </remarks>
-        public uint DemandInstancePagesNumber;
+        public uint DemandInstancePagesNumber { get; set; }
 
         /// <summary>
         /// Heap size added to the Auto DS Object.
@@ -425,6 +425,6 @@ namespace SabreTools.Models.LinearExecutable
         /// by the loader. This field is supported for 16-bit compatibility only and
         /// is not used by 32-bit modules.
         /// </remarks>
-        public uint ExtraHeapAllocation;
+        public uint ExtraHeapAllocation { get; set; }
     }
 }

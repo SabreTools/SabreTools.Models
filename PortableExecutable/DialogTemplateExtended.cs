@@ -20,7 +20,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The version number of the extended dialog box template. This member must be
         /// set to 1.
         /// </summary>
-        public ushort Version;
+        public ushort Version { get; set; }
 
         /// <summary>
         /// Indicates whether a template is an extended dialog box template. If signature
@@ -29,21 +29,21 @@ namespace SabreTools.Models.PortableExecutable
         /// than 0xFFFF, this is a standard dialog box template that uses the DLGTEMPLATE
         /// and DLGITEMTEMPLATE structures.
         /// </summary>
-        public ushort Signature;
+        public ushort Signature { get; set; }
 
         /// <summary>
         /// The help context identifier for the dialog box window. When the system sends a
         /// WM_HELP message, it passes this value in the wContextId member of the HELPINFO
         /// structure.
         /// </summary>
-        public uint HelpID;
+        public uint HelpID { get; set; }
 
         /// <summary>
         /// The extended windows styles. This member is not used when creating dialog boxes,
         /// but applications that use dialog box templates can use it to create other types
         /// of windows. 
         /// </summary>
-        public ExtendedWindowStyles ExtendedStyle;
+        public ExtendedWindowStyles ExtendedStyle { get; set; }
 
         /// <summary>
         /// The style of the dialog box.
@@ -55,12 +55,12 @@ namespace SabreTools.Models.PortableExecutable
         /// to the values specified in these members. Then the system sends a WM_SETFONT message
         /// to the dialog box and to each control to provide a handle to the font.
         /// </summary>
-        public WindowStyles Style;
+        public WindowStyles Style { get; set; }
 
         /// <summary>
         /// The number of controls in the dialog box.
         /// </summary>
-        public ushort DialogItems;
+        public ushort DialogItems { get; set; }
 
         /// <summary>
         /// The x-coordinate, in dialog box units, of the upper-left corner of the dialog box.
@@ -69,7 +69,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionX;
+        public short PositionX { get; set; }
 
         /// <summary>
         /// The y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
@@ -78,7 +78,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionY;
+        public short PositionY { get; set; }
 
         /// <summary>
         /// The width, in dialog box units, of the dialog box.
@@ -87,7 +87,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short WidthX;
+        public short WidthX { get; set; }
 
         /// <summary>
         /// The height, in dialog box units, of the dialog box.
@@ -96,7 +96,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short HeightY;
+        public short HeightY { get; set; }
 
         /// <summary>
         /// A variable-length array of 16-bit elements that identifies a menu resource for the dialog box.
@@ -111,15 +111,15 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string MenuResource;
+        public string MenuResource { get; set; }
 #else
-        public string? MenuResource;
+        public string? MenuResource { get; set; }
 #endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
         /// </summary>
-        public ushort MenuResourceOrdinal;
+        public ushort MenuResourceOrdinal { get; set; }
 
         /// <summary>A variable-length array of 16-bit elements that identifies the window class of the
         /// dialog box. If the first element of the array is 0x0000, the system uses the predefined dialog
@@ -133,15 +133,15 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string ClassResource;
+        public string ClassResource { get; set; }
 #else
-        public string? ClassResource;
+        public string? ClassResource { get; set; }
 #endif
 
         /// <summary>
         /// The ordinal value of a predefined system window class.
         /// </summary>
-        public ushort ClassResourceOrdinal;
+        public ushort ClassResourceOrdinal { get; set; }
 
         /// <summary>
         /// The title of the dialog box. If the first element of this array is 0x0000, the dialog box has no
@@ -152,9 +152,9 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string TitleResource;
+        public string TitleResource { get; set; }
 #else
-        public string? TitleResource;
+        public string? TitleResource { get; set; }
 #endif
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace SabreTools.Models.PortableExecutable
         /// 
         /// This member is present only if the style member specifies DS_SETFONT or DS_SHELLFONT.
         /// </summary>
-        public ushort PointSize;
+        public ushort PointSize { get; set; }
 
         /// <summary>
         /// The weight of the font. Note that, although this can be any of the values listed for the lfWeight
@@ -170,21 +170,21 @@ namespace SabreTools.Models.PortableExecutable
         /// 
         /// This member is present only if the style member specifies DS_SETFONT or DS_SHELLFONT.
         /// </summary>
-        public ushort Weight;
+        public ushort Weight { get; set; }
 
         /// <summary>
         /// Indicates whether the font is italic. If this value is TRUE, the font is italic.
         /// 
         /// This member is present only if the style member specifies DS_SETFONT or DS_SHELLFONT.
         /// </summary>
-        public byte Italic;
+        public byte Italic { get; set; }
 
         /// <summary>
         /// The character set to be used. For more information, see the lfcharset member of LOGFONT.
         /// 
         /// This member is present only if the style member specifies DS_SETFONT or DS_SHELLFONT.
         /// </summary>
-        public byte CharSet;
+        public byte CharSet { get; set; }
 
         /// <summary>
         /// The name of the typeface for the font.
@@ -196,9 +196,9 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string Typeface;
+        public string Typeface { get; set; }
 #else
-        public string? Typeface;
+        public string? Typeface { get; set; }
 #endif
     }
 }

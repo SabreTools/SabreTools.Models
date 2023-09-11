@@ -7,19 +7,19 @@ namespace SabreTools.Models.PAK
         /// Signature
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Directory Offset
         /// </summary>
-        public uint DirectoryOffset;
+        public uint DirectoryOffset { get; set; }
 
         /// <summary>
         /// Directory Length
         /// </summary>
-        public uint DirectoryLength;
+        public uint DirectoryLength { get; set; }
     }
 }

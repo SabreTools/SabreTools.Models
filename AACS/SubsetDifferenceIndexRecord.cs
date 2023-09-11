@@ -14,7 +14,7 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// The number of devices per index offset.
         /// </summary>
-        public uint Span;
+        public uint Span { get; set; }
 
         /// <summary>
         /// These offsets refer to the offset within the following Explicit
@@ -22,9 +22,9 @@ namespace SabreTools.Models.AACS
         /// </summary>
         // <remarks>UInt24 not UInt32</remarks>
 #if NET48
-        public uint[] Offsets;
+        public uint[] Offsets { get; set; }
 #else
-        public uint[]? Offsets;
+        public uint[]? Offsets { get; set; }
 #endif
     }
 }

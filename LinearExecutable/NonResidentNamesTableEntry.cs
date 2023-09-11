@@ -42,7 +42,7 @@ namespace SabreTools.Models.LinearExecutable
         /// signifies that additional information is contained in the linear EXE module and
         /// will be used in the future for parameter type checking.
         /// </remarks>
-        public byte Length;
+        public byte Length { get; set; }
 
         /// <summary>
         /// ASCII String.
@@ -52,9 +52,9 @@ namespace SabreTools.Models.LinearExecutable
         /// The string is case case sensitive and is not null terminated.
         /// </remarks>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
@@ -63,6 +63,6 @@ namespace SabreTools.Models.LinearExecutable
         /// <remarks>
         /// The ordinal number in an ordered index into the entry table for this entry point.
         /// </remarks>
-        public ushort OrdinalNumber;
+        public ushort OrdinalNumber { get; set; }
     }
 }

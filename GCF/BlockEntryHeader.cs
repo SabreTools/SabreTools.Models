@@ -6,41 +6,41 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount;
+        public uint BlockCount { get; set; }
 
         /// <summary>
         /// Number of data blocks that point to data.
         /// </summary>
-        public uint BlocksUsed;
+        public uint BlocksUsed { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1;
+        public uint Dummy1 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy2;
+        public uint Dummy2 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy3;
+        public uint Dummy3 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy4;
+        public uint Dummy4 { get; set; }
 
         /// <summary>
         /// Header checksum.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
     }
 }

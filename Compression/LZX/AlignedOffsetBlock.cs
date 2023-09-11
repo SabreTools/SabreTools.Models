@@ -11,9 +11,9 @@ namespace SabreTools.Models.Compression.LZX
         /// Generic block header
         /// </summary>
 #if NET48
-        public BlockHeader Header;
+        public BlockHeader Header { get; set; }
 #else
-        public BlockHeader? Header;
+        public BlockHeader? Header { get; set; }
 #endif
 
         /// <summary>
@@ -21,9 +21,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>8 elements, 3 bits each</remarks>
 #if NET48
-        public byte[] AlignedOffsetTree;
+        public byte[] AlignedOffsetTree { get; set; }
 #else
-        public byte[]? AlignedOffsetTree;
+        public byte[]? AlignedOffsetTree { get; set; }
 #endif
 
         /// <summary>
@@ -31,9 +31,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>20 elements, 4 bits each</remarks>
 #if NET48
-        public byte[] PretreeFirst256;
+        public byte[] PretreeFirst256 { get; set; }
 #else
-        public byte[]? PretreeFirst256;
+        public byte[]? PretreeFirst256 { get; set; }
 #endif
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>Encoded using pretree</remarks>
 #if NET48
-        public int[] PathLengthsFirst256;
+        public int[] PathLengthsFirst256 { get; set; }
 #else
-        public int[]? PathLengthsFirst256;
+        public int[]? PathLengthsFirst256 { get; set; }
 #endif
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>20 elements, 4 bits each</remarks>
 #if NET48
-        public byte[] PretreeRemainder;
+        public byte[] PretreeRemainder { get; set; }
 #else
-        public byte[]? PretreeRemainder;
+        public byte[]? PretreeRemainder { get; set; }
 #endif
 
         /// <summary>
@@ -61,9 +61,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>Encoded using pretree</remarks>
 #if NET48
-        public int[] PathLengthsRemainder;
+        public int[] PathLengthsRemainder { get; set; }
 #else
-        public int[]? PathLengthsRemainder;
+        public int[]? PathLengthsRemainder { get; set; }
 #endif
 
         /// <summary>
@@ -71,9 +71,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>20 elements, 4 bits each</remarks>
 #if NET48
-        public byte[] PretreeLengthTree;
+        public byte[] PretreeLengthTree { get; set; }
 #else
-        public byte[]? PretreeLengthTree;
+        public byte[]? PretreeLengthTree { get; set; }
 #endif
 
         /// <summary>
@@ -81,9 +81,9 @@ namespace SabreTools.Models.Compression.LZX
         /// </summary>
         /// <remarks>Encoded using pretree</remarks>
 #if NET48
-        public int[] PathLengthsLengthTree;
+        public int[] PathLengthsLengthTree { get; set; }
 #else
-        public int[]? PathLengthsLengthTree;
+        public int[]? PathLengthsLengthTree { get; set; }
 #endif
 
         // Entry                                    Comments                    Size

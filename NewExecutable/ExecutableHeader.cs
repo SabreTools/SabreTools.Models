@@ -26,33 +26,33 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Version number of the linker.
         /// </summary>
-        public byte LinkerVersion;
+        public byte LinkerVersion { get; set; }
         
         /// <summary>
         /// Revision number of the linker.
         /// </summary>
-        public byte LinkerRevision;
+        public byte LinkerRevision { get; set; }
         
         /// <summary>
         /// Entry Table file offset, relative to the beginning of the segmented EXE header.
         /// </summary>
-        public ushort EntryTableOffset;
+        public ushort EntryTableOffset { get; set; }
         
         /// <summary>
         /// Number of bytes in the entry table.
         /// </summary>
-        public ushort EntryTableSize;
+        public ushort EntryTableSize { get; set; }
 
         /// <summary>
         /// 32-bit CRC of entire contents of file.
         /// </summary>
         /// <remarks>These words are taken as 00 during the calculation.</remarks>
-        public uint CrcChecksum;
+        public uint CrcChecksum { get; set; }
 
         /// <summary>
         /// Flag word
         /// </summary>
-        public HeaderFlag FlagWord;
+        public HeaderFlag FlagWord { get; set; }
 
         /// <summary>
         /// Segment number of automatic data segment.
@@ -65,26 +65,26 @@ namespace SabreTools.Models.NewExecutable
         /// table. The first entry in the segment table is segment
         /// number 1.
         /// </remarks>
-        public ushort AutomaticDataSegmentNumber;
+        public ushort AutomaticDataSegmentNumber { get; set; }
 
         /// <summary>
         /// Initial size, in bytes, of dynamic heap added to the
         /// data segment. This value is zero if no initial local
         /// heap is allocated.
         /// </summary>
-        public ushort InitialHeapAlloc;
+        public ushort InitialHeapAlloc { get; set; }
 
         /// <summary>
         /// Initial size, in bytes, of stack added to the data
         /// segment. This value is zero to indicate no initial
         /// stack allocation, or when SS is not equal to DS.
         /// </summary>
-        public ushort InitialStackAlloc;
+        public ushort InitialStackAlloc { get; set; }
 
         /// <summary>
         /// Segment number:offset of CS:IP.
         /// </summary>
-        public uint InitialCSIPSetting;
+        public uint InitialCSIPSetting { get; set; }
 
         /// <summary>
         /// Segment number:offset of SS:SP.
@@ -95,108 +95,108 @@ namespace SabreTools.Models.NewExecutable
         /// automatic data segment just below the additional heap
         /// area.
         /// </remarks>
-        public uint InitialSSSPSetting;
+        public uint InitialSSSPSetting { get; set; }
 
         /// <summary>
         /// Number of entries in the Segment Table.
         /// </summary>
-        public ushort FileSegmentCount;
+        public ushort FileSegmentCount { get; set; }
 
         /// <summary>
         /// Number of entries in the Module Reference Table.
         /// </summary>
-        public ushort ModuleReferenceTableSize;
+        public ushort ModuleReferenceTableSize { get; set; }
 
         /// <summary>
         /// Number of bytes in the Non-Resident Name Table.
         /// </summary>
-        public ushort NonResidentNameTableSize;
+        public ushort NonResidentNameTableSize { get; set; }
 
         /// <summary>
         /// Segment Table file offset, relative to the beginning
         /// of the segmented EXE header.
         /// </summary>
-        public ushort SegmentTableOffset;
+        public ushort SegmentTableOffset { get; set; }
 
         /// <summary>
         /// Resource Table file offset, relative to the beginning
         /// of the segmented EXE header.
         /// </summary>
-        public ushort ResourceTableOffset;
+        public ushort ResourceTableOffset { get; set; }
 
         /// <summary>
         /// Resident Name Table file offset, relative to the
         /// beginning of the segmented EXE header.
         /// </summary>
-        public ushort ResidentNameTableOffset;
+        public ushort ResidentNameTableOffset { get; set; }
 
         /// <summary>
         /// Module Reference Table file offset, relative to the
         /// beginning of the segmented EXE header.
         /// </summary>
-        public ushort ModuleReferenceTableOffset;
+        public ushort ModuleReferenceTableOffset { get; set; }
 
         /// <summary>
         /// Imported Names Table file offset, relative to the
         /// beginning of the segmented EXE header.
         /// </summary>
-        public ushort ImportedNamesTableOffset;
+        public ushort ImportedNamesTableOffset { get; set; }
 
         /// <summary>
         /// Non-Resident Name Table offset, relative to the
         /// beginning of the file.
         /// </summary>
-        public uint NonResidentNamesTableOffset;
+        public uint NonResidentNamesTableOffset { get; set; }
 
         /// <summary>
         /// Number of movable entries in the Entry Table.
         /// </summary>
-        public ushort MovableEntriesCount;
+        public ushort MovableEntriesCount { get; set; }
 
         /// <summary>
         /// Logical sector alignment shift count, log(base 2) of
         /// the segment sector size (default 9).
         /// </summary>
-        public ushort SegmentAlignmentShiftCount;
+        public ushort SegmentAlignmentShiftCount { get; set; }
 
         /// <summary>
         /// Number of resource entries.
         /// </summary>
-        public ushort ResourceEntriesCount;
+        public ushort ResourceEntriesCount { get; set; }
 
         /// <summary>
         /// Executable type, used by loader.
         /// </summary>
-        public OperatingSystem TargetOperatingSystem;
+        public OperatingSystem TargetOperatingSystem { get; set; }
         
         /// <summary>
         /// Other OS/2 flags
         /// </summary>
-        public OS2Flag AdditionalFlags;
+        public OS2Flag AdditionalFlags { get; set; }
         
         /// <summary>
         /// Offset to return thunks or start of gangload area
         /// </summary>
-        public ushort ReturnThunkOffset;
+        public ushort ReturnThunkOffset { get; set; }
         
         /// <summary>
         /// Offset to segment reference thunks or size of gangload area
         /// </summary>
-        public ushort SegmentReferenceThunkOffset;
+        public ushort SegmentReferenceThunkOffset { get; set; }
 
         /// <summary>
         /// Minimum code swap area size
         /// </summary>
-        public ushort MinCodeSwapAreaSize;
+        public ushort MinCodeSwapAreaSize { get; set; }
         
         /// <summary>
         /// Windows SDK revison number
         /// </summary>
-        public byte WindowsSDKRevision;
+        public byte WindowsSDKRevision { get; set; }
         
         /// <summary>
         /// Windows SDK version number
         /// </summary>
-        public byte WindowsSDKVersion;
+        public byte WindowsSDKVersion { get; set; }
     }
 }

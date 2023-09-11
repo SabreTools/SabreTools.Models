@@ -14,28 +14,28 @@
         /// File name
         /// </summary>
 #if NET48
-        public string FileName;
+        public string FileName { get; set; }
 #else
-        public string? FileName;
+        public string? FileName { get; set; }
 #endif
 
         /// <summary>
         /// File offset
         /// </summary>
-        public uint FileOffset;
+        public uint FileOffset { get; set; }
 
         /// <summary>
         /// File size
         /// </summary>
-        public uint FileSize;
+        public uint FileSize { get; set; }
 
         /// <summary>
         /// SHA256 hash calculated over the entire file contents
         /// </summary>
 #if NET48
-        public byte[] FileHash;
+        public byte[] FileHash { get; set; }
 #else
-        public byte[]? FileHash;
+        public byte[]? FileHash { get; set; }
 #endif
     }
 }

@@ -9,7 +9,7 @@ namespace SabreTools.Models.AACS
         /// field indicates that only one ID is being revoked, a value of one
         /// in the Range field indicates two ID’s are being revoked, and so on.
         /// </summary>
-        public ushort Range;
+        public ushort Range { get; set; }
 
         /// <summary>
         /// A 6-byte Host ID value identifying the host being revoked (or the
@@ -17,9 +17,9 @@ namespace SabreTools.Models.AACS
         /// Range value).
         /// </summary>
 #if NET48
-        public byte[] HostID;
+        public byte[] HostID { get; set; }
 #else
-        public byte[]? HostID;
+        public byte[]? HostID { get; set; }
 #endif
     }
 }

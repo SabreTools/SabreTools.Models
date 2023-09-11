@@ -6,21 +6,21 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Always 0x14893721
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint Dummy1;
+        public uint Dummy1 { get; set; }
 
         /// <summary>
         /// Number of items.
         /// </summary>
-        public uint ItemCount;
+        public uint ItemCount { get; set; }
 
         /// <summary>
         /// Number of checksums.
         /// </summary>
-        public uint ChecksumCount;
+        public uint ChecksumCount { get; set; }
     }
 }

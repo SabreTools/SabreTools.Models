@@ -4,25 +4,25 @@ namespace SabreTools.Models.XZP
     public sealed class Header
     {
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
-        public uint Version;
+        public uint Version { get; set; }
 
-        public uint PreloadDirectoryEntryCount;
+        public uint PreloadDirectoryEntryCount { get; set; }
 
-        public uint DirectoryEntryCount;
+        public uint DirectoryEntryCount { get; set; }
 
-        public uint PreloadBytes;
+        public uint PreloadBytes { get; set; }
 
-        public uint HeaderLength;
+        public uint HeaderLength { get; set; }
 
-        public uint DirectoryItemCount;
+        public uint DirectoryItemCount { get; set; }
 
-        public uint DirectoryItemOffset;
+        public uint DirectoryItemOffset { get; set; }
 
-        public uint DirectoryItemLength;
+        public uint DirectoryItemLength { get; set; }
     }
 }

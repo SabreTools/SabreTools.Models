@@ -9,11 +9,11 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Index into module reference table for the imported module.
         /// </summary>
-        public ushort Index;
+        public ushort Index { get; set; }
 
         /// <summary>
         /// Procedure ordinal number.
         /// </summary>
-        public ushort Ordinal;
+        public ushort Ordinal { get; set; }
     }
 }

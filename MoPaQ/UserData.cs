@@ -16,25 +16,25 @@ namespace SabreTools.Models.MoPaQ
         /// </summary>
         /// <see cref="SignatureValue"/>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Maximum size of the user data
         /// </summary>
-        public uint UserDataSize;
+        public uint UserDataSize { get; set; }
 
         /// <summary>
         /// Offset of the MPQ header, relative to the beginning of this header
         /// </summary>
-        public uint HeaderOffset;
+        public uint HeaderOffset { get; set; }
 
         /// <summary>
         /// Appears to be size of user data header (Starcraft II maps)
         /// </summary>
-        public uint UserDataHeaderSize;
+        public uint UserDataHeaderSize { get; set; }
 
         // TODO: Does this area contain extra data that should be read in?
     }

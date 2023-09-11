@@ -6,16 +6,16 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// The number of Drive Revocation List Entry fields in the signature block.
         /// </summary>
-        public uint NumberOfEntries;
+        public uint NumberOfEntries { get; set; }
 
         /// <summary>
         /// A list of 8-byte Host Drive List Entry fields, the length of this
         /// list being equal to the number in the signature block.
         /// </summary>
 #if NET48
-        public DriveRevocationListEntry[] EntryFields;
+        public DriveRevocationListEntry[] EntryFields { get; set; }
 #else
-        public DriveRevocationListEntry?[]? EntryFields;
+        public DriveRevocationListEntry?[]? EntryFields { get; set; }
 #endif
     }
 }

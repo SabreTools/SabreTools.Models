@@ -16,14 +16,14 @@
         /// masked as 0x80000000 for PE32, 0x8000000000000000 for PE32+. 
         /// </summary>
         /// <remarks>Bit 31/63</remarks>
-        public bool OrdinalNameFlag;
+        public bool OrdinalNameFlag { get; set; }
 
         /// <summary>
         /// A 16-bit ordinal number. This field is used only if the Ordinal/Name Flag
         /// bit field is 1 (import by ordinal). Bits 30-15 or 62-15 must be 0.
         /// </summary>
         /// <remarks>Bits 15-0</remarks>
-        public ushort OrdinalNumber;
+        public ushort OrdinalNumber { get; set; }
 
         /// <summary>
         /// A 31-bit RVA of a hint/name table entry. This field is used only if the
@@ -31,6 +31,6 @@
         /// must be zero.
         /// </summary>
         /// <remarks>Bits 30-0</remarks>
-        public uint HintNameTableRVA;
+        public uint HintNameTableRVA { get; set; }
     }
 }

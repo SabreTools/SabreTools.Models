@@ -16,15 +16,15 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// The total number of Drive Revocation List Entry fields that follow.
         /// </summary>
-        public uint TotalNumberOfEntries;
+        public uint TotalNumberOfEntries { get; set; }
 
         /// <summary>
         /// Revocation list entries
         /// </summary>
 #if NET48
-        public DriveRevocationSignatureBlock[] SignatureBlocks;
+        public DriveRevocationSignatureBlock[] SignatureBlocks { get; set; }
 #else
-        public DriveRevocationSignatureBlock?[]? SignatureBlocks;
+        public DriveRevocationSignatureBlock?[]? SignatureBlocks { get; set; }
 #endif
     }
 }

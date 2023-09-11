@@ -17,55 +17,55 @@
         /// RSA-2048 SHA-256 signature of the NCSD header
         /// </summary>
 #if NET48
-        public byte[] RSA2048Signature;
+        public byte[] RSA2048Signature { get; set; }
 #else
-        public byte[]? RSA2048Signature;
+        public byte[]? RSA2048Signature { get; set; }
 #endif
 
         /// <summary>
         /// Magic Number 'NCSD'
         /// </summary>
 #if NET48
-        public string MagicNumber;
+        public string MagicNumber { get; set; }
 #else
-        public string? MagicNumber;
+        public string? MagicNumber { get; set; }
 #endif
 
         /// <summary>
         /// Size of the NCSD image, in media units (1 media unit = 0x200 bytes)
         /// </summary>
-        public uint ImageSizeInMediaUnits;
+        public uint ImageSizeInMediaUnits { get; set; }
 
         /// <summary>
         /// Media ID
         /// </summary>
 #if NET48
-        public byte[] MediaId;
+        public byte[] MediaId { get; set; }
 #else
-        public byte[]? MediaId;
+        public byte[]? MediaId { get; set; }
 #endif
 
         /// <summary>
         /// Partitions FS type (0=None, 1=Normal, 3=FIRM, 4=AGB_FIRM save)
         /// </summary>
-        public FilesystemType PartitionsFSType;
+        public FilesystemType PartitionsFSType { get; set; }
 
         /// <summary>
         /// Partitions crypt type (each byte corresponds to a partition in the partition table)
         /// </summary>
 #if NET48
-        public byte[] PartitionsCryptType;
+        public byte[] PartitionsCryptType { get; set; }
 #else
-        public byte[]? PartitionsCryptType;
+        public byte[]? PartitionsCryptType { get; set; }
 #endif
 
         /// <summary>
         /// Offset & Length partition table, in media units
         /// </summary>
 #if NET48
-        public PartitionTableEntry[] PartitionsTable;
+        public PartitionTableEntry[] PartitionsTable { get; set; }
 #else
-        public PartitionTableEntry?[]? PartitionsTable;
+        public PartitionTableEntry?[]? PartitionsTable { get; set; }
 #endif
 
         #endregion
@@ -76,55 +76,55 @@
         /// Exheader SHA-256 hash
         /// </summary>
 #if NET48
-        public byte[] ExheaderHash;
+        public byte[] ExheaderHash { get; set; }
 #else
-        public byte[]? ExheaderHash;
+        public byte[]? ExheaderHash { get; set; }
 #endif
 
         /// <summary>
         /// Additional header size
         /// </summary>
-        public uint AdditionalHeaderSize;
+        public uint AdditionalHeaderSize { get; set; }
 
         /// <summary>
         /// Sector zero offset
         /// </summary>
-        public uint SectorZeroOffset;
+        public uint SectorZeroOffset { get; set; }
 
         /// <summary>
         /// Partition Flags
         /// </summary>
 #if NET48
-        public byte[] PartitionFlags;
+        public byte[] PartitionFlags { get; set; }
 #else
-        public byte[]? PartitionFlags;
+        public byte[]? PartitionFlags { get; set; }
 #endif
 
         /// <summary>
         /// Partition ID table
         /// </summary>
 #if NET48
-        public ulong[] PartitionIdTable;
+        public ulong[] PartitionIdTable { get; set; }
 #else
-        public ulong[]? PartitionIdTable;
+        public ulong[]? PartitionIdTable { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved1;
+        public byte[] Reserved1 { get; set; }
 #else
-        public byte[]? Reserved1;
+        public byte[]? Reserved1 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved?
         /// </summary>
 #if NET48
-        public byte[] Reserved2;
+        public byte[] Reserved2 { get; set; }
 #else
-        public byte[]? Reserved2;
+        public byte[]? Reserved2 { get; set; }
 #endif
 
         /// <summary>
@@ -133,12 +133,12 @@
         /// value during NCSD verification/loading). This appears to enable a new, likely hardware-based,
         /// antipiracy check on cartridges.
         /// </summary>
-        public byte FirmUpdateByte1;
+        public byte FirmUpdateByte1 { get; set; }
 
         /// <summary>
         /// Support for this was implemented with 9.6.0-X FIRM, see below regarding save crypto.
         /// </summary>
-        public byte FirmUpdateByte2;
+        public byte FirmUpdateByte2 { get; set; }
 
         #endregion
 
@@ -148,18 +148,18 @@
         /// Unknown
         /// </summary>
 #if NET48
-        public byte[] Unknown;
+        public byte[] Unknown { get; set; }
 #else
-        public byte[]? Unknown;
+        public byte[]? Unknown { get; set; }
 #endif
 
         /// <summary>
         /// Encrypted MBR partition-table, for the TWL partitions(key-data used for this keyslot is console-unique).
         /// </summary>
 #if NET48
-        public byte[] EncryptedMBR;
+        public byte[] EncryptedMBR { get; set; }
 #else
-        public byte[]? EncryptedMBR;
+        public byte[]? EncryptedMBR { get; set; }
 #endif
 
         #endregion

@@ -10,11 +10,11 @@ namespace SabreTools.Models.NewExecutable
         /// Operating system fixup type.
         /// Floating-point fixups.
         /// </summary>
-        public OSFixupType FixupType;
+        public OSFixupType FixupType { get; set; }
 
         /// <summary>
         /// 0
         /// </summary>
-        public ushort Reserved;
+        public ushort Reserved { get; set; }
     }
 }

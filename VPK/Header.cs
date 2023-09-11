@@ -6,10 +6,10 @@ namespace SabreTools.Models.VPK
         /// <summary>
         /// Always 0x55aa1234.
         /// </summary>
-        public uint Signature;
+        public uint Signature { get; set; }
 
-        public uint Version;
+        public uint Version { get; set; }
 
-        public uint DirectoryLength;
+        public uint DirectoryLength { get; set; }
     }
 }

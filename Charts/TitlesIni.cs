@@ -23,7 +23,7 @@ namespace SabreTools.Models.Charts
 #if NET48
         public Dictionary<string, (string Name, string UnlockId)> Sections { get; set; }
 #else
-        public Dictionary<string, (string Name, string? UnlockId)>? Sections { get; set; }
+        public Dictionary<string, (string? Name, string? UnlockId)>? Sections { get; set; }
 #endif
     }
 }

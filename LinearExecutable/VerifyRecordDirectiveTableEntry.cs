@@ -22,7 +22,7 @@ namespace SabreTools.Models.LinearExecutable
         /// directive table. This is equal to the number of modules referenced by
         /// this module.
         /// </remarks>
-        public ushort EntryCount;
+        public ushort EntryCount { get; set; }
 
         /// <summary>
         /// Ordinal index into the Import Module Name Table.
@@ -31,7 +31,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This value is an ordered index in to the Import Module Name Table for
         /// the referenced module.
         /// </remarks>
-        public ushort OrdinalIndex;
+        public ushort OrdinalIndex { get; set; }
 
         /// <summary>
         /// Module Version.
@@ -44,7 +44,7 @@ namespace SabreTools.Models.LinearExecutable
         /// number in a module to be incremented anytime the entry point offsets
         /// change.
         /// </remarks>
-        public ushort Version;
+        public ushort Version { get; set; }
 
         /// <summary>
         /// Module # of Object Entries.
@@ -53,7 +53,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This field is used to identify the number of object verify entries
         /// that follow for the referenced module.
         /// </remarks>
-        public ushort ObjectEntriesCount;
+        public ushort ObjectEntriesCount { get; set; }
 
         /// <summary>
         /// Object # in Module.
@@ -62,7 +62,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This field specifies the object number in the referenced module that
         /// is being verified.
         /// </remarks>
-        public ushort ObjectNumberInModule;
+        public ushort ObjectNumberInModule { get; set; }
 
         /// <summary>
         /// Object load base address.
@@ -71,7 +71,7 @@ namespace SabreTools.Models.LinearExecutable
         /// This is the address that the object was loaded at when the fixups were
         /// performed.
         /// </remarks>
-        public ushort ObjectLoadBaseAddress;
+        public ushort ObjectLoadBaseAddress { get; set; }
 
         /// <summary>
         /// Object virtual address size.
@@ -80,6 +80,6 @@ namespace SabreTools.Models.LinearExecutable
         /// This field specifies the total amount of virtual memory required for
         /// this object.
         /// </remarks>
-        public ushort ObjectVirtualAddressSize;
+        public ushort ObjectVirtualAddressSize { get; set; }
     }
 }

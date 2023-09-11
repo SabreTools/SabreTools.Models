@@ -10,25 +10,25 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Number of countries
         /// </summary>
-        public ushort NumberOfCountries;
+        public ushort NumberOfCountries { get; set; }
 
         /// <summary>
         /// Number of title sets (NTs)
         /// </summary>
-        public ushort NumberOfTitleSets;
+        public ushort NumberOfTitleSets { get; set; }
 
         /// <summary>
         /// End address (last byte of last PTL_MAIT)
         /// </summary>
-        public uint EndAddress;
+        public uint EndAddress { get; set; }
 
         /// <summary>
         /// Entries
         /// </summary>
 #if NET48
-        public ParentalManagementMasksTableEntry[] Entries;
+        public ParentalManagementMasksTableEntry[] Entries { get; set; }
 #else
-        public ParentalManagementMasksTableEntry?[]? Entries;
+        public ParentalManagementMasksTableEntry?[]? Entries { get; set; }
 #endif
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace SabreTools.Models.DVD
         /// by the masks for level 7, and so on to level 1.
         /// </summary>
 #if NET48
-        public byte[][] BitMasks;
+        public byte[][] BitMasks { get; set; }
 #else
-        public byte[][]? BitMasks;
+        public byte[][]? BitMasks { get; set; }
 #endif
     }
 }

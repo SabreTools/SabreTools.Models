@@ -3,24 +3,24 @@ namespace SabreTools.Models.SGA
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/SGAFile.h"/>
     public class File4
     {
-        public uint NameOffset;
+        public uint NameOffset { get; set; }
 
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
-        public uint Offset;
+        public uint Offset { get; set; }
 
-        public uint SizeOnDisk;
+        public uint SizeOnDisk { get; set; }
 
-        public uint Size;
+        public uint Size { get; set; }
 
-        public uint TimeModified;
+        public uint TimeModified { get; set; }
 
-        public byte Dummy0;
+        public byte Dummy0 { get; set; }
 
-        public byte Type;
+        public byte Type { get; set; }
     }
 }

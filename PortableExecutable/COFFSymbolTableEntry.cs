@@ -38,12 +38,12 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// A field that is set to all zeros if the name is longer than 8 bytes.
         /// </summary>
-        public uint Zeroes;
+        public uint Zeroes { get; set; }
 
         /// <summary>
         /// An offset into the string table.
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
 
         #endregion
 
@@ -52,29 +52,29 @@ namespace SabreTools.Models.PortableExecutable
         /// field depends on SectionNumber and StorageClass. A typical meaning is the
         /// relocatable address.
         /// </summary>
-        public uint Value;
+        public uint Value { get; set; }
 
         /// <summary>
         /// The signed integer that identifies the section, using a one-based index
         /// into the section table. Some values have special meaning.
         /// </summary>
-        public ushort SectionNumber;
+        public ushort SectionNumber { get; set; }
 
         /// <summary>
         /// A number that represents type. Microsoft tools set this field to 0x20
         /// (function) or 0x0 (not a function).
         /// </summary>
-        public SymbolType SymbolType;
+        public SymbolType SymbolType { get; set; }
 
         /// <summary>
         /// An enumerated value that represents storage class.
         /// </summary>
-        public StorageClass StorageClass;
+        public StorageClass StorageClass { get; set; }
 
         /// <summary>
         /// The number of auxiliary symbol table entries that follow this record.
         /// </summary>
-        public byte NumberOfAuxSymbols;
+        public byte NumberOfAuxSymbols { get; set; }
 
         #endregion
 
@@ -106,31 +106,31 @@ namespace SabreTools.Models.PortableExecutable
         /// The symbol-table index of the corresponding .bf (begin function)
         /// symbol record.
         /// </summary>
-        public uint AuxFormat1TagIndex;
+        public uint AuxFormat1TagIndex { get; set; }
 
         /// <summary>
         /// The size of the executable code for the function itself. If the function
         /// is in its own section, the SizeOfRawData in the section header is greater
         /// or equal to this field, depending on alignment considerations.
         /// </summary>
-        public uint AuxFormat1TotalSize;
+        public uint AuxFormat1TotalSize { get; set; }
 
         /// <summary>
         /// The file offset of the first COFF line-number entry for the function, or
         /// zero if none exists.
         /// </summary>
-        public uint AuxFormat1PointerToLinenumber;
+        public uint AuxFormat1PointerToLinenumber { get; set; }
 
         /// <summary>
         /// The symbol-table index of the record for the next function. If the function
         /// is the last in the symbol table, this field is set to zero.
         /// </summary>
-        public uint AuxFormat1PointerToNextFunction;
+        public uint AuxFormat1PointerToNextFunction { get; set; }
 
         /// <summary>
         /// Unused
         /// </summary>
-        public ushort AuxFormat1Unused;
+        public ushort AuxFormat1Unused { get; set; }
 
         #endregion
 
@@ -154,13 +154,13 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Unused
         /// </summary>
-        public uint AuxFormat2Unused1;
+        public uint AuxFormat2Unused1 { get; set; }
 
         /// <summary>
         /// The actual ordinal line number (1, 2, 3, and so on) within the source file,
         /// corresponding to the .bf or .ef record.
         /// </summary>
-        public ushort AuxFormat2Linenumber;
+        public ushort AuxFormat2Linenumber { get; set; }
 
         /// <summary>
         /// Unused
@@ -177,12 +177,12 @@ namespace SabreTools.Models.PortableExecutable
         /// last in the symbol table, this field is set to zero. It is not used for
         /// .ef records.
         /// </summary>
-        public uint AuxFormat2PointerToNextFunction;
+        public uint AuxFormat2PointerToNextFunction { get; set; }
 
         /// <summary>
         /// Unused
         /// </summary>
-        public ushort AuxFormat2Unused3;
+        public ushort AuxFormat2Unused3 { get; set; }
 
         #endregion
 
@@ -207,7 +207,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// The symbol-table index of sym2, the symbol to be linked if sym1 is not found. 
         /// </summary>
-        public uint AuxFormat3TagIndex;
+        public uint AuxFormat3TagIndex { get; set; }
 
         /// <summary>
         /// A value of IMAGE_WEAK_EXTERN_SEARCH_NOLIBRARY indicates that no library search
@@ -216,7 +216,7 @@ namespace SabreTools.Models.PortableExecutable
         /// sym1 should be performed.
         /// A value of IMAGE_WEAK_EXTERN_SEARCH_ALIAS indicates that sym1 is an alias for sym2.
         /// </summary>
-        public uint AuxFormat3Characteristics;
+        public uint AuxFormat3Characteristics { get; set; }
 
         /// <summary>
         /// Unused
@@ -244,7 +244,7 @@ namespace SabreTools.Models.PortableExecutable
 #if NET48
         public byte[] AuxFormat4FileName;
 #else
-        public byte[]? AuxFormat4FileName;
+        public byte[]? AuxFormat4FileName;}
 #endif
 
         #endregion
@@ -260,35 +260,35 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// The size of section data; the same as SizeOfRawData in the section header.
         /// </summary>
-        public uint AuxFormat5Length;
+        public uint AuxFormat5Length { get; set; }
 
         /// <summary>
         /// The number of relocation entries for the section.
         /// </summary>
-        public ushort AuxFormat5NumberOfRelocations;
+        public ushort AuxFormat5NumberOfRelocations { get; set; }
 
         /// <summary>
         /// The number of line-number entries for the section.
         /// </summary>
-        public ushort AuxFormat5NumberOfLinenumbers;
+        public ushort AuxFormat5NumberOfLinenumbers { get; set; }
 
         /// <summary>
         /// The checksum for communal data. It is applicable if the IMAGE_SCN_LNK_COMDAT
         /// flag is set in the section header.
         /// </summary>
-        public uint AuxFormat5CheckSum;
+        public uint AuxFormat5CheckSum { get; set; }
 
         /// <summary>
         /// One-based index into the section table for the associated section. This is
         /// used when the COMDAT selection setting is 5.
         /// </summary>
-        public ushort AuxFormat5Number;
+        public ushort AuxFormat5Number { get; set; }
 
         /// <summary>
         /// The COMDAT selection number. This is applicable if the section is a
         /// COMDAT section.
         /// </summary>
-        public byte AuxFormat5Selection;
+        public byte AuxFormat5Selection { get; set; }
 
         /// <summary>
         /// Unused
@@ -310,17 +310,17 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Must be IMAGE_AUX_SYMBOL_TYPE_TOKEN_DEF (1).
         /// </summary>
-        public byte AuxFormat6AuxType;
+        public byte AuxFormat6AuxType { get; set; }
 
         /// <summary>
         /// Reserved, must be zero.
         /// </summary>
-        public byte AuxFormat6Reserved1;
+        public byte AuxFormat6Reserved1 { get; set; }
 
         /// <summary>
         /// The symbol index of the COFF symbol to which this CLR token definition refers.
         /// </summary>
-        public uint AuxFormat6SymbolTableIndex;
+        public uint AuxFormat6SymbolTableIndex { get; set; }
 
         /// <summary>
         /// Reserved, must be zero.

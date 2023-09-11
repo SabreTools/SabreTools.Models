@@ -11,31 +11,31 @@
         /// The length, in bytes, of the entire StringFileInfo block, including all
         /// structures indicated by the Children member.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// This member is always equal to zero.
         /// </summary>
-        public ushort ValueLength;
+        public ushort ValueLength { get; set; }
 
         /// <summary>
         /// The type of data in the version resource.
         /// </summary>
-        public VersionResourceType ResourceType;
+        public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
         /// The Unicode string L"StringFileInfo".
         /// </summary>
 #if NET48
-        public string Key;
+        public string Key { get; set; }
 #else
-        public string? Key;
+        public string? Key { get; set; }
 #endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
         /// </summary>
-        public ushort Padding;
+        public ushort Padding { get; set; }
 
         /// <summary>
         /// An array of one or more StringTable structures. Each StringTable structure's Key
@@ -43,9 +43,9 @@
         /// that StringTable structure.
         /// </summary>
 #if NET48
-        public StringTable[] Children;
+        public StringTable[] Children { get; set; }
 #else
-        public StringTable?[]? Children;
+        public StringTable?[]? Children { get; set; }
 #endif
     }
 }

@@ -19,6 +19,6 @@ namespace SabreTools.Models.LinearExecutable
         /// <summary>
         /// Cryptographic checksum.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
     }
 }

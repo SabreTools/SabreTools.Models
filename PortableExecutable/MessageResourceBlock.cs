@@ -10,18 +10,18 @@
         /// <summary>
         /// The lowest message identifier contained within this structure.
         /// </summary>
-        public uint LowId;
+        public uint LowId { get; set; }
 
         /// <summary>
         /// The highest message identifier contained within this structure.
         /// </summary>
-        public uint HighId;
+        public uint HighId { get; set; }
 
         /// <summary>
         /// The offset, in bytes, from the beginning of the MESSAGE_RESOURCE_DATA structure to the
         /// MESSAGE_RESOURCE_ENTRY structures in this MESSAGE_RESOURCE_BLOCK. The MESSAGE_RESOURCE_ENTRY
         /// structures contain the message strings.
         /// </summary>
-        public uint OffsetToEntries;
+        public uint OffsetToEntries { get; set; }
     }
 }

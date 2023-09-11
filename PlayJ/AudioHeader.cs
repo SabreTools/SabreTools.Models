@@ -9,113 +9,113 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Signature (0x4B539DFF)
         /// </summary>
-        public uint Signature;
+        public uint Signature { get; set; }
 
         /// <summary>
         /// Version
         /// </summary>
-        public uint Version;
+        public uint Version { get; set; }
 
         // Header-specific data goes here
 
         /// <summary>
         /// Length of the track name
         /// </summary>
-        public ushort TrackLength;
+        public ushort TrackLength { get; set; }
 
         /// <summary>
         /// Track name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Track;
+        public string Track { get; set; }
 #else
-        public string? Track;
+        public string? Track { get; set; }
 #endif
 
         /// <summary>
         /// Length of the artist name
         /// </summary>
-        public ushort ArtistLength;
+        public ushort ArtistLength { get; set; }
 
         /// <summary>
         /// Artist name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Artist;
+        public string Artist { get; set; }
 #else
-        public string? Artist;
+        public string? Artist { get; set; }
 #endif
 
         /// <summary>
         /// Length of the album name
         /// </summary>
-        public ushort AlbumLength;
+        public ushort AlbumLength { get; set; }
 
         /// <summary>
         /// Album name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Album;
+        public string Album { get; set; }
 #else
-        public string? Album;
+        public string? Album { get; set; }
 #endif
 
         /// <summary>
         /// Length of the writer name
         /// </summary>
-        public ushort WriterLength;
+        public ushort WriterLength { get; set; }
 
         /// <summary>
         /// Writer name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Writer;
+        public string Writer { get; set; }
 #else
-        public string? Writer;
+        public string? Writer { get; set; }
 #endif
 
         /// <summary>
         /// Length of the publisher name
         /// </summary>
-        public ushort PublisherLength;
+        public ushort PublisherLength { get; set; }
 
         /// <summary>
         /// Publisher name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Publisher;
+        public string Publisher { get; set; }
 #else
-        public string? Publisher;
+        public string? Publisher { get; set; }
 #endif
 
         /// <summary>
         /// Length of the label name
         /// </summary>
-        public ushort LabelLength;
+        public ushort LabelLength { get; set; }
 
         /// <summary>
         /// Label name (not null-terminated)
         /// </summary>
 #if NET48
-        public string Label;
+        public string Label { get; set; }
 #else
-        public string? Label;
+        public string? Label { get; set; }
 #endif
 
         /// <summary>
         /// Length of the comments
         /// </summary>
         /// <remarks>Optional field only in some samples</remarks>
-        public ushort CommentsLength;
+        public ushort CommentsLength { get; set; }
 
         /// <summary>
         /// Comments (not null-terminated)
         /// </summary>
         /// <remarks>Optional field only in some samples</remarks>
 #if NET48
-        public string Comments;
+        public string Comments { get; set; }
 #else
-        public string? Comments;
+        public string? Comments { get; set; }
 #endif
     }
 }

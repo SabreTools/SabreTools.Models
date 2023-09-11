@@ -6,11 +6,11 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Offset
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
 
         /// <summary>
         /// Length
         /// </summary>
-        public uint Length;
+        public uint Length { get; set; }
     }
 }

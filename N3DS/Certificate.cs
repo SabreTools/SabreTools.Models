@@ -12,63 +12,63 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Signature Type
         /// </summary>
-        public SignatureType SignatureType;
+        public SignatureType SignatureType { get; set; }
 
         /// <summary>
         /// Signature size
         /// </summary>
-        public ushort SignatureSize;
+        public ushort SignatureSize { get; set; }
 
         /// <summary>
         /// Padding size
         /// </summary>
-        public byte PaddingSize;
+        public byte PaddingSize { get; set; }
 
         /// <summary>
         /// Signature
         /// </summary>
 #if NET48
-        public byte[] Signature;
+        public byte[] Signature { get; set; }
 #else
-        public byte[]? Signature;
+        public byte[]? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Padding to align next data to 0x40 bytes
         /// </summary>
 #if NET48
-        public byte[] Padding;
+        public byte[] Padding { get; set; }
 #else
-        public byte[]? Padding;
+        public byte[]? Padding { get; set; }
 #endif
 
         /// <summary>
         /// Issuer
         /// </summary>
 #if NET48
-        public string Issuer;
+        public string Issuer { get; set; }
 #else
-        public string? Issuer;
+        public string? Issuer { get; set; }
 #endif
 
         /// <summary>
         /// Key Type
         /// </summary>
-        public PublicKeyType KeyType;
+        public PublicKeyType KeyType { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// Expiration time as UNIX Timestamp, used at least for CTCert
         /// </summary>
-        public uint ExpirationTime;
+        public uint ExpirationTime { get; set; }
 
         // This contains the Public Key (i.e. Modulus & Public Exponent)
         #region RSA-4096 and RSA-2048
@@ -77,23 +77,23 @@ namespace SabreTools.Models.N3DS
         /// Modulus
         /// </summary>
 #if NET48
-        public byte[] RSAModulus;
+        public byte[] RSAModulus { get; set; }
 #else
-        public byte[]? RSAModulus;
+        public byte[]? RSAModulus { get; set; }
 #endif
 
         /// <summary>
         /// Public Exponent
         /// </summary>
-        public uint RSAPublicExponent;
+        public uint RSAPublicExponent { get; set; }
 
         /// <summary>
         /// Padding
         /// </summary>
 #if NET48
-        public byte[] RSAPadding;
+        public byte[] RSAPadding { get; set; }
 #else
-        public byte[]? RSAPadding;
+        public byte[]? RSAPadding { get; set; }
 #endif
 
         #endregion
@@ -105,18 +105,18 @@ namespace SabreTools.Models.N3DS
         /// Public Key
         /// </summary>
 #if NET48
-        public byte[] ECCPublicKey;
+        public byte[] ECCPublicKey { get; set; }
 #else
-        public byte[]? ECCPublicKey;
+        public byte[]? ECCPublicKey { get; set; }
 #endif
 
         /// <summary>
         /// Padding
         /// </summary>
 #if NET48
-        public byte[] ECCPadding;
+        public byte[] ECCPadding { get; set; }
 #else
-        public byte[]? ECCPadding;
+        public byte[]? ECCPadding { get; set; }
 #endif
 
         #endregion

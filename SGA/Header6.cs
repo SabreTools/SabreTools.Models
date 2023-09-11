@@ -4,15 +4,15 @@ namespace SabreTools.Models.SGA
     public sealed class Header6 : Header
     {
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
-        public uint HeaderLength;
+        public uint HeaderLength { get; set; }
 
-        public uint FileDataOffset;
+        public uint FileDataOffset { get; set; }
 
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
     }
 }

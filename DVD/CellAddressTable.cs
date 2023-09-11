@@ -6,29 +6,29 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Number of VOB IDs
         /// </summary>
-        public ushort NumberOfVOBIDs;
+        public ushort NumberOfVOBIDs { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         /// <summary>
         /// End address (last byte of last entry)
         /// </summary>
-        public uint EndAddress;
+        public uint EndAddress { get; set; }
 
         /// <summary>
         /// 12-byte entries
         /// </summary>
 #if NET48
-        public CellAddressTableEntry[] Entries;
+        public CellAddressTableEntry[] Entries { get; set; }
 #else
-        public CellAddressTableEntry?[]? Entries;
+        public CellAddressTableEntry?[]? Entries { get; set; }
 #endif
     }
 }

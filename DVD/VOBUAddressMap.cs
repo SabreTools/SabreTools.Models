@@ -6,15 +6,15 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// End address (last byte of last entry)
         /// </summary>
-        public uint EndAddress;
+        public uint EndAddress { get; set; }
 
         /// <summary>
         /// Starting sector within VOB of nth VOBU
         /// </summary>
 #if NET48
-        public uint[] StartingSectors;
+        public uint[] StartingSectors { get; set; }
 #else
-        public uint[]? StartingSectors;
+        public uint[]? StartingSectors { get; set; }
 #endif
     }
 }

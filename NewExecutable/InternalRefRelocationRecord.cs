@@ -10,17 +10,17 @@ namespace SabreTools.Models.NewExecutable
         /// Segment number for a fixed segment, or 0FFh for a
         /// movable segment.
         /// </summary>
-        public byte SegmentNumber;
+        public byte SegmentNumber { get; set; }
 
         /// <summary>
         /// 0
         /// </summary>
-        public byte Reserved;
+        public byte Reserved { get; set; }
 
         /// <summary>
         /// Offset into segment if fixed segment, or ordinal
         /// number index into Entry Table if movable segment.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
     }
 }

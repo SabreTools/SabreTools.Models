@@ -20,9 +20,9 @@ namespace SabreTools.Models.AACS
         /// the correct final Media Key value.
         /// </summary>
 #if NET48
-        public byte[] CiphertextValue;
+        public byte[] CiphertextValue { get; set; }
 #else
-        public byte[]? CiphertextValue;
+        public byte[]? CiphertextValue { get; set; }
 #endif
     }
 }

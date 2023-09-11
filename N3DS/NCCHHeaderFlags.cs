@@ -6,44 +6,44 @@
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte Reserved0;
+        public byte Reserved0 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte Reserved1;
+        public byte Reserved1 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte Reserved2;
+        public byte Reserved2 { get; set; }
 
         /// <summary>
         /// Crypto Method: When this is non-zero, a NCCH crypto method using two keyslots is used.
         /// </summary>
-        public CryptoMethod CryptoMethod;
+        public CryptoMethod CryptoMethod { get; set; }
 
         /// <summary>
         /// Content Platform: 1 = CTR, 2 = snake (New 3DS).
         /// </summary>
-        public ContentPlatform ContentPlatform;
+        public ContentPlatform ContentPlatform { get; set; }
 
         /// <summary>
         /// Content Type Bit-masks: Data = 0x1, Executable = 0x2, SystemUpdate = 0x4, Manual = 0x8,
         /// Child = (0x4|0x8), Trial = 0x10. When 'Data' is set, but not 'Executable', NCCH is a CFA.
         /// Otherwise when 'Executable' is set, NCCH is a CXI.
         /// </summary>
-        public ContentType MediaPlatformIndex;
+        public ContentType MediaPlatformIndex { get; set; }
 
         /// <summary>
-        /// Content Unit Size i.e. u32 ContentUnitSize = 0x200*2^flags[6];
+        /// Content Unit Size i.e. u32 ContentUnitSize = 0x200*2^flags[6] { get; set; }
         /// </summary>
-        public byte ContentUnitSize;
+        public byte ContentUnitSize { get; set; }
 
         /// <summary>
         /// Bit-masks: FixedCryptoKey = 0x1, NoMountRomFs = 0x2, NoCrypto = 0x4, using a new keyY
         /// generator = 0x20(starting with FIRM 9.6.0-X).
         /// </summary>
-        public BitMasks BitMasks;
+        public BitMasks BitMasks { get; set; }
     }
 }

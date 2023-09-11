@@ -6,160 +6,160 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Offset to the descriptor strings
         /// </summary>
-        public uint StringsOffset;
+        public uint StringsOffset { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved0;
+        public byte[] Reserved0 { get; set; }
 #else
-        public byte[]? Reserved0;
+        public byte[]? Reserved0 { get; set; }
 #endif
 
         /// <summary>
         /// Offset to the component list
         /// </summary>
-        public uint ComponentListOffset;
+        public uint ComponentListOffset { get; set; }
 
         /// <summary>
         /// Offset to the file table
         /// </summary>
-        public uint FileTableOffset;
+        public uint FileTableOffset { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved1;
+        public byte[] Reserved1 { get; set; }
 #else
-        public byte[]? Reserved1;
+        public byte[]? Reserved1 { get; set; }
 #endif
 
         /// <summary>
         /// Size of the file table
         /// </summary>
-        public uint FileTableSize;
+        public uint FileTableSize { get; set; }
 
         /// <summary>
         /// Redundant size of the file table
         /// </summary>
-        public uint FileTableSize2;
+        public uint FileTableSize2 { get; set; }
 
         /// <summary>
         /// Number of directories
         /// </summary>
-        public ushort DirectoryCount;
+        public ushort DirectoryCount { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved2;
+        public byte[] Reserved2 { get; set; }
 #else
-        public byte[]? Reserved2;
+        public byte[]? Reserved2 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved3;
+        public byte[] Reserved3 { get; set; }
 #else
-        public byte[]? Reserved3;
+        public byte[]? Reserved3 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved4;
+        public byte[] Reserved4 { get; set; }
 #else
-        public byte[]? Reserved4;
+        public byte[]? Reserved4 { get; set; }
 #endif
 
         /// <summary>
         /// Number of files
         /// </summary>
-        public uint FileCount;
+        public uint FileCount { get; set; }
 
         /// <summary>
         /// Redundant offset to the file table
         /// </summary>
-        public uint FileTableOffset2;
+        public uint FileTableOffset2 { get; set; }
 
         /// <summary>
         /// Number of component table infos
         /// </summary>
-        public ushort ComponentTableInfoCount;
+        public ushort ComponentTableInfoCount { get; set; }
 
         /// <summary>
         /// Offset to the component table
         /// </summary>
-        public uint ComponentTableOffset;
+        public uint ComponentTableOffset { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved5;
+        public byte[] Reserved5 { get; set; }
 #else
-        public byte[]? Reserved5;
+        public byte[]? Reserved5 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved6;
+        public byte[] Reserved6 { get; set; }
 #else
-        public byte[]? Reserved6;
+        public byte[]? Reserved6 { get; set; }
 #endif
 
         /// <summary>
         /// Offsets to the file groups
         /// </summary>
 #if NET48
-        public uint[] FileGroupOffsets;
+        public uint[] FileGroupOffsets { get; set; }
 #else
-        public uint[]? FileGroupOffsets;
+        public uint[]? FileGroupOffsets { get; set; }
 #endif
 
         /// <summary>
         /// Offsets to the components
         /// </summary>
 #if NET48
-        public uint[] ComponentOffsets;
+        public uint[] ComponentOffsets { get; set; }
 #else
-        public uint[]? ComponentOffsets;
+        public uint[]? ComponentOffsets { get; set; }
 #endif
 
         /// <summary>
         /// Offset to the setup types
         /// </summary>
-        public uint SetupTypesOffset;
+        public uint SetupTypesOffset { get; set; }
 
         /// <summary>
         /// Offset to the setup table
         /// </summary>
-        public uint SetupTableOffset;
+        public uint SetupTableOffset { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved7;
+        public byte[] Reserved7 { get; set; }
 #else
-        public byte[]? Reserved7;
+        public byte[]? Reserved7 { get; set; }
 #endif
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved8;
+        public byte[] Reserved8 { get; set; }
 #else
-        public byte[]? Reserved8;
+        public byte[]? Reserved8 { get; set; }
 #endif
     }
 }

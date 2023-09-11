@@ -11,14 +11,14 @@ namespace SabreTools.Models.SFFS
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
 #if NET48
-        public byte[] FilenameMD5Hash;
+        public byte[] FilenameMD5Hash { get; set; }
 #else
-        public byte[]? FilenameMD5Hash;
+        public byte[]? FilenameMD5Hash { get; set; }
 #endif
 
         /// <summary>
         /// Index of fileheader (encrypted with filename)
         /// </summary>
-        public ulong FileHeaderIndex;
+        public ulong FileHeaderIndex { get; set; }
     }
 }

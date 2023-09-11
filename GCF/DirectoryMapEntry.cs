@@ -6,6 +6,6 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Index of the first data block. (N/A if == BlockCount.)
         /// </summary>
-        public uint FirstBlockIndex;
+        public uint FirstBlockIndex { get; set; }
     }
 }

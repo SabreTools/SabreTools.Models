@@ -21,26 +21,26 @@ namespace SabreTools.Models.LinearExecutable
         /// <summary>
         /// Resource type ID.
         /// </summary>
-        public ResourceTableEntryType TypeID;
+        public ResourceTableEntryType TypeID { get; set; }
 
         /// <summary>
         /// An ID used as a name for the resource when referred to.
         /// </summary>
-        public ushort NameID;
+        public ushort NameID { get; set; }
 
         /// <summary>
         /// The number of bytes the resource consists of.
         /// </summary>
-        public uint ResourceSize;
+        public uint ResourceSize { get; set; }
 
         /// <summary>
         /// The number of the object which contains the resource.
         /// </summary>
-        public ushort ObjectNumber;
+        public ushort ObjectNumber { get; set; }
 
         /// <summary>
         /// The offset within the specified object where the resource begins.
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
     }
 }

@@ -7,29 +7,29 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// "ISc("
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Encoded version
         /// </summary>
-        public uint Version;
+        public uint Version { get; set; }
 
         /// <summary>
         /// Volume information
         /// </summary>
-        public uint VolumeInfo;
+        public uint VolumeInfo { get; set; }
 
         /// <summary>
         /// Offset to cabinet descriptor
         /// </summary>
-        public uint DescriptorOffset;
+        public uint DescriptorOffset { get; set; }
 
         /// <summary>
         /// Cabinet descriptor size
         /// </summary>
-        public uint DescriptorSize;
+        public uint DescriptorSize { get; set; }
     }
 }

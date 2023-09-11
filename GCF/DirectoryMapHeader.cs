@@ -9,11 +9,11 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Always 0x00000000
         /// </summary>
-        public uint Dummy1;
+        public uint Dummy1 { get; set; }
     }
 }

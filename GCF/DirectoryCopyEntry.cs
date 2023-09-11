@@ -6,6 +6,6 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Index of the directory item.
         /// </summary>
-        public uint DirectoryIndex;
+        public uint DirectoryIndex { get; set; }
     }
 }

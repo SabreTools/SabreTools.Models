@@ -9,11 +9,11 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// The previous block entry.  (N/A if == BlockCount.)
         /// </summary>
-        public uint PreviousBlockEntryIndex;
+        public uint PreviousBlockEntryIndex { get; set; }
 
         /// <summary>
         /// The next block entry.  (N/A if == BlockCount.)
         /// </summary>
-        public uint NextBlockEntryIndex;
+        public uint NextBlockEntryIndex { get; set; }
     }
 }

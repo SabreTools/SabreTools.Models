@@ -6,69 +6,69 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Offset to the file descriptor name
         /// </summary>
-        public uint NameOffset;
+        public uint NameOffset { get; set; }
 
         /// <summary>
         /// File descriptor name
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// Directory index
         /// </summary>
-        public uint DirectoryIndex;
+        public uint DirectoryIndex { get; set; }
 
         /// <summary>
         /// File flags
         /// </summary>
-        public FileFlags Flags;
+        public FileFlags Flags { get; set; }
 
         /// <summary>
         /// Size of the entry when expanded
         /// </summary>
-        public ulong ExpandedSize;
+        public ulong ExpandedSize { get; set; }
 
         /// <summary>
         /// Size of the entry when compressed
         /// </summary>
-        public ulong CompressedSize;
+        public ulong CompressedSize { get; set; }
 
         /// <summary>
         /// Offset to the entry data
         /// </summary>
-        public ulong DataOffset;
+        public ulong DataOffset { get; set; }
 
         /// <summary>
         /// MD5 of the entry data
         /// </summary>
 #if NET48
-        public byte[] MD5;
+        public byte[] MD5 { get; set; }
 #else
-        public byte[]? MD5;
+        public byte[]? MD5 { get; set; }
 #endif
 
         /// <summary>
         /// Volume number
         /// </summary>
-        public ushort Volume;
+        public ushort Volume { get; set; }
 
         /// <summary>
         /// Link previous
         /// </summary>
-        public uint LinkPrevious;
+        public uint LinkPrevious { get; set; }
 
         /// <summary>
         /// Link next
         /// </summary>
-        public uint LinkNext;
+        public uint LinkNext { get; set; }
 
         /// <summary>
         /// Link flags
         /// </summary>
-        public LinkFlags LinkFlags;
+        public LinkFlags LinkFlags { get; set; }
     }
 }

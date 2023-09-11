@@ -18,38 +18,38 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// <summary>
         /// Specifies the uncompressed size of this file, in bytes.
         /// </summary>
-        public uint FileSize;
+        public uint FileSize { get; set; }
 
         /// <summary>
         /// Specifies the uncompressed offset, in bytes, of the start of this file's data. For the
         /// first file in each folder, this value will usually be zero. Subsequent files in the folder will have offsets
         /// that are typically the running sum of the cbFile field values.
         /// </summary>
-        public uint FolderStartOffset;
+        public uint FolderStartOffset { get; set; }
 
         /// <summary>
         /// Index of the folder that contains this file's data.
         /// </summary>
-        public FolderIndex FolderIndex;
+        public FolderIndex FolderIndex { get; set; }
 
         /// <summary>
         /// Date of this file, in the format ((year–1980) << 9)+(month << 5)+(day), where
         /// month={1..12} and day = { 1..31 }. This "date" is typically considered the "last modified" date in local
         /// time, but the actual definition is application-defined.
         /// </summary>
-        public ushort Date;
+        public ushort Date { get; set; }
 
         /// <summary>
         /// Time of this file, in the format (hour << 11)+(minute << 5)+(seconds/2), where
         /// hour={0..23}. This "time" is typically considered the "last modified" time in local time, but the
         /// actual definition is application-defined.
         /// </summary>
-        public ushort Time;
+        public ushort Time { get; set; }
 
         /// <summary>
         /// Attributes of this file; can be used in any combination.
         /// </summary>
-        public FileAttributes Attributes;
+        public FileAttributes Attributes { get; set; }
 
         /// <summary>
         /// The null-terminated name of this file. Note that this string can include path
@@ -64,9 +64,9 @@ namespace SabreTools.Models.MicrosoftCabinet
         /// interpreted according to the current location.
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
     }
 }

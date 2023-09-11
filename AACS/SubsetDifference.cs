@@ -9,12 +9,12 @@ namespace SabreTools.Models.AACS
         /// the mask. For example, the value 0x01 denotes a mask of
         /// 0xFFFFFFFE; value 0x0A denotes a mask of 0xFFFFFC00.
         /// </summary>
-        public byte Mask;
+        public byte Mask { get; set; }
 
         /// <summary>
         /// The last 4 bytes are the uv number, most significant
         /// byte first.
         /// </summary>
-        public uint Number;
+        public uint Number { get; set; }
     }
 }

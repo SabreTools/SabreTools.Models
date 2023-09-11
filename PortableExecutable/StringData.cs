@@ -11,17 +11,17 @@
         /// <summary>
         /// The length, in bytes, of this String structure.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// The size, in words, of the Value member.
         /// </summary>
-        public ushort ValueLength;
+        public ushort ValueLength { get; set; }
 
         /// <summary>
         /// The type of data in the version resource.
         /// </summary>
-        public VersionResourceType ResourceType;
+        public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
         /// An arbitrary Unicode string. The Key member can be one or more of the following
@@ -65,23 +65,23 @@
         ///     could be "Private build for Olivetti solving mouse problems on M250 and M250E computers".
         /// </summary>
 #if NET48
-        public string Key;
+        public string Key { get; set; }
 #else
-        public string? Key;
+        public string? Key { get; set; }
 #endif
 
         /// <summary>
         /// As many zero words as necessary to align the Value member on a 32-bit boundary.
         /// </summary>
-        public ushort Padding;
+        public ushort Padding { get; set; }
 
         /// <summary>
         /// A zero-terminated string. See the szKey member description for more information.
         /// </summary>
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 }

@@ -24,14 +24,14 @@
         /// The image base plus the page RVA is added to each offset to create
         /// the VA where the base relocation must be applied.
         /// </summary>
-        public uint PageRVA;
+        public uint PageRVA { get; set; }
 
         /// <summary>
         /// The total number of bytes in the base relocation block, including
         /// the Page RVA and Block Size fields and the Type/Offset fields that
         /// follow.
         /// </summary>
-        public uint BlockSize;
+        public uint BlockSize { get; set; }
 
         /// <summary>
         /// The Block Size field is then followed by any number of Type or Offset
@@ -47,9 +47,9 @@
         ///                    specifies where the base relocation is to be applied. 
         /// </summary>
 #if NET48
-        public BaseRelocationTypeOffsetFieldEntry[] TypeOffsetFieldEntries;
+        public BaseRelocationTypeOffsetFieldEntry[] TypeOffsetFieldEntries { get; set; }
 #else
-        public BaseRelocationTypeOffsetFieldEntry?[]? TypeOffsetFieldEntries;
+        public BaseRelocationTypeOffsetFieldEntry?[]? TypeOffsetFieldEntries { get; set; }
 #endif
     }
 }

@@ -19,9 +19,9 @@ namespace SabreTools.Models.AACS
         /// must refuse to use the Media Key.
         /// </summary>
 #if NET48
-        public byte[] SignatureData;
+        public byte[] SignatureData { get; set; }
 #else
-        public byte[]? SignatureData;
+        public byte[]? SignatureData { get; set; }
 #endif
     }
 }

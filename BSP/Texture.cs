@@ -7,51 +7,51 @@ namespace SabreTools.Models.BSP
         /// Name
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
     
         /// <summary>
         /// Width
         /// </summary>
-        public uint Width;
+        public uint Width { get; set; }
 
         /// <summary>
         /// Height
         /// </summary>
-        public uint Height;
+        public uint Height { get; set; }
 
         /// <summary>
         /// Offsets
         /// </summary>
 #if NET48
-        public uint[] Offsets;
+        public uint[] Offsets { get; set; }
 #else
-        public uint[]? Offsets;
+        public uint[]? Offsets { get; set; }
 #endif
 
         /// <summary>
         /// Texture data
         /// </summary>
 #if NET48
-        public byte[] TextureData;
+        public byte[] TextureData { get; set; }
 #else
-        public byte[]? TextureData;
+        public byte[]? TextureData { get; set; }
 #endif
 
         /// <summary>
         /// Palette size
         /// </summary>
-        public uint PaletteSize;
+        public uint PaletteSize { get; set; }
 
         /// <summary>
         /// Palette data
         /// </summary>
 #if NET48
-        public byte[] PaletteData;
+        public byte[] PaletteData { get; set; }
 #else
-        public byte[]? PaletteData;
+        public byte[]? PaletteData { get; set; }
 #endif
     }
 }

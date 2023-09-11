@@ -15,24 +15,24 @@ namespace SabreTools.Models.Compression.LZX
     public class BlockHeader
     {
         /// <remarks>3 bits</remarks>
-        public BlockType BlockType;
+        public BlockType BlockType { get; set; }
 
         /// <summary>
         /// Block size is the high 8 bits of 24
         /// </summary>
         /// <remarks>8 bits</remarks>
-        public byte BlockSizeMSB;
+        public byte BlockSizeMSB { get; set; }
 
         /// <summary>
         /// Block size is the middle 8 bits of 24
         /// </summary>
         /// <remarks>8 bits</remarks>
-        public byte BlockSizeByte2;
+        public byte BlockSizeByte2 { get; set; }
 
         /// <summary>
         /// Block size is the low 8 bits of 24
         /// </summary>
         /// <remarks>8 bits</remarks>
-        public byte BlocksizeLSB;
+        public byte BlocksizeLSB { get; set; }
     }
 }

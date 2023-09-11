@@ -3,24 +3,24 @@ namespace SabreTools.Models.WAD
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/WADFile.h"/>
     public sealed class Lump
     {
-        public uint Offset;
+        public uint Offset { get; set; }
 
-        public uint DiskLength;
+        public uint DiskLength { get; set; }
 
-        public uint Length;
+        public uint Length { get; set; }
 
-        public byte Type;
+        public byte Type { get; set; }
 
-        public byte Compression;
+        public byte Compression { get; set; }
 
-        public byte Padding0;
+        public byte Padding0 { get; set; }
 
-        public byte Padding1;
+        public byte Padding1 { get; set; }
 
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
     }
 }

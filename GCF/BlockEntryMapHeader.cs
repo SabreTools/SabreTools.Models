@@ -9,26 +9,26 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount;
+        public uint BlockCount { get; set; }
 
         /// <summary>
         /// Index of the first block entry.
         /// </summary>
-        public uint FirstBlockEntryIndex;
+        public uint FirstBlockEntryIndex { get; set; }
 
         /// <summary>
         /// Index of the last block entry.
         /// </summary>
-        public uint LastBlockEntryIndex;
+        public uint LastBlockEntryIndex { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Header checksum.
         /// </summary>
-        public uint Checksum;
+        public uint Checksum { get; set; }
     }
 }

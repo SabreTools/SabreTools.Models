@@ -17,16 +17,16 @@ namespace SabreTools.Models.CFB
         /// name: '/', '\', ':', '!'.
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// This field MUST be 0x00, 0x01, 0x02, or 0x05, depending on the
         /// actual type of object. All other values are not valid.
         /// </summary>
-        public ushort NameLength;
+        public ushort NameLength { get; set; }
 
         /// <summary>
         /// This field MUST match the length of the Directory Entry Name Unicode
@@ -34,31 +34,31 @@ namespace SabreTools.Models.CFB
         /// terminating null character in the count. This length MUST NOT exceed 64,
         /// the maximum size of the Directory Entry Name field.
         /// </summary>
-        public ObjectType ObjectType;
+        public ObjectType ObjectType { get; set; }
 
         /// <summary>
         /// This field MUST be 0x00 (red) or 0x01 (black). All other values are not valid.
         /// </summary>
-        public ColorFlag ColorFlag;
+        public ColorFlag ColorFlag { get; set; }
 
         /// <summary>
         /// This field contains the stream ID of the left sibling. If there
         /// is no left sibling, the field MUST be set to NOSTREAM (0xFFFFFFFF).
         /// </summary>
-        public StreamID LeftSiblingID;
+        public StreamID LeftSiblingID { get; set; }
 
         /// <summary>
         /// This field contains the stream ID of the right sibling. If there
         /// is no right sibling, the field MUST be set to NOSTREAM (0xFFFFFFFF).
         /// </summary>
-        public StreamID RightSiblingID;
+        public StreamID RightSiblingID { get; set; }
 
         /// <summary>
         /// This field contains the stream ID of a child object. If there is no
         /// child object, including all entries for stream objects, the field
         /// MUST be set to NOSTREAM (0xFFFFFFFF).
         /// </summary>
-        public StreamID ChildID;
+        public StreamID ChildID { get; set; }
 
         /// <summary>
         /// This field contains an object class GUID, if this entry is for a
@@ -71,7 +71,7 @@ namespace SabreTools.Models.CFB
         /// this value is not all zeroes, the object class GUID can be used as a
         /// parameter to start applications.
         /// </summary>
-        public Guid CLSID;
+        public Guid CLSID { get; set; }
 
         /// <summary>
         /// This field contains the user-defined flags if this entry is for a storage
@@ -82,7 +82,7 @@ namespace SabreTools.Models.CFB
         /// objects without explicitly setting state bits, it MUST write all zeroes
         /// by default.
         /// </summary>
-        public uint StateBits;
+        public uint StateBits { get; set; }
 
         /// <summary>
         /// This field contains the creation time for a storage object, or all zeroes
@@ -92,7 +92,7 @@ namespace SabreTools.Models.CFB
         /// object, this field MUST be all zeroes, and the creation time is retrieved
         /// or set on the compound file itself.
         /// </summary>
-        public ulong CreationTime;
+        public ulong CreationTime { get; set; }
 
         /// <summary>
         /// This field contains the modification time for a storage object, or all
@@ -102,7 +102,7 @@ namespace SabreTools.Models.CFB
         /// storage object, this field MAY<2> be set to all zeroes, and the modified
         /// time is retrieved or set on the compound file itself.
         /// </summary>
-        public ulong ModifiedTime;
+        public ulong ModifiedTime { get; set; }
 
         /// <summary>
         /// This field contains the first sector location if this is a stream object.
@@ -110,7 +110,7 @@ namespace SabreTools.Models.CFB
         /// mini stream, if the mini stream exists. For a storage object, this field MUST
         /// be set to all zeroes.
         /// </summary>
-        public uint StartingSectorLocation;
+        public uint StartingSectorLocation { get; set; }
 
         /// <summary>
         /// This 64-bit integer field contains the size of the user-defined data if this
@@ -132,6 +132,6 @@ namespace SabreTools.Models.CFB
         /// unless there is a specific reason to do otherwise (for example, a parser whose
         /// purpose is to verify the correctness of a compound file).
         /// </remarks>
-        public ulong StreamSize;
+        public ulong StreamSize { get; set; }
     }
 }

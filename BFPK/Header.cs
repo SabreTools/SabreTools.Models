@@ -13,19 +13,19 @@ namespace SabreTools.Models.BFPK
         /// "BFPK"
         /// </summary>
 #if NET48
-        public string Magic;
+        public string Magic { get; set; }
 #else
-        public string? Magic;
+        public string? Magic { get; set; }
 #endif
 
         /// <summary>
         /// Version
         /// </summary>
-        public int Version;
+        public int Version { get; set; }
 
         /// <summary>
         /// Files
         /// </summary>
-        public int Files;
+        public int Files { get; set; }
     }
 }

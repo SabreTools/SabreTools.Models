@@ -9,7 +9,7 @@ namespace SabreTools.Models.AACS
         /// field indicates that only one ID is being revoked, a value of one
         /// in the Range field indicates two ID’s are being revoked, and so on.
         /// </summary>
-        public ushort Range;
+        public ushort Range { get; set; }
 
         /// <summary>
         /// A 6-byte Drive ID value identifying the Licensed Drive being revoked
@@ -17,9 +17,9 @@ namespace SabreTools.Models.AACS
         /// case of a non-zero Range value).
         /// </summary>
 #if NET48
-        public byte[] DriveID;
+        public byte[] DriveID { get; set; }
 #else
-        public byte[]? DriveID;
+        public byte[]? DriveID { get; set; }
 #endif
     }
 }

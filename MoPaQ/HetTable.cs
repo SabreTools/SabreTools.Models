@@ -19,71 +19,71 @@ namespace SabreTools.Models.MoPaQ
         /// 'HET\x1A'
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Version. Seems to be always 1
         /// </summary>
-        public uint Version;
+        public uint Version { get; set; }
 
         /// <summary>
         /// Size of the contained table
         /// </summary>
-        public uint DataSize;
+        public uint DataSize { get; set; }
 
         #endregion
 
         /// <summary>
         /// Size of the entire hash table, including the header (in bytes)
         /// </summary>
-        public uint TableSize;
+        public uint TableSize { get; set; }
 
         /// <summary>
         /// Maximum number of files in the MPQ
         /// </summary>
-        public uint MaxFileCount;
+        public uint MaxFileCount { get; set; }
 
         /// <summary>
         /// Size of the hash table (in bytes)
         /// </summary>
-        public uint HashTableSize;
+        public uint HashTableSize { get; set; }
 
         /// <summary>
         /// Effective size of the hash entry (in bits)
         /// </summary>
-        public uint HashEntrySize;
+        public uint HashEntrySize { get; set; }
 
         /// <summary>
         /// Total size of file index (in bits)
         /// </summary>
-        public uint TotalIndexSize;
+        public uint TotalIndexSize { get; set; }
 
         /// <summary>
         /// Extra bits in the file index
         /// </summary>
-        public uint IndexSizeExtra;
+        public uint IndexSizeExtra { get; set; }
 
         /// <summary>
         /// Effective size of the file index (in bits)
         /// </summary>
-        public uint IndexSize;
+        public uint IndexSize { get; set; }
 
         /// <summary>
         /// Size of the block index subtable (in bytes)
         /// </summary>
-        public uint BlockTableSize;
+        public uint BlockTableSize { get; set; }
 
         /// <summary>
         /// HET hash table. Each entry is 8 bits.
         /// </summary>
         /// <remarks>Size is derived from HashTableSize</remarks>
 #if NET48
-        public byte[] HashTable;
+        public byte[] HashTable { get; set; }
 #else
-        public byte[]? HashTable;
+        public byte[]? HashTable { get; set; }
 #endif
 
         /// <summary>
@@ -91,9 +91,9 @@ namespace SabreTools.Models.MoPaQ
         /// Table size is taken from dwHashTableSize.
         /// </summary>
 #if NET48
-        public byte[][] FileIndexes;
+        public byte[][] FileIndexes { get; set; }
 #else
-        public byte[][]? FileIndexes;
+        public byte[][]? FileIndexes { get; set; }
 #endif
     }
 }

@@ -6,6 +6,6 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Version
         /// </summary>
-        public uint Version;
+        public uint Version { get; set; }
     }
 }

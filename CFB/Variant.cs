@@ -9,41 +9,41 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// MUST be set to the size, in quad words (64 bits), of the structure.
         /// </summary>
-        public uint Size;
+        public uint Size { get; set; }
 
         /// <summary>
         /// MUST be set to 0 and MUST be ignored by the recipient.
         /// </summary>
-        public uint RpcReserved;
+        public uint RpcReserved { get; set; }
 
         /// <summary>
         /// MUST be set to one of the values specified with a "V".
         /// </summary>
-        public VariantType VariantType;
+        public VariantType VariantType { get; set; }
 
         /// <summary>
         /// MAY be set to 0 and MUST be ignored by the recipient.
         /// </summary>
-        public ushort Reserved1;
+        public ushort Reserved1 { get; set; }
 
         /// <summary>
         /// MAY be set to 0 and MUST be ignored by the recipient.
         /// </summary>
-        public ushort Reserved2;
+        public ushort Reserved2 { get; set; }
 
         /// <summary>
         /// MAY be set to 0 and MUST be ignored by the recipient.
         /// </summary>
-        public ushort Reserved3;
+        public ushort Reserved3 { get; set; }
 
         /// <summary>
         /// MUST contain an instance of the type, according to the value
         /// in the <see cref="VariantType"/> field.
         /// </summary>
 #if NET48
-        public object Union;
+        public object Union { get; set; }
 #else
-        public object? Union;
+        public object? Union { get; set; }
 #endif
     }
 }

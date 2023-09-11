@@ -8,29 +8,29 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Length of the data file name
         /// </summary>
-        public ushort FileNameLength;
+        public ushort FileNameLength { get; set; }
 
         /// <summary>
         /// Data file name
         /// </summary>
 #if NET48
-        public string FileName;
+        public string FileName { get; set; }
 #else
-        public string? FileName;
+        public string? FileName { get; set; }
 #endif
 
         /// <summary>
         /// Length of the data
         /// </summary>
-        public uint DataLength;
+        public uint DataLength { get; set; }
 
         /// <summary>
         /// Data
         /// </summary>
 #if NET48
-        public byte[] Data;
+        public byte[] Data { get; set; }
 #else
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
 #endif
 
         // Notes about Data:

@@ -14,16 +14,16 @@
         /// the size field itself, so that the value in this location would be 4 if no
         /// strings were present.
         /// </summary>
-        public uint TotalSize;
+        public uint TotalSize { get; set; }
 
         /// <summary>
         /// Following the size are null-terminated strings that are pointed to by symbols
         /// in the COFF symbol table.
         /// </summary>
 #if NET48
-        public string[] Strings;
+        public string[] Strings { get; set; }
 #else
-        public string[]? Strings;
+        public string[]? Strings { get; set; }
 #endif
     }
 }

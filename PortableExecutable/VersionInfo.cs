@@ -12,66 +12,66 @@
         /// include any padding that aligns any subsequent version resource data on a
         /// 32-bit boundary.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// The length, in bytes, of the Value member. This value is zero if there is no
         /// Value member associated with the current version structure.
         /// </summary>
-        public ushort ValueLength;
+        public ushort ValueLength { get; set; }
 
         /// <summary>
         /// The type of data in the version resource. This member is 1 if the version resource
         /// contains text data and 0 if the version resource contains binary data.
         /// </summary>
-        public VersionResourceType ResourceType;
+        public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
         /// The Unicode string L"VS_VERSION_INFO".
         /// </summary>
 #if NET48
-        public string Key;
+        public string Key { get; set; }
 #else
-        public string? Key;
+        public string? Key { get; set; }
 #endif
 
         /// <summary>
         /// Contains as many zero words as necessary to align the Value member on a 32-bit boundary.
         /// </summary>
-        public ushort Padding1;
+        public ushort Padding1 { get; set; }
 
         /// <summary>
         /// Arbitrary data associated with this VS_VERSIONINFO structure. The ValueLength member
         /// specifies the length of this member; if ValueLength is zero, this member does not exist.
         /// </summary>
 #if NET48
-        public FixedFileInfo Value;
+        public FixedFileInfo Value { get; set; }
 #else
-        public FixedFileInfo? Value;
+        public FixedFileInfo? Value { get; set; }
 #endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
         /// These bytes are not included in wValueLength. This member is optional.
         /// </summary>
-        public ushort Padding2;
+        public ushort Padding2 { get; set; }
 
         /// <summary>
         /// The StringFileInfo structure to store user-defined string information data.
         /// </summary>
 #if NET48
-        public StringFileInfo StringFileInfo;
+        public StringFileInfo StringFileInfo { get; set; }
 #else
-        public StringFileInfo? StringFileInfo;
+        public StringFileInfo? StringFileInfo { get; set; }
 #endif
 
         /// <summary>
         /// The VarFileInfo structure to store language information data.
         /// </summary>
 #if NET48
-        public VarFileInfo VarFileInfo;
+        public VarFileInfo VarFileInfo { get; set; }
 #else
-        public VarFileInfo? VarFileInfo;
+        public VarFileInfo? VarFileInfo { get; set; }
 #endif
     }
 }

@@ -9,30 +9,30 @@
         /// <summary>
         /// Name size
         /// </summary>
-        public int NameSize;
+        public int NameSize { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
         /// Uncompressed size
         /// </summary>
-        public int UncompressedSize;
+        public int UncompressedSize { get; set; }
 
         /// <summary>
         /// Offset
         /// </summary>
-        public int Offset;
+        public int Offset { get; set; }
 
         /// <summary>
         /// Compressed size
         /// </summary>
-        public int CompressedSize;
+        public int CompressedSize { get; set; }
     }
 }

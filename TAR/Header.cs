@@ -6,116 +6,116 @@ namespace SabreTools.Models.TAR
         /// File name
         /// </summary>
 #if NET48
-        public string FileName;
+        public string FileName { get; set; }
 #else
-        public string? FileName;
+        public string? FileName { get; set; }
 #endif
 
         /// <summary>
         /// File mode
         /// </summary>
-        public Mode Mode;
+        public Mode Mode { get; set; }
 
          /// <summary>
         /// Owner's numeric user ID
         /// </summary>
-        public uint UID;
+        public uint UID { get; set; }
 
          /// <summary>
         /// Owner's numeric user ID
         /// </summary>
-        public uint GID;
+        public uint GID { get; set; }
 
         /// <summary>
         /// File size in bytes
         /// </summary>
-        public ulong Size;
+        public ulong Size { get; set; }
 
         /// <summary>
         /// Last modification time in numeric Unix time format
         /// </summary>
-        public ulong ModifiedTime;
+        public ulong ModifiedTime { get; set; }
 
         /// <summary>
         /// Checksum for header record
         /// </summary>
-        public ushort Checksum;
+        public ushort Checksum { get; set; }
 
         /// <summary>
         /// Link indicator (file type) / Type flag
         /// </summary>
-        public TypeFlag TypeFlag;
+        public TypeFlag TypeFlag { get; set; }
 
         /// <summary>
         /// Name of linked file
         /// </summary>
 #if NET48
-        public string LinkName;
+        public string LinkName { get; set; }
 #else
-        public string? LinkName;
+        public string? LinkName { get; set; }
 #endif
 
         /// <summary>
         /// UStar indicator, "ustar", then NUL
         /// </summary>
 #if NET48
-        public string Magic;
+        public string Magic { get; set; }
 #else
-        public string? Magic;
+        public string? Magic { get; set; }
 #endif
 
         /// <summary>
         /// UStar version, "00"
         /// </summary>
 #if NET48
-        public string Version;
+        public string Version { get; set; }
 #else
-        public string? Version;
+        public string? Version { get; set; }
 #endif
 
         /// <summary>
         /// Owner user name
         /// </summary>
 #if NET48
-        public string UserName;
+        public string UserName { get; set; }
 #else
-        public string? UserName;
+        public string? UserName { get; set; }
 #endif
 
         /// <summary>
         /// Owner group name
         /// </summary>
 #if NET48
-        public string GroupName;
+        public string GroupName { get; set; }
 #else
-        public string? GroupName;
+        public string? GroupName { get; set; }
 #endif
 
         /// <summary>
         /// Device major number
         /// </summary>
 #if NET48
-        public string DevMajor;
+        public string DevMajor { get; set; }
 #else
-        public string? DevMajor;
+        public string? DevMajor { get; set; }
 #endif
 
         /// <summary>
         /// Device minor number
         /// </summary>
 #if NET48
-        public string DevMinor;
+        public string DevMinor { get; set; }
 #else
-        public string? DevMinor;
+        public string? DevMinor { get; set; }
 #endif
 
         /// <summary>
         /// Filename prefix
         /// </summary>
 #if NET48
-        public string Prefix;
+        public string Prefix { get; set; }
 #else
-        public string? Prefix;
+        public string? Prefix { get; set; }
 #endif
     }
 }

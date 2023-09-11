@@ -15,7 +15,7 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// The Record Type field value indicates the type of the Record.
         /// </summary>
-        public RecordType RecordType;
+        public RecordType RecordType { get; set; }
 
         /// <summary>
         /// The Record Length field value indicates the number of bytes in
@@ -23,6 +23,6 @@ namespace SabreTools.Models.AACS
         /// fields themselves. Record lengths are always multiples of 4 bytes.
         /// </summary>
         // <remarks>UInt24 not UInt32</remarks>
-        public uint RecordLength;
+        public uint RecordLength { get; set; }
     }
 }

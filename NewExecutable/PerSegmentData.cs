@@ -13,15 +13,15 @@
         /// <summary>
         /// Number of relocation records that follow.
         /// </summary>
-        public ushort RelocationRecordCount;
+        public ushort RelocationRecordCount { get; set; }
 
         /// <summary>
         /// A table of relocation records follows.
         /// </summary>
 #if NET48
-        public RelocationRecord[] RelocationRecords;
+        public RelocationRecord[] RelocationRecords { get; set; }
 #else
-        public RelocationRecord?[]? RelocationRecords;
+        public RelocationRecord?[]? RelocationRecords { get; set; }
 #endif
     }
 }

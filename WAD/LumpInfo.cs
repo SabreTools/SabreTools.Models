@@ -4,31 +4,31 @@ namespace SabreTools.Models.WAD
     public sealed class LumpInfo
     {
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
-        public uint Width;
+        public uint Width { get; set; }
 
-        public uint Height;
+        public uint Height { get; set; }
 
-        public uint PixelOffset;
+        public uint PixelOffset { get; set; }
 
         // 12 bytes of unknown data
 
 #if NET48
-        public byte[] PixelData;
+        public byte[] PixelData { get; set; }
 #else
-        public byte[]? PixelData;
+        public byte[]? PixelData { get; set; }
 #endif
 
-        public uint PaletteSize;
+        public uint PaletteSize { get; set; }
 
 #if NET48
-        public byte[] PaletteData;
+        public byte[] PaletteData { get; set; }
 #else
-        public byte[]? PaletteData;
+        public byte[]? PaletteData { get; set; }
 #endif
     }
 }

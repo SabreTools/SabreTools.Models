@@ -12,15 +12,15 @@ namespace SabreTools.Models.Nitro
         /// and the most significant bit indicates whether it is a
         /// folder (1 = folder, 0 = file).
         /// </summary>
-        public bool Folder;
+        public bool Folder { get; set; }
 
         /// <summary>
         /// The variable length name (UTF-8)
         /// </summary>
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         /// <summary>
@@ -28,6 +28,6 @@ namespace SabreTools.Models.Nitro
         /// within the Folder allocation table, allowing its contents to
         /// be found.
         /// </summary>
-        public ushort Index;
+        public ushort Index { get; set; }
     }
 }

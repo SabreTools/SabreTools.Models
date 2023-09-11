@@ -10,233 +10,233 @@ namespace SabreTools.Models.Nitro
         /// Game Title
         /// </summary>
 #if NET48
-        public string GameTitle;
+        public string GameTitle { get; set; }
 #else
-        public string? GameTitle;
+        public string? GameTitle { get; set; }
 #endif
 
         /// <summary>
         /// Gamecode
         /// </summary>
-        public uint GameCode;
+        public uint GameCode { get; set; }
 
         /// <summary>
         /// Makercode
         /// </summary>
 #if NET48
-        public string MakerCode;
+        public string MakerCode { get; set; }
 #else
-        public string? MakerCode;
+        public string? MakerCode { get; set; }
 #endif
 
         /// <summary>
         /// Unitcode
         /// </summary>
-        public Unitcode UnitCode;
+        public Unitcode UnitCode { get; set; }
 
         /// <summary>
         /// Encryption seed select (device code. 0 = normal)
         /// </summary>
-        public byte EncryptionSeedSelect;
+        public byte EncryptionSeedSelect { get; set; }
 
         /// <summary>
         /// Devicecapacity
         /// </summary>
-        public byte DeviceCapacity;
+        public byte DeviceCapacity { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved1;
+        public byte[] Reserved1 { get; set; }
 #else
-        public byte[]? Reserved1;
+        public byte[]? Reserved1 { get; set; }
 #endif
 
         /// <summary>
         /// Game Revision (used by DSi titles)
         /// </summary>
-        public ushort GameRevision;
+        public ushort GameRevision { get; set; }
 
         /// <summary>
         /// ROM Version
         /// </summary>
-        public byte RomVersion;
+        public byte RomVersion { get; set; }
 
         /// <summary>
         /// Internal flags, (Bit2: Autostart)
         /// </summary>
-        public byte InternalFlags;
+        public byte InternalFlags { get; set; }
 
         /// <summary>
         /// ARM9 rom offset
         /// </summary>
-        public uint ARM9RomOffset;
+        public uint ARM9RomOffset { get; set; }
 
         /// <summary>
         /// ARM9 entry address
         /// </summary>
-        public uint ARM9EntryAddress;
+        public uint ARM9EntryAddress { get; set; }
 
         /// <summary>
         /// ARM9 load address
         /// </summary>
-        public uint ARM9LoadAddress;
+        public uint ARM9LoadAddress { get; set; }
 
         /// <summary>
         /// ARM9 size
         /// </summary>
-        public uint ARM9Size;
+        public uint ARM9Size { get; set; }
 
         /// <summary>
         /// ARM7 rom offset
         /// </summary>
-        public uint ARM7RomOffset;
+        public uint ARM7RomOffset { get; set; }
 
         /// <summary>
         /// ARM7 entry address
         /// </summary>
-        public uint ARM7EntryAddress;
+        public uint ARM7EntryAddress { get; set; }
 
         /// <summary>
         /// ARM7 load address
         /// </summary>
-        public uint ARM7LoadAddress;
+        public uint ARM7LoadAddress { get; set; }
 
         /// <summary>
         /// ARM7 size
         /// </summary>
-        public uint ARM7Size;
+        public uint ARM7Size { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) offset
         /// </summary>
-        public uint FileNameTableOffset;
+        public uint FileNameTableOffset { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) length
         /// </summary>
-        public uint FileNameTableLength;
+        public uint FileNameTableLength { get; set; }
 
         /// <summary>
         /// File Allocation Table (FNT) offset
         /// </summary>
-        public uint FileAllocationTableOffset;
+        public uint FileAllocationTableOffset { get; set; }
 
         /// <summary>
         /// File Allocation Table (FNT) length
         /// </summary>
-        public uint FileAllocationTableLength;
+        public uint FileAllocationTableLength { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) offset
         /// </summary>
-        public uint ARM9OverlayOffset;
+        public uint ARM9OverlayOffset { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) length
         /// </summary>
-        public uint ARM9OverlayLength;
+        public uint ARM9OverlayLength { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) offset
         /// </summary>
-        public uint ARM7OverlayOffset;
+        public uint ARM7OverlayOffset { get; set; }
 
         /// <summary>
         /// File Name Table (FNT) length
         /// </summary>
-        public uint ARM7OverlayLength;
+        public uint ARM7OverlayLength { get; set; }
 
         /// <summary>
         /// Normal card control register settings (0x00416657 for OneTimePROM)
         /// </summary>
-        public uint NormalCardControlRegisterSettings;
+        public uint NormalCardControlRegisterSettings { get; set; }
 
         /// <summary>
         /// Secure card control register settings (0x081808F8 for OneTimePROM)
         /// </summary>
-        public uint SecureCardControlRegisterSettings;
+        public uint SecureCardControlRegisterSettings { get; set; }
 
         /// <summary>
         /// Icon Banner offset (NDSi same as NDS, but with new extra entries)
         /// </summary>
-        public uint IconBannerOffset;
+        public uint IconBannerOffset { get; set; }
 
         /// <summary>
         /// Secure area (2K) CRC
         /// </summary>
-        public ushort SecureAreaCRC;
+        public ushort SecureAreaCRC { get; set; }
 
         /// <summary>
         /// Secure transfer timeout (0x0D7E for OneTimePROM)
         /// </summary>
-        public ushort SecureTransferTimeout;
+        public ushort SecureTransferTimeout { get; set; }
 
         /// <summary>
         /// ARM9 autoload
         /// </summary>
-        public uint ARM9Autoload;
+        public uint ARM9Autoload { get; set; }
 
         /// <summary>
         /// ARM7 autoload
         /// </summary>
-        public uint ARM7Autoload;
+        public uint ARM7Autoload { get; set; }
 
         /// <summary>
         /// Secure disable
         /// </summary>
 #if NET48
-        public byte[] SecureDisable;
+        public byte[] SecureDisable { get; set; }
 #else
-        public byte[]? SecureDisable;
+        public byte[]? SecureDisable { get; set; }
 #endif
 
         /// <summary>
         /// NTR region ROM size (excluding DSi area)
         /// </summary>
-        public uint NTRRegionRomSize;
+        public uint NTRRegionRomSize { get; set; }
 
         /// <summary>
         /// Header size
         /// </summary>
-        public uint HeaderSize;
+        public uint HeaderSize { get; set; }
 
         /// <summary>
         ///Reserved (0x88, 0x8C, 0x90 = Unknown, used by DSi)
         /// </summary>
 #if NET48
-        public byte[] Reserved2;
+        public byte[] Reserved2 { get; set; }
 #else
-        public byte[]? Reserved2;
+        public byte[]? Reserved2 { get; set; }
 #endif
 
         /// <summary>
         /// Nintendo Logo
         /// </summary>
 #if NET48
-        public byte[] NintendoLogo;
+        public byte[] NintendoLogo { get; set; }
 #else
-        public byte[]? NintendoLogo;
+        public byte[]? NintendoLogo { get; set; }
 #endif
 
         /// <summary>
         /// Nintendo Logo CRC
         /// </summary>
-        public ushort NintendoLogoCRC;
+        public ushort NintendoLogoCRC { get; set; }
 
         /// <summary>
         /// Header CRC
         /// </summary>
-        public ushort HeaderCRC;
+        public ushort HeaderCRC { get; set; }
 
         /// <summary>
         /// Debugger reserved
         /// </summary>
 #if NET48
-        public byte[] DebuggerReserved;
+        public byte[] DebuggerReserved { get; set; }
 #else
-        public byte[]? DebuggerReserved;
+        public byte[]? DebuggerReserved { get; set; }
 #endif
     }
 }

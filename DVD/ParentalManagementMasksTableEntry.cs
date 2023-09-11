@@ -6,20 +6,20 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Country code
         /// </summary>
-        public ushort CountryCode;
+        public ushort CountryCode { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         /// <summary>
         /// Offset to PTL_MAIT
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
     }
 }

@@ -6,56 +6,56 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint Dummy0;
+        public uint Dummy0 { get; set; }
 
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint MajorVersion;
+        public uint MajorVersion { get; set; }
 
         /// <summary>
         /// GCF version number.
         /// </summary>
-        public uint MinorVersion;
+        public uint MinorVersion { get; set; }
 
         /// <summary>
         /// Cache ID
         /// </summary>
-        public uint CacheID;
+        public uint CacheID { get; set; }
 
         /// <summary>
         /// Last version played
         /// </summary>
-        public uint LastVersionPlayed;
+        public uint LastVersionPlayed { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1;
+        public uint Dummy1 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy2;
+        public uint Dummy2 { get; set; }
 
         /// <summary>
         /// Total size of GCF file in bytes.
         /// </summary>
-        public uint FileSize;
+        public uint FileSize { get; set; }
 
         /// <summary>
         /// Size of each data block in bytes.
         /// </summary>
-        public uint BlockSize;
+        public uint BlockSize { get; set; }
 
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount;
+        public uint BlockCount { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy3;
+        public uint Dummy3 { get; set; }
     }
 }

@@ -6,20 +6,20 @@
         /// <summary>
         /// SaveData Size
         /// </summary>
-        public ulong SaveDataSize;
+        public ulong SaveDataSize { get; set; }
 
         /// <summary>
         /// Jump ID
         /// </summary>
-        public ulong JumpID;
+        public ulong JumpID { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
     }
 }

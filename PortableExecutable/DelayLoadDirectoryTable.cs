@@ -20,7 +20,7 @@ namespace SabreTools.Models.PortableExecutable
         /// indicating the presence of new fields, or it can be used to indicate
         /// behaviors to the delay or unload helper functions.
         /// </remarks>
-        public uint Attributes;
+        public uint Attributes { get; set; }
 
         /// <summary>
         /// The RVA of the name of the DLL to be loaded. The name resides in the
@@ -30,7 +30,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The name of the DLL to be delay-loaded resides in the read-only data
         /// section of the image. It is referenced through the szName field.
         /// </remarks>
-        public uint Name;
+        public uint Name { get; set; }
 
         /// <summary>
         /// The RVA of the module handle (in the data section of the image) of the DLL
@@ -42,7 +42,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The phmod field points to the handle. The supplied delay-load helper uses
         /// this location to store the handle to the loaded DLL.
         /// </remarks>
-        public uint ModuleHandle;
+        public uint ModuleHandle { get; set; }
 
         /// <summary>
         /// The RVA of the delay-load import address table.
@@ -54,7 +54,7 @@ namespace SabreTools.Models.PortableExecutable
         /// the calling loop. The function pointers are accessed by using the expression
         /// pINT->u1.Function.
         /// </remarks>
-        public uint DelayImportAddressTable;
+        public uint DelayImportAddressTable { get; set; }
 
         /// <summary>
         /// The RVA of the delay-load name table, which contains the names of the imports
@@ -66,7 +66,7 @@ namespace SabreTools.Models.PortableExecutable
         /// in the IAT. They consist of the same structures as the standard INT and are
         /// accessed by using the expression pINT->u1.AddressOfData->Name[0].
         /// </remarks>
-        public uint DelayImportNameTable;
+        public uint DelayImportNameTable { get; set; }
 
         /// <summary>
         /// The RVA of the bound delay-load address table, if it exists.
@@ -76,7 +76,7 @@ namespace SabreTools.Models.PortableExecutable
         /// IMAGE_THUNK_DATA items that is used along with the timestamp field of the
         /// delay-load directory table by a post-process binding phase.
         /// </remarks>
-        public uint BoundDelayImportTable;
+        public uint BoundDelayImportTable { get; set; }
 
         /// <summary>
         /// The RVA of the unload delay-load address table, if it exists. This is an exact
@@ -92,7 +92,7 @@ namespace SabreTools.Models.PortableExecutable
         /// On the unload request, the library can be freed, the *phmod cleared, and the
         /// UIAT written over the IAT to restore everything to its preload state.
         /// </remarks>
-        public uint UnloadDelayImportTable;
+        public uint UnloadDelayImportTable { get; set; }
 
         /// <summary>
         /// The timestamp of the DLL to which this image has been bound.
@@ -102,6 +102,6 @@ namespace SabreTools.Models.PortableExecutable
         /// IMAGE_THUNK_DATA items that is used along with the timestamp field of the
         /// delay-load directory table by a post-process binding phase.
         /// </remarks>
-        public uint TimeStamp;
+        public uint TimeStamp { get; set; }
     }
 }

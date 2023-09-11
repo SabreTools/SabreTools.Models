@@ -14,21 +14,21 @@ namespace SabreTools.Models.PortableExecutable
         /// The help context identifier for the control. When the system sends a WM_HELP message,
         /// it passes the helpID value in the dwContextId member of the HELPINFO structure.
         /// </summary>
-        public uint HelpID;
+        public uint HelpID { get; set; }
 
         /// <summary>
         /// The extended styles for a window. This member is not used to create controls in dialog
         /// boxes, but applications that use dialog box templates can use it to create other types
         /// of windows.
         /// </summary>
-        public ExtendedWindowStyles ExtendedStyle;
+        public ExtendedWindowStyles ExtendedStyle { get; set; }
 
         /// <summary>
         /// The style of the control. This member can be a combination of window style values
         /// (such as WS_BORDER) and one or more of the control style values (such as
         /// BS_PUSHBUTTON and ES_LEFT).
         /// </summary>
-        public WindowStyles Style;
+        public WindowStyles Style { get; set; }
 
         /// <summary>
         /// The x-coordinate, in dialog box units, of the upper-left corner of the control.
@@ -39,7 +39,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values to screen
         /// units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionX;
+        public short PositionX { get; set; }
 
         /// <summary>
         /// The y-coordinate, in dialog box units, of the upper-left corner of the control.
@@ -50,7 +50,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values to screen
         /// units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionY;
+        public short PositionY { get; set; }
 
         /// <summary>
         /// The width, in dialog box units, of the control.
@@ -59,7 +59,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values to screen
         /// units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short WidthX;
+        public short WidthX { get; set; }
 
         /// <summary>
         /// The height, in dialog box units, of the control.
@@ -68,12 +68,12 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values to screen
         /// units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short HeightY;
+        public short HeightY { get; set; }
 
         /// <summary>
         /// The control identifier.
         /// </summary>
-        public uint ID;
+        public uint ID { get; set; }
 
         /// <summary>
         /// A variable-length array of 16-bit elements that specifies the window class of the control. If
@@ -88,15 +88,15 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string ClassResource;
+        public string ClassResource { get; set; }
 #else
-        public string? ClassResource;
+        public string? ClassResource { get; set; }
 #endif
 
         /// <summary>
         /// The ordinal value of a predefined system class.
         /// </summary>
-        public DialogItemTemplateOrdinal ClassResourceOrdinal;
+        public DialogItemTemplateOrdinal ClassResourceOrdinal { get; set; }
 
         /// <summary>
         /// A variable-length array of 16-bit elements that contains the initial text or resource identifier of the
@@ -111,22 +111,22 @@ namespace SabreTools.Models.PortableExecutable
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
 #if NET48
-        public string TitleResource;
+        public string TitleResource { get; set; }
 #else
-        public string? TitleResource;
+        public string? TitleResource { get; set; }
 #endif
 
         /// <summary>
         /// An ordinal value of a resource, such as an icon, in an executable file
         /// </summary>
-        public ushort TitleResourceOrdinal;
+        public ushort TitleResourceOrdinal { get; set; }
 
         /// <summary>
         /// The creation data array begins at the next WORD boundary after the title array. This creation data
         /// can be of any size and format. If the first word of the creation data array is nonzero, it indicates
         /// the size, in bytes, of the creation data (including the size word).
         /// </summary>
-        public ushort CreationDataSize;
+        public ushort CreationDataSize { get; set; }
 
         /// <summary>
         /// The creation data array begins at the next WORD boundary after the title array. This creation data
@@ -135,9 +135,9 @@ namespace SabreTools.Models.PortableExecutable
         /// WM_CREATE message that it sends to the control.
         /// </summary>
 #if NET48
-        public byte[] CreationData;
+        public byte[] CreationData { get; set; }
 #else
-        public byte[]? CreationData;
+        public byte[]? CreationData { get; set; }
 #endif
     }
 }

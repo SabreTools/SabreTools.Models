@@ -11,35 +11,35 @@ namespace SabreTools.Models.CFB
         /// This field MUST be set to 0xFFFE. This field is a byte order mark for
         /// all integer fields, specifying little-endian byte order.
         /// </summary>
-        public ushort ByteOrder;
+        public ushort ByteOrder { get; set; }
 
         /// <summary>
         /// Format
         /// </summary>
-        public ushort Format;
+        public ushort Format { get; set; }
 
         /// <summary>
         /// Build
         /// </summary>
-        public ushort Build;
+        public ushort Build { get; set; }
 
         /// <summary>
         /// Platform ID
         /// </summary>
-        public ushort PlatformID;
+        public ushort PlatformID { get; set; }
 
         /// <summary>
         /// CLSID
         /// </summary>
-        public Guid CLSID;
+        public Guid CLSID { get; set; }
 
         /// <summary>
         /// 4 bytes of reserved data
         /// </summary>
 #if NET48
-        public byte[] Reserved;
+        public byte[] Reserved { get; set; }
 #else
-        public byte[]? Reserved;
+        public byte[]? Reserved { get; set; }
 #endif
 
         #endregion
@@ -49,15 +49,15 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// Format ID, should be <see cref="Constants.FMTID_SummaryInformation"/>
         /// </summary>
-        public Guid FormatID;
+        public Guid FormatID { get; set; }
 
         /// <summary>
         /// 16 bytes of unknown data
         /// </summary>
 #if NET48
-        public byte[] Unknown;
+        public byte[] Unknown { get; set; }
 #else
-        public byte[]? Unknown;
+        public byte[]? Unknown { get; set; }
 #endif
 
         #endregion
@@ -67,26 +67,26 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// Location of the section
         /// </summary>
-        public uint Offset;
+        public uint Offset { get; set; }
 
         /// <summary>
         /// Section count(?)
         /// </summary>
-        public uint SectionCount;
+        public uint SectionCount { get; set; }
 
         /// <summary>
         /// Property count
         /// </summary>
-        public uint PropertyCount;
+        public uint PropertyCount { get; set; }
 
         /// <summary>
         /// Properties
         /// </summary>
         /// <remarks>Each Variant might be followed by an index and offset value</remarks>
 #if NET48
-        public Variant[] Properties;
+        public Variant[] Properties { get; set; }
 #else
-        public Variant?[]? Properties;
+        public Variant?[]? Properties { get; set; }
 #endif
 
         #endregion

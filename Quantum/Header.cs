@@ -13,34 +13,34 @@ namespace SabreTools.Models.Quantum
         /// Quantum signature: 0x44 0x53
         /// </summary>
 #if NET48
-        public string Signature;
+        public string Signature { get; set; }
 #else
-        public string? Signature;
+        public string? Signature { get; set; }
 #endif
 
         /// <summary>
         /// Quantum major version number
         /// </summary>
-        public byte MajorVersion;
+        public byte MajorVersion { get; set; }
 
         /// <summary>
         /// Quantum minor version number
         /// </summary>
-        public byte MinorVersion;
+        public byte MinorVersion { get; set; }
 
         /// <summary>
         /// Number of files within this archive
         /// </summary>
-        public ushort FileCount;
+        public ushort FileCount { get; set; }
 
         /// <summary>
         /// Table size required for decompression
         /// </summary>
-        public byte TableSize;
+        public byte TableSize { get; set; }
 
         /// <summary>
         /// Compression flags
         /// </summary>
-        public byte CompressionFlags;
+        public byte CompressionFlags { get; set; }
     }
 }

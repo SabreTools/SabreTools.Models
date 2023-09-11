@@ -44,20 +44,20 @@ namespace SabreTools.Models.LinearExecutable
         ///     this number of times.
         /// For <see cref="BundleType.ForwarderEntry"/>, this field is reserved for future use.
         /// </remarks>
-        public byte Entries;
+        public byte Entries { get; set; }
 
         /// <summary>
         /// This defines the bundle type which determines the contents of the BUNDLE INFO.
         /// </summary>
-        public BundleType BundleType;
+        public BundleType BundleType { get; set; }
 
         /// <summary>
         /// Table entries in the bundle
         /// </summary>
 #if NET48
-        public EntryTableEntry[] TableEntries;
+        public EntryTableEntry[] TableEntries { get; set; }
 #else
-        public EntryTableEntry?[]? TableEntries;
+        public EntryTableEntry?[]? TableEntries { get; set; }
 #endif
     }
 }

@@ -29,19 +29,19 @@ namespace SabreTools.Models.PortableExecutable
         /// 
         /// The DS_SHELLFONT style is not supported in the DLGTEMPLATE header.
         /// </summary>
-        public WindowStyles Style;
+        public WindowStyles Style { get; set; }
 
         /// <summary>
         /// The extended styles for a window. This member is not used to create dialog boxes,
         /// but applications that use dialog box templates can use it to create other types
         /// of windows.
         /// </summary>
-        public ExtendedWindowStyles ExtendedStyle;
+        public ExtendedWindowStyles ExtendedStyle { get; set; }
 
         /// <summary>
         /// The number of items in the dialog box.
         /// </summary>
-        public ushort ItemCount;
+        public ushort ItemCount { get; set; }
 
         /// <summary>
         /// The x-coordinate, in dialog box units, of the upper-left corner of the dialog box.
@@ -50,7 +50,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionX;
+        public short PositionX { get; set; }
 
         /// <summary>
         /// The y-coordinate, in dialog box units, of the upper-left corner of the dialog box.
@@ -59,7 +59,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short PositionY;
+        public short PositionY { get; set; }
 
         /// <summary>
         /// The width, in dialog box units, of the dialog box.
@@ -68,7 +68,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short WidthX;
+        public short WidthX { get; set; }
 
         /// <summary>
         /// The height, in dialog box units, of the dialog box.
@@ -77,7 +77,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The x, y, cx, and cy members specify values in dialog box units. You can convert these values
         /// to screen units (pixels) by using the MapDialogRect function.
         /// </remarks>
-        public short HeightY;
+        public short HeightY { get; set; }
 
         // In a standard template for a dialog box, the DLGTEMPLATE structure is always immediately
         // followed by three variable-length arrays that specify the menu, class, and title for the
@@ -100,15 +100,15 @@ namespace SabreTools.Models.PortableExecutable
         /// Unicode strings.
         /// </remarks>
 #if NET48
-        public string MenuResource;
+        public string MenuResource { get; set; }
 #else
-        public string? MenuResource;
+        public string? MenuResource { get; set; }
 #endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
         /// </summary>
-        public ushort MenuResourceOrdinal;
+        public ushort MenuResourceOrdinal { get; set; }
 
         /// <summary>
         /// Following the menu array is a class array that identifies the window class of the dialog box.
@@ -123,15 +123,15 @@ namespace SabreTools.Models.PortableExecutable
         /// Unicode strings.
         /// </remarks>
 #if NET48
-        public string ClassResource;
+        public string ClassResource { get; set; }
 #else
-        public string? ClassResource;
+        public string? ClassResource { get; set; }
 #endif
 
         /// <summary>
         /// The ordinal value of a predefined system class.
         /// </summary>
-        public ushort ClassResourceOrdinal;
+        public ushort ClassResourceOrdinal { get; set; }
 
         /// <summary>
         /// Following the class array is a title array that specifies a null-terminated Unicode string
@@ -143,9 +143,9 @@ namespace SabreTools.Models.PortableExecutable
         /// Unicode strings.
         /// </remarks>
 #if NET48
-        public string TitleResource;
+        public string TitleResource { get; set; }
 #else
-        public string? TitleResource;
+        public string? TitleResource { get; set; }
 #endif
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace SabreTools.Models.PortableExecutable
         /// and sends a WM_SETFONT message to the dialog box procedure and the control window
         /// procedures as it creates the dialog box and controls.
         /// </summary>
-        public ushort PointSizeValue;
+        public ushort PointSizeValue { get; set; }
 
         /// <summary>
         /// The 16-bit point size value and the typeface array follow the title array, but only if the
@@ -171,9 +171,9 @@ namespace SabreTools.Models.PortableExecutable
         /// Unicode strings.
         /// </remarks>
 #if NET48
-        public string Typeface;
+        public string Typeface { get; set; }
 #else
-        public string? Typeface;
+        public string? Typeface { get; set; }
 #endif
     }
 }

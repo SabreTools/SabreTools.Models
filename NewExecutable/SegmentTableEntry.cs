@@ -17,22 +17,22 @@ namespace SabreTools.Models.NewExecutable
         /// data, relative to the beginning of the file. Zero means no
         /// file data.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
 
         /// <summary>
         /// Length of the segment in the file, in bytes. Zero means 64K.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// Flag word.
         /// </summary>
-        public SegmentTableEntryFlag FlagWord;
+        public SegmentTableEntryFlag FlagWord { get; set; }
 
         /// <summary>
         /// Minimum allocation size of the segment, in bytes. Total size
         /// of the segment. Zero means 64K.
         /// </summary>
-        public ushort MinimumAllocationSize;
+        public ushort MinimumAllocationSize { get; set; }
     }
 }

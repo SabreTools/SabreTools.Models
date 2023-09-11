@@ -11,12 +11,12 @@ namespace SabreTools.Models.BMP
         /// not include the size of the color table or the size of the color masks,
         /// if they are appended to the end of structure.
         /// </summary>
-        public uint Size;
+        public uint Size { get; set; }
 
         /// <summary>
         /// Specifies the width of the bitmap, in pixels.
         /// </summary>
-        public int Width;
+        public int Width { get; set; }
 
         /// <summary>
         /// Specifies the height of the bitmap, in pixels.
@@ -30,19 +30,19 @@ namespace SabreTools.Models.BMP
         ///   or negative biHeight.
         /// - For compressed formats, biHeight must be positive, regardless of image orientation.
         /// </summary>
-        public int Height;
+        public int Height { get; set; }
 
         /// <summary>
         /// Specifies the number of planes for the target device. This value must be set to 1.
         /// </summary>
-        public ushort Planes;
+        public ushort Planes { get; set; }
 
         /// <summary>
         /// Specifies the number of bits per pixel (bpp). For uncompressed formats, this value
         /// is the average number of bits per pixel. For compressed formats, this value is the
         /// implied bit depth of the uncompressed image, after the image has been decoded.
         /// </summary>
-        public ushort BitCount;
+        public ushort BitCount { get; set; }
 
         /// <summary>
         /// For compressed video and YUV formats, this member is a FOURCC code, specified as a
@@ -59,36 +59,36 @@ namespace SabreTools.Models.BMP
         /// If biCompression equals BI_BITFIELDS, the format is either RGB 555 or RGB 565. Use
         /// the subtype GUID in the AM_MEDIA_TYPE structure to determine the specific RGB type.
         /// </summary>
-        public uint Compression;
+        public uint Compression { get; set; }
 
         /// <summary>
         /// Specifies the size, in bytes, of the image. This can be set to 0 for uncompressed
         /// RGB bitmaps.
         /// </summary>
-        public uint SizeImage;
+        public uint SizeImage { get; set; }
 
         /// <summary>
         /// Specifies the horizontal resolution, in pixels per meter, of the target device for
         /// the bitmap.
         /// </summary>
-        public int XPelsPerMeter;
+        public int XPelsPerMeter { get; set; }
 
         /// <summary>
         /// Specifies the vertical resolution, in pixels per meter, of the target device for
         /// the bitmap.
         /// </summary>
-        public int YPelsPerMeter;
+        public int YPelsPerMeter { get; set; }
 
         /// <summary>
         /// Specifies the number of color indices in the color table that are actually used by
         /// the bitmap.
         /// </summary>
-        public uint ClrUsed;
+        public uint ClrUsed { get; set; }
 
         /// <summary>
         /// Specifies the number of color indices that are considered important for displaying
         /// the bitmap. If this value is zero, all colors are important.
         /// </summary>
-        public uint ClrImportant;
+        public uint ClrImportant { get; set; }
     }
 }

@@ -9,20 +9,20 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// Current system IP
         /// </summary>
-        public uint SystemIP;
+        public uint SystemIP { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Reserved;
+        public uint Reserved { get; set; }
 
         /// <summary>
         /// King tag
         /// </summary>
 #if NET48
-        public string KingTag;
+        public string KingTag { get; set; }
 #else
-        public string? KingTag;
+        public string? KingTag { get; set; }
 #endif
     }
 }

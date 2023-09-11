@@ -10,32 +10,32 @@
         /// <summary>
         /// Describes the menu item.
         /// </summary>
-        public MenuFlags ItemType;
+        public MenuFlags ItemType { get; set; }
 
         /// <summary>
         /// Describes the menu item.
         /// </summary>
-        public MenuFlags State;
+        public MenuFlags State { get; set; }
 
         /// <summary>
         /// A numeric expression that identifies the menu item that is passed in the
         /// WM_COMMAND message.
         /// </summary>
-        public uint ID;
+        public uint ID { get; set; }
 
         /// <summary>
         /// A set of bit flags that specify the type of menu item.
         /// </summary>
-        public MenuFlags Flags;
+        public MenuFlags Flags { get; set; }
 
         /// <summary>
         /// A null-terminated Unicode string that contains the text for this menu item.
         /// There is no fixed limit on the size of this string.
         /// </summary>
 #if NET48
-        public string MenuText;
+        public string MenuText { get; set; }
 #else
-        public string? MenuText;
+        public string? MenuText { get; set; }
 #endif
     }
 }

@@ -14,6 +14,6 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Offset within Imported Names Table to referenced module name string.
         /// </summary>
-        public ushort Offset;
+        public ushort Offset { get; set; }
     }
 }

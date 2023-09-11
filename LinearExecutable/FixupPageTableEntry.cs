@@ -31,6 +31,6 @@ namespace SabreTools.Models.LinearExecutable
         /// This field specifies the offset following the last fixup record in the
         /// fixup record table. This is the last entry in the fixup page table. (n + 1)
         /// </remarks>
-        public uint Offset;
+        public uint Offset { get; set; }
     }
 }

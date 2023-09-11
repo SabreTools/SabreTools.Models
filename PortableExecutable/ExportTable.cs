@@ -20,9 +20,9 @@
         /// locations and sizes of the other export tables.
         /// </summary>
 #if NET48
-        public ExportDirectoryTable ExportDirectoryTable;
+        public ExportDirectoryTable ExportDirectoryTable { get; set; }
 #else
-        public ExportDirectoryTable? ExportDirectoryTable;
+        public ExportDirectoryTable? ExportDirectoryTable { get; set; }
 #endif
 
         /// <summary>
@@ -32,18 +32,18 @@
         /// using the public name that corresponds to the ordinal if a public name is defined.
         /// </summary>
 #if NET48
-        public ExportAddressTableEntry[] ExportAddressTable;
+        public ExportAddressTableEntry[] ExportAddressTable { get; set; }
 #else
-        public ExportAddressTableEntry?[]? ExportAddressTable;
+        public ExportAddressTableEntry?[]? ExportAddressTable { get; set; }
 #endif
 
         /// <summary>
         /// An array of pointers to the public export names, sorted in ascending order.
         /// </summary>
 #if NET48
-        public ExportNamePointerTable NamePointerTable;
+        public ExportNamePointerTable NamePointerTable { get; set; }
 #else
-        public ExportNamePointerTable? NamePointerTable;
+        public ExportNamePointerTable? NamePointerTable { get; set; }
 #endif
 
         /// <summary>
@@ -53,9 +53,9 @@
         /// table.
         /// </summary>
 #if NET48
-        public ExportOrdinalTable OrdinalTable;
+        public ExportOrdinalTable OrdinalTable { get; set; }
 #else
-        public ExportOrdinalTable? OrdinalTable;
+        public ExportOrdinalTable? OrdinalTable { get; set; }
 #endif
 
         /// <summary>
@@ -65,9 +65,9 @@
         /// the image file. 
         /// </summary>
 #if NET48
-        public ExportNameTable ExportNameTable;
+        public ExportNameTable ExportNameTable { get; set; }
 #else
-        public ExportNameTable? ExportNameTable;
+        public ExportNameTable? ExportNameTable { get; set; }
 #endif
     }
 }

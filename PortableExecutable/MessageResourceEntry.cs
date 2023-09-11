@@ -9,21 +9,21 @@
         /// <summary>
         /// The length, in bytes, of the MESSAGE_RESOURCE_ENTRY structure.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// Indicates that the string is encoded in Unicode, if equal to the value 0x0001.
         /// Indicates that the string is encoded in ANSI, if equal to the value 0x0000.
         /// </summary>
-        public ushort Flags;
+        public ushort Flags { get; set; }
 
         /// <summary>
         /// Pointer to an array that contains the error message or message box display text.
         /// </summary>
 #if NET48
-        public string Text;
+        public string Text { get; set; }
 #else
-        public string? Text;
+        public string? Text { get; set; }
 #endif
     }
 }

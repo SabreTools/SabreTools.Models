@@ -10,12 +10,12 @@ namespace SabreTools.Models.Compression.MSZIP
         /// The number of data bytes in the block
         /// </summary>
         /// <remarks>Bytes 0-1</remarks>
-        public ushort LEN;
+        public ushort LEN { get; set; }
 
         /// <summary>
         /// The one's complement of LEN
         /// </summary>
         /// <remarks>Bytes 2-3</remarks>
-        public ushort NLEN;
+        public ushort NLEN { get; set; }
     }
 }

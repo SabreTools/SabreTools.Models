@@ -6,26 +6,26 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// VOBidn
         /// </summary>
-        public ushort VOBIdentity;
+        public ushort VOBIdentity { get; set; }
 
         /// <summary>
         /// CELLidn
         /// </summary>
-        public byte CellIdentity;
+        public byte CellIdentity { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte Reserved;
+        public byte Reserved { get; set; }
 
         /// <summary>
         /// Starting sector within VOB
         /// </summary>
-        public uint StartingSectorWithinVOB;
+        public uint StartingSectorWithinVOB { get; set; }
 
         /// <summary>
         /// Ending sector within VOB
         /// </summary>
-        public uint EndingSectorWithinVOB;
+        public uint EndingSectorWithinVOB { get; set; }
     }
 }

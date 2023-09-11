@@ -15,18 +15,18 @@
         /// Dialog box header structure
         /// </summary>
 #if NET48
-        public DialogTemplate DialogTemplate;
+        public DialogTemplate DialogTemplate { get; set; }
 #else
-        public DialogTemplate? DialogTemplate;
+        public DialogTemplate? DialogTemplate { get; set; }
 #endif
 
         /// <summary>
         /// Dialog box extended header structure
         /// </summary>
 #if NET48
-        public DialogTemplateExtended ExtendedDialogTemplate;
+        public DialogTemplateExtended ExtendedDialogTemplate { get; set; }
 #else
-        public DialogTemplateExtended? ExtendedDialogTemplate;
+        public DialogTemplateExtended? ExtendedDialogTemplate { get; set; }
 #endif
 
         #endregion
@@ -40,9 +40,9 @@
         /// These DLGITEMTEMPLATE structures must be aligned on DWORD boundaries.
         /// </summary>
 #if NET48
-        public DialogItemTemplate[] DialogItemTemplates;
+        public DialogItemTemplate[] DialogItemTemplates { get; set; }
 #else
-        public DialogItemTemplate?[]? DialogItemTemplates;
+        public DialogItemTemplate?[]? DialogItemTemplates { get; set; }
 #endif
 
         /// <summary>
@@ -52,9 +52,9 @@
         /// structures that follow in the template.
         /// </summary>
 #if NET48
-        public DialogItemTemplateExtended[] ExtendedDialogItemTemplates;
+        public DialogItemTemplateExtended[] ExtendedDialogItemTemplates { get; set; }
 #else
-        public DialogItemTemplateExtended?[]? ExtendedDialogItemTemplates;
+        public DialogItemTemplateExtended?[]? ExtendedDialogItemTemplates { get; set; }
 #endif
 
         #endregion

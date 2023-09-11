@@ -20,15 +20,15 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Alignment shift count for resource data.
         /// </summary>
-        public ushort AlignmentShiftCount;
+        public ushort AlignmentShiftCount { get; set; }
 
         /// <summary>
         /// A table of resource type information blocks follows.
         /// </summary>
 #if NET48
-        public ResourceTypeInformationEntry[] ResourceTypes;
+        public ResourceTypeInformationEntry[] ResourceTypes { get; set; }
 #else
-        public ResourceTypeInformationEntry?[]? ResourceTypes;
+        public ResourceTypeInformationEntry?[]? ResourceTypes { get; set; }
 #endif
 
         /// <summary>
@@ -36,9 +36,9 @@ namespace SabreTools.Models.NewExecutable
         /// resource table.
         /// </summary>
 #if NET48
-        public Dictionary<ushort, ResourceTypeAndNameString> TypeAndNameStrings;
+        public Dictionary<ushort, ResourceTypeAndNameString> TypeAndNameStrings { get; set; }
 #else
-        public Dictionary<ushort, ResourceTypeAndNameString?>? TypeAndNameStrings;
+        public Dictionary<ushort, ResourceTypeAndNameString?>? TypeAndNameStrings { get; set; }
 #endif
     }
 }

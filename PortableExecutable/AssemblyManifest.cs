@@ -8,25 +8,25 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("manifestVersion")]
 #if NET48
-        public string ManifestVersion;
+        public string ManifestVersion { get; set; }
 #else
-        public string? ManifestVersion;
+        public string? ManifestVersion { get; set; }
 #endif
 
         #region Group
 
         [XmlElement("assemblyIdentity")]
 #if NET48
-        public AssemblyIdentity[] AssemblyIdentities;
+        public AssemblyIdentity[] AssemblyIdentities { get; set; }
 #else
-        public AssemblyIdentity?[]? AssemblyIdentities;
+        public AssemblyIdentity?[]? AssemblyIdentities { get; set; }
 #endif
 
         [XmlElement("noInheritable")]
 #if NET48
-        public AssemblyNoInheritable[] NoInheritables;
+        public AssemblyNoInheritable[] NoInheritables { get; set; }
 #else
-        public AssemblyNoInheritable?[]? NoInheritables;
+        public AssemblyNoInheritable?[]? NoInheritables { get; set; }
 #endif
 
         #endregion
@@ -35,63 +35,63 @@ namespace SabreTools.Models.PortableExecutable
 
         [XmlElement("description")]
 #if NET48
-        public AssemblyDescription Description;
+        public AssemblyDescription Description { get; set; }
 #else
-        public AssemblyDescription? Description;
+        public AssemblyDescription? Description { get; set; }
 #endif
 
         [XmlElement("noInherit")]
 #if NET48
-        public AssemblyNoInherit NoInherit;
+        public AssemblyNoInherit NoInherit { get; set; }
 #else
-        public AssemblyNoInherit? NoInherit;
+        public AssemblyNoInherit? NoInherit { get; set; }
 #endif
 
         //[XmlElement("noInheritable")]
-        //public AssemblyNoInheritable NoInheritable;
+        //public AssemblyNoInheritable NoInheritable { get; set; }
 
         [XmlElement("comInterfaceExternalProxyStub")]
 #if NET48
-        public AssemblyCOMInterfaceExternalProxyStub[] COMInterfaceExternalProxyStub;
+        public AssemblyCOMInterfaceExternalProxyStub[] COMInterfaceExternalProxyStub { get; set; }
 #else
-        public AssemblyCOMInterfaceExternalProxyStub?[]? COMInterfaceExternalProxyStub;
+        public AssemblyCOMInterfaceExternalProxyStub?[]? COMInterfaceExternalProxyStub { get; set; }
 #endif
 
         [XmlElement("dependency")]
 #if NET48
-        public AssemblyDependency[] Dependency;
+        public AssemblyDependency[] Dependency { get; set; }
 #else
-        public AssemblyDependency?[]? Dependency;
+        public AssemblyDependency?[]? Dependency { get; set; }
 #endif
 
         [XmlElement("file")]
 #if NET48
-        public AssemblyFile[] File;
+        public AssemblyFile[] File { get; set; }
 #else
-        public AssemblyFile?[]? File;
+        public AssemblyFile?[]? File { get; set; }
 #endif
 
         [XmlElement("clrClass")]
 #if NET48
-        public AssemblyCommonLanguageRuntimeClass[] CLRClass;
+        public AssemblyCommonLanguageRuntimeClass[] CLRClass { get; set; }
 #else
-        public AssemblyCommonLanguageRuntimeClass?[]? CLRClass;
+        public AssemblyCommonLanguageRuntimeClass?[]? CLRClass { get; set; }
 #endif
 
         [XmlElement("clrSurrogate")]
 #if NET48
-        public AssemblyCommonLanguageSurrogateClass[] CLRSurrogate;
+        public AssemblyCommonLanguageSurrogateClass[] CLRSurrogate { get; set; }
 #else
-        public AssemblyCommonLanguageSurrogateClass?[]? CLRSurrogate;
+        public AssemblyCommonLanguageSurrogateClass?[]? CLRSurrogate { get; set; }
 #endif
 
         #endregion
 
         [XmlAnyElement]
 #if NET48
-        public object[] EverythingElse;
+        public object[] EverythingElse { get; set; }
 #else
-        public object[]? EverythingElse;
+        public object[]? EverythingElse { get; set; }
 #endif
     }
 
@@ -100,9 +100,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -111,9 +111,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -122,16 +122,16 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("oldVersion")]
 #if NET48
-        public string OldVersion;
+        public string OldVersion { get; set; }
 #else
-        public string? OldVersion;
+        public string? OldVersion { get; set; }
 #endif
 
         [XmlAttribute("newVersion")]
 #if NET48
-        public string NewVersion;
+        public string NewVersion { get; set; }
 #else
-        public string? NewVersion;
+        public string? NewVersion { get; set; }
 #endif
     }
 
@@ -140,44 +140,44 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("clsid")]
 #if NET48
-        public string CLSID;
+        public string CLSID { get; set; }
 #else
-        public string? CLSID;
+        public string? CLSID { get; set; }
 #endif
 
         [XmlAttribute("threadingModel")]
 #if NET48
-        public string ThreadingModel;
+        public string ThreadingModel { get; set; }
 #else
-        public string? ThreadingModel;
+        public string? ThreadingModel { get; set; }
 #endif
 
         [XmlAttribute("progid")]
 #if NET48
-        public string ProgID;
+        public string ProgID { get; set; }
 #else
-        public string? ProgID;
+        public string? ProgID { get; set; }
 #endif
 
         [XmlAttribute("tlbid")]
 #if NET48
-        public string TLBID;
+        public string TLBID { get; set; }
 #else
-        public string? TLBID;
+        public string? TLBID { get; set; }
 #endif
 
         [XmlAttribute("description")]
 #if NET48
-        public string Description;
+        public string Description { get; set; }
 #else
-        public string? Description;
+        public string? Description { get; set; }
 #endif
 
         [XmlElement("progid")]
 #if NET48
-        public AssemblyProgID[] ProgIDs;
+        public AssemblyProgID[] ProgIDs { get; set; }
 #else
-        public AssemblyProgID?[]? ProgIDs;
+        public AssemblyProgID?[]? ProgIDs { get; set; }
 #endif
     }
 
@@ -186,44 +186,44 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("iid")]
 #if NET48
-        public string IID;
+        public string IID { get; set; }
 #else
-        public string? IID;
+        public string? IID { get; set; }
 #endif
 
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("tlbid")]
 #if NET48
-        public string TLBID;
+        public string TLBID { get; set; }
 #else
-        public string? TLBID;
+        public string? TLBID { get; set; }
 #endif
 
         [XmlAttribute("numMethods")]
 #if NET48
-        public string NumMethods;
+        public string NumMethods { get; set; }
 #else
-        public string? NumMethods;
+        public string? NumMethods { get; set; }
 #endif
 
         [XmlAttribute("proxyStubClsid32")]
 #if NET48
-        public string ProxyStubClsid32;
+        public string ProxyStubClsid32 { get; set; }
 #else
-        public string? ProxyStubClsid32;
+        public string? ProxyStubClsid32 { get; set; }
 #endif
 
         [XmlAttribute("baseInterface")]
 #if NET48
-        public string BaseInterface;
+        public string BaseInterface { get; set; }
 #else
-        public string? BaseInterface;
+        public string? BaseInterface { get; set; }
 #endif
     }
 
@@ -232,44 +232,44 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("iid")]
 #if NET48
-        public string IID;
+        public string IID { get; set; }
 #else
-        public string? IID;
+        public string? IID { get; set; }
 #endif
 
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("tlbid")]
 #if NET48
-        public string TLBID;
+        public string TLBID { get; set; }
 #else
-        public string? TLBID;
+        public string? TLBID { get; set; }
 #endif
 
         [XmlAttribute("numMethods")]
 #if NET48
-        public string NumMethods;
+        public string NumMethods { get; set; }
 #else
-        public string? NumMethods;
+        public string? NumMethods { get; set; }
 #endif
 
         [XmlAttribute("proxyStubClsid32")]
 #if NET48
-        public string ProxyStubClsid32;
+        public string ProxyStubClsid32 { get; set; }
 #else
-        public string? ProxyStubClsid32;
+        public string? ProxyStubClsid32 { get; set; }
 #endif
 
         [XmlAttribute("baseInterface")]
 #if NET48
-        public string BaseInterface;
+        public string BaseInterface { get; set; }
 #else
-        public string? BaseInterface;
+        public string? BaseInterface { get; set; }
 #endif
     }
 
@@ -278,58 +278,58 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("clsid")]
 #if NET48
-        public string CLSID;
+        public string CLSID { get; set; }
 #else
-        public string? CLSID;
+        public string? CLSID { get; set; }
 #endif
 
         [XmlAttribute("progid")]
 #if NET48
-        public string ProgID;
+        public string ProgID { get; set; }
 #else
-        public string? ProgID;
+        public string? ProgID { get; set; }
 #endif
 
         [XmlAttribute("tlbid")]
 #if NET48
-        public string TLBID;
+        public string TLBID { get; set; }
 #else
-        public string? TLBID;
+        public string? TLBID { get; set; }
 #endif
 
         [XmlAttribute("description")]
 #if NET48
-        public string Description;
+        public string Description { get; set; }
 #else
-        public string? Description;
+        public string? Description { get; set; }
 #endif
 
         [XmlAttribute("runtimeVersion")]
 #if NET48
-        public string RuntimeVersion;
+        public string RuntimeVersion { get; set; }
 #else
-        public string? RuntimeVersion;
+        public string? RuntimeVersion { get; set; }
 #endif
 
         [XmlAttribute("threadingModel")]
 #if NET48
-        public string ThreadingModel;
+        public string ThreadingModel { get; set; }
 #else
-        public string? ThreadingModel;
+        public string? ThreadingModel { get; set; }
 #endif
 
         [XmlElement("progid")]
 #if NET48
-        public AssemblyProgID[] ProgIDs;
+        public AssemblyProgID[] ProgIDs { get; set; }
 #else
-        public AssemblyProgID?[]? ProgIDs;
+        public AssemblyProgID?[]? ProgIDs { get; set; }
 #endif
     }
 
@@ -338,23 +338,23 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("clsid")]
 #if NET48
-        public string CLSID;
+        public string CLSID { get; set; }
 #else
-        public string? CLSID;
+        public string? CLSID { get; set; }
 #endif
 
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("runtimeVersion")]
 #if NET48
-        public string RuntimeVersion;
+        public string RuntimeVersion { get; set; }
 #else
-        public string? RuntimeVersion;
+        public string? RuntimeVersion { get; set; }
 #endif
     }
 
@@ -363,16 +363,16 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlElement("dependentAssembly")]
 #if NET48
-        public AssemblyDependentAssembly DependentAssembly;
+        public AssemblyDependentAssembly DependentAssembly { get; set; }
 #else
-        public AssemblyDependentAssembly? DependentAssembly;
+        public AssemblyDependentAssembly? DependentAssembly { get; set; }
 #endif
 
         [XmlAttribute("optional")]
 #if NET48
-        public string Optional;
+        public string Optional { get; set; }
 #else
-        public string? Optional;
+        public string? Optional { get; set; }
 #endif
     }
 
@@ -381,16 +381,16 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlElement("assemblyIdentity")]
 #if NET48
-        public AssemblyIdentity AssemblyIdentity;
+        public AssemblyIdentity AssemblyIdentity { get; set; }
 #else
-        public AssemblyIdentity? AssemblyIdentity;
+        public AssemblyIdentity? AssemblyIdentity { get; set; }
 #endif
 
         [XmlElement("bindingRedirect")]
 #if NET48
-        public AssemblyBindingRedirect[] BindingRedirect;
+        public AssemblyBindingRedirect[] BindingRedirect { get; set; }
 #else
-        public AssemblyBindingRedirect?[]? BindingRedirect;
+        public AssemblyBindingRedirect?[]? BindingRedirect { get; set; }
 #endif
     }
 
@@ -399,9 +399,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -410,9 +410,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -421,9 +421,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -432,9 +432,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -443,9 +443,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -454,60 +454,60 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("hash")]
 #if NET48
-        public string Hash;
+        public string Hash { get; set; }
 #else
-        public string? Hash;
+        public string? Hash { get; set; }
 #endif
 
         [XmlAttribute("hashalg")]
 #if NET48
-        public string HashAlgorithm;
+        public string HashAlgorithm { get; set; }
 #else
-        public string? HashAlgorithm;
+        public string? HashAlgorithm { get; set; }
 #endif
 
         [XmlAttribute("size")]
 #if NET48
-        public string Size;
+        public string Size { get; set; }
 #else
-        public string? Size;
+        public string? Size { get; set; }
 #endif
 
         #region Group
 
         [XmlElement("comClass")]
 #if NET48
-        public AssemblyCOMClass[] COMClass;
+        public AssemblyCOMClass[] COMClass { get; set; }
 #else
-        public AssemblyCOMClass?[]? COMClass;
+        public AssemblyCOMClass?[]? COMClass { get; set; }
 #endif
 
         [XmlElement("comInterfaceProxyStub")]
 #if NET48
-        public AssemblyCOMInterfaceProxyStub[] COMInterfaceProxyStub;
+        public AssemblyCOMInterfaceProxyStub[] COMInterfaceProxyStub { get; set; }
 #else
-        public AssemblyCOMInterfaceProxyStub?[]? COMInterfaceProxyStub;
+        public AssemblyCOMInterfaceProxyStub?[]? COMInterfaceProxyStub { get; set; }
 #endif
 
         [XmlElement("typelib")]
 #if NET48
-        public AssemblyTypeLib[] Typelib;
+        public AssemblyTypeLib[] Typelib { get; set; }
 #else
-        public AssemblyTypeLib?[]? Typelib;
+        public AssemblyTypeLib?[]? Typelib { get; set; }
 #endif
 
         [XmlElement("windowClass")]
 #if NET48
-        public AssemblyWindowClass[] WindowClass;
+        public AssemblyWindowClass[] WindowClass { get; set; }
 #else
-        public AssemblyWindowClass?[]? WindowClass;
+        public AssemblyWindowClass?[]? WindowClass { get; set; }
 #endif
 
         #endregion
@@ -518,9 +518,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -529,9 +529,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -540,9 +540,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -551,44 +551,44 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("name")]
 #if NET48
-        public string Name;
+        public string Name { get; set; }
 #else
-        public string? Name;
+        public string? Name { get; set; }
 #endif
 
         [XmlAttribute("version")]
 #if NET48
-        public string Version;
+        public string Version { get; set; }
 #else
-        public string? Version;
+        public string? Version { get; set; }
 #endif
 
         [XmlAttribute("type")]
 #if NET48
-        public string Type;
+        public string Type { get; set; }
 #else
-        public string? Type;
+        public string? Type { get; set; }
 #endif
 
         [XmlAttribute("processorArchitecture")]
 #if NET48
-        public string ProcessorArchitecture;
+        public string ProcessorArchitecture { get; set; }
 #else
-        public string? ProcessorArchitecture;
+        public string? ProcessorArchitecture { get; set; }
 #endif
 
         [XmlAttribute("publicKeyToken")]
 #if NET48
-        public string PublicKeyToken;
+        public string PublicKeyToken { get; set; }
 #else
-        public string? PublicKeyToken;
+        public string? PublicKeyToken { get; set; }
 #endif
 
         [XmlAttribute("language")]
 #if NET48
-        public string Language;
+        public string Language { get; set; }
 #else
-        public string? Language;
+        public string? Language { get; set; }
 #endif
     }
 
@@ -597,9 +597,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -618,9 +618,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -629,9 +629,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -640,9 +640,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("Id")]
 #if NET48
-        public string Id;
+        public string Id { get; set; }
 #else
-        public string? Id;
+        public string? Id { get; set; }
 #endif
     }
 
@@ -651,37 +651,37 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlElement("tlbid")]
 #if NET48
-        public string TLBID;
+        public string TLBID { get; set; }
 #else
-        public string? TLBID;
+        public string? TLBID { get; set; }
 #endif
 
         [XmlElement("version")]
 #if NET48
-        public string Version;
+        public string Version { get; set; }
 #else
-        public string? Version;
+        public string? Version { get; set; }
 #endif
 
         [XmlElement("helpdir")]
 #if NET48
-        public string HelpDir;
+        public string HelpDir { get; set; }
 #else
-        public string? HelpDir;
+        public string? HelpDir { get; set; }
 #endif
 
         [XmlElement("resourceid")]
 #if NET48
-        public string ResourceID;
+        public string ResourceID { get; set; }
 #else
-        public string? ResourceID;
+        public string? ResourceID { get; set; }
 #endif
 
         [XmlElement("flags")]
 #if NET48
-        public string Flags;
+        public string Flags { get; set; }
 #else
-        public string? Flags;
+        public string? Flags { get; set; }
 #endif
     }
 
@@ -690,9 +690,9 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
@@ -701,16 +701,16 @@ namespace SabreTools.Models.PortableExecutable
     {
         [XmlAttribute("versioned")]
 #if NET48
-        public string Versioned;
+        public string Versioned { get; set; }
 #else
-        public string? Versioned;
+        public string? Versioned { get; set; }
 #endif
 
         [XmlText]
 #if NET48
-        public string Value;
+        public string Value { get; set; }
 #else
-        public string? Value;
+        public string? Value { get; set; }
 #endif
     }
 
