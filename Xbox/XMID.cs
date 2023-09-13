@@ -20,7 +20,7 @@ namespace SabreTools.Models.Xbox
 #if NET48
         public string PublisherIdentifier { get; set; }
 #else
-        public string PublisherIdentifier { get; set; }
+        public string? PublisherIdentifier { get; set; }
 #endif
 
         /// <summary>
