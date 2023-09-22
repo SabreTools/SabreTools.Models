@@ -33,9 +33,9 @@ namespace SabreTools.Models.Compression.MSZIP
         /// Compressed blocks
         /// </summary>
 #if NET48
-        public DeflateBlock CompressedBlocks { get; set; }
+        public DeflateBlock[] CompressedBlocks { get; set; }
 #else
-        public DeflateBlock? CompressedBlocks { get; set; }
+        public DeflateBlock[]? CompressedBlocks { get; set; }
 #endif
     }
 }
