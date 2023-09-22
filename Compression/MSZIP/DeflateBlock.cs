@@ -10,8 +10,26 @@ namespace SabreTools.Models.Compression.MSZIP
     /// MUST be maintained.Each MSZIP block MUST represent no more than 32 KB of uncompressed data.
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-MCI/%5bMS-MCI%5d.pdf"/>
-    public class RFC1951Block
+    public class DeflateBlock
     {
+        /// <summary>
+        /// Deflate block (RFC-1951) header
+        /// </summary>
+#if NET48
+        public DeflateBlockHeader Header { get; set; }
+#else
+        public DeflateBlockHeader? Header { get; set; }
+#endif
+
+        /// <summary>
+        /// Compression-specific data header
+        /// </summary>
+#if NET48
+        public DataHeader DataHeader { get; set; }
+#else
+        public DataHeader? DataHeader { get; set; }
+#endif
+
         /// <summary>
         /// Compressed MSZIP data block
         /// </summary>

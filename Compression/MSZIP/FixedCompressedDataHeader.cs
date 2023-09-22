@@ -7,7 +7,7 @@ namespace SabreTools.Models.Compression.MSZIP
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-MCI/%5bMS-MCI%5d.pdf"/>
     /// <see href="https://www.rfc-editor.org/rfc/rfc1951"/>
-    public class FixedHuffmanCompressedBlockHeader : CompressedBlockHeader
+    public class FixedCompressedDataHeader : CompressedDataHeader
     {
         #region Properties
 

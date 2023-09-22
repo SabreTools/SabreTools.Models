@@ -4,7 +4,7 @@ namespace SabreTools.Models.Compression.MSZIP
     /// Non-compressed blocks (BTYPE=00)
     /// </summary>
     /// <see href="https://www.rfc-editor.org/rfc/rfc1951"/>
-    public class NonCompressedBlockHeader
+    public class NonCompressedBlockHeader : DataHeader
     {
         /// <summary>
         /// The number of data bytes in the block
