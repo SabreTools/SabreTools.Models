@@ -31,8 +31,13 @@ namespace SabreTools.Models.Compression.MSZIP
 #endif
 
         /// <summary>
-        /// Compressed MSZIP data block
+        /// MSZIP data
         /// </summary>
+        /// <remarks>
+        /// Depending on the implementation of these models, this property could either be
+        /// compressed or uncompressed data. Keep this in mind when using the built
+        /// versions of this model.
+        /// </remarks>
 #if NET48
         public byte[] Data { get; set; }
 #else
