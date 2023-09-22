@@ -7,7 +7,7 @@ namespace SabreTools.Models.Compression.MSZIP
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-MCI/%5bMS-MCI%5d.pdf"/>
     /// <see href="https://www.rfc-editor.org/rfc/rfc1951"/>
-    public class FixedHuffmanCompressedBlockHeader
+    public class FixedHuffmanCompressedBlockHeader : CompressedBlockHeader
     {
         #region Properties
 
@@ -15,9 +15,9 @@ namespace SabreTools.Models.Compression.MSZIP
         /// Huffman code lengths for the literal / length alphabet
         /// </summary>
 #if NET48
-        public uint[] LiteralLengths
+        public override uint[] LiteralLengths
 #else
-        public uint[]? LiteralLengths
+        public override uint[]? LiteralLengths
 #endif
         {
             get
@@ -57,9 +57,9 @@ namespace SabreTools.Models.Compression.MSZIP
         /// Huffman distance codes for the literal / length alphabet
         /// </summary>
 #if NET48
-        public uint[] DistanceCodes
+        public override uint[] DistanceCodes
 #else
-        public uint[]? DistanceCodes
+        public override uint[]? DistanceCodes
 #endif
         {
             get
