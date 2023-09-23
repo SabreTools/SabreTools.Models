@@ -5,17 +5,8 @@ namespace SabreTools.Models.Compression.LZX
     /// tree preceding the other trees.
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-PATCH/%5bMS-PATCH%5d.pdf"/>
-    public class AlignedOffsetBlock
+    public class AlignedOffsetBlockData : BlockData
     {
-        /// <summary>
-        /// Generic block header
-        /// </summary>
-#if NET48
-        public BlockHeader Header { get; set; }
-#else
-        public BlockHeader? Header { get; set; }
-#endif
-
         /// <summary>
         /// Aligned offset tree
         /// </summary>

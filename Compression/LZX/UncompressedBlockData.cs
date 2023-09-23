@@ -14,17 +14,8 @@ namespace SabreTools.Models.Compression.LZX
     /// subsequent compressed block if present.
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-PATCH/%5bMS-PATCH%5d.pdf"/>
-    public class UncompressedBlock
+    public class UncompressedBlockData : BlockData
     {
-        /// <summary>
-        /// Generic block header
-        /// </summary>
-#if NET48
-        public BlockHeader Header { get; set; }
-#else
-        public BlockHeader? Header { get; set; }
-#endif
-
         /// <summary>
         /// Padding to align following field on 16-bit boundary
         /// </summary>

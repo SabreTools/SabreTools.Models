@@ -4,17 +4,8 @@ namespace SabreTools.Models.Compression.LZX
     /// The fields of a verbatim block that follow the generic block header
     /// </summary>
     /// <see href="https://interoperability.blob.core.windows.net/files/MS-PATCH/%5bMS-PATCH%5d.pdf"/>
-    public class VerbatimBlock
+    public class VerbatimBlockData : BlockData
     {
-        /// <summary>
-        /// Generic block header
-        /// </summary>
-#if NET48
-        public BlockHeader Header { get; set; }
-#else
-        public BlockHeader? Header { get; set; }
-#endif
-
         /// <summary>
         /// Pretree for first 256 elements of main tree
         /// </summary>
