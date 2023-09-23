@@ -10,5 +10,9 @@ namespace SabreTools.Models.Compression.Quantum
 #else
         public ModelSymbol?[]? Symbols { get; set; }
 #endif
+
+        public int TotalFrequency { get; set; }
+
+        public int TimeToReorder { get; set; }
     }
 }
