@@ -77,8 +77,14 @@ namespace SabreTools.Models.Compression.LZX
         public int[]? PathLengthsLengthTree { get; set; }
 #endif
 
-        // Entry                                    Comments                    Size
-        // ---------------------------------------------------------------------------------------
-        // Token sequence (matches and literals)    Specified in section 2.6    Variable
+        /// <summary>
+        /// Token sequence (matches and literals)
+        /// </summary>
+        /// <remarks>Variable</remarks>
+#if NET48
+        public byte[] TokenSequence { get; set; }
+#else
+        public byte[]? TokenSequence { get; set; }
+#endif
     }
 }
