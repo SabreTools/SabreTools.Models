@@ -11,5 +11,7 @@ namespace SabreTools.Models.PIC
         public const string DiscTypeIdentifierReWritable = "BDW";
 
         public const string DiscTypeIdentifierRecordable = "BDR";
+
+        public const string DiscTypeIdentifierXGD4 = "XG4";
     }
 }
