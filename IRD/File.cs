@@ -127,8 +127,9 @@ namespace SabreTools.Models.IRD
         public byte[] PIC { get; set; }
 
         /// <summary>
-        /// UID
+        /// Unique Identifier
         /// </summary>
+        /// <remarks>Not present on version 6 and prior, after AppVersion on version 7</remarks>
         public uint UID { get; set; }
 
         /// <summary>
