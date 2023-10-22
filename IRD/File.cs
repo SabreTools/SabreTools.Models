@@ -99,14 +99,14 @@ namespace SabreTools.Models.IRD
         public byte[][] FileHashes { get; set; }
 
         /// <summary>
-        /// Future development, must be 0x0000
+        /// Extra Config, usually 0x0000
         /// </summary>
-        public ushort ExtraAttribute1 { get; set; }
+        public ushort ExtraConfig { get; set; }
 
         /// <summary>
-        /// Future development, must be 0x0000
+        /// Attachments, usually 0x0000
         /// </summary>
-        public ushort ExtraAttribute2 { get; set; }
+        public ushort Attachments { get; set; }
 
         /// <summary>
         /// D1 key
