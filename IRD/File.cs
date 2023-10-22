@@ -51,12 +51,6 @@ namespace SabreTools.Models.IRD
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// ID
-        /// </summary>
-        /// <remarks>Version 7</remarks>
-        public uint ID { get; set; }
-
-        /// <summary>
         /// Length of the gzip-compressed header data
         /// </summary>
         public uint HeaderLength { get; set; }
