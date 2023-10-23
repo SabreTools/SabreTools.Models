@@ -51,12 +51,6 @@ namespace SabreTools.Models.IRD
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// ID
-        /// </summary>
-        /// <remarks>Version 7</remarks>
-        public uint ID { get; set; }
-
-        /// <summary>
         /// Length of the gzip-compressed header data
         /// </summary>
         public uint HeaderLength { get; set; }
@@ -105,14 +99,14 @@ namespace SabreTools.Models.IRD
         public byte[][] FileHashes { get; set; }
 
         /// <summary>
-        /// Future development, must be 0x0000
+        /// Extra Config, usually 0x0000
         /// </summary>
-        public ushort ExtraAttribute1 { get; set; }
+        public ushort ExtraConfig { get; set; }
 
         /// <summary>
-        /// Future development, must be 0x0000
+        /// Attachments, usually 0x0000
         /// </summary>
-        public ushort ExtraAttribute2 { get; set; }
+        public ushort Attachments { get; set; }
 
         /// <summary>
         /// D1 key
@@ -133,8 +127,9 @@ namespace SabreTools.Models.IRD
         public byte[] PIC { get; set; }
 
         /// <summary>
-        /// UID
+        /// Unique Identifier
         /// </summary>
+        /// <remarks>Not present on version 6 and prior, after AppVersion on version 7</remarks>
         public uint UID { get; set; }
 
         /// <summary>
