@@ -15,11 +15,19 @@ namespace SabreTools.Models.Compression.LZX
         /// <summary>
         /// Chunk header
         /// </summary>
+#if NET48
         public ChunkHeader Header { get; set; }
+#else
+        public ChunkHeader? Header { get; set; }
+#endif
 
         /// <summary>
         /// Block headers and data
         /// </summary>
+#if NET48
         public Block[] Blocks { get; set; }
+#else
+        public Block[]? Blocks { get; set; }
+#endif
     }
 }
