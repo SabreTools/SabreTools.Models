@@ -2,7 +2,7 @@ namespace SabreTools.Models.IRD
 {
     /// <see href="https://psdevwiki.com/ps3/Bluray_disc#IRD_file"/> 
     /// <see href="https://github.com/SabreTools/MPF/files/13062347/IRD.File.Format.pdf"/> 
-    public class IRD
+    public class File
     {
         /// <summary>
         /// "3IRD"
