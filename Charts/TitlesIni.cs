@@ -16,6 +16,10 @@ namespace SabreTools.Models.Charts
         /// `name` - Display name of the tier.
         /// `unlock_id` - Name used for associating a song with this tier, and for checking unlock requirements.
         /// </summary>
+#if NET20 || NET35
+        public Dictionary<string, System.Tuple<string?, string?>>? Sections { get; set; }
+#else
         public Dictionary<string, (string? Name, string? UnlockId)>? Sections { get; set; }
+#endif
     }
 }
