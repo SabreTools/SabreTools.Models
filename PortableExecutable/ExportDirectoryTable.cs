@@ -39,11 +39,7 @@
         /// <summary>
         /// ASCII string that contains the name of the DLL.
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// The starting ordinal number for exports in this image. This field specifies

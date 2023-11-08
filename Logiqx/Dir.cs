@@ -8,37 +8,21 @@ namespace SabreTools.Models.Logiqx
     {
         [Required]
         [XmlAttribute("name")]
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         [XmlElement("game", typeof(Game))]
         [XmlElement("machine", typeof(Machine))]
-#if NET48
-        public GameBase[] Game { get; set; }
-#else
         public GameBase[]? Game { get; set; }
-#endif
 
         #region DO NOT USE IN PRODUCTION
 
         /// <remarks>Should be empty</remarks>
         [XmlAnyAttribute]
-#if NET48
-        public XmlAttribute[] ADDITIONAL_ATTRIBUTES { get; set; }
-#else
         public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-#endif
 
         /// <remarks>Should be empty</remarks>
         [XmlAnyElement]
-#if NET48
-        public object[] ADDITIONAL_ELEMENTS { get; set; }
-#else
         public object[]? ADDITIONAL_ELEMENTS { get; set; }
-#endif
 
         #endregion
     }

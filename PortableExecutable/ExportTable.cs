@@ -19,11 +19,7 @@
         /// A table with just one row (unlike the debug directory). This table indicates the
         /// locations and sizes of the other export tables.
         /// </summary>
-#if NET48
-        public ExportDirectoryTable ExportDirectoryTable { get; set; }
-#else
         public ExportDirectoryTable? ExportDirectoryTable { get; set; }
-#endif
 
         /// <summary>
         /// An array of RVAs of exported symbols. These are the actual addresses of the exported
@@ -31,20 +27,12 @@
         /// can import a symbol by using an index to this table (an ordinal) or, optionally, by
         /// using the public name that corresponds to the ordinal if a public name is defined.
         /// </summary>
-#if NET48
-        public ExportAddressTableEntry[] ExportAddressTable { get; set; }
-#else
         public ExportAddressTableEntry?[]? ExportAddressTable { get; set; }
-#endif
 
         /// <summary>
         /// An array of pointers to the public export names, sorted in ascending order.
         /// </summary>
-#if NET48
-        public ExportNamePointerTable NamePointerTable { get; set; }
-#else
         public ExportNamePointerTable? NamePointerTable { get; set; }
-#endif
 
         /// <summary>
         /// An array of the ordinals that correspond to members of the name pointer table. The
@@ -52,11 +40,7 @@
         /// must have the same number of members. Each ordinal is an index into the export address
         /// table.
         /// </summary>
-#if NET48
-        public ExportOrdinalTable OrdinalTable { get; set; }
-#else
         public ExportOrdinalTable? OrdinalTable { get; set; }
-#endif
 
         /// <summary>
         /// A series of null-terminated ASCII strings. Members of the name pointer table point into
@@ -64,10 +48,6 @@
         /// exported; they are not necessarily the same as the private names that are used within
         /// the image file. 
         /// </summary>
-#if NET48
-        public ExportNameTable ExportNameTable { get; set; }
-#else
         public ExportNameTable? ExportNameTable { get; set; }
-#endif
     }
 }

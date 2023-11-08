@@ -13,11 +13,7 @@
         /// <summary>
         /// File name
         /// </summary>
-#if NET48
-        public string FileName { get; set; }
-#else
         public string? FileName { get; set; }
-#endif
 
         /// <summary>
         /// File offset
@@ -32,10 +28,6 @@
         /// <summary>
         /// SHA256 hash calculated over the entire file contents
         /// </summary>
-#if NET48
-        public byte[] FileHash { get; set; }
-#else
         public byte[]? FileHash { get; set; }
-#endif
     }
 }

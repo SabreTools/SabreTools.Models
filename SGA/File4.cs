@@ -5,11 +5,7 @@ namespace SabreTools.Models.SGA
     {
         public uint NameOffset { get; set; }
 
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         public uint Offset { get; set; }
 

@@ -13,11 +13,7 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// 0x5A4D (ASCII for 'M' and 'Z')
         /// </summary>
-#if NET48
-        public string Magic { get; set; }
-#else
         public string? Magic { get; set; }
-#endif
 
         /// <summary>
         /// Number of bytes in the last page.
@@ -101,11 +97,7 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Reserved words
         /// </summary>
-#if NET48
-        public ushort[] Reserved1 { get; set; } = new ushort[4];
-#else
         public ushort[]? Reserved1 { get; set; } = new ushort[4];
-#endif
 
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
@@ -120,11 +112,7 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Reserved words
         /// </summary>
-#if NET48
-        public ushort[] Reserved2 { get; set; } = new ushort[10];
-#else
         public ushort[]? Reserved2 { get; set; } = new ushort[10];
-#endif
 
         /// <summary>
         /// Starting address of the PE header

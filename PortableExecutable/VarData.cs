@@ -26,11 +26,7 @@
         /// <summary>
         /// The Unicode string L"Translation".
         /// </summary>
-#if NET48
-        public string Key { get; set; }
-#else
         public string? Key { get; set; }
-#endif
 
         /// <summary>
         /// As many zero words as necessary to align the Value member on a 32-bit boundary.
@@ -49,10 +45,6 @@
         /// independent. If the Var structure is omitted, the file will be interpreted as both
         /// language and code page independent.
         /// </summary>
-#if NET48
-        public uint[] Value { get; set; }
-#else
         public uint[]? Value { get; set; }
-#endif
     }
 }

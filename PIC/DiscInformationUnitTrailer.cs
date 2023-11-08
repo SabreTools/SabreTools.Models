@@ -11,21 +11,13 @@ namespace SabreTools.Models.PIC
         /// Disc Manufacturer ID
         /// </summary>
         /// <remarks>6 bytes</remarks>
-#if NET48
-        public byte[] DiscManufacturerID { get; set; } = new byte[6];
-#else
         public byte[]? DiscManufacturerID { get; set; } = new byte[6];
-#endif
 
         /// <summary>
         /// Media Type ID
         /// </summary>
         /// <remarks>3 bytes</remarks>
-#if NET48
-        public byte[] MediaTypeID { get; set; } = new byte[3];
-#else
         public byte[]? MediaTypeID { get; set; } = new byte[3];
-#endif
 
         /// <summary>
         /// Time Stamp

@@ -282,11 +282,7 @@
         /// Code integrity information.
         /// </summary>
         /// <remarks>12 bytes</remarks>
-#if NET48
-        public byte[] CodeIntegrity { get; set; }
-#else
         public byte[]? CodeIntegrity { get; set; }
-#endif
 
         #region GuardAddressTakenIatEntryTable
 

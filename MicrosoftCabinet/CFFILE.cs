@@ -60,10 +60,6 @@
         /// CFFILE.szName field, but the _A_NAME_IS_UTF attribute is not set, the characters SHOULD be
         /// interpreted according to the current location.
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
     }
 }

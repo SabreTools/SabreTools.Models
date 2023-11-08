@@ -11,10 +11,6 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Offsets
         /// </summary>
-#if NET48
-        public uint[] Offsets { get; set; }
-#else
         public uint[]? Offsets { get; set; }
-#endif
     }
 }

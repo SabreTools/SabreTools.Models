@@ -11,11 +11,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved0 { get; set; }
-#else
         public byte[]? Reserved0 { get; set; }
-#endif
 
         /// <summary>
         /// Offset to the component list
@@ -30,11 +26,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved1 { get; set; }
-#else
         public byte[]? Reserved1 { get; set; }
-#endif
 
         /// <summary>
         /// Size of the file table
@@ -54,29 +46,17 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved3 { get; set; }
-#else
         public byte[]? Reserved3 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved4 { get; set; }
-#else
         public byte[]? Reserved4 { get; set; }
-#endif
 
         /// <summary>
         /// Number of files
@@ -101,38 +81,22 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved5 { get; set; }
-#else
         public byte[]? Reserved5 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved6 { get; set; }
-#else
         public byte[]? Reserved6 { get; set; }
-#endif
 
         /// <summary>
         /// Offsets to the file groups
         /// </summary>
-#if NET48
-        public uint[] FileGroupOffsets { get; set; }
-#else
         public uint[]? FileGroupOffsets { get; set; }
-#endif
 
         /// <summary>
         /// Offsets to the components
         /// </summary>
-#if NET48
-        public uint[] ComponentOffsets { get; set; }
-#else
         public uint[]? ComponentOffsets { get; set; }
-#endif
 
         /// <summary>
         /// Offset to the setup types
@@ -147,19 +111,11 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved7 { get; set; }
-#else
         public byte[]? Reserved7 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved8 { get; set; }
-#else
         public byte[]? Reserved8 { get; set; }
-#endif
     }
 }

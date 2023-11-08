@@ -15,11 +15,7 @@ namespace SabreTools.Models.CueSheets
         /// <summary>
         /// filename
         /// </summary>
-#if NET48
-        public string FileName { get; set; }
-#else
         public string? FileName { get; set; }
-#endif
 
         /// <summary>
         /// filetype
@@ -29,10 +25,6 @@ namespace SabreTools.Models.CueSheets
         /// <summary>
         /// List of TRACK in FILE
         /// </summary>
-#if NET48
-        public CueTrack[] Tracks { get; set; }
-#else
         public CueTrack?[]? Tracks { get; set; }
-#endif
     }
 }

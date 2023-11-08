@@ -23,19 +23,11 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Block header
         /// </summary>
-#if NET48
-        public BlockHeader BlockHeader { get; set; }
-#else
         public BlockHeader? BlockHeader { get; set; }
-#endif
 
         /// <summary>
         /// Compressed blocks
         /// </summary>
-#if NET48
-        public DeflateBlock[] CompressedBlocks { get; set; }
-#else
         public DeflateBlock[]? CompressedBlocks { get; set; }
-#endif
     }
 }

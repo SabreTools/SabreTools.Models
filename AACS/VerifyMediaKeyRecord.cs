@@ -19,10 +19,6 @@ namespace SabreTools.Models.AACS
         /// where 0xXXXXXXXXXXXXXXXX is an arbitrary 8-byte value, and Km is
         /// the correct final Media Key value.
         /// </summary>
-#if NET48
-        public byte[] CiphertextValue { get; set; }
-#else
         public byte[]? CiphertextValue { get; set; }
-#endif
     }
 }

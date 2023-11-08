@@ -22,10 +22,6 @@
         /// <summary>
         /// A series of null-terminated ASCII strings of variable length.
         /// </summary>
-#if NET48
-        public string[] Strings { get; set; }
-#else
         public string[]? Strings { get; set; }
-#endif
     }
 }

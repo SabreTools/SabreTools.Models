@@ -13,11 +13,7 @@ namespace SabreTools.Models.NewExecutable
         /// "N" is low-order byte.
         /// "E" is high-order byte.
         /// </summary>
-#if NET48
-        public string Magic;
-#else
         public string? Magic;
-#endif
 
         /// <summary>
         /// Version number of the linker.

@@ -7,11 +7,7 @@
         /// MD5 hash of filename (not encrypted,)
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] FilenameMD5Hash { get; set; }
-#else
         public byte[]? FilenameMD5Hash { get; set; }
-#endif
 
         /// <summary>
         /// Index of fileheader (encrypted with filename)

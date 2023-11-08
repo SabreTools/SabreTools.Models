@@ -9,11 +9,7 @@ namespace SabreTools.Models.Quantum
         /// <summary>
         /// Quantum signature: 0x44 0x53
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Quantum major version number

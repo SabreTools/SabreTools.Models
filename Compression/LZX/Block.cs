@@ -14,19 +14,11 @@ namespace SabreTools.Models.Compression.LZX
         /// <summary>
         /// Block header
         /// </summary>
-#if NET48
-        public BlockHeader Header { get; set; }
-#else
         public BlockHeader? Header { get; set; }
-#endif
 
         /// <summary>
         /// Block data
         /// </summary>
-#if NET48
-        public BlockData BlockData { get; set; }
-#else
         public BlockData? BlockData { get; set; }
-#endif
     }
 }

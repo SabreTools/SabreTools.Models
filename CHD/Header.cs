@@ -6,11 +6,7 @@ namespace SabreTools.Models.CHD
         /// <summary>
         /// 'MComprHD'
         /// </summary>
-#if NET48
-        public string Tag { get; set; }
-#else
         public string? Tag { get; set; }
-#endif
 
         /// <summary>
         /// Length of header (including tag and length fields)

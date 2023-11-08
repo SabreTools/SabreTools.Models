@@ -11,11 +11,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File group name
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// Size of the expanded data
@@ -25,11 +21,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved0 { get; set; }
-#else
         public byte[]? Reserved0 { get; set; }
-#endif
 
         /// <summary>
         /// Size of the compressed data
@@ -39,20 +31,12 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved1 { get; set; }
-#else
         public byte[]? Reserved1 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// Attribute(?)
@@ -117,46 +101,26 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved3 { get; set; }
-#else
         public byte[]? Reserved3 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved4 { get; set; }
-#else
         public byte[]? Reserved4 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved5 { get; set; }
-#else
         public byte[]? Reserved5 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved6 { get; set; }
-#else
         public byte[]? Reserved6 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved7 { get; set; }
-#else
         public byte[]? Reserved7 { get; set; }
-#endif
     }
 }

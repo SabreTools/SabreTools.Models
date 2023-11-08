@@ -21,11 +21,7 @@
         /// The signature word is used by the loader to identify the EXE
         /// file as a valid 32-bit Linear Executable Module Format.
         /// </remarks>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Byte Ordering. 

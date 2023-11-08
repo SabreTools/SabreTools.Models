@@ -11,11 +11,7 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved { get; set; }
-#else
         public byte[]? Reserved { get; set; }
-#endif
 
         /// <summary>
         /// End address (last byte of last PGC in this LU)
@@ -26,10 +22,6 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Program Chains
         /// </summary>
-#if NET48
-        public ProgramChainTableEntry[] Entries { get; set; }
-#else
         public ProgramChainTableEntry?[]? Entries { get; set; }
-#endif
     }
 }

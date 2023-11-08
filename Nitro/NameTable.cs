@@ -15,19 +15,11 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Folder allocation table
         /// </summary>
-#if NET48
-        public FolderAllocationTableEntry[] FolderAllocationTable { get; set; }
-#else
         public FolderAllocationTableEntry?[]? FolderAllocationTable { get; set; }
-#endif
 
         /// <summary>
         /// Name list
         /// </summary>
-#if NET48
-        public NameListEntry[] NameList { get; set; }
-#else
         public NameListEntry?[]? NameList { get; set; }
-#endif
     }
 }

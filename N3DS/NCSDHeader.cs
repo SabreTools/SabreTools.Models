@@ -16,20 +16,12 @@
         /// <summary>
         /// RSA-2048 SHA-256 signature of the NCSD header
         /// </summary>
-#if NET48
-        public byte[] RSA2048Signature { get; set; }
-#else
         public byte[]? RSA2048Signature { get; set; }
-#endif
 
         /// <summary>
         /// Magic Number 'NCSD'
         /// </summary>
-#if NET48
-        public string MagicNumber { get; set; }
-#else
         public string? MagicNumber { get; set; }
-#endif
 
         /// <summary>
         /// Size of the NCSD image, in media units (1 media unit = 0x200 bytes)
@@ -39,11 +31,7 @@
         /// <summary>
         /// Media ID
         /// </summary>
-#if NET48
-        public byte[] MediaId { get; set; }
-#else
         public byte[]? MediaId { get; set; }
-#endif
 
         /// <summary>
         /// Partitions FS type (0=None, 1=Normal, 3=FIRM, 4=AGB_FIRM save)
@@ -53,20 +41,12 @@
         /// <summary>
         /// Partitions crypt type (each byte corresponds to a partition in the partition table)
         /// </summary>
-#if NET48
-        public byte[] PartitionsCryptType { get; set; }
-#else
         public byte[]? PartitionsCryptType { get; set; }
-#endif
 
         /// <summary>
         /// Offset & Length partition table, in media units
         /// </summary>
-#if NET48
-        public PartitionTableEntry[] PartitionsTable { get; set; }
-#else
         public PartitionTableEntry?[]? PartitionsTable { get; set; }
-#endif
 
         #endregion
 
@@ -75,11 +55,7 @@
         /// <summary>
         /// Exheader SHA-256 hash
         /// </summary>
-#if NET48
-        public byte[] ExheaderHash { get; set; }
-#else
         public byte[]? ExheaderHash { get; set; }
-#endif
 
         /// <summary>
         /// Additional header size
@@ -94,38 +70,22 @@
         /// <summary>
         /// Partition Flags
         /// </summary>
-#if NET48
-        public byte[] PartitionFlags { get; set; }
-#else
         public byte[]? PartitionFlags { get; set; }
-#endif
 
         /// <summary>
         /// Partition ID table
         /// </summary>
-#if NET48
-        public ulong[] PartitionIdTable { get; set; }
-#else
         public ulong[]? PartitionIdTable { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved1 { get; set; }
-#else
         public byte[]? Reserved1 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved?
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// Support for this was implemented with 9.6.0-X FIRM. Bit0=1 enables using bits 1-2, it's unknown
@@ -147,20 +107,12 @@
         /// <summary>
         /// Unknown
         /// </summary>
-#if NET48
-        public byte[] Unknown { get; set; }
-#else
         public byte[]? Unknown { get; set; }
-#endif
 
         /// <summary>
         /// Encrypted MBR partition-table, for the TWL partitions(key-data used for this keyslot is console-unique).
         /// </summary>
-#if NET48
-        public byte[] EncryptedMBR { get; set; }
-#else
         public byte[]? EncryptedMBR { get; set; }
-#endif
 
         #endregion
     }

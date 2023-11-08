@@ -11,11 +11,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File descriptor name
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// Directory index
@@ -45,11 +41,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// MD5 of the entry data
         /// </summary>
-#if NET48
-        public byte[] MD5 { get; set; }
-#else
         public byte[]? MD5 { get; set; }
-#endif
 
         /// <summary>
         /// Volume number

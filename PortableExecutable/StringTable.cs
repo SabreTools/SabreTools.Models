@@ -31,11 +31,7 @@
         /// identifier contains two parts: the low-order 10 bits specify the major language,
         /// and the high-order 6 bits specify the sublanguage.
         /// </summary>
-#if NET48
-        public string Key { get; set; }
-#else
         public string? Key { get; set; }
-#endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
@@ -45,10 +41,6 @@
         /// <summary>
         /// An array of one or more StringData structures.
         /// </summary>
-#if NET48
-        public StringData[] Children { get; set; }
-#else
         public StringData?[]? Children { get; set; }
-#endif
     }
 }

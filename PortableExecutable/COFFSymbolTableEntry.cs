@@ -26,11 +26,7 @@
         /// An array of 8 bytes. This array is padded with nulls on the right if
         /// the name is less than 8 bytes long.
         /// </summary>
-#if NET48
-        public byte[] ShortName { get; set; } = new byte[8];
-#else
         public byte[]? ShortName { get; set; } = new byte[8];
-#endif
 
         /// <summary>
         /// A field that is set to all zeros if the name is longer than 8 bytes.
@@ -162,11 +158,7 @@
         /// <summary>
         /// Unused
         /// </summary>
-#if NET48
-        public byte[] AuxFormat2Unused2 { get; set; } = new byte[6];
-#else
         public byte[]? AuxFormat2Unused2 { get; set; } = new byte[6];
-#endif
 
         /// <summary>
         /// The symbol-table index of the next .bf symbol record. If the function is the
@@ -217,11 +209,7 @@
         /// <summary>
         /// Unused
         /// </summary>
-#if NET48
-        public byte[] AuxFormat3Unused { get; set; } = new byte[10];
-#else
         public byte[]? AuxFormat3Unused { get; set; } = new byte[10];
-#endif
 
         #endregion
 
@@ -235,11 +223,7 @@
         /// An ANSI string that gives the name of the source file. This is padded
         /// with nulls if it is less than the maximum length.
         /// </summary>
-#if NET48
-        public byte[] AuxFormat4FileName { get; set; } = new byte[18];
-#else
         public byte[]? AuxFormat4FileName { get; set; } = new byte[18];
-#endif
 
         #endregion
 
@@ -287,11 +271,7 @@
         /// <summary>
         /// Unused
         /// </summary>
-#if NET48
-        public byte[] AuxFormat5Unused { get; set; } = new byte[3];
-#else
         public byte[]? AuxFormat5Unused { get; set; } = new byte[3];
-#endif
 
         #endregion
 
@@ -318,11 +298,7 @@
         /// <summary>
         /// Reserved, must be zero.
         /// </summary>
-#if NET48
-        public byte[] AuxFormat6Reserved2 { get; set; } = new byte[12];
-#else
         public byte[]? AuxFormat6Reserved2 { get; set; } = new byte[12];
-#endif
 
         #endregion
 

@@ -6,20 +6,12 @@ namespace SabreTools.Models.PlayStation3
         /// <summary>
         /// SFO header
         /// </summary>
-#if NET48
-        public SFOHeader Header { get; set; }
-#else
         public SFOHeader? Header { get; set; }
-#endif
 
         /// <summary>
         /// Index table
         /// </summary>
-#if NET48
-        public SFOIndexTableEntry[] IndexTable { get; set; }
-#else
         public SFOIndexTableEntry[]? IndexTable { get; set; }
-#endif
 
         /// <summary>
         /// Key table
@@ -37,21 +29,13 @@ namespace SabreTools.Models.PlayStation3
         /// coincidence caused by the length of the key names used, when this
         /// happens there is no padding needed) 
         /// </remarks>
-#if NET48
-        public string[] KeyTable { get; set; }
-#else
         public string[]? KeyTable { get; set; }
-#endif
 
         /// <summary>
         /// Padding
         /// </summary>
         /// <remarks>Enough bytes to align to 4 bytes</remarks>
-#if NET48
-        public byte[] Padding { get; set; }
-#else
         public byte[]? Padding { get; set; }
-#endif
 
         /// <summary>
         /// Data table
@@ -66,10 +50,6 @@ namespace SabreTools.Models.PlayStation3
         /// being used). This entries can be considered reserved, and are marked with
         /// a len = 0 in the associated entry in the index_table
         /// </remarks>
-#if NET48
-        public byte[][] DataTable { get; set; }
-#else
         public byte[][]? DataTable { get; set; }
-#endif
     }
 }

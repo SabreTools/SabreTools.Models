@@ -29,10 +29,6 @@
         /// <summary>
         /// A table of resources for this type follows.
         /// </summary>
-#if NET48
-        public ResourceTypeResourceEntry[] Resources { get; set; }
-#else
         public ResourceTypeResourceEntry?[]? Resources { get; set; }
-#endif
     }
 }

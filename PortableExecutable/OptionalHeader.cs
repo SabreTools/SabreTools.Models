@@ -275,65 +275,37 @@
         /// <summary>
         /// The export table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory ExportTable { get; set; }
-#else
         public DataDirectory? ExportTable { get; set; }
-#endif
 
         /// <summary>
         /// The import table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory ImportTable { get; set; }
-#else
         public DataDirectory? ImportTable { get; set; }
-#endif
 
         /// <summary>
         /// The resource table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory ResourceTable { get; set; }
-#else
         public DataDirectory? ResourceTable { get; set; }
-#endif
 
         /// <summary>
         /// The exception table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory ExceptionTable { get; set; }
-#else
         public DataDirectory? ExceptionTable { get; set; }
-#endif
 
         /// <summary>
         /// The attribute certificate table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory CertificateTable { get; set; }
-#else
         public DataDirectory? CertificateTable { get; set; }
-#endif
 
         /// <summary>
         /// The base relocation table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory BaseRelocationTable { get; set; }
-#else
         public DataDirectory? BaseRelocationTable { get; set; }
-#endif
 
         /// <summary>
         /// The debug data starting address and size.
         /// </summary>
-#if NET48
-        public DataDirectory Debug { get; set; }
-#else
         public DataDirectory? Debug { get; set; }
-#endif
 
         /// <summary>
         /// Reserved, must be 0
@@ -344,65 +316,37 @@
         /// The RVA of the value to be stored in the global pointer register.
         /// The size member of this structure must be set to zero.
         /// </summary>
-#if NET48
-        public DataDirectory GlobalPtr { get; set; }
-#else
         public DataDirectory? GlobalPtr { get; set; }
-#endif
 
         /// <summary>
         /// The thread local storage (TLS) table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory ThreadLocalStorageTable { get; set; }
-#else
         public DataDirectory? ThreadLocalStorageTable { get; set; }
-#endif
 
         /// <summary>
         /// The load configuration table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory LoadConfigTable { get; set; }
-#else
         public DataDirectory? LoadConfigTable { get; set; }
-#endif
 
         /// <summary>
         /// The bound import table address and size.
         /// </summary>
-#if NET48
-        public DataDirectory BoundImport { get; set; }
-#else
         public DataDirectory? BoundImport { get; set; }
-#endif
 
         /// <summary>
         /// The import address table address and size
         /// </summary>
-#if NET48
-        public DataDirectory ImportAddressTable { get; set; }
-#else
         public DataDirectory? ImportAddressTable { get; set; }
-#endif
 
         /// <summary>
         /// The delay import descriptor address and size.
         /// </summary>
-#if NET48
-        public DataDirectory DelayImportDescriptor { get; set; }
-#else
         public DataDirectory? DelayImportDescriptor { get; set; }
-#endif
 
         /// <summary>
         /// The CLR runtime header address and size.
         /// </summary>
-#if NET48
-        public DataDirectory CLRRuntimeHeader { get; set; }
-#else
         public DataDirectory? CLRRuntimeHeader { get; set; }
-#endif
 
         /// <summary>
         /// Reserved, must be zero

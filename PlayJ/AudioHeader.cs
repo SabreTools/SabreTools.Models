@@ -26,11 +26,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Track name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Track { get; set; }
-#else
         public string? Track { get; set; }
-#endif
 
         /// <summary>
         /// Length of the artist name
@@ -40,11 +36,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Artist name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Artist { get; set; }
-#else
         public string? Artist { get; set; }
-#endif
 
         /// <summary>
         /// Length of the album name
@@ -54,11 +46,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Album name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Album { get; set; }
-#else
         public string? Album { get; set; }
-#endif
 
         /// <summary>
         /// Length of the writer name
@@ -68,11 +56,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Writer name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Writer { get; set; }
-#else
         public string? Writer { get; set; }
-#endif
 
         /// <summary>
         /// Length of the publisher name
@@ -82,11 +66,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Publisher name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Publisher { get; set; }
-#else
         public string? Publisher { get; set; }
-#endif
 
         /// <summary>
         /// Length of the label name
@@ -96,11 +76,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Label name (not null-terminated)
         /// </summary>
-#if NET48
-        public string Label { get; set; }
-#else
         public string? Label { get; set; }
-#endif
 
         /// <summary>
         /// Length of the comments
@@ -112,10 +88,6 @@ namespace SabreTools.Models.PlayJ
         /// Comments (not null-terminated)
         /// </summary>
         /// <remarks>Optional field only in some samples</remarks>
-#if NET48
-        public string Comments { get; set; }
-#else
         public string? Comments { get; set; }
-#endif
     }
 }

@@ -33,10 +33,6 @@
         /// file and is not mapped into the run-time address space). If it is mapped,
         /// the RVA is its address.
         /// </summary>
-#if NET48
-        public DebugDirectoryEntry[] DebugDirectoryTable { get; set; }
-#else
         public DebugDirectoryEntry?[]? DebugDirectoryTable { get; set; }
-#endif
     }
 }

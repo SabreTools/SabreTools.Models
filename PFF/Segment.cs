@@ -29,11 +29,7 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// File name
         /// </summary>
-#if NET48
-        public string FileName { get; set; }
-#else
         public string? FileName { get; set; }
-#endif
 
         /// <summary>
         /// Modified date

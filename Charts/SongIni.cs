@@ -12,71 +12,43 @@ namespace SabreTools.Models.Charts
         /// Title of the song.
         /// </summary>
         /// <remarks>name</remarks>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// Artist(s) or band(s) behind the song.
         /// </summary>
         /// <remarks>artist</remarks>
-#if NET48
-        public string Artist { get; set; }
-#else
         public string? Artist { get; set; }
-#endif
 
         /// <summary>
         /// Title of the album the song is featured in.
         /// </summary>
         /// <remarks>album</remarks>
-#if NET48
-        public string Album { get; set; }
-#else
         public string? Album { get; set; }
-#endif
 
         /// <summary>
         /// Genre of the song.
         /// </summary>
         /// <remarks>genre</remarks>
-#if NET48
-        public string Genre { get; set; }
-#else
         public string? Genre { get; set; }
-#endif
 
         /// <summary>
         /// Sub-genre for the song.
         /// </summary>
         /// <remarks>sub_genre</remarks>
-#if NET48
-        public string SubGenre { get; set; }
-#else
         public string? SubGenre { get; set; }
-#endif
 
         /// <summary>
         /// Year of the song’s release.
         /// </summary>
         /// <remarks>year</remarks>
-#if NET48
-        public string Year { get; set; }
-#else
         public string? Year { get; set; }
-#endif
 
         /// <summary>
         /// Community member responsible for charting the song.
         /// </summary>
         /// <remarks>charter, frets</remarks>
-#if NET48
-        public string Charter { get; set; }
-#else
         public string? Charter { get; set; }
-#endif
 
         /// <summary>
         /// Version number for the song.
@@ -118,11 +90,7 @@ namespace SabreTools.Models.Charts
         /// Flavor text for this song, usually shown after picking the song or during loading.
         /// </summary>
         /// <remarks>loading_phrase</remarks>
-#if NET48
-        public string LoadingPhrase { get; set; }
-#else
         public string? LoadingPhrase { get; set; }
-#endif
 
         #endregion
 
@@ -132,53 +100,33 @@ namespace SabreTools.Models.Charts
         /// (FoFiX) Hex color to use in the song screen for the cassette.
         /// </summary>
         /// <remarks>cassettecolor</remarks>
-#if NET48
-        public string CassetteColor { get; set; }
-#else
         public string? CassetteColor { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) Miscellaneous tags for the chart.
         /// Only known valid value is `cover`.
         /// </summary>
         /// <remarks>tags</remarks>
-#if NET48
-        public string Tags { get; set; }
-#else
         public string? Tags { get; set; }
-#endif
 
         /// <summary>
         /// (PS) Two timestamps in milliseconds for preview start and end time.
         /// Example: `55000 85000`
         /// </summary>
         /// <remarks>preview</remarks>
-#if NET48
-        public long[] Preview { get; set; }
-#else
         public long[]? Preview { get; set; }
-#endif
 
         /// <summary>
         /// (CH) Playlist that the song should show up in.
         /// </summary>
         /// <remarks>playlist</remarks>
-#if NET48
-        public string Playlist { get; set; }
-#else
         public string? Playlist { get; set; }
-#endif
 
         /// <summary>
         /// (CH) Sub-playlist that the song should show up in. 	
         /// </summary>
         /// <remarks>sub_playlist</remarks>
-#if NET48
-        public string SubPlaylist { get; set; }
-#else
         public string? SubPlaylist { get; set; }
-#endif
 
         /// <summary>
         /// (CH) Indicates if this song is a modchart.
@@ -350,51 +298,31 @@ namespace SabreTools.Models.Charts
         /// Specifies a voice type for the singer (either "male" or "female").
         /// </summary>
         /// <remarks>vocal_gender</remarks>
-#if NET48
-        public string VocalGender { get; set; }
-#else
         public string? VocalGender { get; set; }
-#endif
 
         /// <summary>
         /// Specifies a tuning for 17-fret Pro Guitar.
         /// </summary>
         /// <remarks>real_guitar_tuning</remarks>
-#if NET48
-        public string RealGuitarTuning { get; set; }
-#else
         public string? RealGuitarTuning { get; set; }
-#endif
 
         /// <summary>
         /// Specifies a tuning for 22-fret Pro Guitar.
         /// </summary>
         /// <remarks>real_guitar_22_tuning</remarks>
-#if NET48
-        public string RealGuitar22Tuning { get; set; }
-#else
         public string? RealGuitar22Tuning { get; set; }
-#endif
 
         /// <summary>
         /// Specifies a tuning for 17-fret Pro Bass.
         /// </summary>
         /// <remarks>real_bass_tuning</remarks>
-#if NET48
-        public string RealBassTuning { get; set; }
-#else
         public string? RealBassTuning { get; set; }
-#endif
 
         /// <summary>
         /// Specifies a tuning for 22-fret Pro Bass.
         /// </summary>
         /// <remarks>real_bass_22_tuning</remarks>
-#if NET48
-        public string RealBass22Tuning { get; set; }
-#else
         public string? RealBass22Tuning { get; set; }
-#endif
 
         /// <summary>
         /// Specifies the number of lanes for the right hand in Real Keys.
@@ -479,11 +407,7 @@ namespace SabreTools.Models.Charts
         /// Valid values are "none", "half", or "full".
         /// </summary>
         /// <remarks>early_hit_window_size</remarks>
-#if NET48
-        public string EarlyHitWindowSize { get; set; }
-#else
         public string? EarlyHitWindowSize { get; set; }
-#endif
 
         /// <summary>
         /// (CH) Sets whether or not end events in the chart will be respected.
@@ -560,31 +484,19 @@ namespace SabreTools.Models.Charts
         /// Included in either the chart folder or the game the chart was made for, or sourced from this repository of icons.
         /// </summary>
         /// <remarks>icon</remarks>
-#if NET48
-        public string Icon { get; set; }
-#else
         public string? Icon { get; set; }
-#endif
 
         /// <summary>
         /// Name for a background image file.
         /// </summary>
         /// <remarks>background</remarks>
-#if NET48
-        public string Background { get; set; }
-#else
         public string? Background { get; set; }
-#endif
 
         /// <summary>
         /// Name for a background video file.
         /// </summary>
         /// <remarks>video</remarks>
-#if NET48
-        public string Video { get; set; }
-#else
         public string? Video { get; set; }
-#endif
 
         /// <summary>
         /// Name for a background video file.
@@ -610,11 +522,7 @@ namespace SabreTools.Models.Charts
         /// Name for a cover image file.
         /// </summary>
         /// <remarks>cover</remarks>
-#if NET48
-        public string Cover { get; set; }
-#else
         public string? Cover { get; set; }
-#endif
 
         #endregion
 
@@ -624,41 +532,25 @@ namespace SabreTools.Models.Charts
         /// (PS) Name for banner A.
         /// </summary>
         /// <remarks>link_name_a</remarks>
-#if NET48
-        public string LinkNameA { get; set; }
-#else
         public string? LinkNameA { get; set; }
-#endif
 
         /// <summary>
         /// (PS) Name for banner B.
         /// </summary>
         /// <remarks>link_name_b</remarks>
-#if NET48
-        public string LinkNameB { get; set; }
-#else
         public string? LinkNameB { get; set; }
-#endif
 
         /// <summary>
         /// (PS) Link that clicking banner A will open.
         /// </summary>
         /// <remarks>banner_link_a</remarks>
-#if NET48
-        public string BannerLinkA { get; set; }
-#else
         public string? BannerLinkA { get; set; }
-#endif
 
         /// <summary>
         /// (PS) Link that clicking banner B will open.
         /// </summary>
         /// <remarks>banner_link_b</remarks>
-#if NET48
-        public string BannerLinkB { get; set; }
-#else
         public string? BannerLinkB { get; set; }
-#endif
 
         #endregion
 
@@ -668,21 +560,13 @@ namespace SabreTools.Models.Charts
         /// (FoFiX) High score data.
         /// </summary>
         /// <remarks>scores</remarks>
-#if NET48
-        public string Scores { get; set; }
-#else
         public string? Scores { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) Additional score data.
         /// </summary>
         /// <remarks>scores_ext</remarks>
-#if NET48
-        public string ScoresExt { get; set; }
-#else
         public string? ScoresExt { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) Play count.
@@ -700,31 +584,19 @@ namespace SabreTools.Models.Charts
         /// (FoFiX) Career ID for this song.
         /// </summary>
         /// <remarks>unlock_id</remarks>
-#if NET48
-        public string UnlockId { get; set; }
-#else
         public string? UnlockId { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) The career ID that must be completed to unlock this song.
         /// </summary>
         /// <remarks>unlock_require</remarks>
-#if NET48
-        public string UnlockRequire { get; set; }
-#else
         public string? UnlockRequire { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) Text to display if the song is locked.
         /// </summary>
         /// <remarks>unlock_text</remarks>
-#if NET48
-        public string UnlockText { get; set; }
-#else
         public string? UnlockText { get; set; }
-#endif
 
         /// <summary>
         /// (FoFiX) Indicates if the song is unlocked.

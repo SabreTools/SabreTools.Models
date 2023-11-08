@@ -20,10 +20,6 @@
         /// <summary>
         /// ASCII text of the name string.
         /// </summary>
-#if NET48
-        public byte[] NameString { get; set; }
-#else
         public byte[]? NameString { get; set; }
-#endif
     }
 }

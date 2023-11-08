@@ -24,11 +24,7 @@
         /// A null-terminated Unicode string that contains the text for this menu item.
         /// There is no fixed limit on the size of this string.
         /// </summary>
-#if NET48
-        public string NormalMenuText { get; set; }
-#else
         public string? NormalMenuText { get; set; }
-#endif
 
         #endregion
 
@@ -59,11 +55,7 @@
         /// A null-terminated Unicode string that contains the text for this menu item.
         /// There is no fixed limit on the size of this string.
         /// </summary>
-#if NET48
-        public string PopupMenuText { get; set; }
-#else
         public string? PopupMenuText { get; set; }
-#endif
 
         #endregion
     }

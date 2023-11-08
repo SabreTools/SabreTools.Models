@@ -17,29 +17,17 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// 2-character publisher identifier
         /// </summary>
-#if NET48
-        public string PublisherIdentifier { get; set; }
-#else
         public string? PublisherIdentifier { get; set; }
-#endif
 
         /// <summary>
         /// 3-character Game ID
         /// </summary>
-#if NET48
-        public string GameID { get; set; }
-#else
         public string? GameID { get; set; }
-#endif
 
         /// <summary>
         /// 2-character Internal version number
         /// </summary>
-#if NET48
-        public string VersionNumber { get; set; }
-#else
         public string? VersionNumber { get; set; }
-#endif
 
         /// <summary>
         /// 1-character Region identifier character

@@ -15,20 +15,12 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Deflate block (RFC-1951) header
         /// </summary>
-#if NET48
-        public DeflateBlockHeader Header { get; set; }
-#else
         public DeflateBlockHeader? Header { get; set; }
-#endif
 
         /// <summary>
         /// Compression-specific data header
         /// </summary>
-#if NET48
-        public DataHeader DataHeader { get; set; }
-#else
         public DataHeader? DataHeader { get; set; }
-#endif
 
         /// <summary>
         /// MSZIP data
@@ -38,10 +30,6 @@ namespace SabreTools.Models.Compression.MSZIP
         /// compressed or uncompressed data. Keep this in mind when using the built
         /// versions of this model.
         /// </remarks>
-#if NET48
-        public byte[] Data { get; set; }
-#else
         public byte[]? Data { get; set; }
-#endif
     }
 }

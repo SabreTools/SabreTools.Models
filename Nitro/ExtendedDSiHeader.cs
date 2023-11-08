@@ -9,29 +9,17 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Global MBK1..MBK5 Settings
         /// </summary>
-#if NET48
-        public uint[] GlobalMBK15Settings { get; set; }
-#else
         public uint[]? GlobalMBK15Settings { get; set; }
-#endif
 
         /// <summary>
         ///	Local MBK6..MBK8 Settings for ARM9
         /// </summary>
-#if NET48
-        public uint[] LocalMBK68SettingsARM9 { get; set; }
-#else
         public uint[]? LocalMBK68SettingsARM9 { get; set; }
-#endif
 
         /// <summary>
         /// Local MBK6..MBK8 Settings for ARM7
         /// </summary>
-#if NET48
-        public uint[] LocalMBK68SettingsARM7 { get; set; }
-#else
         public uint[]? LocalMBK68SettingsARM7 { get; set; }
-#endif
 
         /// <summary>
         /// Global MBK9 Setting
@@ -166,11 +154,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Unknown (used by DSi)
         /// </summary>
-#if NET48
-        public byte[] Unknown2 { get; set; }
-#else
         public byte[]? Unknown2 { get; set; }
-#endif
 
         /// <summary>
         /// Modcrypt area 1 offset
@@ -195,11 +179,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Title ID
         /// </summary>
-#if NET48
-        public byte[] TitleID { get; set; }
-#else
         public byte[]? TitleID { get; set; }
-#endif
 
         /// <summary>
         /// DSiWare: "public.sav" size
@@ -214,118 +194,66 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Reserved (zero)
         /// </summary>
-#if NET48
-        public byte[] ReservedZero { get; set; }
-#else
         public byte[]? ReservedZero { get; set; }
-#endif
 
         /// <summary>
         /// Unknown (used by DSi)
         /// </summary>
-#if NET48
-        public byte[] Unknown3 { get; set; }
-#else
         public byte[]? Unknown3 { get; set; }
-#endif
 
         /// <summary>
         /// ARM9 (with encrypted secure area) SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] ARM9WithSecureAreaSHA1HMACHash { get; set; }
-#else
         public byte[]? ARM9WithSecureAreaSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// ARM7 SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] ARM7SHA1HMACHash { get; set; }
-#else
         public byte[]? ARM7SHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// Digest master SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] DigestMasterSHA1HMACHash { get; set; }
-#else
         public byte[]? DigestMasterSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// Banner SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] BannerSHA1HMACHash { get; set; }
-#else
         public byte[]? BannerSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// ARM9i (decrypted) SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] ARM9iDecryptedSHA1HMACHash { get; set; }
-#else
         public byte[]? ARM9iDecryptedSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// ARM7i (decrypted) SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] ARM7iDecryptedSHA1HMACHash { get; set; }
-#else
         public byte[]? ARM7iDecryptedSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved5 { get; set; }
-#else
         public byte[]? Reserved5 { get; set; }
-#endif
 
         /// <summary>
         /// ARM9 (without secure area) SHA1 HMAC hash
         /// </summary>
-#if NET48
-        public byte[] ARM9NoSecureAreaSHA1HMACHash { get; set; }
-#else
         public byte[]? ARM9NoSecureAreaSHA1HMACHash { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved6 { get; set; }
-#else
         public byte[]? Reserved6 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved and unchecked region, always zero. Used for passing arguments in debug environment.
         /// </summary>
-#if NET48
-        public byte[] ReservedAndUnchecked { get; set; }
-#else
         public byte[]? ReservedAndUnchecked { get; set; }
-#endif
 
         /// <summary>
         /// RSA signature (the first 0xE00 bytes of the header are signed with an 1024-bit RSA signature).
         /// </summary>
-#if NET48
-        public byte[] RSASignature { get; set; }
-#else
         public byte[]? RSASignature { get; set; }
-#endif
     }
 }

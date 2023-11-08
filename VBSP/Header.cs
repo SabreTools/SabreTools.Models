@@ -6,11 +6,7 @@ namespace SabreTools.Models.VBSP
         /// <summary>
         /// BSP file signature.
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// BSP file version.
@@ -25,11 +21,7 @@ namespace SabreTools.Models.VBSP
         /// <summary>
         /// Lumps.
         /// </summary>
-#if NET48
-        public Lump[] Lumps { get; set; }
-#else
         public Lump?[]? Lumps { get; set; }
-#endif
 
         /// <summary>
         /// The map's revision (iteration, version) number.

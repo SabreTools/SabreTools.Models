@@ -13,11 +13,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Component identifier
         /// </summary>
-#if NET48
-        public string Identifier { get; set; }
-#else
         public string? Identifier { get; set; }
-#endif
 
         /// <summary>
         /// Offset to the component descriptor
@@ -32,20 +28,12 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Display name
         /// </summary>
-#if NET48
-        public string DisplayName { get; set; }
-#else
         public string? DisplayName { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved0 { get; set; }
-#else
         public byte[]? Reserved0 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved offset
@@ -70,11 +58,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Component name
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// Reserved offset
@@ -94,11 +78,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved1 { get; set; }
-#else
         public byte[]? Reserved1 { get; set; }
-#endif
 
         /// <summary>
         /// Offset to the component CLSID
@@ -113,20 +93,12 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved3 { get; set; }
-#else
         public byte[]? Reserved3 { get; set; }
-#endif
 
         /// <summary>
         /// Number of depends(?)
@@ -151,11 +123,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File group names
         /// </summary>
-#if NET48
-        public string[] FileGroupNames { get; set; }
-#else
         public string[]? FileGroupNames { get; set; }
-#endif
 
         /// <summary>
         /// Number of X3(?)

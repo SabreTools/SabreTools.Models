@@ -12,28 +12,16 @@
         /// <summary>
         /// Cabinet header
         /// </summary>
-#if NET48
-        public CFHEADER Header { get; set; }
-#else
         public CFHEADER? Header { get; set; }
-#endif
 
         /// <summary>
         /// One or more CFFOLDER entries
         /// </summary>
-#if NET48
-        public CFFOLDER[] Folders { get; set; }
-#else
         public CFFOLDER?[]? Folders { get; set; }
-#endif
 
         /// <summary>
         /// A series of one or more cabinet file (CFFILE) entries
         /// </summary>
-#if NET48
-        public CFFILE[] Files { get; set; }
-#else
         public CFFILE?[]? Files { get; set; }
-#endif
     }
 }

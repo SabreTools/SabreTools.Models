@@ -25,19 +25,11 @@
         /// MD5 of the entire patch file after decompression
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] MD5 { get; set; }
-#else
         public byte[]? MD5 { get; set; }
-#endif
 
         /// <summary>
         /// The sector offset table (variable length)
         /// </summary>
-#if NET48
-        public uint[] SectorOffsetTable { get; set; }
-#else
         public uint[]? SectorOffsetTable { get; set; }
-#endif
     }
 }

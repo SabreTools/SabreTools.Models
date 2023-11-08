@@ -29,11 +29,7 @@
         /// <summary>
         /// The Unicode string L"VS_VERSION_INFO".
         /// </summary>
-#if NET48
-        public string Key { get; set; }
-#else
         public string? Key { get; set; }
-#endif
 
         /// <summary>
         /// Contains as many zero words as necessary to align the Value member on a 32-bit boundary.
@@ -44,11 +40,7 @@
         /// Arbitrary data associated with this VS_VERSIONINFO structure. The ValueLength member
         /// specifies the length of this member; if ValueLength is zero, this member does not exist.
         /// </summary>
-#if NET48
-        public FixedFileInfo Value { get; set; }
-#else
         public FixedFileInfo? Value { get; set; }
-#endif
 
         /// <summary>
         /// As many zero words as necessary to align the Children member on a 32-bit boundary.
@@ -59,19 +51,11 @@
         /// <summary>
         /// The StringFileInfo structure to store user-defined string information data.
         /// </summary>
-#if NET48
-        public StringFileInfo StringFileInfo { get; set; }
-#else
         public StringFileInfo? StringFileInfo { get; set; }
-#endif
 
         /// <summary>
         /// The VarFileInfo structure to store language information data.
         /// </summary>
-#if NET48
-        public VarFileInfo VarFileInfo { get; set; }
-#else
         public VarFileInfo? VarFileInfo { get; set; }
-#endif
     }
 }

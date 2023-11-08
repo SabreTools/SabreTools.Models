@@ -6,20 +6,12 @@ namespace SabreTools.Models.BDPlus
         /// <summary>
         /// "BDSVM_CC"
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// 5 bytes of unknown data
         /// </summary>
-#if NET48
-        public byte[] Unknown1 { get; set; }
-#else
         public byte[]? Unknown1 { get; set; }
-#endif
 
         /// <summary>
         /// Version year
@@ -39,11 +31,7 @@ namespace SabreTools.Models.BDPlus
         /// <summary>
         /// 4 bytes of unknown data
         /// </summary>
-#if NET48
-        public byte[] Unknown2 { get; set; }
-#else
         public byte[]? Unknown2 { get; set; }
-#endif
 
         /// <summary>
         /// Length
@@ -53,10 +41,6 @@ namespace SabreTools.Models.BDPlus
         /// <summary>
         /// Length bytes of data
         /// </summary>
-#if NET48
-        public byte[] Data { get; set; }
-#else
         public byte[]? Data { get; set; }
-#endif
     }
 }

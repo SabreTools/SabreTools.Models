@@ -23,20 +23,12 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// A table of resource type information blocks follows.
         /// </summary>
-#if NET48
-        public ResourceTypeInformationEntry[] ResourceTypes { get; set; }
-#else
         public ResourceTypeInformationEntry?[]? ResourceTypes { get; set; }
-#endif
 
         /// <summary>
         /// Resource type and name strings are stored at the end of the
         /// resource table.
         /// </summary>
-#if NET48
-        public Dictionary<ushort, ResourceTypeAndNameString> TypeAndNameStrings { get; set; }
-#else
         public Dictionary<ushort, ResourceTypeAndNameString?>? TypeAndNameStrings { get; set; }
-#endif
     }
 }

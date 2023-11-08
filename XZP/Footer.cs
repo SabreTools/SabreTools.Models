@@ -5,10 +5,6 @@ namespace SabreTools.Models.XZP
     {
         public uint FileLength { get; set; }
 
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
     }
 }

@@ -57,11 +57,7 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// This field MUST be set to all zeroes.
         /// </summary>
-#if NET48
-        public byte[] Reserved { get; set; }
-#else
         public byte[]? Reserved { get; set; }
-#endif
 
         /// <summary>
         /// This integer field contains the count of the number of directory sectors
@@ -126,10 +122,6 @@ namespace SabreTools.Models.CFB
         /// This array of 32-bit integer fields contains the first 109 FAT sector
         /// locations of the compound file
         /// </summary>
-#if NET48
-        public SectorNumber[] DIFAT { get; set; }
-#else
         public SectorNumber?[]? DIFAT { get; set; }
-#endif
     }
 }

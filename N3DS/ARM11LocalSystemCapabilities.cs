@@ -36,47 +36,27 @@
         /// <summary>
         /// Resource limit descriptors. The first byte here controls the maximum allowed CpuTime.
         /// </summary>
-#if NET48
-        public ushort[] ResourceLimitDescriptors { get; set; }
-#else
         public ushort[]? ResourceLimitDescriptors { get; set; }
-#endif
 
         /// <summary>
         /// Storage info
         /// </summary>
-#if NET48
-        public StorageInfo StorageInfo { get; set; }
-#else
         public StorageInfo? StorageInfo { get; set; }
-#endif
 
         /// <summary>
         /// Service access control
         /// </summary>
-#if NET48
-        public ulong[] ServiceAccessControl { get; set; }
-#else
         public ulong[]? ServiceAccessControl { get; set; }
-#endif
 
         /// <summary>
         /// Extended service access control, support for this was implemented with 9.3.0-X.
         /// </summary>
-#if NET48
-        public ulong[] ExtendedServiceAccessControl { get; set; }
-#else
         public ulong[]? ExtendedServiceAccessControl { get; set; }
-#endif
 
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved { get; set; }
-#else
         public byte[]? Reserved { get; set; }
-#endif
 
         /// <summary>
         /// Resource limit category. (0 = APPLICATION, 1 = SYS_APPLET, 2 = LIB_APPLET, 3 = OTHER (sysmodules running under the BASE memregion))

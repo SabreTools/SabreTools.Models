@@ -16,11 +16,7 @@
         /// <summary>
         /// The signature consists of a string of three (3) ASCII characters: "NB0"
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// This defines the type of debugger data that exists in the remainder of the
@@ -34,10 +30,6 @@
         /// the responsibility of the linker or debugging tools to follow the convention
         /// for the type field that is defined here.
         /// </summary>
-#if NET48
-        public byte[] DebuggerData { get; set; }
-#else
         public byte[]? DebuggerData { get; set; }
-#endif
     }
 }

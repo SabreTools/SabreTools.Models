@@ -13,10 +13,6 @@
         /// <summary>
         /// The pointers are 32 bits each and are relative to the image base.
         /// </summary>
-#if NET48
-        public uint[] Pointers { get; set; }
-#else
         public uint[]? Pointers { get; set; }
-#endif
     }
 }

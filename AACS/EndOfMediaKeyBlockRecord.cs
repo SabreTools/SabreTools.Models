@@ -18,10 +18,6 @@ namespace SabreTools.Models.AACS
         /// determines that the signature does not verify or is omitted, it
         /// must refuse to use the Media Key.
         /// </summary>
-#if NET48
-        public byte[] SignatureData { get; set; }
-#else
         public byte[]? SignatureData { get; set; }
-#endif
     }
 }

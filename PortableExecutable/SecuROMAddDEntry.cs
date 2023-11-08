@@ -61,11 +61,7 @@
         /// Entry file name (null-terminated)
         /// </summary>
         /// <remarks>12 bytes long in the sample (all 3 entries) in 4.47.00.0039</remarks>
-#if NET48
-        public string FileName { get; set; }
-#else
         public string? FileName { get; set; }
-#endif
 
         /// <summary>
         /// Unknown (0x2C)

@@ -9,11 +9,7 @@
         /// <summary>
         /// "BFPK"
         /// </summary>
-#if NET48
-        public string Magic { get; set; }
-#else
         public string? Magic { get; set; }
-#endif
 
         /// <summary>
         /// Version

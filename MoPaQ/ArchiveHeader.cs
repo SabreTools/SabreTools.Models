@@ -11,11 +11,7 @@
         /// <summary>
         /// The MPQ archive signature
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Size of the archive header
@@ -144,61 +140,37 @@
         /// MD5 of the block table before decryption
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] BlockTableMD5 { get; set; }
-#else
         public byte[]? BlockTableMD5 { get; set; }
-#endif
 
         /// <summary>
         /// MD5 of the hash table before decryption
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] HashTableMD5 { get; set; }
-#else
         public byte[]? HashTableMD5 { get; set; }
-#endif
 
         /// <summary>
         /// MD5 of the hi-block table
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] HiBlockTableMD5 { get; set; }
-#else
         public byte[]? HiBlockTableMD5 { get; set; }
-#endif
 
         /// <summary>
         /// MD5 of the BET table before decryption
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] BetTableMD5 { get; set; }
-#else
         public byte[]? BetTableMD5 { get; set; }
-#endif
 
         /// <summary>
         /// MD5 of the HET table before decryption
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] HetTableMD5 { get; set; }
-#else
         public byte[]? HetTableMD5 { get; set; }
-#endif
 
         /// <summary>
         /// MD5 of the MPQ header from signature to (including) HetTableMD5
         /// </summary>
         /// <remarks>0x10 bytes</remarks>
-#if NET48
-        public byte[] MpqHeaderMD5 { get; set; }
-#else
         public byte[]? MpqHeaderMD5 { get; set; }
-#endif
 
         #endregion
     }

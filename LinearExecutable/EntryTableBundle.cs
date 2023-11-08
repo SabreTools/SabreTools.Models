@@ -51,10 +51,6 @@
         /// <summary>
         /// Table entries in the bundle
         /// </summary>
-#if NET48
-        public EntryTableEntry[] TableEntries { get; set; }
-#else
         public EntryTableEntry?[]? TableEntries { get; set; }
-#endif
     }
 }

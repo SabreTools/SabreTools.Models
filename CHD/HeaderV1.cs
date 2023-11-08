@@ -41,19 +41,11 @@
         /// <summary>
         /// MD5 checksum of raw data
         /// </summary>
-#if NET48
-        public byte[] MD5 { get; set; } = new byte[16];
-#else
         public byte[]? MD5 { get; set; } = new byte[16];
-#endif
 
         /// <summary>
         /// MD5 checksum of parent file
         /// </summary>
-#if NET48
-        public byte[] ParentMD5 { get; set; } = new byte[16];
-#else
         public byte[]? ParentMD5 { get; set; } = new byte[16];
-#endif
     }
 }

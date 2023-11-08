@@ -22,11 +22,7 @@
         /// The font supplier's copyright information.
         /// </summary>
         /// <remarks>60 characters</remarks>
-#if NET48
-        public byte[] Copyright { get; set; }
-#else
         public byte[]? Copyright { get; set; }
-#endif
 
         /// <summary>
         /// The type of font file.
@@ -168,19 +164,11 @@
         /// <summary>
         /// The name of the device if this font file is designated for a specific device.
         /// </summary>
-#if NET48
-        public string DeviceName { get; set; }
-#else
         public string? DeviceName { get; set; }
-#endif
 
         /// <summary>
         /// The typeface name of the font.
         /// </summary>
-#if NET48
-        public string FaceName { get; set; }
-#else
         public string? FaceName { get; set; }
-#endif
     }
 }

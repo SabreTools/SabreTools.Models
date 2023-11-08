@@ -14,11 +14,7 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Huffman code lengths for the literal / length alphabet
         /// </summary>
-#if NET48
-        public override uint[] LiteralLengths
-#else
         public override uint[]? LiteralLengths
-#endif
         {
             get
             {
@@ -56,11 +52,7 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Huffman distance codes for the literal / length alphabet
         /// </summary>
-#if NET48
-        public override uint[] DistanceCodes
-#else
         public override uint[]? DistanceCodes
-#endif
         {
             get
             {
@@ -90,20 +82,12 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Huffman code lengths for the literal / length alphabet
         /// </summary>
-#if NET48
-        private uint[] _literalLengths = null;
-#else
         private uint[]? _literalLengths = null;
-#endif
 
         /// <summary>
         /// Huffman distance codes for the literal / length alphabet
         /// </summary>
-#if NET48
-        private uint[] _distanceCodes = null;
-#else
         private uint[]? _distanceCodes = null;
-#endif
 
         #endregion
     }

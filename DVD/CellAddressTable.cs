@@ -11,11 +11,7 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved { get; set; }
-#else
         public byte[]? Reserved { get; set; }
-#endif
 
         /// <summary>
         /// End address (last byte of last entry)
@@ -25,10 +21,6 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// 12-byte entries
         /// </summary>
-#if NET48
-        public CellAddressTableEntry[] Entries { get; set; }
-#else
         public CellAddressTableEntry?[]? Entries { get; set; }
-#endif
     }
 }

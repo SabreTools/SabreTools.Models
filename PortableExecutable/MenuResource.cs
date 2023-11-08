@@ -14,20 +14,12 @@
         /// <summary>
         /// Menu header structure
         /// </summary>
-#if NET48
-        public MenuHeader MenuHeader { get; set; }
-#else
         public MenuHeader? MenuHeader { get; set; }
-#endif
 
         /// <summary>
         /// Menu extended header structure
         /// </summary>
-#if NET48
-        public MenuHeaderExtended ExtendedMenuHeader { get; set; }
-#else
         public MenuHeaderExtended? ExtendedMenuHeader { get; set; }
-#endif
 
         #endregion
 
@@ -36,20 +28,12 @@
         /// <summary>
         /// Menu items
         /// </summary>
-#if NET48
-        public MenuItem[] MenuItems { get; set; }
-#else
         public MenuItem?[]? MenuItems { get; set; }
-#endif
 
         /// <summary>
         /// Extended menu items
         /// </summary>
-#if NET48
-        public MenuItemExtended[] ExtendedMenuItems { get; set; }
-#else
         public MenuItemExtended?[]? ExtendedMenuItems { get; set; }
-#endif
 
         #endregion
     }

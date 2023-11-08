@@ -96,11 +96,7 @@
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
-#if NET48
-        public string MenuResource { get; set; }
-#else
         public string? MenuResource { get; set; }
-#endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
@@ -119,11 +115,7 @@
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
-#if NET48
-        public string ClassResource { get; set; }
-#else
         public string? ClassResource { get; set; }
-#endif
 
         /// <summary>
         /// The ordinal value of a predefined system class.
@@ -139,11 +131,7 @@
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
-#if NET48
-        public string TitleResource { get; set; }
-#else
         public string? TitleResource { get; set; }
-#endif
 
         /// <summary>
         /// The 16-bit point size value and the typeface array follow the title array, but only if the
@@ -167,10 +155,6 @@
         /// If you specify character strings in the menu, class, title, or typeface arrays, you must use
         /// Unicode strings.
         /// </remarks>
-#if NET48
-        public string Typeface { get; set; }
-#else
         public string? Typeface { get; set; }
-#endif
     }
 }

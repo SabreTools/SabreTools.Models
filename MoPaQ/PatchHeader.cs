@@ -46,20 +46,12 @@
         /// <summary>
         /// MD5 of the original (unpached) file
         /// </summary>
-#if NET48
-        public byte[] Md5BeforePatch { get; set; } = new byte[0x10];
-#else
         public byte[]? Md5BeforePatch { get; set; } = new byte[0x10];
-#endif
 
         /// <summary>
         /// MD5 of the patched file
         /// </summary>
-#if NET48
-        public byte[] Md5AfterPatch { get; set; } = new byte[0x10];
-#else
         public byte[]? Md5AfterPatch { get; set; } = new byte[0x10];
-#endif
 
         #endregion
 
@@ -116,11 +108,7 @@
         /// <summary>
         /// File data are simply replaced by the data in the patch.
         /// </summary>
-#if NET48
-        public byte[] PatchDataCopy { get; set; }
-#else
         public byte[]? PatchDataCopy { get; set; }
-#endif
 
         #endregion
     }

@@ -6,11 +6,7 @@ namespace SabreTools.Models.PAK
         /// <summary>
         /// Item Name
         /// </summary>
-#if NET48
-        public string ItemName { get; set; }
-#else
         public string? ItemName { get; set; }
-#endif
 
         /// <summary>
         /// Item Offset

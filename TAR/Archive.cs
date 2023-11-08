@@ -5,10 +5,6 @@ namespace SabreTools.Models.TAR
         /// <summary>
         /// File header
         /// </summary>
-#if NET48
-        public Header Header { get; set; }
-#else
         public Header? Header { get; set; }
-#endif
     }
 }

@@ -16,10 +16,6 @@ namespace SabreTools.Models.AACS
         /// (or the first in a range of Licensed Drives being revoked, in the
         /// case of a non-zero Range value).
         /// </summary>
-#if NET48
-        public byte[] DriveID { get; set; }
-#else
         public byte[]? DriveID { get; set; }
-#endif
     }
 }

@@ -12,40 +12,24 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// MS-DOS executable stub
         /// </summary>
-#if NET48
-        public MSDOS.Executable Stub { get; set; }
-#else
         public MSDOS.Executable? Stub { get; set; }
-#endif
 
         /// <summary>
         /// After the MS-DOS stub, at the file offset specified at offset 0x3c, is a 4-byte
         /// signature that identifies the file as a PE format image file. This signature is "PE\0\0"
         /// (the letters "P" and "E" followed by two null bytes).
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// COFF file header
         /// </summary>
-#if NET48
-        public COFFFileHeader COFFFileHeader { get; set; }
-#else
         public COFFFileHeader? COFFFileHeader { get; set; }
-#endif
 
         /// <summary>
         /// Optional header
         /// </summary>
-#if NET48
-        public OptionalHeader OptionalHeader { get; set; }
-#else
         public OptionalHeader? OptionalHeader { get; set; }
-#endif
 
         // TODO: Support grouped sections in section reading and parsing
         // https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#grouped-sections-object-only
@@ -56,47 +40,27 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Section table
         /// </summary>
-#if NET48
-        public SectionHeader[] SectionTable { get; set; }
-#else
         public SectionHeader?[]? SectionTable { get; set; }
-#endif
 
         /// <summary>
         /// COFF symbol table
         /// </summary>
-#if NET48
-        public COFFSymbolTableEntry[] COFFSymbolTable { get; set; }
-#else
         public COFFSymbolTableEntry?[]? COFFSymbolTable { get; set; }
-#endif
 
         /// <summary>
         /// COFF string table
         /// </summary>
-#if NET48
-        public COFFStringTable COFFStringTable { get; set; }
-#else
         public COFFStringTable? COFFStringTable { get; set; }
-#endif
 
         /// <summary>
         /// Attribute certificate table
         /// </summary>
-#if NET48
-        public AttributeCertificateTableEntry[] AttributeCertificateTable { get; set; }
-#else
         public AttributeCertificateTableEntry?[]? AttributeCertificateTable { get; set; }
-#endif
 
         /// <summary>
         /// Delay-load directory table
         /// </summary>
-#if NET48
-        public DelayLoadDirectoryTable DelayLoadDirectoryTable { get; set; }
-#else
         public DelayLoadDirectoryTable? DelayLoadDirectoryTable { get; set; }
-#endif
 
         #region Named Sections
 
@@ -107,20 +71,12 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Base relocation table (.reloc)
         /// </summary>
-#if NET48
-        public BaseRelocationBlock[] BaseRelocationTable { get; set; }
-#else
         public BaseRelocationBlock?[]? BaseRelocationTable { get; set; }
-#endif
 
         /// <summary>
         /// Debug table (.debug*)
         /// </summary>
-#if NET48
-        public DebugTable DebugTable { get; set; }
-#else
         public DebugTable? DebugTable { get; set; }
-#endif
 
         // .drectve - A section is a directive section if it has the IMAGE_SCN_LNK_INFO
         // flag set in the section header and has the .drectve section name. The linker
@@ -141,29 +97,17 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Export table (.edata)
         /// </summary>
-#if NET48
-        public ExportTable ExportTable { get; set; }
-#else
         public ExportTable? ExportTable { get; set; }
-#endif
 
         /// <summary>
         /// Import table (.idata)
         /// </summary>
-#if NET48
-        public ImportTable ImportTable { get; set; }
-#else
         public ImportTable? ImportTable { get; set; }
-#endif
 
         /// <summary>
         /// Resource directory table (.rsrc)
         /// </summary>
-#if NET48
-        public ResourceDirectoryTable ResourceDirectoryTable { get; set; }
-#else
         public ResourceDirectoryTable? ResourceDirectoryTable { get; set; }
-#endif
 
         // .sxdata - The valid exception handlers of an object are listed in the .sxdata
         // section of that object. The section is marked IMAGE_SCN_LNK_INFO. It contains

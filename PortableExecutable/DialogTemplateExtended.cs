@@ -107,11 +107,7 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string MenuResource { get; set; }
-#else
         public string? MenuResource { get; set; }
-#endif
 
         /// <summary>
         /// The ordinal value of a menu resource in an executable file.
@@ -129,11 +125,7 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string ClassResource { get; set; }
-#else
         public string? ClassResource { get; set; }
-#endif
 
         /// <summary>
         /// The ordinal value of a predefined system window class.
@@ -148,11 +140,7 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string TitleResource { get; set; }
-#else
         public string? TitleResource { get; set; }
-#endif
 
         /// <summary>
         /// The point size of the font to use for the text in the dialog box and its controls.
@@ -192,10 +180,6 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string Typeface { get; set; }
-#else
         public string? Typeface { get; set; }
-#endif
     }
 }

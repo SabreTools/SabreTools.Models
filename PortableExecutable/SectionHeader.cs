@@ -29,11 +29,7 @@
         /// characters. Long names in object files are truncated if they are emitted
         /// to an executable file. 
         /// </summary>
-#if NET48
-        public byte[] Name { get; set; } = new byte[8];
-#else
         public byte[]? Name { get; set; } = new byte[8];
-#endif
 
         /// <summary>
         /// The total size of the section when loaded into memory. If this value is
@@ -104,19 +100,11 @@
         /// <summary>
         /// COFF Relocations (Object Only)
         /// </summary>
-#if NET48
-        public COFFRelocation[] COFFRelocations { get; set; }
-#else
         public COFFRelocation?[]? COFFRelocations { get; set; }
-#endif
 
         /// <summary>
         /// COFF Line Numbers (Deprecated)
         /// </summary>
-#if NET48
-        public COFFLineNumber[] COFFLineNumbers { get; set; }
-#else
         public COFFLineNumber?[]? COFFLineNumbers { get; set; }
-#endif
     }
 }

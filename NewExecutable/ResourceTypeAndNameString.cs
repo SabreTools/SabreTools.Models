@@ -18,10 +18,6 @@
         /// <summary>
         /// ASCII text of the type or name string.
         /// </summary>
-#if NET48
-        public byte[] Text { get; set; }
-#else
         public byte[]? Text { get; set; }
-#endif
     }
 }

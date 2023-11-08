@@ -33,10 +33,6 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// SHA-256 hash
         /// </summary>
-#if NET48
-        public byte[] SHA256Hash { get; set; }
-#else
         public byte[]? SHA256Hash { get; set; }
-#endif
     }
 }

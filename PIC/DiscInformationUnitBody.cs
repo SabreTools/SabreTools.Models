@@ -12,11 +12,7 @@ namespace SabreTools.Models.PIC
         /// = "BDW" for BD-RE
         /// = "BDR" for BD-R
         /// </summary>
-#if NET48
-        public string DiscTypeIdentifier { get; set; }
-#else
         public string? DiscTypeIdentifier { get; set; }
-#endif
 
         /// <summary>
         /// Disc Size/Class/Version
@@ -27,10 +23,6 @@ namespace SabreTools.Models.PIC
         /// DI Unit Format dependent contents
         /// </summary>
         /// <remarks>52 bytes for BD-ROM, 100 bytes for BD-R/RE</remarks>
-#if NET48
-        public byte[] FormatDependentContents { get; set; }
-#else
         public byte[]? FormatDependentContents { get; set; }
-#endif
     }
 }

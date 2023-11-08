@@ -39,11 +39,7 @@
         /// <summary>
         /// ASCII string that contains the name of the DLL.
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
 
         /// <summary>
         /// The RVA of the import address table. The contents of this table are identical

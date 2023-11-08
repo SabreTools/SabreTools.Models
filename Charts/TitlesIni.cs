@@ -10,20 +10,12 @@ namespace SabreTools.Models.Charts
         /// A space-separated list of .ini sections to include in the career.
         /// </summary>
         /// <remarks>sections</remarks>
-#if NET48
-        public string[] SectionList { get; set; }
-#else
         public string[]? SectionList { get; set; }
-#endif
 
         /// <summary>
         /// `name` - Display name of the tier.
         /// `unlock_id` - Name used for associating a song with this tier, and for checking unlock requirements.
         /// </summary>
-#if NET48
-        public Dictionary<string, (string Name, string UnlockId)> Sections { get; set; }
-#else
         public Dictionary<string, (string? Name, string? UnlockId)>? Sections { get; set; }
-#endif
     }
 }

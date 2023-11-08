@@ -29,10 +29,6 @@
         /// <summary>
         /// Disc information and emergency brake units
         /// </summary>
-#if NET48
-        public DiscInformationUnit[] Units { get; set; }
-#else
         public DiscInformationUnit?[]? Units { get; set; }
-#endif
     }
 }

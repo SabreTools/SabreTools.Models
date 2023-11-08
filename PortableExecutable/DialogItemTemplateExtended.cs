@@ -84,11 +84,7 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string ClassResource { get; set; }
-#else
         public string? ClassResource { get; set; }
-#endif
 
         /// <summary>
         /// The ordinal value of a predefined system class.
@@ -107,11 +103,7 @@
         /// If you specify character strings in the class and title arrays, you must use Unicode strings. Use the
         /// MultiByteToWideChar function to generate Unicode strings from ANSI strings.
         /// </remarks>
-#if NET48
-        public string TitleResource { get; set; }
-#else
         public string? TitleResource { get; set; }
-#endif
 
         /// <summary>
         /// An ordinal value of a resource, such as an icon, in an executable file
@@ -131,10 +123,6 @@
         /// When the system creates the control, it passes a pointer to this data in the lParam parameter of the
         /// WM_CREATE message that it sends to the control.
         /// </summary>
-#if NET48
-        public byte[] CreationData { get; set; }
-#else
         public byte[]? CreationData { get; set; }
-#endif
     }
 }

@@ -16,10 +16,6 @@ namespace SabreTools.Models.AACS
         /// first in a range of hosts being revoked, in the case of a non-zero
         /// Range value).
         /// </summary>
-#if NET48
-        public byte[] HostID { get; set; }
-#else
         public byte[]? HostID { get; set; }
-#endif
     }
 }

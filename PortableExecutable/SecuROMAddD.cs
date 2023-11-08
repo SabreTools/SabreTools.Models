@@ -27,20 +27,12 @@
         /// <summary>
         /// Version, always 8 bytes?
         /// </summary>
-#if NET48
-        public string Version { get; set; }
-#else
         public string? Version { get; set; }
-#endif
 
         /// <summary>
         /// Unknown (Build? Formatted as a string)
         /// </summary>
-#if NET48
-        public char[] Build { get; set; }
-#else
         public char[]? Build { get; set; }
-#endif
 
         /// <summary>
         /// Unknown (0x14h), Variable number of bytes before entry table
@@ -55,19 +47,11 @@
         /// "554900-001" in 4.84.76.7968
         /// "548520-001" in 4.85.07.0009
         /// </remarks>
-#if NET48
-        public byte[] Unknown14h { get; set; }
-#else
         public byte[]? Unknown14h { get; set; }
-#endif
 
         /// <summary>
         /// Entry table
         /// </summary>
-#if NET48
-        public SecuROMAddDEntry[] Entries { get; set; }
-#else
         public SecuROMAddDEntry?[]? Entries { get; set; }
-#endif
     }
 }

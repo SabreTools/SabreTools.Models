@@ -44,11 +44,7 @@ namespace SabreTools.Models.Compression.LZX
         /// Can use the direct memcpy function, as specified in [IEEE1003.1]
         /// </summary>
         /// <remarks>Encoded directly in the byte stream, not in the bitstream of byte-swapped 16-bit words</remarks>
-#if NET48
-        public byte[] RawDataBytes { get; set; }
-#else
         public byte[]? RawDataBytes { get; set; }
-#endif
 
         /// <summary>
         /// Only if uncompressed size is odd

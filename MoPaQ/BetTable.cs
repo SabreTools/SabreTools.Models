@@ -14,11 +14,7 @@
         /// <summary>
         /// 'BET\x1A'
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Version. Seems to be always 1
@@ -131,11 +127,7 @@
         /// Followed by array of file flags. Each entry is 32-bit size and its meaning is the same like
         /// </summary>
         /// <remarks>Size from <see cref="FlagCount"/></remarks>
-#if NET48
-        public uint[] FlagsArray { get; set; }
-#else
         public uint[]? FlagsArray { get; set; }
-#endif
 
         // File table. Size of each entry is taken from dwTableEntrySize.
         // Size of the table is (dwTableEntrySize * dwMaxFileCount), round up to 8.

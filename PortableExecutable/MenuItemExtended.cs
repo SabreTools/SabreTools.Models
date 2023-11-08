@@ -32,10 +32,6 @@
         /// A null-terminated Unicode string that contains the text for this menu item.
         /// There is no fixed limit on the size of this string.
         /// </summary>
-#if NET48
-        public string MenuText { get; set; }
-#else
         public string? MenuText { get; set; }
-#endif
     }
 }

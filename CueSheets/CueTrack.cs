@@ -27,65 +27,37 @@ namespace SabreTools.Models.CueSheets
         /// ISRC
         /// </summary>
         /// <remarks>12 characters in length</remarks>
-#if NET48
-        public string ISRC { get; set; }
-#else
         public string? ISRC { get; set; }
-#endif
 
         /// <summary>
         /// PERFORMER
         /// </summary>
-#if NET48
-        public string Performer { get; set; }
-#else
         public string? Performer { get; set; }
-#endif
 
         /// <summary>
         /// SONGWRITER
         /// </summary>
-#if NET48
-        public string Songwriter { get; set; }
-#else
         public string? Songwriter { get; set; }
-#endif
 
         /// <summary>
         /// TITLE
         /// </summary>
-#if NET48
-        public string Title { get; set; }
-#else
         public string? Title { get; set; }
-#endif
 
         /// <summary>
         /// PREGAP
         /// </summary>
-#if NET48
-        public PreGap PreGap { get; set; }
-#else
         public PreGap? PreGap { get; set; }
-#endif
 
         /// <summary>
         /// List of INDEX in TRACK
         /// </summary>
         /// <remarks>Must start with 0 or 1 and then sequential</remarks>
-#if NET48
-        public CueIndex[] Indices { get; set; }
-#else
         public CueIndex?[]? Indices { get; set; }
-#endif
 
         /// <summary>
         /// POSTGAP
         /// </summary>
-#if NET48
-        public PostGap PostGap { get; set; }
-#else
         public PostGap? PostGap { get; set; }
-#endif
     }
 }

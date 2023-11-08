@@ -9,19 +9,11 @@ namespace SabreTools.Models.SGA
         /// <summary>
         ///Header data
         /// </summary>
-#if NET48
-        public Header Header { get; set; }
-#else
         public Header? Header { get; set; }
-#endif
 
         /// <summary>
         /// Directory data
         /// </summary>
-#if NET48
-        public Directory Directory { get; set; }
-#else
         public Directory? Directory { get; set; }
-#endif
     }
 }

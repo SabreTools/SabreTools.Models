@@ -10,19 +10,11 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Huffman code lengths for the literal / length alphabet
         /// </summary>
-#if NET48
-        public virtual uint[] LiteralLengths { get; set; }
-#else
         public virtual uint[]? LiteralLengths { get; set; }
-#endif
 
         /// <summary>
         /// Huffman distance codes for the literal / length alphabet
         /// </summary>
-#if NET48
-        public virtual uint[] DistanceCodes { get; set; }
-#else
         public virtual uint[]? DistanceCodes { get; set; }
-#endif
     }
 }

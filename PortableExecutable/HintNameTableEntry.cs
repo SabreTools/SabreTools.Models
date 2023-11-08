@@ -18,10 +18,6 @@
         /// must be matched to the public name in the DLL. This string is case sensitive
         /// and terminated by a null byte.
         /// </summary>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
     }
 }

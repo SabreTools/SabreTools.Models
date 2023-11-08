@@ -11,11 +11,7 @@
         /// Contains the characters "M", "S", "C", and "F" (bytes 0x4D, 0x53, 0x43,
         /// 0x46). This field is used to ensure that the file is a cabinet (.cab) file.
         /// </summary>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Reserved field; MUST be set to 0 (zero).
@@ -111,11 +107,7 @@
         /// cbCFHeader field is non-zero, this field contains per-cabinet-file application information. This field
         /// is defined by the application, and is used for application-defined purposes.
         /// </summary>
-#if NET48
-        public byte[] ReservedData { get; set; }
-#else
         public byte[]? ReservedData { get; set; }
-#endif
 
         /// <summary>
         /// If the flags.cfhdrPREV_CABINET field is not set, this
@@ -127,11 +119,7 @@
         /// reported to begin in the "previous cabinet," the szCabinetPrev field would indicate the name of the
         /// cabinet to examine.
         /// </summary>
-#if NET48
-        public string CabinetPrev { get; set; }
-#else
         public string? CabinetPrev { get; set; }
-#endif
 
         /// <summary>
         /// If the flags.cfhdrPREV_CABINET field is not set, then this
@@ -140,11 +128,7 @@
         /// This string can be used when prompting the user to insert a disk. The string can contain up to 255
         /// bytes, plus the null byte.
         /// </summary>
-#if NET48
-        public string DiskPrev { get; set; }
-#else
         public string? DiskPrev { get; set; }
-#endif
 
         /// <summary>
         /// If the flags.cfhdrNEXT_CABINET field is not set, this
@@ -152,11 +136,7 @@
         /// cabinet file in a set. The string can contain up to 255 bytes, plus the null byte. Files that extend
         /// beyond the end of the current cabinet file are continued in the named cabinet file.
         /// </summary>
-#if NET48
-        public string CabinetNext { get; set; }
-#else
         public string? CabinetNext { get; set; }
-#endif
 
         /// <summary>
         /// If the flags.cfhdrNEXT_CABINET field is not set, this field is
@@ -165,10 +145,6 @@
         /// string can contain up to 255 bytes, plus the null byte. This string can be used when prompting the
         /// user to insert a disk.
         /// </summary>
-#if NET48
-        public string DiskNext { get; set; }
-#else
         public string? DiskNext { get; set; }
-#endif
     }
 }

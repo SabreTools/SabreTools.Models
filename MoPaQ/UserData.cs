@@ -12,11 +12,7 @@
         /// The user data signature
         /// </summary>
         /// <see cref="SignatureValue"/>
-#if NET48
-        public string Signature { get; set; }
-#else
         public string? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Maximum size of the user data

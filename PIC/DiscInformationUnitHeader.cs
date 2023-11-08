@@ -8,11 +8,7 @@ namespace SabreTools.Models.PIC
         /// Disc Information Identifier "DI"
         /// Emergency Brake Identifier "EB"
         /// </summary>
-#if NET48
-        public string DiscInformationIdentifier { get; set; }
-#else
         public string? DiscInformationIdentifier { get; set; }
-#endif
 
         /// <summary>
         /// Disc Information Format

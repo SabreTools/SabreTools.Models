@@ -6,11 +6,7 @@ namespace SabreTools.Models.PlayStation3
         /// <summary>
         /// "\0PSF"
         /// </summary>
-#if NET48
-        public byte[] Magic { get; set; }
-#else
         public byte[]? Magic { get; set; }
-#endif
 
         /// <summary>
         /// Version

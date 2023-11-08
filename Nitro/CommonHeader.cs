@@ -9,11 +9,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Game Title
         /// </summary>
-#if NET48
-        public string GameTitle { get; set; }
-#else
         public string? GameTitle { get; set; }
-#endif
 
         /// <summary>
         /// Gamecode
@@ -23,11 +19,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Makercode
         /// </summary>
-#if NET48
-        public string MakerCode { get; set; }
-#else
         public string? MakerCode { get; set; }
-#endif
 
         /// <summary>
         /// Unitcode
@@ -47,11 +39,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved1 { get; set; }
-#else
         public byte[]? Reserved1 { get; set; }
-#endif
 
         /// <summary>
         /// Game Revision (used by DSi titles)
@@ -186,11 +174,7 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Secure disable
         /// </summary>
-#if NET48
-        public byte[] SecureDisable { get; set; }
-#else
         public byte[]? SecureDisable { get; set; }
-#endif
 
         /// <summary>
         /// NTR region ROM size (excluding DSi area)
@@ -205,20 +189,12 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         ///Reserved (0x88, 0x8C, 0x90 = Unknown, used by DSi)
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// Nintendo Logo
         /// </summary>
-#if NET48
-        public byte[] NintendoLogo { get; set; }
-#else
         public byte[]? NintendoLogo { get; set; }
-#endif
 
         /// <summary>
         /// Nintendo Logo CRC
@@ -233,10 +209,6 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// Debugger reserved
         /// </summary>
-#if NET48
-        public byte[] DebuggerReserved { get; set; }
-#else
         public byte[]? DebuggerReserved { get; set; }
-#endif
     }
 }

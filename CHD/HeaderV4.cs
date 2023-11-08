@@ -36,28 +36,16 @@
         /// <summary>
         /// Combined raw+meta SHA1
         /// </summary>
-#if NET48
-        public byte[] SHA1 { get; set; } = new byte[20];
-#else
         public byte[]? SHA1 { get; set; } = new byte[20];
-#endif
 
         /// <summary>
         /// Combined raw+meta SHA1 of parent
         /// </summary>
-#if NET48
-        public byte[] ParentSHA1 { get; set; } = new byte[20];
-#else
         public byte[]? ParentSHA1 { get; set; } = new byte[20];
-#endif
 
         /// <summary>
         /// Raw data SHA1
         /// </summary>
-#if NET48
-        public byte[] RawSHA1 { get; set; } = new byte[20];
-#else
         public byte[]? RawSHA1 { get; set; } = new byte[20];
-#endif
     }
 }

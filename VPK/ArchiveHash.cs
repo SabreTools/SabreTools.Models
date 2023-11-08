@@ -12,10 +12,6 @@ namespace SabreTools.Models.VPK
         /// <summary>
         /// MD5
         /// </summary>
-#if NET48
-        public byte[] Hash { get; set; }
-#else
         public byte[]? Hash { get; set; }
-#endif
     }
 }

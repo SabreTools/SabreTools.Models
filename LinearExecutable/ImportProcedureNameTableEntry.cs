@@ -41,10 +41,6 @@
         /// This is a variable length string with it's length defined in bytes by
         /// the LEN field. The string is case sensitive and is not null terminated.
         /// </remarks>
-#if NET48
-        public string Name { get; set; }
-#else
         public string? Name { get; set; }
-#endif
     }
 }

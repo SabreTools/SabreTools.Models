@@ -16,10 +16,6 @@
         /// The FONTDIRENTRY structure for the specified font directly follows the DIRENTRY structure
         /// for that font.
         /// </summary>
-#if NET48
-        public FontDirEntry Entry { get; set; }
-#else
         public FontDirEntry? Entry { get; set; }
-#endif
     }
 }

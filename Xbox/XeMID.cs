@@ -22,11 +22,7 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// 2-character publisher identifier
         /// </summary>
-#if NET48
-        public string PublisherIdentifier { get; set; }
-#else
         public string? PublisherIdentifier { get; set; }
-#endif
 
         /// <summary>
         /// 1-character Platform disc is made for, 2 indicates Xbox 360
@@ -36,20 +32,12 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// 3-character Game ID
         /// </summary>
-#if NET48
-        public string GameID { get; set; }
-#else
         public string? GameID { get; set; }
-#endif
 
         /// <summary>
         /// 2-character Title-specific SKU
         /// </summary>
-#if NET48
-        public string SKU { get; set; }
-#else
         public string? SKU { get; set; }
-#endif
 
         /// <summary>
         /// 1-character Region identifier character
@@ -59,11 +47,7 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// 2-character Base version of executables, usually starts at 01
         /// </summary>
-#if NET48
-        public string BaseVersion { get; set; }
-#else
         public string? BaseVersion { get; set; }
-#endif
 
         /// <summary>
         /// 1-character Media subtype identifier
@@ -73,19 +57,11 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// 2-character Disc number stored in [disc number][total discs] format
         /// </summary>
-#if NET48
-        public string DiscNumberIdentifier { get; set; }
-#else
         public string? DiscNumberIdentifier { get; set; }
-#endif
 
         /// <summary>
         /// 8-hex-digit certification submission identifier; usually on test discs only
         /// </summary>
-#if NET48
-        public string CertificationSubmissionIdentifier { get; set; }
-#else
         public string? CertificationSubmissionIdentifier { get; set; }
-#endif
     }
 }

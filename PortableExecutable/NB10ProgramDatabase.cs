@@ -34,10 +34,6 @@
         /// Null-terminated name of the PDB file. It can also contain full
         /// or partial path to the file. 
         /// </summary>
-#if NET48
-        public string PdbFileName { get; set; }
-#else
         public string? PdbFileName { get; set; }
-#endif
     }
 }

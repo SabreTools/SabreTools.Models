@@ -26,29 +26,17 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Signature
         /// </summary>
-#if NET48
-        public byte[] Signature { get; set; }
-#else
         public byte[]? Signature { get; set; }
-#endif
 
         /// <summary>
         /// Padding
         /// </summary>
-#if NET48
-        public byte[] Padding1 { get; set; }
-#else
         public byte[]? Padding1 { get; set; }
-#endif
 
         /// <summary>
         /// Signature Issuer
         /// </summary>
-#if NET48
-        public string Issuer { get; set; }
-#else
         public string? Issuer { get; set; }
-#endif
 
         /// <summary>
         /// Version
@@ -103,11 +91,7 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved2 { get; set; }
-#else
         public byte[]? Reserved2 { get; set; }
-#endif
 
         /// <summary>
         /// SRL Flag
@@ -117,11 +101,7 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Reserved
         /// </summary>
-#if NET48
-        public byte[] Reserved3 { get; set; }
-#else
         public byte[]? Reserved3 { get; set; }
-#endif
 
         /// <summary>
         /// Access Rights
@@ -146,39 +126,23 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Padding
         /// </summary>
-#if NET48
-        public byte[] Padding2 { get; set; }
-#else
         public byte[]? Padding2 { get; set; }
-#endif
 
         /// <summary>
         /// SHA-256 Hash of the Content Info Records
         /// </summary>
-#if NET48
-        public byte[] SHA256HashContentInfoRecords { get; set; }
-#else
         public byte[]? SHA256HashContentInfoRecords { get; set; }
-#endif
 
         /// <summary>
         /// There are 64 of these records, usually only the first is used.
         /// </summary>
-#if NET48
-        public ContentInfoRecord[] ContentInfoRecords { get; set; }
-#else
         public ContentInfoRecord?[]? ContentInfoRecords { get; set; }
-#endif
 
         /// <summary>
         /// There is one of these for each content contained in this title.
         /// (Determined by "Content Count" in the TMD Header).
         /// </summary>
-#if NET48
-        public ContentChunkRecord[] ContentChunkRecords { get; set; }
-#else
         public ContentChunkRecord?[]? ContentChunkRecords { get; set; }
-#endif
 
         /// <summary>
         /// Certificate chain
@@ -186,10 +150,6 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/Title_metadata#Certificate_Chain
         /// </remarks>
-#if NET48
-        public Certificate[] CertificateChain { get; set; }
-#else
         public Certificate?[]? CertificateChain { get; set; }
-#endif
     }
 }

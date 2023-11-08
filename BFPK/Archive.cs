@@ -9,19 +9,11 @@
         /// <summary>
         /// Header
         /// </summary>
-#if NET48
-        public Header Header { get; set; }
-#else
         public Header? Header { get; set; }
-#endif
 
         /// <summary>
         /// Files
         /// </summary>
-#if NET48
-        public FileEntry[] Files { get; set; }
-#else
         public FileEntry?[]? Files { get; set; }
-#endif
     }
 }
