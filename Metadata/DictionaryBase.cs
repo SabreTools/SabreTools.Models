@@ -140,11 +140,7 @@ namespace SabreTools.Models.Metadata
         /// </summary>
         private bool ValidateKey(string key)
         {
-#if NET20 || NET35
-            if (key == null || string.IsNullOrEmpty(key.TrimEnd(' ')))
-#else
             if (string.IsNullOrWhiteSpace(key))
-#endif
                 return false;
             else if (!ContainsKey(key))
                 return false;
