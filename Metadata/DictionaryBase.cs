@@ -126,11 +126,11 @@ namespace SabreTools.Models.Metadata
 
             string? asString = Read<string>(key);
             if (asString != null)
-                return new string[] { asString };
+                return [asString];
 
             asString = this[key]!.ToString();
             if (asString != null)
-                return new string[] { asString };
+                return [asString];
 
             return null;
         }
@@ -140,7 +140,7 @@ namespace SabreTools.Models.Metadata
         /// </summary>
         private bool ValidateKey(string key)
         {
-            if (string.IsNullOrWhiteSpace(key))
+            if (string.IsNullOrEmpty(key))
                 return false;
             else if (!ContainsKey(key))
                 return false;
