@@ -27,6 +27,9 @@ namespace SabreTools.Models.OfflineList
         [XmlElement("releaseNumber")]
         public ReleaseNumber? ReleaseNumber { get; set; }
 
+        [XmlElement("imageNumber")]
+        public ImageNumber? ImageNumber { get; set; }
+
         [XmlElement("languageNumber")]
         public LanguageNumber? LanguageNumber { get; set; }
 
