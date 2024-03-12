@@ -21,7 +21,7 @@ namespace SabreTools.Models.SoftwareList
         public string? Status { get; set; }
 
         /// <remarks>(yes|no) "no"</remarks>
-        [XmlAttribute("writeable")]
+        [XmlAttribute("writable")]
         public string? Writeable { get; set; }
 
         #region DO NOT USE IN PRODUCTION
