@@ -46,7 +46,7 @@ namespace SabreTools.Models.OfflineList
         [XmlElement("comment")]
         public string? Comment { get; set; }
 
-        [XmlElement("duplicateId")]
+        [XmlElement("duplicateID")]
         public string? DuplicateID { get; set; }
 
         #region DO NOT USE IN PRODUCTION
