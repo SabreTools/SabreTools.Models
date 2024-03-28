@@ -7,7 +7,7 @@ namespace SabreTools.Models.Xbox
     /// Stored in a JSON file on the disc at /MSXC/Metadata/catalog.js
     /// TODO: Check for unknown fields or values in more catalog.js files
     /// </summary>
-    [JsonObject(MemberSerialization.OptIn, Description = "catalog.js")]
+    [JsonObject]
     public class Catalog
     {
         /// <summary>
@@ -34,7 +34,7 @@ namespace SabreTools.Models.Xbox
         /// Known Versions Present: 4.0
         /// </summary>
         [JsonProperty("discCount", NullValueHandling = NullValueHandling.Ignore)]
-        public int DiscCount { get; set; }
+        public int? DiscCount { get; set; }
 
         /// <summary>
         /// "discSetId":
