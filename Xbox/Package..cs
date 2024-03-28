@@ -106,7 +106,7 @@ namespace SabreTools.Models.Xbox
         /// List of paths to each image in MSXC/Metadata/<PackageName>/
         /// Known Versions Present: 2.0, 2.1, 4.0
         /// </summary>
-        [JsonProperty("size", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("images", NullValueHandling = NullValueHandling.Ignore)]
         public Image[]? Images { get; set; }
 
         /// <summary>
