@@ -58,13 +58,12 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// "launchPackage":
         /// Package name to use as launch package
-        /// Before 4.0, Package with ContentID filled
-        /// For 4.0 onwards, String rather than Package
+        /// Before 4.0, object=Package with only ContentID filled
+        /// For 4.0 onwards, object=String, representing filename
         /// Known Versions Present: 2.0, 4.0
         /// </summary>
         [JsonProperty("launchPackage", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(LaunchPackageJsonConverter))]
-        public string? LaunchPackage { get; set; }
+        public object? LaunchPackage { get; set; }
 
         /// <summary>
         /// "packages":
