@@ -80,6 +80,6 @@ namespace SabreTools.Models.Xbox
         /// Known Versions Present: 4.0
         /// </summary>
         [JsonProperty("siblings", NullValueHandling = NullValueHandling.Ignore)]
-        public string[]? Siblings { get; set; }
+        public string[][]? Siblings { get; set; }
     }
 }

@@ -148,7 +148,7 @@ namespace SabreTools.Models.Xbox
         /// Known Versions Present: 2.0, 2.1
         /// </summary>
         [JsonProperty("size", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Size { get; set; }
+        public long? Size { get; set; }
 
         /// <summary>
         /// "type":
