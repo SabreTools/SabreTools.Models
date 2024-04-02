@@ -70,7 +70,7 @@ namespace SabreTools.Models.Xbox
         /// Package details for each package on disc
         /// Known Versions Present: 2.1, 4.0
         /// </summary>
-        [JsonProperty("packages", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("packages")]
         public Package[]? Packages { get; set; }
 
         /// <summary>
