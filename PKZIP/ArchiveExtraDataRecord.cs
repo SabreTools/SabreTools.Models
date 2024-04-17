@@ -3,7 +3,7 @@ namespace SabreTools.Models.PKZIP
     /// <summary>
     /// Archive extra data record
     /// </summary>
-    /// <see href="https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.9.TXT"/> 
+    /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
     public class ArchiveExtraDataRecord
     {
         /// <summary>

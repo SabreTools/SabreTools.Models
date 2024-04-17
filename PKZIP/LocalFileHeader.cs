@@ -4,7 +4,7 @@ namespace SabreTools.Models.PKZIP
     /// PKZIP local file header
     /// </summary>
     /// <see href="https://petlibrary.tripod.com/ZIP.HTM"/> 
-    /// <see href="https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.9.TXT"/> 
+    /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
     public class LocalFileHeader
     {
         /// <summary>

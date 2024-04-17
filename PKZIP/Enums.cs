@@ -1,6 +1,6 @@
 using System;
 
-/// <see href="https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.9.TXT"/> 
+/// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
 namespace SabreTools.Models.PKZIP
 {
     public enum CompressionMethod : ushort
@@ -404,6 +404,11 @@ namespace SabreTools.Models.PKZIP
         Macintosh = 0x07C8,
 
         /// <summary>
+        /// Pixar USD header ID
+        /// </summary>
+        PixarUSD = 0x1986,
+
+        /// <summary>
         /// ZipIt Macintosh
         /// </summary>
         ZipItMacintosh = 0x2605,
@@ -444,6 +449,11 @@ namespace SabreTools.Models.PKZIP
         MVS = 0x470F,
 
         /// <summary>
+        /// THEOS (old?)
+        /// </summary>
+        THEOSold = 0x4854,
+
+        /// <summary>
         /// FWKCS MD5
         /// </summary>
         FWKCSMD5 = 0x4B46,
@@ -457,6 +467,11 @@ namespace SabreTools.Models.PKZIP
         /// Info-ZIP OpenVMS
         /// </summary>
         InfoZIPOpenVMS = 0x4D49,
+
+        /// <summary>
+        /// Macintosh Smartzip (??)
+        /// </summary>
+        MacintoshSmartzip = 0x4D63,
 
         /// <summary>
         /// Xceed original location extra field
@@ -494,19 +509,34 @@ namespace SabreTools.Models.PKZIP
         BeOSBeBox = 0x6542,
 
         /// <summary>
+        /// THEOS
+        /// </summary>
+        THEOS = 0x6854,
+
+        /// <summary>
         /// Info-ZIP Unicode Path Extra Field
         /// </summary>
         InfoZIPUnicodePath = 0x7075,
 
         /// <summary>
+        /// AtheOS/Syllable
+        /// </summary>
+        AtheOSSyllable = 0x7441,
+
+        /// <summary>
         /// ASi UNIX
         /// </summary>
-        ASiUnix = 0x756E,
+        ASiUNIX = 0x756E,
 
         /// <summary>
         /// Info-ZIP UNIX (new)
         /// </summary>
-        InfoZIPUnixNew = 0x7855,
+        InfoZIPUNIXNew = 0x7855,
+
+        /// <summary>
+        /// Info-ZIP UNIX (newer UID/GID)
+        /// </summary>
+        InfoZIPUNIXNewer = 0x7875,
 
         /// <summary>
         /// Data Stream Alignment (Apache Commons-Compress)
@@ -517,6 +547,21 @@ namespace SabreTools.Models.PKZIP
         /// Microsoft Open Packaging Growth Hint
         /// </summary>
         MicrosoftOpenPackagingGrowthHint = 0xA220,
+
+        /// <summary>
+        /// Java JAR file Extra Field Header ID
+        /// </summary>
+        JavaJAR = 0xCAFE,
+
+        /// <summary>
+        /// Android ZIP Alignment Extra Field
+        /// </summary>
+        AndroidZIPAlignment = 0xD935,
+
+        /// <summary>
+        /// Korean ZIP code page info
+        /// </summary>
+        KoreanZIPCodePage = 0xE57A,
 
         /// <summary>
         /// SMS/QDOS

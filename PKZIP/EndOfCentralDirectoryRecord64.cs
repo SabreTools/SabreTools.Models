@@ -3,7 +3,7 @@ namespace SabreTools.Models.PKZIP
     /// <summary>
     /// Zip64 end of central directory record
     /// </summary>
-    /// <see href="https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.9.TXT"/> 
+    /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
     public class EndOfCentralDirectoryRecord64
     {
         /// <summary>

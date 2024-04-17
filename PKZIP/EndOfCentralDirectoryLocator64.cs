@@ -3,7 +3,7 @@ namespace SabreTools.Models.PKZIP
     /// <summary>
     /// Zip64 end of central directory locator
     /// </summary>
-    /// <see href="https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.9.TXT"/> 
+    /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
     public class EndOfCentralDirectoryLocator64
     {
         /// <summary>
