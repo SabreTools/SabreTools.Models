@@ -3,6 +3,7 @@ namespace SabreTools.Models.PKZIP
     /// <summary>
     /// Represents a single ZIP/ZIP64 archive
     /// </summary>
+    /// <remarks>PKZIP archives are meant to be read from the end</remarks>
     public class Archive
     {
         #region Entries, Interleaved
