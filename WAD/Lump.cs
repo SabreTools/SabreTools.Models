@@ -1,22 +1,27 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.WAD
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/WADFile.h"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class Lump
     {
-        public uint Offset { get; set; }
+        public uint Offset;
 
-        public uint DiskLength { get; set; }
+        public uint DiskLength;
 
-        public uint Length { get; set; }
+        public uint Length;
 
-        public byte Type { get; set; }
+        public byte Type;
 
-        public byte Compression { get; set; }
+        public byte Compression;
 
-        public byte Padding0 { get; set; }
+        public byte Padding0;
 
-        public byte Padding1 { get; set; }
+        public byte Padding1;
 
-        public string? Name { get; set; }
+        /// <remarks>16 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 16)]
+        public string? Name;
     }
 }
