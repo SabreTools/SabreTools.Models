@@ -13,7 +13,7 @@
         /// indicates the end of the resource type and name string, also
         /// the end of the resource table.
         /// </summary>
-        public byte Length { get; set; }
+        public byte Length { get; set; } // TODO: Remove in lieu of AnsiBStr
 
         /// <summary>
         /// ASCII text of the type or name string.

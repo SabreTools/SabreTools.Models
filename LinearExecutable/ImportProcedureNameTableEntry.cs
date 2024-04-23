@@ -32,7 +32,7 @@
         /// linear EXE module and will be used in the future for parameter type
         /// checking.
         /// </remarks>
-        public byte Length { get; set; }
+        public byte Length { get; set; } // TODO: Remove in lieu of AnsiBStr
 
         /// <summary>
         /// ASCII String.

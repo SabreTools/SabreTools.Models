@@ -15,7 +15,7 @@
         /// Length of the name string that follows. A zero value indicates
         /// the end of the name table.
         /// </summary>
-        public byte Length { get; set; }
+        public byte Length { get; set; } // TODO: Remove in lieu of AnsiBStr
 
         /// <summary>
         /// ASCII text of the name string.

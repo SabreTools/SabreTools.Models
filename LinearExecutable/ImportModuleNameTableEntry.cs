@@ -24,7 +24,7 @@
         /// This defines the length of the string in bytes. The length of each
         /// ascii name string is limited to 127 characters.
         /// </remarks>
-        public byte Length { get; set; }
+        public byte Length { get; set; } // TODO: Remove in lieu of AnsiBStr
 
         /// <summary>
         /// ASCII String.

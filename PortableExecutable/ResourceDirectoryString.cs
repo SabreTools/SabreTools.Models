@@ -13,7 +13,7 @@
         /// <summary>
         /// The size of the string, not including length field itself.
         /// </summary>
-        public ushort Length { get; set; }
+        public ushort Length { get; set; } // TODO: Remove in lieu of BStr
 
         /// <summary>
         /// The variable-length Unicode string data, word-aligned.
