@@ -1,24 +1,32 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.XZP
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/XZPFile.h"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class Header
     {
-        public string? Signature { get; set; }
+        /// <summary>
+        /// "piZx"
+        /// </summary>
+        /// <remarks>4 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
+        public string? Signature;
 
-        public uint Version { get; set; }
+        public uint Version;
 
-        public uint PreloadDirectoryEntryCount { get; set; }
+        public uint PreloadDirectoryEntryCount;
 
-        public uint DirectoryEntryCount { get; set; }
+        public uint DirectoryEntryCount;
 
-        public uint PreloadBytes { get; set; }
+        public uint PreloadBytes;
 
-        public uint HeaderLength { get; set; }
+        public uint HeaderLength;
 
-        public uint DirectoryItemCount { get; set; }
+        public uint DirectoryItemCount;
 
-        public uint DirectoryItemOffset { get; set; }
+        public uint DirectoryItemOffset;
 
-        public uint DirectoryItemLength { get; set; }
+        public uint DirectoryItemLength;
     }
 }
