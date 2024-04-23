@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.Nitro
 {
     /// <summary>
@@ -6,28 +8,29 @@ namespace SabreTools.Models.Nitro
     /// point to the file system.
     /// </summary>
     /// <see href="https://github.com/Deijin27/RanseiLink/wiki/NDS-File-System"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class FolderAllocationTableEntry
     {
         /// <summary>
         /// Start offset of folder contents within Name List
         /// relative to start of NameTable
         /// </summary>
-        public uint StartOffset { get; set; }
+        public uint StartOffset;
 
         /// <summary>
         /// Index of first file within folder in File Allocation Table
         /// </summary>
-        public ushort FirstFileIndex { get; set; }
+        public ushort FirstFileIndex;
 
         /// <summary>
         /// Index of parent folder in current table; for root folder
         /// this holds the number of entries in the table
         /// </summary>
-        public byte ParentFolderIndex { get; set; }
+        public byte ParentFolderIndex;
 
         /// <summary>
         /// Unknown, always 0xF0 except for root folder
         /// </summary>
-        public byte Unknown { get; set; }
+        public byte Unknown;
     }
 }

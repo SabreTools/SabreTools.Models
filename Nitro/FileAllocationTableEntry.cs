@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.Nitro
 {
     /// <summary>
@@ -5,16 +7,17 @@ namespace SabreTools.Models.Nitro
     /// it's just a table of 8 byte entries
     /// </summary>
     /// <see href="https://github.com/Deijin27/RanseiLink/wiki/NDS-File-System"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class FileAllocationTableEntry
     {
         /// <summary>
         /// Start offset of file
         /// </summary>
-        public uint StartOffset { get; set; }
+        public uint StartOffset;
 
         /// <summary>
         /// End offset of file (after this is padding)
         /// </summary>
-        public uint EndOffset { get; set; }
+        public uint EndOffset;
     }
 }
