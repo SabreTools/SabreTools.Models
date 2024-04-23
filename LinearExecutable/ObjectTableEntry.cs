@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The object table contains information that describes each segment in
@@ -12,6 +14,7 @@
     /// </remarks>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ObjectTableEntry
     {
         /// <summary>
@@ -24,7 +27,7 @@
         /// file for the object. This memory size must also be large enough to
         /// contain all of the iterated data and uninitialized data in the EXE file. 
         /// </remarks>
-        public uint VirtualSegmentSize { get; set; }
+        public uint VirtualSegmentSize;
 
         /// <summary>
         /// Relocation Base Address.
@@ -34,12 +37,13 @@
         /// internal relocation fixups for the module have been removed, this is the
         /// address the object will be allocated at by the loader.
         /// </remarks>
-        public uint RelocationBaseAddress { get; set; }
+        public uint RelocationBaseAddress;
 
         /// <summary>
         /// Flag bits for the object.
         /// </summary>
-        public ObjectFlags ObjectFlags { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public ObjectFlags ObjectFlags;
 
         /// <summary>
         /// Object Page Table Index.
@@ -53,7 +57,7 @@
         /// other words the object table entries are sorted based on the object page table
         /// index value.
         /// </remarks>
-        public uint PageTableIndex { get; set; }
+        public uint PageTableIndex;
 
         /// <summary>
         /// # of object page table entries for this object.
@@ -69,11 +73,11 @@
         /// was neither a zero filled or invalid page, then the additional pages are treated
         /// as zero filled pages.
         /// </remarks>
-        public uint PageTableEntries { get; set; }
+        public uint PageTableEntries;
 
         /// <summary>
         /// Reserved for future use. Must be set to zero.
         /// </summary>
-        public uint Reserved { get; set; }
+        public uint Reserved;
     }
 }

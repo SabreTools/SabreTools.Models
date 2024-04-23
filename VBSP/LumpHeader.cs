@@ -1,16 +1,19 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.VBSP
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/VBSPFile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class LumpHeader
     {
-        public int LumpOffset { get; set; }
+        public int LumpOffset;
 
-        public int LumpID { get; set; }
+        public int LumpID;
 
-        public int LumpVersion { get; set; }
+        public int LumpVersion;
 
-        public int LumpLength { get; set; }
+        public int LumpLength;
 
-        public int MapRevision { get; set; }
+        public int MapRevision;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The resource table is an array of resource table entries. Each resource table
@@ -13,31 +15,33 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTableEntry
     {
         /// <summary>
         /// Resource type ID.
         /// </summary>
-        public ResourceTableEntryType TypeID { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public ResourceTableEntryType TypeID;
 
         /// <summary>
         /// An ID used as a name for the resource when referred to.
         /// </summary>
-        public ushort NameID { get; set; }
+        public ushort NameID;
 
         /// <summary>
         /// The number of bytes the resource consists of.
         /// </summary>
-        public uint ResourceSize { get; set; }
+        public uint ResourceSize;
 
         /// <summary>
         /// The number of the object which contains the resource.
         /// </summary>
-        public ushort ObjectNumber { get; set; }
+        public ushort ObjectNumber;
 
         /// <summary>
         /// The offset within the specified object where the resource begins.
         /// </summary>
-        public uint Offset { get; set; }
+        public uint Offset;
     }
 }

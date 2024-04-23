@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.InstallShieldCabinet
 {
     /// <see href="https://github.com/twogood/unshield/blob/main/lib/cabfile.h"/>
@@ -6,116 +8,118 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Offset to the descriptor strings
         /// </summary>
-        public uint StringsOffset { get; set; }
+        public uint StringsOffset;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved0 { get; set; }
+        public uint Reserved0;
 
         /// <summary>
         /// Offset to the component list
         /// </summary>
-        public uint ComponentListOffset { get; set; }
+        public uint ComponentListOffset;
 
         /// <summary>
         /// Offset to the file table
         /// </summary>
-        public uint FileTableOffset { get; set; }
+        public uint FileTableOffset;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved1 { get; set; }
+        public uint Reserved1;
 
         /// <summary>
         /// Size of the file table
         /// </summary>
-        public uint FileTableSize { get; set; }
+        public uint FileTableSize;
 
         /// <summary>
         /// Redundant size of the file table
         /// </summary>
-        public uint FileTableSize2 { get; set; }
+        public uint FileTableSize2;
 
         /// <summary>
         /// Number of directories
         /// </summary>
-        public ushort DirectoryCount { get; set; }
+        public ushort DirectoryCount;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved2 { get; set; }
+        public uint Reserved2;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved3 { get; set; }
+        public ushort Reserved3;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved4 { get; set; }
+        public uint Reserved4;
 
         /// <summary>
         /// Number of files
         /// </summary>
-        public uint FileCount { get; set; }
+        public uint FileCount;
 
         /// <summary>
         /// Redundant offset to the file table
         /// </summary>
-        public uint FileTableOffset2 { get; set; }
+        public uint FileTableOffset2;
 
         /// <summary>
         /// Number of component table infos
         /// </summary>
-        public ushort ComponentTableInfoCount { get; set; }
+        public ushort ComponentTableInfoCount;
 
         /// <summary>
         /// Offset to the component table
         /// </summary>
-        public uint ComponentTableOffset { get; set; }
+        public uint ComponentTableOffset;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved5 { get; set; }
+        public uint Reserved5;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved6 { get; set; }
+        public uint Reserved6;
 
         /// <summary>
         /// Offsets to the file groups
         /// </summary>
-        public uint[]? FileGroupOffsets { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 71)]
+        public uint[]? FileGroupOffsets;
 
         /// <summary>
         /// Offsets to the components
         /// </summary>
-        public uint[]? ComponentOffsets { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 71)]
+        public uint[]? ComponentOffsets;
 
         /// <summary>
         /// Offset to the setup types
         /// </summary>
-        public uint SetupTypesOffset { get; set; }
+        public uint SetupTypesOffset;
 
         /// <summary>
         /// Offset to the setup table
         /// </summary>
-        public uint SetupTableOffset { get; set; }
+        public uint SetupTableOffset;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved7 { get; set; }
+        public uint Reserved7;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved8 { get; set; }
+        public uint Reserved8;
     }
 }

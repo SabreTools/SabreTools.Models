@@ -1,61 +1,64 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.NCF
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/NCFFile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class Header
     {
         /// <summary>
         /// Always 0x00000001
         /// </summary>
-        public uint Dummy0 { get; set; }
+        public uint Dummy0;
 
         /// <summary>
         /// Always 0x00000002
         /// </summary>
-        public uint MajorVersion { get; set; }
+        public uint MajorVersion;
 
         /// <summary>
         /// NCF version number.
         /// </summary>
-        public uint MinorVersion { get; set; }
+        public uint MinorVersion;
 
         /// <summary>
         /// Cache ID
         /// </summary>
-        public uint CacheID { get; set; }
+        public uint CacheID;
 
         /// <summary>
         /// Last version played
         /// </summary>
-        public uint LastVersionPlayed { get; set; }
+        public uint LastVersionPlayed;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1 { get; set; }
+        public uint Dummy1;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy2 { get; set; }
+        public uint Dummy2;
 
         /// <summary>
         /// Total size of NCF file in bytes.
         /// </summary>
-        public uint FileSize { get; set; }
+        public uint FileSize;
 
         /// <summary>
         /// Size of each data block in bytes.
         /// </summary>
-        public uint BlockSize { get; set; }
+        public uint BlockSize;
 
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount { get; set; }
+        public uint BlockCount;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy3 { get; set; }
+        public uint Dummy3;
     }
 }

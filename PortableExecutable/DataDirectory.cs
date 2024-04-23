@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Each data directory gives the address and size of a table or string that Windows uses.
@@ -9,6 +11,7 @@
     /// that the sections that contain specific tables have specific names.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class DataDirectory
     {
         /// <summary>
@@ -16,11 +19,11 @@
         /// is the address of the table relative to the base address of the image when
         /// the table is loaded.
         /// </summary>
-        public uint VirtualAddress { get; set; }
+        public uint VirtualAddress;
 
         /// <summary>
         /// The second field gives the size in bytes.
         /// </summary>
-        public uint Size { get; set; }
+        public uint Size;
     }
 }

@@ -11,7 +11,7 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved { get; set; }
+        public ushort Reserved { get; set; }
 
         /// <summary>
         /// End address (last byte of last entry)

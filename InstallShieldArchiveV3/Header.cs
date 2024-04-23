@@ -1,50 +1,53 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.InstallShieldArchiveV3
 {
     /// <see href="https://github.com/wfr/unshieldv3/blob/master/ISArchiveV3.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public class Header
     {
-        public uint Signature1 { get; set; }
+        public uint Signature1;
 
-        public uint Signature2 { get; set; }
+        public uint Signature2;
 
-        public ushort Reserved0 { get; set; }
+        public ushort Reserved0;
 
-        public ushort IsMultivolume { get; set; }
+        public ushort IsMultivolume;
 
-        public ushort FileCount { get; set; }
+        public ushort FileCount;
 
-        public uint DateTime { get; set; }
+        public uint DateTime;
 
-        public uint CompressedSize { get; set; }
+        public uint CompressedSize;
 
-        public uint UncompressedSize { get; set; }
+        public uint UncompressedSize;
 
-        public uint Reserved1 { get; set; }
+        public uint Reserved1;
 
         /// <remarks>
         /// Set in first vol only, zero in subsequent vols
         /// </remarks>
-        public byte VolumeTotal { get; set; }
+        public byte VolumeTotal;
 
         /// <remarks>
         /// [1...n]
         /// </remarks>
-        public byte VolumeNumber { get; set; }
+        public byte VolumeNumber;
 
-        public byte Reserved2 { get; set; }
+        public byte Reserved2;
 
-        public uint SplitBeginAddress { get; set; }
+        public uint SplitBeginAddress;
 
-        public uint SplitEndAddress { get; set; }
+        public uint SplitEndAddress;
 
-        public uint TocAddress { get; set; }
+        public uint TocAddress;
 
-        public uint Reserved3 { get; set; }
+        public uint Reserved3;
 
-        public ushort DirCount { get; set; }
+        public ushort DirCount;
 
-        public uint Reserved4 { get; set; }
+        public uint Reserved4;
 
-        public uint Reserved5 { get; set; }
+        public uint Reserved5;
     }
 }

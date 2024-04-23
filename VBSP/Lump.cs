@@ -1,20 +1,24 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.VBSP
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/VBSPFile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class Lump
     {
-        public uint Offset { get; set; }
+        public uint Offset;
 
-        public uint Length { get; set; }
+        public uint Length;
 
         /// <summary>
         /// Default to zero.
         /// </summary>
-        public uint Version { get; set; }
+        public uint Version;
 
         /// <summary>
         /// Default to (char)0, (char)0, (char)0, (char)0.
         /// </summary>
-        public char[]? FourCC { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        public char[]? FourCC;
     }
 }

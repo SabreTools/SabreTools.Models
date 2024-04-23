@@ -1,76 +1,79 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.NCF
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/NCFFile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class DirectoryHeader
     {
         /// <summary>
         /// Always 0x00000004
         /// </summary>
-        public uint Dummy0 { get; set; }
+        public uint Dummy0;
 
         /// <summary>
         /// Cache ID.
         /// </summary>
-        public uint CacheID { get; set; }
+        public uint CacheID;
 
         /// <summary>
         /// NCF file version.
         /// </summary>
-        public uint LastVersionPlayed { get; set; }
+        public uint LastVersionPlayed;
 
         /// <summary>
         /// Number of items in the directory.
         /// </summary>
-        public uint ItemCount { get; set; }
+        public uint ItemCount;
 
         /// <summary>
         /// Number of files in the directory.
         /// </summary>
-        public uint FileCount { get; set; }
+        public uint FileCount;
 
         /// <summary>
         /// Always 0x00008000.  Data per checksum?
         /// </summary>
-        public uint ChecksumDataLength { get; set; }
+        public uint ChecksumDataLength;
 
         /// <summary>
         /// Size of lpNCFDirectoryEntries & lpNCFDirectoryNames & lpNCFDirectoryInfo1Entries & lpNCFDirectoryInfo2Entries & lpNCFDirectoryCopyEntries & lpNCFDirectoryLocalEntries in bytes.
         /// </summary>
-        public uint DirectorySize { get; set; }
+        public uint DirectorySize;
 
         /// <summary>
         /// Size of the directory names in bytes.
         /// </summary>
-        public uint NameSize { get; set; }
+        public uint NameSize;
 
         /// <summary>
         /// Number of Info1 entires.
         /// </summary>
-        public uint Info1Count { get; set; }
+        public uint Info1Count;
 
         /// <summary>
         /// Number of files to copy.
         /// </summary>
-        public uint CopyCount { get; set; }
+        public uint CopyCount;
 
         /// <summary>
         /// Number of files to keep local.
         /// </summary>
-        public uint LocalCount { get; set; }
+        public uint LocalCount;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1 { get; set; }
+        public uint Dummy1;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy2 { get; set; }
+        public uint Dummy2;
 
         /// <summary>
         /// Header checksum.
         /// </summary>
-        public uint Checksum { get; set; }
+        public uint Checksum;
     }
 }

@@ -1,9 +1,12 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.BMP
 {
     /// <summary>
     /// The BITMAPINFOHEADER structure contains information about the dimensions and
     /// color format of a device-independent bitmap (DIB).
     /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class BITMAPINFOHEADER
     {
         /// <summary>
@@ -11,12 +14,12 @@ namespace SabreTools.Models.BMP
         /// not include the size of the color table or the size of the color masks,
         /// if they are appended to the end of structure.
         /// </summary>
-        public uint Size { get; set; }
+        public uint Size;
 
         /// <summary>
         /// Specifies the width of the bitmap, in pixels.
         /// </summary>
-        public int Width { get; set; }
+        public int Width;
 
         /// <summary>
         /// Specifies the height of the bitmap, in pixels.
@@ -30,19 +33,19 @@ namespace SabreTools.Models.BMP
         ///   or negative biHeight.
         /// - For compressed formats, biHeight must be positive, regardless of image orientation.
         /// </summary>
-        public int Height { get; set; }
+        public int Height;
 
         /// <summary>
         /// Specifies the number of planes for the target device. This value must be set to 1.
         /// </summary>
-        public ushort Planes { get; set; }
+        public ushort Planes;
 
         /// <summary>
         /// Specifies the number of bits per pixel (bpp). For uncompressed formats, this value
         /// is the average number of bits per pixel. For compressed formats, this value is the
         /// implied bit depth of the uncompressed image, after the image has been decoded.
         /// </summary>
-        public ushort BitCount { get; set; }
+        public ushort BitCount;
 
         /// <summary>
         /// For compressed video and YUV formats, this member is a FOURCC code, specified as a
@@ -59,36 +62,36 @@ namespace SabreTools.Models.BMP
         /// If biCompression equals BI_BITFIELDS, the format is either RGB 555 or RGB 565. Use
         /// the subtype GUID in the AM_MEDIA_TYPE structure to determine the specific RGB type.
         /// </summary>
-        public uint Compression { get; set; }
+        public uint Compression;
 
         /// <summary>
         /// Specifies the size, in bytes, of the image. This can be set to 0 for uncompressed
         /// RGB bitmaps.
         /// </summary>
-        public uint SizeImage { get; set; }
+        public uint SizeImage;
 
         /// <summary>
         /// Specifies the horizontal resolution, in pixels per meter, of the target device for
         /// the bitmap.
         /// </summary>
-        public int XPelsPerMeter { get; set; }
+        public int XPelsPerMeter;
 
         /// <summary>
         /// Specifies the vertical resolution, in pixels per meter, of the target device for
         /// the bitmap.
         /// </summary>
-        public int YPelsPerMeter { get; set; }
+        public int YPelsPerMeter;
 
         /// <summary>
         /// Specifies the number of color indices in the color table that are actually used by
         /// the bitmap.
         /// </summary>
-        public uint ClrUsed { get; set; }
+        public uint ClrUsed;
 
         /// <summary>
         /// Specifies the number of color indices that are considered important for displaying
         /// the bitmap. If this value is zero, all colors are important.
         /// </summary>
-        public uint ClrImportant { get; set; }
+        public uint ClrImportant;
     }
 }

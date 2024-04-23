@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The `information block` in the LE header contains the linker version number,
@@ -10,6 +12,7 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class InformationBlock
     {
         /// <summary>
@@ -21,7 +24,8 @@
         /// The signature word is used by the loader to identify the EXE
         /// file as a valid 32-bit Linear Executable Module Format.
         /// </remarks>
-        public string? Signature { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
+        public string? Signature;
 
         /// <summary>
         /// Byte Ordering. 
@@ -29,7 +33,8 @@
         /// <remarks>
         /// This byte specifies the byte ordering for the linear EXE format.
         /// </remarks>
-        public ByteOrder ByteOrder { get; set; }
+        [MarshalAs(UnmanagedType.U1)]
+        public ByteOrder ByteOrder;
 
         /// <summary>
         /// Word Ordering.
@@ -37,7 +42,8 @@
         /// <remarks>
         /// This byte specifies the Word ordering for the linear EXE format.
         /// </remarks>
-        public WordOrder WordOrder { get; set; }
+        [MarshalAs(UnmanagedType.U1)]
+        public WordOrder WordOrder;
 
         /// <summary>
         /// Linear EXE Format Level.
@@ -49,7 +55,7 @@
         /// future EXE file versions so that an appropriate error message may be
         /// displayed if an attempt is made to load them. 
         /// </remarks>
-        public uint ExecutableFormatLevel { get; set; }
+        public uint ExecutableFormatLevel;
 
         /// <summary>
         /// Module CPU Type.
@@ -57,7 +63,8 @@
         /// <remarks>
         /// This field specifies the type of CPU required by this module to run.
         /// </remarks>
-        public CPUType CPUType { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public CPUType CPUType;
 
         /// <summary>
         /// Module OS Type.
@@ -65,7 +72,8 @@
         /// <remarks>
         /// This field specifies the type of Operating system required to run this module.
         /// </remarks>
-        public OperatingSystem ModuleOS { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public OperatingSystem ModuleOS;
 
         /// <summary>
         /// Module version
@@ -74,12 +82,13 @@
         /// This is useful for differentiating between revisions of dynamic linked modules.
         /// This value is specified at link time by the user. 
         /// </remarks>
-        public uint ModuleVersion { get; set; }
+        public uint ModuleVersion;
 
         /// <summary>
         /// Module type flags
         /// </summary>
-        public ModuleFlags ModuleTypeFlags { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public ModuleFlags ModuleTypeFlags;
 
         /// <summary>
         /// Number of pages in module.
@@ -94,7 +103,7 @@
         /// EXE module. This is used to determine the size of the page information tables
         /// in the linear EXE module. 
         /// </remarks>
-        public uint ModuleNumberPages { get; set; }
+        public uint ModuleNumberPages;
 
         /// <summary>
         /// The Object number to which the Entry Address is relative.
@@ -109,7 +118,7 @@
         /// is set, then the object to which this field refers must be a 32-bit object (i.e.,
         /// the Big/Default bit must be set in the object flags; see below).
         /// </remarks>
-        public uint InitialObjectCS { get; set; }
+        public uint InitialObjectCS;
 
         /// <summary>
         /// Entry Address of module.
@@ -118,7 +127,7 @@
         /// The Entry Address is the starting address for program modules and the library
         /// initialization and Library termination address for library modules. 
         /// </remarks>
-        public uint InitialEIP { get; set; }
+        public uint InitialEIP;
 
         /// <summary>
         /// The Object number to which the ESP is relative.
@@ -128,7 +137,7 @@
         /// nonzero value for a program module to be correctly loaded. This field is ignored
         /// for a library module. 
         /// </remarks>
-        public uint InitialObjectSS { get; set; }
+        public uint InitialObjectSS;
 
         /// <summary>
         /// Starting stack address of module.
@@ -138,7 +147,7 @@
         /// value in this field indicates that the stack pointer is to be initialized to the
         /// highest address/offset in the object. This field is ignored for a library module. 
         /// </remarks>
-        public uint InitialESP { get; set; }
+        public uint InitialESP;
 
         /// <summary>
         /// The size of one page for this system.
@@ -148,7 +157,7 @@
         /// For the initial version of this linear EXE format the page size is 4Kbytes.
         /// (The 4K page size is specified by a value of 4096 in this field.)
         /// </remarks>
-        public uint MemoryPageSize { get; set; }
+        public uint MemoryPageSize;
 
         /// <summary>
         /// The shift left bits for page offsets.
@@ -162,7 +171,7 @@
         /// 512 byte (disk sector) basis. The default value for this field is 12 (decimal),
         /// which give a 4096 byte alignment. All other offsets are byte aligned.
         /// </remarks>
-        public uint BytesOnLastPage { get; set; }
+        public uint BytesOnLastPage;
 
         /// <summary>
         /// Total size of the fixup information in bytes.
@@ -174,7 +183,7 @@
         /// - Import Module name Table
         /// - Import Procedure Name Table
         /// </remarks>
-        public uint FixupSectionSize { get; set; }
+        public uint FixupSectionSize;
 
         /// <summary>
         /// Checksum for fixup information.
@@ -185,7 +194,7 @@
         /// not always loaded into main memory with the 'loader section'. If the checksum
         /// feature is not implemented, then the linker will set these fields to zero.
         /// </remarks>
-        public uint FixupSectionChecksum { get; set; }
+        public uint FixupSectionChecksum;
 
         /// <summary>
         /// Size of memory resident tables.
@@ -195,7 +204,7 @@
         /// for the module, while the module is in use. This total size includes all
         /// tables from the Object Table down to and including the Per-Page Checksum Table.
         /// </remarks>
-        public uint LoaderSectionSize { get; set; }
+        public uint LoaderSectionSize;
 
         /// <summary>
         /// Checksum for loader section.
@@ -205,7 +214,7 @@
         /// If the checksum feature is not implemented, then the linker will set these fields
         /// to zero.
         /// </remarks>
-        public uint LoaderSectionChecksum { get; set; }
+        public uint LoaderSectionChecksum;
 
         /// <summary>
         /// Object Table offset.
@@ -213,7 +222,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectTableOffset { get; set; }
+        public uint ObjectTableOffset;
 
         /// <summary>
         /// Object Table Count.
@@ -221,7 +230,7 @@
         /// <remarks>
         /// This defines the number of entries in Object Table.
         /// </remarks>
-        public uint ObjectTableCount { get; set; }
+        public uint ObjectTableCount;
 
         /// <summary>
         /// Object Page Table offset
@@ -229,7 +238,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectPageMapOffset { get; set; }
+        public uint ObjectPageMapOffset;
 
         /// <summary>
         /// Object Iterated Pages offset.
@@ -237,7 +246,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ObjectIterateDataMapOffset { get; set; }
+        public uint ObjectIterateDataMapOffset;
 
         /// <summary>
         /// Resource Table offset
@@ -245,12 +254,12 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ResourceTableOffset { get; set; }
+        public uint ResourceTableOffset;
 
         /// <summary>
         /// Number of entries in Resource Table.
         /// </summary>
-        public uint ResourceTableCount { get; set; }
+        public uint ResourceTableCount;
 
         /// <summary>
         /// Resident Name Table offset.
@@ -258,7 +267,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ResidentNamesTableOffset { get; set; }
+        public uint ResidentNamesTableOffset;
 
         /// <summary>
         /// Entry Table offset.
@@ -266,7 +275,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint EntryTableOffset { get; set; }
+        public uint EntryTableOffset;
 
         /// <summary>
         /// Module Format Directives Table offset.
@@ -274,7 +283,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ModuleDirectivesTableOffset { get; set; }
+        public uint ModuleDirectivesTableOffset;
 
         /// <summary>
         /// Number of Module Format Directives in the Table.
@@ -283,7 +292,7 @@
         /// This field specifies the number of entries in the
         /// Module Format Directives Table.
         /// </remarks>
-        public uint ModuleDirectivesCount { get; set; }
+        public uint ModuleDirectivesCount;
 
         /// <summary>
         /// Fixup Page Table offset.
@@ -291,7 +300,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint FixupPageTableOffset { get; set; }
+        public uint FixupPageTableOffset;
 
         /// <summary>
         /// Fixup Record Table offset.
@@ -299,7 +308,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint FixupRecordTableOffset { get; set; }
+        public uint FixupRecordTableOffset;
 
         /// <summary>
         /// Import Module Name Table offset.
@@ -307,12 +316,12 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ImportedModulesNameTableOffset { get; set; }
+        public uint ImportedModulesNameTableOffset;
 
         /// <summary>
         /// The number of entries in the Import Module Name Table.
         /// </summary>
-        public uint ImportedModulesCount { get; set; }
+        public uint ImportedModulesCount;
 
         /// <summary>
         /// Import Procedure Name Table offset.
@@ -320,7 +329,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint ImportProcedureNameTableOffset { get; set; }
+        public uint ImportProcedureNameTableOffset;
 
         /// <summary>
         /// Per-page Checksum Table offset.
@@ -328,7 +337,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint PerPageChecksumTableOffset { get; set; }
+        public uint PerPageChecksumTableOffset;
 
         /// <summary>
         /// Data Pages Offset.
@@ -336,7 +345,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the EXE file.
         /// </remarks>
-        public uint DataPagesOffset { get; set; }
+        public uint DataPagesOffset;
 
         /// <summary>
         /// Number of Preload pages for this module.
@@ -345,7 +354,7 @@
         /// Note that OS/2 2.0 does not respect the preload of pages as specified
         /// in the executable file for performance reasons.
         /// </remarks>
-        public uint PreloadPageCount { get; set; }
+        public uint PreloadPageCount;
 
         /// <summary>
         /// Non-Resident Name Table offset.
@@ -353,12 +362,12 @@
         /// <remarks>
         /// This offset is relative to the beginning of the EXE file.
         /// </remarks>
-        public uint NonResidentNamesTableOffset { get; set; }
+        public uint NonResidentNamesTableOffset;
 
         /// <summary>
         /// Number of bytes in the Non-resident name table.
         /// </summary>
-        public uint NonResidentNamesTableLength { get; set; }
+        public uint NonResidentNamesTableLength;
 
         /// <summary>
         /// Non-Resident Name Table Checksum.
@@ -366,7 +375,7 @@
         /// <remarks>
         /// This is a cryptographic checksum of the Non-Resident Name Table.
         /// </remarks>
-        public uint NonResidentNamesTableChecksum { get; set; }
+        public uint NonResidentNamesTableChecksum;
 
         /// <summary>
         /// The Auto Data Segment Object number.
@@ -376,7 +385,7 @@
         /// This field is supported for 16-bit compatibility only and is not used by
         /// 32-bit modules.
         /// </remarks>
-        public uint AutomaticDataObject { get; set; }
+        public uint AutomaticDataObject;
 
         /// <summary>
         /// Debug Information offset.
@@ -384,7 +393,7 @@
         /// <remarks>
         /// This offset is relative to the beginning of the linear EXE header.
         /// </remarks>
-        public uint DebugInformationOffset { get; set; }
+        public uint DebugInformationOffset;
 
         /// <summary>
         /// Debug Information length.
@@ -392,7 +401,7 @@
         /// <remarks>
         /// The length of the debug information in bytes.
         /// </remarks>
-        public uint DebugInformationLength { get; set; }
+        public uint DebugInformationLength;
 
         /// <summary>
         /// Instance pages in preload section.
@@ -400,7 +409,7 @@
         /// <remarks>
         /// The number of instance data pages found in the preload section.
         /// </remarks>
-        public uint PreloadInstancePagesNumber { get; set; }
+        public uint PreloadInstancePagesNumber;
 
         /// <summary>
         /// Instance pages in demand section.
@@ -408,7 +417,7 @@
         /// <remarks>
         /// The number of instance data pages found in the demand section.
         /// </remarks>
-        public uint DemandInstancePagesNumber { get; set; }
+        public uint DemandInstancePagesNumber;
 
         /// <summary>
         /// Heap size added to the Auto DS Object.
@@ -418,6 +427,6 @@
         /// by the loader. This field is supported for 16-bit compatibility only and
         /// is not used by 32-bit modules.
         /// </remarks>
-        public uint ExtraHeapAllocation { get; set; }
+        public uint ExtraHeapAllocation;
     }
 }

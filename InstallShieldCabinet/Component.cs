@@ -33,7 +33,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved0 { get; set; }
+        public ushort Reserved0 { get; set; }
 
         /// <summary>
         /// Reserved offset
@@ -78,6 +78,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+        /// <remarks>32 bytes</remarks>
         public byte[]? Reserved1 { get; set; }
 
         /// <summary>
@@ -93,11 +94,13 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
+        /// <remarks>28 bytes</remarks>
         public byte[]? Reserved2 { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
+        /// <remarks>2 bytes (<= v5), 1 byte (> v5)</remarks>
         public byte[]? Reserved3 { get; set; }
 
         /// <summary>

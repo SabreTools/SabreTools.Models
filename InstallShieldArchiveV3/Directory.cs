@@ -1,10 +1,14 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.InstallShieldArchiveV3
 {
     /// <see href="https://github.com/wfr/unshieldv3/blob/master/ISArchiveV3.cpp"/>
+    [StructLayout(LayoutKind.Sequential)]
     public class Directory
     {
-        public string? Name { get; set; }
+        [MarshalAs(UnmanagedType.BStr)]
+        public string? Name;
 
-        public ushort FileCount { get; set; }
+        public ushort FileCount;
     }
 }

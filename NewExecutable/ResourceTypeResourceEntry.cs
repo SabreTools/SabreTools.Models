@@ -1,10 +1,13 @@
-﻿namespace SabreTools.Models.NewExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// A table of resources for this type follows. The following is
     /// the format of each resource (8 bytes each):
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeResourceEntry
     {
         /// <summary>
@@ -13,17 +16,18 @@
         /// of the alignment shift count value specified at
         /// beginning of the resource table.
         /// </summary>
-        public ushort Offset { get; set; }
+        public ushort Offset;
 
         /// <summary>
         /// Length of the resource in the file (in bytes).
         /// </summary>
-        public ushort Length { get; set; }
+        public ushort Length;
 
         /// <summary>
         /// Flag word.
         /// </summary>
-        public ResourceTypeResourceFlag FlagWord { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public ResourceTypeResourceFlag FlagWord;
 
         /// <summary>
         /// Resource ID. This is an integer type if the high-order
@@ -31,11 +35,11 @@
         /// resource string, the offset is relative to the
         /// beginning of the resource table.
         /// </summary>
-        public ushort ResourceID { get; set; }
+        public ushort ResourceID;
 
         /// <summary>
         /// Reserved.
         /// </summary>
-        public uint Reserved { get; set; }
+        public uint Reserved;
     }
 }

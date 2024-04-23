@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// The delay-load directory table is the counterpart to the import directory
@@ -6,6 +8,7 @@
     /// the optional header data directories list (offset 200).
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class DelayLoadDirectoryTable
     {
         /// <summary>
@@ -17,7 +20,7 @@
         /// indicating the presence of new fields, or it can be used to indicate
         /// behaviors to the delay or unload helper functions.
         /// </remarks>
-        public uint Attributes { get; set; }
+        public uint Attributes;
 
         /// <summary>
         /// The RVA of the name of the DLL to be loaded. The name resides in the
@@ -27,7 +30,7 @@
         /// The name of the DLL to be delay-loaded resides in the read-only data
         /// section of the image. It is referenced through the szName field.
         /// </remarks>
-        public uint Name { get; set; }
+        public uint Name;
 
         /// <summary>
         /// The RVA of the module handle (in the data section of the image) of the DLL
@@ -39,7 +42,7 @@
         /// The phmod field points to the handle. The supplied delay-load helper uses
         /// this location to store the handle to the loaded DLL.
         /// </remarks>
-        public uint ModuleHandle { get; set; }
+        public uint ModuleHandle;
 
         /// <summary>
         /// The RVA of the delay-load import address table.
@@ -51,7 +54,7 @@
         /// the calling loop. The function pointers are accessed by using the expression
         /// pINT->u1.Function.
         /// </remarks>
-        public uint DelayImportAddressTable { get; set; }
+        public uint DelayImportAddressTable;
 
         /// <summary>
         /// The RVA of the delay-load name table, which contains the names of the imports
@@ -63,7 +66,7 @@
         /// in the IAT. They consist of the same structures as the standard INT and are
         /// accessed by using the expression pINT->u1.AddressOfData->Name[0].
         /// </remarks>
-        public uint DelayImportNameTable { get; set; }
+        public uint DelayImportNameTable;
 
         /// <summary>
         /// The RVA of the bound delay-load address table, if it exists.
@@ -73,7 +76,7 @@
         /// IMAGE_THUNK_DATA items that is used along with the timestamp field of the
         /// delay-load directory table by a post-process binding phase.
         /// </remarks>
-        public uint BoundDelayImportTable { get; set; }
+        public uint BoundDelayImportTable;
 
         /// <summary>
         /// The RVA of the unload delay-load address table, if it exists. This is an exact
@@ -89,7 +92,7 @@
         /// On the unload request, the library can be freed, the *phmod cleared, and the
         /// UIAT written over the IAT to restore everything to its preload state.
         /// </remarks>
-        public uint UnloadDelayImportTable { get; set; }
+        public uint UnloadDelayImportTable;
 
         /// <summary>
         /// The timestamp of the DLL to which this image has been bound.
@@ -99,6 +102,6 @@
         /// IMAGE_THUNK_DATA items that is used along with the timestamp field of the
         /// delay-load directory table by a post-process binding phase.
         /// </remarks>
-        public uint TimeStamp { get; set; }
+        public uint TimeStamp;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.NewExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.NewExecutable
 {
     /// <summary>
     /// The segment table contains an entry for each segment in the executable
@@ -7,6 +9,7 @@
     /// The following is the structure of a segment table entry.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class SegmentTableEntry
     {
         /// <summary>
@@ -14,22 +17,23 @@
         /// data, relative to the beginning of the file. Zero means no
         /// file data.
         /// </summary>
-        public ushort Offset { get; set; }
+        public ushort Offset;
 
         /// <summary>
         /// Length of the segment in the file, in bytes. Zero means 64K.
         /// </summary>
-        public ushort Length { get; set; }
+        public ushort Length;
 
         /// <summary>
         /// Flag word.
         /// </summary>
-        public SegmentTableEntryFlag FlagWord { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public SegmentTableEntryFlag FlagWord;
 
         /// <summary>
         /// Minimum allocation size of the segment, in bytes. Total size
         /// of the segment. Zero means 64K.
         /// </summary>
-        public ushort MinimumAllocationSize { get; set; }
+        public ushort MinimumAllocationSize;
     }
 }

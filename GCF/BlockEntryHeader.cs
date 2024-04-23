@@ -1,46 +1,49 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.GCF
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/GCFFile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class BlockEntryHeader
     {
         /// <summary>
         /// Number of data blocks.
         /// </summary>
-        public uint BlockCount { get; set; }
+        public uint BlockCount;
 
         /// <summary>
         /// Number of data blocks that point to data.
         /// </summary>
-        public uint BlocksUsed { get; set; }
+        public uint BlocksUsed;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy0 { get; set; }
+        public uint Dummy0;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy1 { get; set; }
+        public uint Dummy1;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy2 { get; set; }
+        public uint Dummy2;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy3 { get; set; }
+        public uint Dummy3;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public uint Dummy4 { get; set; }
+        public uint Dummy4;
 
         /// <summary>
         /// Header checksum.
         /// </summary>
-        public uint Checksum { get; set; }
+        public uint Checksum;
     }
 }

@@ -7,10 +7,6 @@ namespace SabreTools.Models.PIC
     {
         /// <summary>
         /// Disc Type Identifier
-        /// = "BDO" for BD-ROM
-        /// = "BDU" for BD-ROM Ultra
-        /// = "BDW" for BD-RE
-        /// = "BDR" for BD-R
         /// </summary>
         public string? DiscTypeIdentifier { get; set; }
 

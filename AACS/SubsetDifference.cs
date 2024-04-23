@@ -1,6 +1,9 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.AACS
 {
     /// <see href="https://aacsla.com/wp-content/uploads/2019/02/AACS_Spec_Common_Final_0953.pdf"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class SubsetDifference
     {
         /// <summary>
@@ -9,12 +12,12 @@ namespace SabreTools.Models.AACS
         /// the mask. For example, the value 0x01 denotes a mask of
         /// 0xFFFFFFFE; value 0x0A denotes a mask of 0xFFFFFC00.
         /// </summary>
-        public byte Mask { get; set; }
+        public byte Mask;
 
         /// <summary>
         /// The last 4 bytes are the uv number, most significant
         /// byte first.
         /// </summary>
-        public uint Number { get; set; }
+        public uint Number;
     }
 }

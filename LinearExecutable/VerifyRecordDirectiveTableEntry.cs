@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Verify Record Directive Table is an optional table. It maintains a record
@@ -9,6 +11,7 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class VerifyRecordDirectiveTableEntry
     {
         /// <summary>
@@ -19,7 +22,7 @@
         /// directive table. This is equal to the number of modules referenced by
         /// this module.
         /// </remarks>
-        public ushort EntryCount { get; set; }
+        public ushort EntryCount;
 
         /// <summary>
         /// Ordinal index into the Import Module Name Table.
@@ -28,7 +31,7 @@
         /// This value is an ordered index in to the Import Module Name Table for
         /// the referenced module.
         /// </remarks>
-        public ushort OrdinalIndex { get; set; }
+        public ushort OrdinalIndex;
 
         /// <summary>
         /// Module Version.
@@ -41,7 +44,7 @@
         /// number in a module to be incremented anytime the entry point offsets
         /// change.
         /// </remarks>
-        public ushort Version { get; set; }
+        public ushort Version;
 
         /// <summary>
         /// Module # of Object Entries.
@@ -50,7 +53,7 @@
         /// This field is used to identify the number of object verify entries
         /// that follow for the referenced module.
         /// </remarks>
-        public ushort ObjectEntriesCount { get; set; }
+        public ushort ObjectEntriesCount;
 
         /// <summary>
         /// Object # in Module.
@@ -59,7 +62,7 @@
         /// This field specifies the object number in the referenced module that
         /// is being verified.
         /// </remarks>
-        public ushort ObjectNumberInModule { get; set; }
+        public ushort ObjectNumberInModule;
 
         /// <summary>
         /// Object load base address.
@@ -68,7 +71,7 @@
         /// This is the address that the object was loaded at when the fixups were
         /// performed.
         /// </remarks>
-        public ushort ObjectLoadBaseAddress { get; set; }
+        public ushort ObjectLoadBaseAddress;
 
         /// <summary>
         /// Object virtual address size.
@@ -77,6 +80,6 @@
         /// This field specifies the total amount of virtual memory required for
         /// this object.
         /// </remarks>
-        public ushort ObjectVirtualAddressSize { get; set; }
+        public ushort ObjectVirtualAddressSize;
     }
 }

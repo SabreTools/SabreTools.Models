@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Contains information about the resource header itself and the data specific to
@@ -7,6 +9,7 @@
     /// explanation only; it is not present in any standard header file.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/resourceheader"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceHeader
     {
         /// <summary>
@@ -14,12 +17,12 @@
         /// particular resource. It does not include any file padding between this
         /// resource and any resource that follows it in the resource file.
         /// </summary>
-        public uint DataSize { get; set; }
+        public uint DataSize;
 
         /// <summary>
         /// The size, in bytes, of the resource header data that follows.
         /// </summary>
-        public uint HeaderSize { get; set; }
+        public uint HeaderSize;
 
         /// <summary>
         /// The resource type. The TYPE member can either be a numeric value or a
@@ -32,7 +35,8 @@
         /// 
         /// Values less than 256 are reserved for system use.
         /// </summary>
-        public ResourceType ResourceType { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public ResourceType ResourceType;
 
         /// <summary>
         /// A name that identifies the particular resource. The NAME member, like the TYPE
@@ -44,13 +48,13 @@
         /// members because they contain WORD data. However, you may need to add a WORD of
         /// padding after the NAME member to align the rest of the header on DWORD boundaries.
         /// </summary>
-        public uint Name { get; set; }
+        public uint Name;
 
         /// <summary>
         /// A predefined resource data version. This will determine which version of the
         /// resource data the application should use.
         /// </summary>
-        public uint DataVersion { get; set; }
+        public uint DataVersion;
 
         /// <summary>
         /// A set of attribute flags that can describe the state of the resource. Modifiers
@@ -62,7 +66,8 @@
         /// ignored. Resources are loaded when the corresponding module is loaded, and are
         /// freed when the module is unloaded.
         /// </summary>
-        public MemoryFlags MemoryFlags { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public MemoryFlags MemoryFlags;
 
         /// <summary>
         /// The language for the resource or set of resources. Set the value for this member
@@ -75,20 +80,20 @@
         /// the strings within the resources, you will need to specify a LanguageId for each
         /// one.
         /// </summary>
-        public ushort LanguageId { get; set; }
+        public ushort LanguageId;
 
         /// <summary>
         /// A user-defined version number for the resource data that tools can use to read and
         /// write resource files. Set this value with the optional VERSION resource definition
         /// statement.
         /// </summary>
-        public uint Version { get; set; }
+        public uint Version;
 
         /// <summary>
         /// Specifies user-defined information about the resource that tools can use to read and
         /// write resource files. Set this value with the optional CHARACTERISTICS resource
         /// definition statement.
         /// </summary>
-        public uint Characteristics { get; set; }
+        public uint Characteristics;
     }
 }

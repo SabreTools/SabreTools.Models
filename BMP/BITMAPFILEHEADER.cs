@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.BMP
 {
     /// <summary>
@@ -5,31 +7,32 @@ namespace SabreTools.Models.BMP
     /// and layout of a file that contains a DIB.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class BITMAPFILEHEADER
     {
         /// <summary>
         /// The file type; must be BM.
         /// </summary>
-        public ushort Type { get; set; }
+        public ushort Type;
 
         /// <summary>
         /// The size, in bytes, of the bitmap file.
         /// </summary>
-        public uint Size { get; set; }
+        public uint Size;
 
         /// <summary>
         /// Reserved; must be zero.
         /// </summary>
-        public ushort Reserved1 { get; set; }
+        public ushort Reserved1;
 
         /// <summary>
         /// Reserved; must be zero.
         /// </summary>
-        public ushort Reserved2 { get; set; }
+        public ushort Reserved2;
 
         /// <summary>
         /// The offset, in bytes, from the beginning of the BITMAPFILEHEADER structure to the bitmap bits.
         /// </summary>
-        public uint OffBits { get; set; }
+        public uint OffBits;
     }
 }

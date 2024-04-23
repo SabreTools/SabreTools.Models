@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Object page table provides information about a logical page in an object.
@@ -13,6 +15,7 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ObjectPageMapEntry
     {
         /// <summary>
@@ -35,7 +38,7 @@
         /// The logical page number (Object Page Table index), is used to index the Fixup
         /// Page Table to find any fixups associated with the logical page. 
         /// </remarks>
-        public uint PageDataOffset { get; set; }
+        public uint PageDataOffset;
 
         /// <summary>
         /// Number of bytes of data for this page.
@@ -47,11 +50,12 @@
         /// bytes are to be filled with zeros. If the FLAGS field indicates an Iterated Data
         /// Page, the iterated data records will completely fill out the remainder. 
         /// </remarks>
-        public ushort DataSize { get; set; }
+        public ushort DataSize;
 
         /// <summary>
         /// Attributes specifying characteristics of this logical page.
         /// </summary>
-        public ObjectPageFlags Flags { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public ObjectPageFlags Flags;
     }
 }

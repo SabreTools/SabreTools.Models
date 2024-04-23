@@ -1,31 +1,34 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.DVD
 {
     /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo.html"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class CellAddressTableEntry
     {
         /// <summary>
         /// VOBidn
         /// </summary>
-        public ushort VOBIdentity { get; set; }
+        public ushort VOBIdentity;
 
         /// <summary>
         /// CELLidn
         /// </summary>
-        public byte CellIdentity { get; set; }
+        public byte CellIdentity;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte Reserved { get; set; }
+        public byte Reserved;
 
         /// <summary>
         /// Starting sector within VOB
         /// </summary>
-        public uint StartingSectorWithinVOB { get; set; }
+        public uint StartingSectorWithinVOB;
 
         /// <summary>
         /// Ending sector within VOB
         /// </summary>
-        public uint EndingSectorWithinVOB { get; set; }
+        public uint EndingSectorWithinVOB;
     }
 }

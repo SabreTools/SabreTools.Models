@@ -1,32 +1,37 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.InstallShieldArchiveV3
 {
     /// <see href="https://github.com/wfr/unshieldv3/blob/master/ISArchiveV3.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public class File
     {
-        public byte VolumeEnd { get; set; }
+        public byte VolumeEnd;
 
-        public ushort Index { get; set; }
+        public ushort Index;
 
-        public uint UncompressedSize { get; set; }
+        public uint UncompressedSize;
 
-        public uint CompressedSize { get; set; }
+        public uint CompressedSize;
 
-        public uint Offset { get; set; }
+        public uint Offset;
 
-        public uint DateTime { get; set; }
+        public uint DateTime;
 
-        public uint Reserved0 { get; set; }
+        public uint Reserved0;
 
-        public ushort ChunkSize { get; set; }
+        public ushort ChunkSize;
 
-        public Attributes Attrib { get; set; }
+        [MarshalAs(UnmanagedType.U1)]
+        public Attributes Attrib;
 
-        public byte IsSplit { get; set; }
+        public byte IsSplit;
 
-        public byte Reserved1 { get; set; }
+        public byte Reserved1;
 
-        public byte VolumeStart { get; set; }
+        public byte VolumeStart;
 
-        public string? Name { get; set; }
+        [MarshalAs(UnmanagedType.AnsiBStr)]
+        public string? Name;
     }
 }

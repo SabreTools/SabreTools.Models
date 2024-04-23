@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Image files contain an optional debug directory that indicates what form
@@ -17,47 +19,49 @@
     /// RVA is its address.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class DebugDirectoryEntry
     {
         /// <summary>
         /// Reserved, must be zero. 
         /// </summary>
-        public uint Characteristics { get; set; }
+        public uint Characteristics;
 
         /// <summary>
         /// The time and date that the debug data was created.
         /// </summary>
-        public uint TimeDateStamp { get; set; }
+        public uint TimeDateStamp;
 
         /// <summary>
         /// The major version number of the debug data format.
         /// </summary>
-        public ushort MajorVersion { get; set; }
+        public ushort MajorVersion;
 
         /// <summary>
         /// The minor version number of the debug data format.
         /// </summary>
-        public ushort MinorVersion { get; set; }
+        public ushort MinorVersion;
 
         /// <summary>
         /// The format of debugging information. This field enables support
         /// of multiple debuggers.
         /// </summary>
-        public DebugType DebugType { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public DebugType DebugType;
 
         /// <summary>
         /// The size of the debug data (not including the debug directory itself).
         /// </summary>
-        public uint SizeOfData { get; set; }
+        public uint SizeOfData;
 
         /// <summary>
         /// The address of the debug data when loaded, relative to the image base.
         /// </summary>
-        public uint AddressOfRawData { get; set; }
+        public uint AddressOfRawData;
 
         /// <summary>
         /// The file pointer to the debug data.
         /// </summary>
-        public uint PointerToRawData { get; set; }
+        public uint PointerToRawData;
     }
 }

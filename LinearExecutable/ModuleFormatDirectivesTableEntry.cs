@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The Module Format Directives Table is an optional table that allows additional
@@ -13,6 +15,7 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ModuleFormatDirectivesTableEntry
     {
         /// <summary>
@@ -22,7 +25,8 @@
         /// The directive number specifies the type of directive defined. This can be
         /// used to determine the format of the information in the directive data.
         /// </remarks>
-        public DirectiveNumber DirectiveNumber { get; set; }
+        [MarshalAs(UnmanagedType.U2)]
+        public DirectiveNumber DirectiveNumber;
 
         /// <summary>
         /// Directive data length.
@@ -30,7 +34,7 @@
         /// <remarks>
         /// This specifies the length in byte of the directive data for this directive number.
         /// </remarks>
-        public ushort DirectiveDataLength { get; set; }
+        public ushort DirectiveDataLength;
 
         /// <summary>
         /// Directive data offset.
@@ -40,6 +44,6 @@
         /// to beginning of linear EXE header for a resident table, and relative to the
         /// beginning of the EXE file for non-resident tables.
         /// </remarks>
-        public uint DirectiveDataOffset { get; set; }
+        public uint DirectiveDataOffset;
     }
 }

@@ -1,33 +1,37 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.PlayStation3
 {
     /// <see href="https://psdevwiki.com/ps3/PARAM.SFO"/> 
+    [StructLayout(LayoutKind.Sequential)]
     public class SFOIndexTableEntry
     {
         /// <summary>
         /// Key relative offset.
         /// (Absolute start offset of key) - (Absolute start offset of key_table)
         /// </summary>
-        public ushort KeyOffset { get; set; }
+        public ushort KeyOffset;
 
         /// <summary>
         /// Data type
         /// </summary>
-        public DataFormat DataFormat { get; set; } 
+        [MarshalAs(UnmanagedType.U2)]
+        public DataFormat DataFormat; 
 
         /// <summary>
         /// Data used length
         /// </summary>
-        public uint DataLength { get; set; } 
+        public uint DataLength; 
 
         /// <summary>
         /// Data total length. TITLE_ID is always = 16 bytes
         /// </summary>
-        public uint DataMaxLength { get; set; }
+        public uint DataMaxLength;
 
         /// <summary>
         /// Data relative offset.
         /// (Absolute start offset of data_1) - (Absolute start offset of data_table)
         /// </summary>
-        public uint DataOffset { get; set; }
+        public uint DataOffset;
     }
 }

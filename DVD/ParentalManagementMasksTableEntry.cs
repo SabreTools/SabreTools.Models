@@ -1,21 +1,24 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.DVD
 {
     /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo_vmg.html"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ParentalManagementMasksTableEntry
     {
         /// <summary>
         /// Country code
         /// </summary>
-        public ushort CountryCode { get; set; }
+        public ushort CountryCode;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved { get; set; }
+        public ushort Reserved;
 
         /// <summary>
         /// Offset to PTL_MAIT
         /// </summary>
-        public uint Offset { get; set; }
+        public uint Offset;
     }
 }

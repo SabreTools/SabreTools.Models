@@ -42,7 +42,7 @@ namespace SabreTools.Models.PortableExecutable
         LastEntry = 0x80,
     }
 
-    public enum BaseRelocationTypes : uint
+    public enum BaseRelocationTypes : ushort
     {
         /// <summary>
         /// The base relocation is skipped. This type can be used to pad a block.

@@ -1,21 +1,25 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.PAK
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/PAKFile.h"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class DirectoryItem
     {
         /// <summary>
         /// Item Name
         /// </summary>
-        public string? ItemName { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 56)]
+        public string? ItemName;
 
         /// <summary>
         /// Item Offset
         /// </summary>
-        public uint ItemOffset { get; set; }
+        public uint ItemOffset;
 
         /// <summary>
         /// Item Length
         /// </summary>
-        public uint ItemLength { get; set; }
+        public uint ItemLength;
     }
 }
