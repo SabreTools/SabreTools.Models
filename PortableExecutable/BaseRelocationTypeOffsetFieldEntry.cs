@@ -1,12 +1,9 @@
-﻿using System.Runtime.InteropServices;
-
-namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Type or Offset field entry is a WORD (2 bytes).
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    [StructLayout(LayoutKind.Sequential)]
     public sealed class BaseRelocationTypeOffsetFieldEntry
     {
         /// <summary>

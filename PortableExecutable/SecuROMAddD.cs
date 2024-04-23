@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.PortableExecutable
 {
     /// <summary>
     /// Overlay data associated with SecuROM executables
@@ -15,7 +17,7 @@
         /// </summary>
         public uint Signature { get; set; }
 
-        /// <summary>
+        /// <summary>s
         /// Unknown (Entry count?)
         /// </summary>
         /// <remarks>
@@ -27,12 +29,14 @@
         /// <summary>
         /// Version, always 8 bytes?
         /// </summary>
-        public string? Version { get; set; }
+        [MarshalAs(UnmanagedType.LPStr)]
+        public string? Version;
 
         /// <summary>
         /// Unknown (Build? Formatted as a string)
         /// </summary>
-        public char[]? Build { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        public char[]? Build;
 
         /// <summary>
         /// Unknown (0x14h), Variable number of bytes before entry table

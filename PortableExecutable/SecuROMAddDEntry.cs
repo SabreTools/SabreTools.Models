@@ -64,7 +64,7 @@ namespace SabreTools.Models.PortableExecutable
         /// Entry file name (null-terminated)
         /// </summary>
         /// <remarks>12 bytes long in the sample (all 3 entries) in 4.47.00.0039</remarks>
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 12)]
+        [MarshalAs(UnmanagedType.LPStr)]
         public string? FileName;
 
         /// <summary>

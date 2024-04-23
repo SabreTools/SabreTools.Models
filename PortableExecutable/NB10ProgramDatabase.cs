@@ -35,8 +35,9 @@ namespace SabreTools.Models.PortableExecutable
 
         /// <summary>
         /// Null-terminated name of the PDB file. It can also contain full
-        /// or partial path to the file. 
+        /// or partial path to the file.
         /// </summary>
+        /// <remarks>Is this Unicode?</remarks>
         [MarshalAs(UnmanagedType.LPStr)]
         public string? PdbFileName;
     }
