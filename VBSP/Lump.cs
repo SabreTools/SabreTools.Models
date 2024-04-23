@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace SabreTools.Models.VBSP
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/VBSPFile.h"/>
-    [StructLayout(LayoutKind.Sequential)]
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class Lump
     {
         public uint Offset;
