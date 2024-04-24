@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.MoPaQ
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.MoPaQ
 {
     /// <summary>
     /// The HET table is present if the HetTablePos64 member of MPQ header is
@@ -15,7 +17,8 @@
         /// <summary>
         /// 'HET\x1A'
         /// </summary>
-        public string? Signature { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
+        public string? Signature;
 
         /// <summary>
         /// Version. Seems to be always 1
