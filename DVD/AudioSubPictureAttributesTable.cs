@@ -1,6 +1,6 @@
 namespace SabreTools.Models.DVD
 {
-    /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo.html"/>
+    /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo_vmg.html"/>
     public sealed class AudioSubPictureAttributesTable
     {
         /// <summary>
@@ -11,7 +11,7 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved { get; set; }
+        public ushort Reserved { get; set; }
 
         /// <summary>
         /// End address (last byte of last VTS_ATRT)
@@ -21,11 +21,12 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Offset to VTS_ATRT n
         /// </summary>
+        /// <remarks>NumberOfTitleSets entries</remarks>
         public uint[]? Offsets { get; set; }
 
         /// <summary>
         /// Entries
         /// </summary>
-        public AudioSubPictureAttributesTableEntry?[]? Entries { get; set; }
+        public AudioSubPictureAttributesTableEntry[]? Entries { get; set; }
     }
 }

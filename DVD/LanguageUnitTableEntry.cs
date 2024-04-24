@@ -7,7 +7,7 @@ namespace SabreTools.Models.DVD
     public sealed class LanguageUnitTableEntry
     {
         /// <summary>
-        /// 	ISO639 language code
+        /// ISO639 language code
         /// </summary>
         public ushort ISO639LanguageCode;
 

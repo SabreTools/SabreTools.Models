@@ -1,6 +1,6 @@
 namespace SabreTools.Models.DVD
 {
-    /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo.html"/>
+    /// <see href="https://dvd.sourceforge.net/dvdinfo/ifo_vmg.html"/>
     public sealed class AudioSubPictureAttributesTableEntry
     {
         /// <summary>

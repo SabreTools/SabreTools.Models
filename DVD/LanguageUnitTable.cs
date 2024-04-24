@@ -11,7 +11,7 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved { get; set; }
+        public ushort Reserved { get; set; }
 
         /// <summary>
         /// End address (last byte of last PGC in last LU)
@@ -22,11 +22,13 @@ namespace SabreTools.Models.DVD
         /// <summary>
         /// Language Units
         /// </summary>
-        public LanguageUnitTableEntry?[]? Entries { get; set; }
+        /// <remarks>NumberOfVOBIDs entries</remarks>
+        public LanguageUnitTableEntry[]? Entries { get; set; }
 
         /// <summary>
         /// Program Chains
         /// </summary>
-        public ProgramChainTable?[]? ProgramChains { get; set; }
+        /// <remarks>NumberOfVOBIDs entries</remarks>
+        public ProgramChainTable[]? ProgramChains { get; set; }
     }
 }
