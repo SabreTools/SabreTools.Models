@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.N3DS
 {
     /// <summary>
@@ -5,12 +7,13 @@ namespace SabreTools.Models.N3DS
     /// (Determined by "Content Count" in the TMD Header).
     /// </summary>
     /// <see href="https://www.3dbrew.org/wiki/Title_metadata#Content_chunk_records"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ContentChunkRecord
     {
         /// <summary>
         /// Content id
         /// </summary>
-        public uint ContentId { get; set; }
+        public uint ContentId;
 
         /// <summary>
         /// Content index
@@ -18,21 +21,23 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// This does not apply to DLC.
         /// </remarks>
-        public ContentIndex ContentIndex { get; set; }
+        public ContentIndex ContentIndex;
 
         /// <summary>
         /// Content type
         /// </summary>
-        public TMDContentType ContentType { get; set; }
+        public TMDContentType ContentType;
 
         /// <summary>
         /// Content size
         /// </summary>
-        public ulong ContentSize { get; set; }
+        public ulong ContentSize;
 
         /// <summary>
         /// SHA-256 hash
         /// </summary>
-        public byte[]? SHA256Hash { get; set; }
+        /// <remarks>0x20 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
+        public byte[]? SHA256Hash;
     }
 }

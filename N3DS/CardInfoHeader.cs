@@ -1,61 +1,74 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.N3DS
 {
     /// <see href="https://www.3dbrew.org/wiki/NCSD#Card_Info_Header"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class CardInfoHeader
     {
         /// <summary>
         /// CARD2: Writable Address In Media Units (For 'On-Chip' Savedata). CARD1: Always 0xFFFFFFFF.
         /// </summary>
-        public uint WritableAddressMediaUnits { get; set; }
+        public uint WritableAddressMediaUnits;
 
         /// <summary>
         /// Card Info Bitmask
         /// </summary>
-        public uint CardInfoBitmask { get; set; }
+        public uint CardInfoBitmask;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved1 { get; set; }
+        /// <remarks>0xF8 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xF8)]
+        public byte[]? Reserved1;
 
         /// <summary>
         /// Filled size of cartridge
         /// </summary>
-        public uint FilledSize { get; set; }
+        public uint FilledSize;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved2 { get; set; }
+        /// <remarks>0x0C bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x0C)]
+        public byte[]? Reserved2;
 
         /// <summary>
         /// Title version
         /// </summary>
-        public ushort TitleVersion { get; set; }
+        public ushort TitleVersion;
 
         /// <summary>
         /// Card revision
         /// </summary>
-        public ushort CardRevision { get; set; }
+        public ushort CardRevision;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved3 { get; set; }
+        /// <remarks>0x0C bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x0C)]
+        public byte[]? Reserved3;
 
         /// <summary>
         /// Title ID of CVer in included update partition
         /// </summary>
-        public byte[]? CVerTitleID { get; set; }
+        /// <remarks>8 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+        public byte[]? CVerTitleID;
 
         /// <summary>
         /// Version number of CVer in included update partition
         /// </summary>
-        public ushort CVerVersionNumber { get; set; }
+        public ushort CVerVersionNumber;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved4 { get; set; }
+        /// <remarks>0xCD6 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xCD6)]
+        public byte[]? Reserved4;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.N3DS
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// There are a maximum of 10 file headers in the ExeFS format. (This maximum
@@ -8,26 +10,24 @@
     /// the currently define size of 0x200 bytes.)
     /// </summary>
     /// <see href="https://www.3dbrew.org/wiki/ExeFS#File_headers"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class ExeFSFileHeader
     {
         /// <summary>
         /// File name
         /// </summary>
-        public string? FileName { get; set; }
+        /// <remarks>8 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        public string? FileName;
 
         /// <summary>
         /// File offset
         /// </summary>
-        public uint FileOffset { get; set; }
+        public uint FileOffset;
 
         /// <summary>
         /// File size
         /// </summary>
-        public uint FileSize { get; set; }
-
-        /// <summary>
-        /// SHA256 hash calculated over the entire file contents
-        /// </summary>
-        public byte[]? FileHash { get; set; }
+        public uint FileSize;
     }
 }

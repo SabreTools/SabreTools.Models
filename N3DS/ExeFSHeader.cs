@@ -21,6 +21,7 @@
         /// <summary>
         /// Reserved
         /// </summary>
+        /// <remarks>0x20 bytes</remarks>
         public byte[]? Reserved { get; set; }
 
         /// <summary>

@@ -1,21 +1,24 @@
-﻿namespace SabreTools.Models.N3DS
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.N3DS
 {
     /// <see href="https://www.3dbrew.org/wiki/NCCH/Extended_Header#Code_Set_Info"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class CodeSetInfo
     {
         /// <summary>
         /// Address
         /// </summary>
-        public uint Address { get; set; }
+        public uint Address;
 
         /// <summary>
         /// Physical region size (in page-multiples)
         /// </summary>
-        public uint PhysicalRegionSizeInPages { get; set; }
+        public uint PhysicalRegionSizeInPages;
 
         /// <summary>
         /// Size (in bytes)
         /// </summary>
-        public uint SizeInBytes { get; set; }
+        public uint SizeInBytes;
     }
 }

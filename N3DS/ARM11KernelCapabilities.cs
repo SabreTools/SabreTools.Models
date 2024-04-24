@@ -1,9 +1,12 @@
-﻿namespace SabreTools.Models.N3DS
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// The kernel capability descriptors are passed to svcCreateProcess.
     /// </summary>
     /// <see href="https://www.3dbrew.org/wiki/NCCH/Extended_Header#ARM11_Kernel_Capabilities"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class ARM11KernelCapabilities
     {
         /// <summary>
@@ -34,11 +37,15 @@
         /// 13	Process has access to CPU core 2 (New3DS only)
         /// </summary>
         /// TODO: Make enum for flag values
-        public uint[]? Descriptors { get; set; }
+        /// <remarks>28 entries</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 28)]
+        public uint[]? Descriptors;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved { get; set; }
+        /// <remarks>0x10 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x10)]
+        public byte[]? Reserved;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.N3DS
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.N3DS
 {
     /// <summary>
     /// RomFS (or Read-Only Filesystem) is part of the NCCH format, and is
@@ -6,91 +8,94 @@
     /// </summary>
     /// <see href="https://www.3dbrew.org/wiki/RomFS"/>
     /// TODO: Implement the other parts of the RomFS tree structure
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class RomFSHeader
     {
         /// <summary>
         /// Magic "IVFC"
         /// </summary>
-        public string? MagicString { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
+        public string? MagicString;
 
         /// <summary>
         /// Magic number 0x10000
         /// </summary>
-        public uint MagicNumber { get; set; }
+        public uint MagicNumber;
 
         /// <summary>
         /// Master hash size
         /// </summary>
-        public uint MasterHashSize { get; set; }
+        public uint MasterHashSize;
 
         /// <summary>
         /// Level 1 logical offset
         /// </summary>
-        public ulong Level1LogicalOffset { get; set; }
+        public ulong Level1LogicalOffset;
 
         /// <summary>
         /// Level 1 hashdata size
         /// </summary>
-        public ulong Level1HashdataSize { get; set; }
+        public ulong Level1HashdataSize;
 
         /// <summary>
         /// Level 1 block size, in log2
         /// </summary>
-        public uint Level1BlockSizeLog2 { get; set; }
+        public uint Level1BlockSizeLog2;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved1 { get; set; }
+        public uint Reserved1;
 
         /// <summary>
         /// Level 2 logical offset
         /// </summary>
-        public ulong Level2LogicalOffset { get; set; }
+        public ulong Level2LogicalOffset;
 
         /// <summary>
         /// Level 2 hashdata size
         /// </summary>
-        public ulong Level2HashdataSize { get; set; }
+        public ulong Level2HashdataSize;
 
         /// <summary>
         /// Level 2 block size, in log2
         /// </summary>
-        public uint Level2BlockSizeLog2 { get; set; }
+        public uint Level2BlockSizeLog2;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved2 { get; set; }
+        public uint Reserved2;
 
         /// <summary>
         /// Level 3 logical offset
         /// </summary>
-        public ulong Level3LogicalOffset { get; set; }
+        public ulong Level3LogicalOffset;
 
         /// <summary>
         /// Level 3 hashdata size
         /// </summary>
-        public ulong Level3HashdataSize { get; set; }
+        public ulong Level3HashdataSize;
 
         /// <summary>
         /// Level 3 block size, in log2
         /// </summary>
-        public uint Level3BlockSizeLog2 { get; set; }
+        public uint Level3BlockSizeLog2;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved3 { get; set; }
+        public uint Reserved3;
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved4 { get; set; }
+        public uint Reserved4;
 
         /// <summary>
         /// Optional info size.
         /// </summary>
-        public uint OptionalInfoSize { get; set; }
+        public uint OptionalInfoSize;
     }
 }
