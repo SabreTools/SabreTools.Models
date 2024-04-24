@@ -19,7 +19,7 @@ namespace SabreTools.Models.CFB
         /// name: '/', '\', ':', '!'.
         /// </summary>
         /// <remarks>64 bytes</remarks>
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 64)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
         public string? Name;
 
         /// <summary>
