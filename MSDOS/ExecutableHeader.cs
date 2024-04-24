@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.MSDOS
 {
     /// <summary>
@@ -6,6 +8,7 @@ namespace SabreTools.Models.MSDOS
     /// </summary>
     /// <see href="https://wiki.osdev.org/MZ"/>
     /// <see href="http://www.pinvoke.net/default.aspx/Structures.IMAGE_DOS_HEADER"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class ExecutableHeader
     {
         #region Standard Fields
@@ -13,23 +16,25 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// 0x5A4D (ASCII for 'M' and 'Z')
         /// </summary>
-        public string? Magic { get; set; }
+        /// <remarks>15 bytes</remarks>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
+        public string? Magic;
 
         /// <summary>
         /// Number of bytes in the last page.
         /// </summary>
-        public ushort LastPageBytes { get; set; }
+        public ushort LastPageBytes;
 
         /// <summary>
         /// Number of whole/partial pages.
         /// </summary>
         /// <remarks>A page (or block) is 512 bytes long.</remarks>
-        public ushort Pages { get; set; }
+        public ushort Pages;
 
         /// <summary>
         /// Number of entries in the relocation table.
         /// </summary>
-        public ushort RelocationItems { get; set; }
+        public ushort RelocationItems;
 
         /// <summary>
         /// The number of paragraphs taken up by the header. It can be any value, as the loader
@@ -38,57 +43,57 @@ namespace SabreTools.Models.MSDOS
         /// own header metadata, or put the relocation table there, or use it for any other purpose. [08]
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort HeaderParagraphSize { get; set; }
+        public ushort HeaderParagraphSize;
 
         /// <summary>
         /// The number of paragraphs required by the program, excluding the PSP and program image.
         /// If no free block is big enough, the loading stops.
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort MinimumExtraParagraphs { get; set; }
+        public ushort MinimumExtraParagraphs;
 
         /// <summary>
         /// The number of paragraphs requested by the program.
         /// If no free block is big enough, the biggest one possible is allocated.
         /// </summary>
         /// <remarks>A paragraph is 16 bytes in size</remarks>
-        public ushort MaximumExtraParagraphs { get; set; }
+        public ushort MaximumExtraParagraphs;
 
         /// <summary>
         /// Relocatable segment address for SS.
         /// </summary>
-        public ushort InitialSSValue { get; set; }
+        public ushort InitialSSValue;
 
         /// <summary>
         /// Initial value for SP.
         /// </summary>
-        public ushort InitialSPValue { get; set; }
+        public ushort InitialSPValue;
 
         /// <summary>
         /// When added to the sum of all other words in the file, the result should be zero.
         /// </summary>
-        public ushort Checksum { get; set; }
+        public ushort Checksum;
 
         /// <summary>
         /// Initial value for IP. [14]
         /// </summary>
-        public ushort InitialIPValue { get; set; }
+        public ushort InitialIPValue;
 
         /// <summary>
         /// Relocatable segment address for CS.
         /// </summary>
-        public ushort InitialCSValue { get; set; }
+        public ushort InitialCSValue;
 
         /// <summary>
         /// The (absolute) offset to the relocation table.
         /// </summary>
-        public ushort RelocationTableAddr { get; set; }
+        public ushort RelocationTableAddr;
 
         /// <summary>
         /// Value used for overlay management.
         /// If zero, this is the main executable.
         /// </summary>
-        public ushort OverlayNumber { get; set; }
+        public ushort OverlayNumber;
 
         #endregion
 
@@ -97,27 +102,31 @@ namespace SabreTools.Models.MSDOS
         /// <summary>
         /// Reserved words
         /// </summary>
-        public ushort[]? Reserved1 { get; set; } = new ushort[4];
+        /// <remarks>4 entries/remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        public ushort[]? Reserved1;
 
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
         /// </summary>
-        public ushort OEMIdentifier { get; set; }
+        public ushort OEMIdentifier;
 
         /// <summary>
         /// Defined by name but no other information is given; typically zeroes
         /// </summary>
-        public ushort OEMInformation { get; set; }
+        public ushort OEMInformation;
 
         /// <summary>
         /// Reserved words
         /// </summary>
-        public ushort[]? Reserved2 { get; set; } = new ushort[10];
+        /// <remarks>10 entries/remarks>
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
+        public ushort[]? Reserved2;
 
         /// <summary>
         /// Starting address of the PE header
         /// </summary>
-        public uint NewExeHeaderAddr { get; set; }
+        public uint NewExeHeaderAddr;
 
         #endregion
     }
