@@ -11,6 +11,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Offsets
         /// </summary>
+        /// <remarks>TextureCount entries</remarks>
         public uint[]? Offsets { get; set; }
     }
 }
