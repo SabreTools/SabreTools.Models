@@ -6,11 +6,13 @@ namespace SabreTools.Models.BDPlus
         /// <summary>
         /// "BDSVM_CC"
         /// </summary>
+        /// <remarks>8 bytes</remarks>
         public string? Signature { get; set; }
 
         /// <summary>
-        /// 5 bytes of unknown data
+        /// Unknown data
         /// </summary>
+        /// <remarks>5 bytes</remarks>
         public byte[]? Unknown1 { get; set; }
 
         /// <summary>
@@ -29,8 +31,9 @@ namespace SabreTools.Models.BDPlus
         public byte Day { get; set; }
 
         /// <summary>
-        /// 4 bytes of unknown data
+        /// Unknown data
         /// </summary>
+        /// <remarks>4 bytes</remarks>
         public byte[]? Unknown2 { get; set; }
 
         /// <summary>
