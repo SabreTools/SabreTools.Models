@@ -1,42 +1,45 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
-    public class CompressedMapHeaderV5
+    [StructLayout(LayoutKind.Sequential)]
+    public sealed class CompressedMapHeaderV5
     {
         /// <summary>
         /// Length of compressed map
         /// </summary>
-        public uint Length { get; set; }
+        public uint Length;
 
         /// <summary>
         /// Offset of first block
         /// </summary>
         /// <remarks>Actually UInt48</remarks>
-        public ulong DataStart { get; set; }
+        public ulong DataStart;
 
         /// <summary>
         /// CRC-16 of the map
         /// </summary>
-        public ushort CRC { get; set; }
+        public ushort CRC;
 
         /// <summary>
         /// Bits used to encode complength
         /// </summary>
-        public byte LengthBits { get; set; }
+        public byte LengthBits;
 
         /// <summary>
         /// Bits used to encode self-refs
         /// </summary>
-        public byte HunkBits { get; set; }
+        public byte HunkBits;
 
         /// <summary>
         /// Bits used to encode parent unit refs
         /// </summary>
-        public byte ParentUnitBits { get; set; }
+        public byte ParentUnitBits;
 
         /// <summary>
         /// Future use
         /// </summary>
-        public byte Reserved { get; set; }
+        public byte Reserved;
     }
 }

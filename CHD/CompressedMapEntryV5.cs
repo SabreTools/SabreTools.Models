@@ -1,28 +1,31 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
-    public class CompressedMapEntryV5
+    [StructLayout(LayoutKind.Sequential)]
+    public sealed class CompressedMapEntryV5
     {
         /// <summary>
         /// Compression type
         /// </summary>
-        public byte Compression { get; set; }
+        public byte Compression;
 
         /// <summary>
         /// Compressed length
         /// </summary>
         /// <remarks>Actually UInt24</remarks>
-        public uint CompLength { get; set; }
+        public uint CompLength;
 
         /// <summary>
         /// Offset
         /// </summary>
         /// <remarks>Actually UInt48</remarks>
-        public ulong Offset { get; set; }
+        public ulong Offset;
 
         /// <summary>
         /// CRC-16 of the data
         /// </summary>
-        public ushort CRC { get; set; }
+        public ushort CRC;
     }
 }
