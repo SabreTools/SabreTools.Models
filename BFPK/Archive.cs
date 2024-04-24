@@ -14,6 +14,6 @@
         /// <summary>
         /// Files
         /// </summary>
-        public FileEntry?[]? Files { get; set; }
+        public FileEntry[]? Files { get; set; }
     }
 }
