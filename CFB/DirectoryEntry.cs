@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 namespace SabreTools.Models.CFB
 {
     /// <see href="https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-CFB/%5bMS-CFB%5d.pdf"/>
-    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public sealed class DirectoryEntry
     {
         /// <summary>
