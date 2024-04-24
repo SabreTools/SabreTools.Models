@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 namespace SabreTools.Models.InstallShieldCabinet
 {
     /// <see href="https://github.com/twogood/unshield/blob/main/lib/cabfile.h"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class Descriptor
     {
         /// <summary>
