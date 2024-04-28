@@ -1,7 +1,7 @@
 namespace SabreTools.Models.PKZIP
 {
     /// <summary>
-    /// TThe following is the layout of the Policy Key Data "extra" block.
+    /// The following is the layout of the Policy Key Data "extra" block.
     /// TData is a variable length, variable content field.  It holds
     /// information about encryptions and/or encryption key sources.
     /// Contact PKWARE for information on current TData structures.
