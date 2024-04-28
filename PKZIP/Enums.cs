@@ -3,6 +3,210 @@ using System;
 /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
 namespace SabreTools.Models.PKZIP
 {
+    [Flags]
+    public enum ActionsReactions : uint
+    {
+        /// <summary>
+        /// Use for auto detection
+        /// </summary>
+        AutoDetection = 0b0000_0000_0000_0000_0000_0000_0000_0001,
+
+        /// <summary>
+        /// Treat as a self-patch
+        /// </summary>
+        SelfPatch = 0b0000_0000_0000_0000_0000_0000_0000_0010,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved2 = 0b0000_0000_0000_0000_0000_0000_0000_0100,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved3 = 0b0000_0000_0000_0000_0000_0000_0000_1000,
+
+        /// <summary>
+        /// Action (None)
+        /// </summary>
+        ActionNone = 0b0000_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// Action (Add)
+        /// </summary>
+        ActionAdd = 0b0000_0000_0000_0000_0000_0000_0001_0000,
+
+        /// <summary>
+        /// Action (Delete)
+        /// </summary>
+        ActionDelete = 0b0000_0000_0000_0000_0000_0000_0010_0000,
+
+        /// <summary>
+        /// Action (Patch)
+        /// </summary>
+        ActionPatch = 0b0000_0000_0000_0000_0000_0000_0011_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved6 = 0b0000_0000_0000_0000_0000_0000_0100_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved7 = 0b0000_0000_0000_0000_0000_0000_1000_0000,
+
+        /// <summary>
+        /// Absent file reaction (Ask)
+        /// </summary>
+        ReactionAbsentAsk = 0b0000_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// Absent file reaction (Skip)
+        /// </summary>
+        ReactionAbsentSkip = 0b0000_0000_0000_0000_0000_0001_0000_0000,
+
+        /// <summary>
+        /// Absent file reaction (Ignore)
+        /// </summary>
+        ReactionAbsentIgnore = 0b0000_0000_0000_0000_0000_0010_0000_0000,
+
+        /// <summary>
+        /// Absent file reaction (Fail)
+        /// </summary>
+        ReactionAbsentFail = 0b0000_0000_0000_0000_0000_0011_0000_0000,
+
+        /// <summary>
+        /// Newer file reaction (Ask)
+        /// </summary>
+        ReactionNewerAsk = 0b0000_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// Newer file reaction (Skip)
+        /// </summary>
+        ReactionNewerSkip = 0b0000_0000_0000_0000_0000_0100_0000_0000,
+
+        /// <summary>
+        /// Newer file reaction (Ignore)
+        /// </summary>
+        ReactionNewerIgnore = 0b0000_0000_0000_0000_0000_1000_0000_0000,
+
+        /// <summary>
+        /// Newer file reaction (Fail)
+        /// </summary>
+        ReactionNewerFail = 0b0000_0000_0000_0000_0000_1100_0000_0000,
+
+        /// <summary>
+        /// Unknown file reaction (Ask)
+        /// </summary>
+        ReactionUnknownAsk = 0b0000_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// Unknown file reaction (Skip)
+        /// </summary>
+        ReactionUnknownSkip = 0b0000_0000_0000_0000_0001_0000_0000_0000,
+
+        /// <summary>
+        /// Unknown file reaction (Ignore)
+        /// </summary>
+        ReactionUnknownIgnore = 0b0000_0000_0000_0000_0010_0000_0000_0000,
+
+        /// <summary>
+        /// Unknown file reaction (Fail)
+        /// </summary>
+        ReactionUnknownFail = 0b0000_0000_0000_0000_0011_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved14 = 0b0000_0000_0000_0000_0100_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved15 = 0b0000_0000_0000_0000_1000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved16 = 0b0000_0000_0000_0001_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved17 = 0b0000_0000_0000_0010_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved18 = 0b0000_0000_0000_0100_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved19 = 0b0000_0000_0000_1000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved20 = 0b0000_0000_0001_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved21 = 0b0000_0000_0010_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved22 = 0b0000_0000_0100_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved23 = 0b0000_0000_1000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved24 = 0b0000_0001_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved25 = 0b0000_0010_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved26 = 0b0000_0100_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved27 = 0b0000_1000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved28 = 0b0001_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved29 = 0b0010_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved30 = 0b0100_0000_0000_0000_0000_0000_0000_0000,
+
+        /// <summary>
+        /// RESERVED
+        /// </summary>
+        Reserved31 = 0b1000_0000_0000_0000_0000_0000_0000_0000,
+    }
+
     public enum CompressionMethod : ushort
     {
         /// <summary>
