@@ -1002,6 +1002,91 @@ namespace SabreTools.Models.PKZIP
         */
     }
 
+    [Flags]
+    public enum ZipItInternalSettings : ushort
+    {
+        /// <summary>
+        /// If set, the folder is shown expanded (open)
+        /// when the archive contents are viewed in ZipIt.
+        /// </summary>
+        ShowExpanded = 0b0000_0000_0000_0001,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved1 = 0b0000_0000_0000_0010,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved2 = 0b0000_0000_0000_0100,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved3 = 0b0000_0000_0000_1000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved4 = 0b0000_0000_0001_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved5 = 0b0000_0000_0010_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved6 = 0b0000_0000_0100_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved7 = 0b0000_0000_1000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved8 = 0b0000_0001_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved9 = 0b0000_0010_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved10 = 0b0000_0100_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved11 = 0b0000_1000_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved12 = 0b0001_0000_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved13 = 0b0010_0000_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved14 = 0b0100_0000_0000_0000,
+
+        /// <summary>
+        /// Reserved, zero
+        /// </summary>
+        Reserved15 = 0b1000_0000_0000_0000,
+    }
+
     public enum ZOSExtraFieldAttributeFieldCode : ushort
     {
         /// <summary>
