@@ -31,7 +31,11 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// zero terminated UTF8 path and file name
         /// </summary>
-        [MarshalAs(UnmanagedType.LPWStr)]
+#if NET472_OR_GREATER || NETCOREAPP
+        [MarshalAs(UnmanagedType.LPUTF8Str)]
+#else
+        [MarshalAs(UnmanagedType.LPStr)]
+#endif
         public string? PathAndFileName;
     }
 }
