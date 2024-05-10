@@ -7,13 +7,13 @@ namespace SabreTools.Models.Xbox
     /// XGD2/3 XeMID Format Information:
     ///
     /// AABCCCDDEFFGHH(IIIIIIII)
-    /// - AA        => The two-ASCII-character publisher identifier (see GetPublisher for details)
+    /// - AA        => The two-ASCII-character publisher identifier (see Constants.Publishers for details)
     /// - B         => Platform identifier; 2 indicates Xbox 360.
     /// - CCC       => Game ID
     /// - DD        => SKU number (unique per SKU of a title)
-    /// - E         => Region identifier (see GetRegion for details)
+    /// - E         => Region identifier (see Constants.Regions for details)
     /// - FF        => Base version; usually starts at 01 (can be 1 or 2 characters)
-    /// - G         => Media type identifier (see GetMediaSubtype for details)
+    /// - G         => Media type identifier (see Constants.MediaSubtypes for details)
     /// - HH        => Disc number stored in [disc number][total discs] format
     /// - IIIIIIII  => 8-hex-digit certification submission identifier; usually on test discs only
     /// </remarks>

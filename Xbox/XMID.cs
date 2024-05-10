@@ -7,10 +7,10 @@ namespace SabreTools.Models.Xbox
     /// XGD1 XMID Format Information:
     ///
     /// AABBBCCD
-    /// - AA        => The two-ASCII-character publisher identifier (see GetPublisher for details)
+    /// - AA        => The two-ASCII-character publisher identifier (see Constants.Publishers for details)
     /// - BBB       => Game ID
     /// - CC        => Version number
-    /// - D         => Region identifier (see GetRegion for details)
+    /// - D         => Region identifier (see Constants.Regions for details)
     /// </remarks>
     public class XMID
     {
