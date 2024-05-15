@@ -8,7 +8,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/menuex-template-item"/>
     [StructLayout(LayoutKind.Sequential)]
-    public sealed class MenuItemExtended
+    public sealed class MenuItemExtended : MenuItem
     {
         /// <summary>
         /// Describes the menu item.
