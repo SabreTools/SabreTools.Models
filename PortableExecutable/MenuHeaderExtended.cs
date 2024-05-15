@@ -8,7 +8,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/menuex-template-header"/>
     [StructLayout(LayoutKind.Sequential)]
-    public sealed class MenuHeaderExtended
+    public sealed class MenuHeaderExtended : MenuHeader
     {
         /// <summary>
         /// The template version number. This member must be 1 for extended menu templates.
