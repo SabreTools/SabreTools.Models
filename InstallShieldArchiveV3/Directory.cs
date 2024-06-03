@@ -17,9 +17,13 @@ namespace SabreTools.Models.InstallShieldArchiveV3
         public ushort ChunkSize;
 
         /// <summary>
-        /// Byte-length-prefixed ASCII string
+        /// Length of the following ASCII string
         /// </summary>
-        [MarshalAs(UnmanagedType.BStr)]
+        public ushort NameLength;
+
+        /// <summary>
+        /// Name as an ASCII string
+        /// </summary>
         public string? Name;
     }
 }
