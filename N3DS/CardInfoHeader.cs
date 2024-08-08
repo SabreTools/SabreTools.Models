@@ -70,5 +70,10 @@ namespace SabreTools.Models.N3DS
         /// <remarks>0xCD6 bytes</remarks>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xCD6)]
         public byte[]? Reserved4;
+
+        /// <summary>
+        /// This data is returned by 16-byte cartridge command 0x82.
+        /// </summary>
+        public InitialData? InitialData;
     }
 }
