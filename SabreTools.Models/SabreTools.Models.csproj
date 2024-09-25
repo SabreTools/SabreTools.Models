@@ -42,7 +42,7 @@
     <!-- Support for old .NET versions -->
     <ItemGroup
         Condition="$(TargetFramework.StartsWith(`net2`)) OR $(TargetFramework.StartsWith(`net3`))">
-        <PackageReference Include="MinValueTupleBridge" Version="0.2.0" />
+        <PackageReference Include="MinValueTupleBridge" Version="0.2.1" />
     </ItemGroup>
     <ItemGroup Condition="$(TargetFramework.StartsWith(`net4`))">
         <PackageReference Include="System.ValueTuple" Version="4.5.0" />
