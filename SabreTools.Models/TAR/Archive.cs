@@ -1,10 +1,12 @@
+using System.Collections.Generic;
+
 namespace SabreTools.Models.TAR
 {
     public sealed class Archive
     {
         /// <summary>
-        /// File header
+        /// 1 or more entries
         /// </summary>
-        public Header? Header { get; set; }
+        public List<Entry>? Entries { get; set; }
     }
 }
