@@ -26,7 +26,7 @@ namespace SabreTools.Models.TAR
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
         public byte[]? UID;
 
-         /// <summary>
+        /// <summary>
         /// Owner's numeric group ID
         /// </summary>
         /// <remarks>Octal string representation</remarks>
@@ -64,6 +64,8 @@ namespace SabreTools.Models.TAR
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 100)]
         public string? LinkName;
+
+        #region USTAR Extension
 
         /// <summary>
         /// UStar indicator, "ustar", then NUL
@@ -109,5 +111,7 @@ namespace SabreTools.Models.TAR
         /// <remarks>155 bytes</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 155)]
         public string? Prefix;
+
+        #endregion
     }
 }
