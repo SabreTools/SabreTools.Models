@@ -4,7 +4,7 @@ namespace SabreTools.Models.Charts
 {
     /// <see href="https://github.com/TheNathannator/GuitarGame_ChartFormats/tree/main/doc/FileFormats/song.ini"/> 
     /// <remarks>[song]/[Song]</remarks>
-    internal class SongIni
+    public class SongIni
     {
         #region Song/Chart Metadata
 

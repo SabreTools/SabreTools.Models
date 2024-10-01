@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-
 namespace SabreTools.Models.Charts
 {
     /// <see href="https://github.com/TheNathannator/GuitarGame_ChartFormats/blob/main/doc/FileFormats/Other/Frets%20on%20Fire%20X/Careers.md"/> 
     /// <remarks>[titles]</remarks>
-    internal class TitlesIni
+    public class TitlesIni
     {
         /// <summary>
         /// A space-separated list of .ini sections to include in the career.
@@ -13,9 +11,8 @@ namespace SabreTools.Models.Charts
         public string[]? SectionList { get; set; }
 
         /// <summary>
-        /// `name` - Display name of the tier.
-        /// `unlock_id` - Name used for associating a song with this tier, and for checking unlock requirements.
+        /// This entry points to other sections that should be used as part of the career.
         /// </summary>
-        public Dictionary<string, (string? Name, string? UnlockId)>? Sections { get; set; }
+        public Tier[]? Sections { get; set; }
     }
 }
