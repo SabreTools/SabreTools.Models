@@ -31,19 +31,19 @@ namespace SabreTools.Models.InstallShieldCabinet
         public string? DisplayName { get; set; }
 
         /// <summary>
-        /// Reserved
+        /// Component status
         /// </summary>
-        public ushort Reserved0 { get; set; }
+        public ComponentStatus Status { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to the password
         /// </summary>
-        public uint ReservedOffset0 { get; set; }
+        public uint PasswordOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Misc offset
         /// </summary>
-        public uint ReservedOffset1 { get; set; }
+        public uint MiscOffset { get; set; }
 
         /// <summary>
         /// Component index
@@ -61,25 +61,24 @@ namespace SabreTools.Models.InstallShieldCabinet
         public string? Name { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to the CD-ROM folder
         /// </summary>
-        public uint ReservedOffset2 { get; set; }
+        public uint CDRomFolderOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to the HTTP location
         /// </summary>
-        public uint ReservedOffset3 { get; set; }
+        public uint HTTPLocationOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to the FTP location
         /// </summary>
-        public uint ReservedOffset4 { get; set; }
+        public uint FTPLocationOffset { get; set; }
 
         /// <summary>
-        /// Reserved
+        /// Unknown GUIDs
         /// </summary>
-        /// <remarks>32 bytes</remarks>
-        public byte[]? Reserved1 { get; set; }
+        public Guid[]? Guid { get; set; } = new Guid[2];
 
         /// <summary>
         /// Offset to the component CLSID
@@ -94,7 +93,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Reserved
         /// </summary>
-        /// <remarks>28 bytes</remarks>
+        /// <remarks>28 bytes, see CompAttrs</remarks>
         public byte[]? Reserved2 { get; set; }
 
         /// <summary>
@@ -154,23 +153,23 @@ namespace SabreTools.Models.InstallShieldCabinet
         public uint NextComponentOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to on installing text
         /// </summary>
-        public uint ReservedOffset5 { get; set; }
+        public uint OnInstallingOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to on installed text
         /// </summary>
-        public uint ReservedOffset6 { get; set; }
+        public uint OnInstalledOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to on uninstalling text
         /// </summary>
-        public uint ReservedOffset7 { get; set; }
+        public uint OnUninstallingOffset { get; set; }
 
         /// <summary>
-        /// Reserved offset
+        /// Offset to on uninstalled text
         /// </summary>
-        public uint ReservedOffset8 { get; set; }
+        public uint OnUninstalledOffset { get; set; }
     }
 }

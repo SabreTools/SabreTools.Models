@@ -2,6 +2,26 @@ using System;
 
 namespace SabreTools.Models.InstallShieldCabinet
 {
+    /// <remarks>i6comp02</remarks>
+    [Flags]
+    public enum ComponentStatus : ushort
+    {
+        /// <summary>
+        /// Critical
+        /// </summary>
+        COMP_STAT_CRITICAL = 0x01,
+
+        /// <summary>
+        /// Recommended
+        /// </summary>
+        COMP_STAT_RECOMMEND = 0x02,
+
+        /// <summary>
+        /// Standard
+        /// </summary>
+        COMP_STAT_STANDARD = 0x04,
+    }
+
     /// <see href="https://github.com/twogood/unshield/blob/main/lib/cabfile.h"/>
     [Flags]
     public enum FileFlags : ushort
