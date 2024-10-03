@@ -1,6 +1,7 @@
 namespace SabreTools.Models.InstallShieldCabinet
 {
     /// <see href="https://github.com/twogood/unshield/blob/main/lib/libunshield.h"/>
+    /// <remarks>Additional info from i6comp02</remarks>
     public sealed class FileGroup
     {
         /// <summary>
@@ -19,34 +20,14 @@ namespace SabreTools.Models.InstallShieldCabinet
         public uint ExpandedSize { get; set; }
 
         /// <summary>
-        /// Reserved
-        /// </summary>
-        public byte[]? Reserved0 { get; set; }
-
-        /// <summary>
         /// Size of the compressed data
         /// </summary>
         public uint CompressedSize { get; set; }
 
         /// <summary>
-        /// Reserved
+        /// Attributes (junk2)
         /// </summary>
-        public byte[]? Reserved1 { get; set; }
-
-        /// <summary>
-        /// Reserved
-        /// </summary>
-        public byte[]? Reserved2 { get; set; }
-
-        /// <summary>
-        /// Attribute(?)
-        /// </summary>
-        public ushort Attribute1 { get; set; }
-
-        /// <summary>
-        /// Attribute(?)
-        /// </summary>
-        public ushort Attribute2 { get; set; }
+        public FileGroupAttributes Attributes { get; set; }
 
         /// <summary>
         /// Index of the first file
@@ -59,19 +40,19 @@ namespace SabreTools.Models.InstallShieldCabinet
         public uint LastFile { get; set; }
 
         /// <summary>
-        /// Unknown offset(?)
+        /// Unknown string offset
         /// </summary>
-        public uint UnknownOffset { get; set; }
+        public uint UnknownStringOffset { get; set; }
 
         /// <summary>
-        /// Var 4 offset(?)
+        /// Offset to the operating system (Var4)
         /// </summary>
-        public uint Var4Offset { get; set; }
+        public uint OperatingSystemOffset { get; set; }
 
         /// <summary>
-        /// Var 1 offset(?)
+        /// Offset to the language (Var1)
         /// </summary>
-        public uint Var1Offset { get; set; }
+        public uint LanguageOffset { get; set; }
 
         /// <summary>
         /// Offset to the HTTP location
@@ -84,14 +65,9 @@ namespace SabreTools.Models.InstallShieldCabinet
         public uint FTPLocationOffset { get; set; }
 
         /// <summary>
-        /// Misc offset(?)
+        /// Misc offset
         /// </summary>
         public uint MiscOffset { get; set; }
-
-        /// <summary>
-        /// Var 2 offset(?)
-        /// </summary>
-        public uint Var2Offset { get; set; }
 
         /// <summary>
         /// Offset to the target directory
@@ -99,28 +75,13 @@ namespace SabreTools.Models.InstallShieldCabinet
         public uint TargetDirectoryOffset { get; set; }
 
         /// <summary>
-        /// Reserved
+        /// Overwrite setting flags
         /// </summary>
-        public byte[]? Reserved3 { get; set; }
+        public FileGroupFlags OverwriteFlags { get; set; }
 
         /// <summary>
         /// Reserved
         /// </summary>
-        public byte[]? Reserved4 { get; set; }
-
-        /// <summary>
-        /// Reserved
-        /// </summary>
-        public byte[]? Reserved5 { get; set; }
-
-        /// <summary>
-        /// Reserved
-        /// </summary>
-        public byte[]? Reserved6 { get; set; }
-
-        /// <summary>
-        /// Reserved
-        /// </summary>
-        public byte[]? Reserved7 { get; set; }
+        public uint[]? Reserved { get; set; } = new uint[4];
     }
 }
