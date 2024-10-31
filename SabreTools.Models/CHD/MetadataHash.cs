@@ -9,8 +9,7 @@ namespace SabreTools.Models.CHD
         /// <summary>
         /// Tag of the metadata in big-endian
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[]? Tag;
+        public MetadataTag Tag;
 
         /// <summary>
         /// Hash data
