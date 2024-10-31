@@ -19,14 +19,5 @@ namespace SabreTools.Models.CHD
         public const uint CHDMETAINDEX_APPEND = uint.MaxValue;
 
         #endregion
-
-        #region Metadata Flags
-
-        /// <summary>
-        /// Indicates data is checksummed
-        /// </summary>
-        public const byte CHD_MDFLAGS_CHECKSUM = 0x01;
-
-        #endregion
     }
 }

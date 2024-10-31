@@ -34,6 +34,6 @@ namespace SabreTools.Models.CHD
         /// <summary>
         /// Flag bits
         /// </summary>
-        public byte Flags;
+        public MetadataFlags Flags;
     }
 }

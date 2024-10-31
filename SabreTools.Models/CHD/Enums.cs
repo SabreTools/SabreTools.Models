@@ -143,6 +143,16 @@ namespace SabreTools.Models.CHD
     }
 
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
+    [Flags]
+    public enum MetadataFlags : byte
+    {
+        /// <summary>
+        /// Indicates data is checksummed
+        /// </summary>
+        CHD_MDFLAGS_CHECKSUM = 0x01,
+    }
+
+    /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
     public enum MetadataTag : uint
     {
         CHDMETATAG_WILDCARD = 0,
