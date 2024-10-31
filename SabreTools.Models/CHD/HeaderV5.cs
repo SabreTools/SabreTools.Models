@@ -6,7 +6,7 @@
         /// <summary>
         /// Which custom compressors are used?
         /// </summary>
-        public uint[] Compressors { get; set; } = new uint[4];
+        public CodecType[] Compressors { get; set; } = new CodecType[4];
 
         /// <summary>
         /// Logical size of the data (in bytes)
