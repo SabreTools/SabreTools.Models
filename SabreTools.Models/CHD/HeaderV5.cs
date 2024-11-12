@@ -1,6 +1,9 @@
-﻿namespace SabreTools.Models.CHD
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public class HeaderV5 : Header
     {
         /// <summary>

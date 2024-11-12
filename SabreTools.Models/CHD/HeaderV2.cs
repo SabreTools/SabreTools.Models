@@ -1,56 +1,63 @@
-﻿namespace SabreTools.Models.CHD
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public class HeaderV2 : Header
     {
         /// <summary>
         /// Flags
         /// </summary>
-        public Flags Flags { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public Flags Flags;
 
         /// <summary>
         /// Compression type
         /// </summary>
-        public CompressionType Compression { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public CompressionType Compression;
 
         /// <summary>
         /// Seclen-byte sectors per hunk
         /// </summary>
-        public uint HunkSize { get; set; }
+        public uint HunkSize;
 
         /// <summary>
         /// Total # of hunks represented
         /// </summary>
-        public uint TotalHunks { get; set; }
+        public uint TotalHunks;
 
         /// <summary>
         /// Number of cylinders on hard disk
         /// </summary>
-        public uint Cylinders { get; set; }
+        public uint Cylinders;
 
         /// <summary>
         /// Number of heads on hard disk
         /// </summary>
-        public uint Heads { get; set; }
+        public uint Heads;
 
         /// <summary>
         /// Number of sectors on hard disk
         /// </summary>
-        public uint Sectors { get; set; }
+        public uint Sectors;
 
         /// <summary>
         /// MD5 checksum of raw data
         /// </summary>
-        public byte[]? MD5 { get; set; } = new byte[16];
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
+        public byte[]? MD5 = new byte[16];
 
         /// <summary>
         /// MD5 checksum of parent file
         /// </summary>
-        public byte[]? ParentMD5 { get; set; } = new byte[16];
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
+        public byte[]? ParentMD5 = new byte[16];
 
         /// <summary>
         /// Number of bytes per sector
         /// </summary>
-        public uint BytesPerSector { get; set; }
+        public uint BytesPerSector;
     }
 }

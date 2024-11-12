@@ -1,51 +1,59 @@
-﻿namespace SabreTools.Models.CHD
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public class HeaderV4 : Header
     {
         /// <summary>
         /// Flags
         /// </summary>
-        public Flags Flags { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public Flags Flags;
 
         /// <summary>
         /// Compression type
         /// </summary>
-        public CompressionType Compression { get; set; }
+        [MarshalAs(UnmanagedType.U4)]
+        public CompressionType Compression;
 
         /// <summary>
         /// Total # of hunks represented
         /// </summary>
-        public uint TotalHunks { get; set; }
+        public uint TotalHunks;
 
         /// <summary>
         /// Logical size of the data (in bytes)
         /// </summary>
-        public ulong LogicalBytes { get; set; }
+        public ulong LogicalBytes;
 
         /// <summary>
         /// Offset to the first blob of metadata
         /// </summary>
-        public ulong MetaOffset { get; set; }
+        public ulong MetaOffset;
 
         /// <summary>
         /// Number of bytes per hunk
         /// </summary>
-        public uint HunkBytes { get; set; }
+        public uint HunkBytes;
 
         /// <summary>
         /// Combined raw+meta SHA1
         /// </summary>
-        public byte[]? SHA1 { get; set; } = new byte[20];
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
+        public byte[]? SHA1 = new byte[20];
 
         /// <summary>
         /// Combined raw+meta SHA1 of parent
         /// </summary>
-        public byte[]? ParentSHA1 { get; set; } = new byte[20];
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
+        public byte[]? ParentSHA1 = new byte[20];
 
         /// <summary>
         /// Raw data SHA1
         /// </summary>
-        public byte[]? RawSHA1 { get; set; } = new byte[20];
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
+        public byte[]? RawSHA1 = new byte[20];
     }
 }

@@ -1,21 +1,25 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.CHD
 {
     /// <see href="https://github.com/mamedev/mame/blob/master/src/lib/util/chd.h"/> 
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     public abstract class Header
     {
         /// <summary>
         /// 'MComprHD'
         /// </summary>
-        public string? Tag { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        public string? Tag;
 
         /// <summary>
         /// Length of header (including tag and length fields)
         /// </summary>
-        public uint Length { get; set; }
+        public uint Length;
 
         /// <summary>
         /// Drive format version
         /// </summary>
-        public uint Version { get; set; }
+        public uint Version;
     }
 }
