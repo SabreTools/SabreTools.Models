@@ -2,7 +2,7 @@ namespace SabreTools.Models.VBSP
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x56, 0x42, 0x53, 0x50 };
+        public static readonly byte[] SignatureBytes = [0x56, 0x42, 0x53, 0x50];
 
         public const string SignatureString = "VBSP";
 

@@ -2,7 +2,7 @@ namespace SabreTools.Models.Quantum
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x44, 0x53 };
+        public static readonly byte[] SignatureBytes = [0x44, 0x53];
 
         public const string SignatureString = "DS";
 

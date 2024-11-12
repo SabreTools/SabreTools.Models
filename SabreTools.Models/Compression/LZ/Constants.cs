@@ -8,7 +8,7 @@ namespace SabreTools.Models.Compression.LZ
 
         public const int LZ_HEADER_LEN = 14;
 
-        public static readonly byte[] MagicBytes = new byte[] { 0x53, 0x5a, 0x44, 0x44, 0x88, 0xf0, 0x27, 0x33 };
+        public static readonly byte[] MagicBytes = [0x53, 0x5a, 0x44, 0x44, 0x88, 0xf0, 0x27, 0x33];
 
         public static readonly string MagicString = System.Text.Encoding.ASCII.GetString(MagicBytes);
 

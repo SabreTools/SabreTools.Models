@@ -2,7 +2,7 @@ namespace SabreTools.Models.InstallShieldCabinet
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x49, 0x53, 0x63, 0x28 };
+        public static readonly byte[] SignatureBytes = [0x49, 0x53, 0x63, 0x28];
 
         public const string SignatureString = "ISc(";
 

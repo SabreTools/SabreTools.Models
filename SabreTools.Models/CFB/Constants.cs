@@ -4,7 +4,7 @@ namespace SabreTools.Models.CFB
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1 };
+        public static readonly byte[] SignatureBytes = [0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1];
     
         public const ulong SignatureUInt64 = 0xE11AB1A1E011CFD0;
 
@@ -15,17 +15,17 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// Installer Package (msi), Merge Module (msm), Patch Creation Properties (pcp)
         /// </summary>
-        public static readonly Guid InstallerPackage = new Guid("000c1084-0000-0000-c000-000000000046");
+        public static readonly Guid InstallerPackage = new("000c1084-0000-0000-c000-000000000046");
 
         /// <summary>
         /// Patch Package (msp)
         /// </summary>
-        public static readonly Guid PatchPackage = new Guid("000C1086-0000-0000-C000-000000000046");
+        public static readonly Guid PatchPackage = new("000C1086-0000-0000-C000-000000000046");
 
         /// <summary>
         /// Transform (mst)
         /// </summary>
-        public static readonly Guid Transform = new Guid("000C1082-0000-0000-C000-000000000046");
+        public static readonly Guid Transform = new("000C1082-0000-0000-C000-000000000046");
 
         #endregion
 
@@ -35,17 +35,17 @@ namespace SabreTools.Models.CFB
         /// <summary>
         /// The Summary Information Property Set
         /// </summary>
-        public static readonly Guid FMTID_SummaryInformation = new Guid("F29F85E0-4FF9-1068-AB91-08002B27B3D9");
+        public static readonly Guid FMTID_SummaryInformation = new("F29F85E0-4FF9-1068-AB91-08002B27B3D9");
         
         /// <summary>
         /// The DocumentSummaryInformation and UserDefined Property Sets
         /// </summary>
-        public static readonly Guid FMTID_DocSummaryInformation = new Guid("D5CDD502-2E9C-101B-9397-08002B2CF9AE");
+        public static readonly Guid FMTID_DocSummaryInformation = new("D5CDD502-2E9C-101B-9397-08002B2CF9AE");
         
         /// <summary>
         /// The DocumentSummaryInformation and UserDefined Property Sets
         /// </summary>
-        public static readonly Guid FMTID_UserDefinedProperties = new Guid("D5CDD505-2E9C-101B-9397-08002B2CF9AE");
+        public static readonly Guid FMTID_UserDefinedProperties = new("D5CDD505-2E9C-101B-9397-08002B2CF9AE");
 
         #endregion
     }

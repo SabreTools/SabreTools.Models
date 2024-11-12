@@ -2,7 +2,7 @@ namespace SabreTools.Models.PAK
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x50, 0x41, 0x43, 0x4b };
+        public static readonly byte[] SignatureBytes = [0x50, 0x41, 0x43, 0x4b];
 
         public const string SignatureString = "PACK";
 

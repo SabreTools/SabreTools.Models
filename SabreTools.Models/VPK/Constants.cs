@@ -2,7 +2,7 @@ namespace SabreTools.Models.VPK
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x34, 0x12, 0xaa, 0x55 };
+        public static readonly byte[] SignatureBytes = [0x34, 0x12, 0xaa, 0x55];
 
         public static readonly string SignatureString = System.Text.Encoding.ASCII.GetString(SignatureBytes);
 

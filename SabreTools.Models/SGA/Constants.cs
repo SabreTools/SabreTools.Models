@@ -2,7 +2,7 @@ namespace SabreTools.Models.SGA
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x5f, 0x41, 0x52, 0x43, 0x48, 0x49, 0x56, 0x45 };
+        public static readonly byte[] SignatureBytes = [0x5f, 0x41, 0x52, 0x43, 0x48, 0x49, 0x56, 0x45];
 
         public const string SignatureString = "_ARCHIVE";
 

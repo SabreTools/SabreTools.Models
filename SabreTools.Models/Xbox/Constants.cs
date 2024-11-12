@@ -10,7 +10,7 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// Mapping of all Xbox 360 media subtypes to long names
         /// </summary>
-        public static readonly Dictionary<char, string> MediaSubtypes = new Dictionary<char, string>
+        public static readonly Dictionary<char, string> MediaSubtypes = new()
         {
             { 'F', "XGD3" },
             { 'X', "XGD2" },
@@ -20,7 +20,7 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// Mapping of all publisher 2-letter codes to long names
         /// </summary>
-        public static readonly Dictionary<string, string> Publishers = new Dictionary<string, string>
+        public static readonly Dictionary<string, string> Publishers = new()
         {
             { "AB", "Ambush Reality" },
             { "AC", "Acclaim Entertainment" },
@@ -187,7 +187,7 @@ namespace SabreTools.Models.Xbox
         /// <summary>
         /// Mapping of all region 1-letter codes to long names
         /// </summary>
-        public static readonly Dictionary<char, string> Regions = new Dictionary<char, string>
+        public static readonly Dictionary<char, string> Regions = new()
         {
             { 'A', "USA" },
             { 'E', "Europe" },

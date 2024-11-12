@@ -2,7 +2,7 @@ namespace SabreTools.Models.NewExecutable
 {
     public static class Constants
     {
-        public static readonly byte[] SignatureBytes = new byte[] { 0x4e, 0x45 };
+        public static readonly byte[] SignatureBytes = [0x4e, 0x45];
 
         public const string SignatureString = "NE";
 

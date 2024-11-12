@@ -4,7 +4,7 @@ namespace SabreTools.Models.MoPaQ
     {
         #region Archive Header
 
-        public static readonly byte[] ArchiveHeaderSignatureBytes = new byte[] { 0x4d, 0x50, 0x51, 0x1a };
+        public static readonly byte[] ArchiveHeaderSignatureBytes = [0x4d, 0x50, 0x51, 0x1a];
 
         public static readonly string ArchiveHeaderSignatureString = System.Text.Encoding.ASCII.GetString(ArchiveHeaderSignatureBytes);
 
@@ -14,7 +14,7 @@ namespace SabreTools.Models.MoPaQ
 
         #region User Data
 
-        public static readonly byte[] UserDataSignatureBytes = new byte[] { 0x4d, 0x50, 0x51, 0x1b };
+        public static readonly byte[] UserDataSignatureBytes = [0x4d, 0x50, 0x51, 0x1b];
 
         public static readonly string UserDataSignatureString = System.Text.Encoding.ASCII.GetString(UserDataSignatureBytes);
 
@@ -24,7 +24,7 @@ namespace SabreTools.Models.MoPaQ
 
         #region HET Table
 
-        public static readonly byte[] HetTableSignatureBytes = new byte[] { 0x48, 0x45, 0x54, 0x1a };
+        public static readonly byte[] HetTableSignatureBytes = [0x48, 0x45, 0x54, 0x1a];
 
         public static readonly string HetTableSignatureString = System.Text.Encoding.ASCII.GetString(HetTableSignatureBytes);
 
@@ -34,7 +34,7 @@ namespace SabreTools.Models.MoPaQ
 
         #region BET Table
 
-        public static readonly byte[] BetTableSignatureBytes = new byte[] { 0x42, 0x45, 0x54, 0x1a };
+        public static readonly byte[] BetTableSignatureBytes = [0x42, 0x45, 0x54, 0x1a];
 
         public static readonly string BetTableSignatureString = System.Text.Encoding.ASCII.GetString(BetTableSignatureBytes);
 
