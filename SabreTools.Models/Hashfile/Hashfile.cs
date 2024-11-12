@@ -5,6 +5,10 @@ namespace SabreTools.Models.Hashfile
     {
         public SFV[]? SFV { get; set; }
 
+        public MD2[]? MD2 { get; set; }
+
+        public MD4[]? MD4 { get; set; }
+
         public MD5[]? MD5 { get; set; }
 
         public SHA1[]? SHA1 { get; set; }
