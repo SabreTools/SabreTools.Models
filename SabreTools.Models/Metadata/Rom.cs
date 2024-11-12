@@ -114,6 +114,12 @@ namespace SabreTools.Models.Metadata
         public const string MatrixNumberKey = "matrix_number";
 
         /// <remarks>string</remarks>
+        public const string MD2Key = "md2";
+
+        /// <remarks>string</remarks>
+        public const string MD4Key = "md4";
+
+        /// <remarks>string</remarks>
         public const string MD5Key = "md5";
 
         /// <remarks>string; OpenMSX.RomBase</remarks>
