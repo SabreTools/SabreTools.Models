@@ -7,11 +7,6 @@ namespace SabreTools.Models.N3DS
     public sealed class DevelopmentCardInfoHeader
     {
         /// <summary>
-        /// InitialData
-        /// </summary>
-        public InitialData? InitialData;
-
-        /// <summary>
         /// CardDeviceReserved1
         /// </summary>
         /// <remarks>0x200 bytes</remarks>
