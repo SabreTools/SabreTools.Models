@@ -47,12 +47,5 @@ namespace SabreTools.Models.AttractMode
         public string? PlayedTime { get; set; }
 
         public string? FileIsAvailable { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        public string[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

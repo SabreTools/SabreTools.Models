@@ -72,17 +72,5 @@ namespace SabreTools.Models.Logiqx
         /// <remarks>Boolean; RomVault extension</remarks>
         [XmlAttribute("mia")]
         public string? MIA { get; set; }
-        
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyAttribute]
-        public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyElement]
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

@@ -49,17 +49,5 @@ namespace SabreTools.Models.Listxml
         /// <remarks>(yes|no) "no", Only present in older versions</remarks>
         [XmlAttribute("soundonly")]
         public string? SoundOnly { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyAttribute]
-        public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyElement]
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

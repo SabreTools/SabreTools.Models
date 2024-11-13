@@ -29,12 +29,5 @@ namespace SabreTools.Models.RomCenter
 
         /// <remarks>8</remarks>
         public string? MergeName { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        public string[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

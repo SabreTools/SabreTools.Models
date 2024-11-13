@@ -24,17 +24,5 @@ namespace SabreTools.Models.SoftwareList
 
         [XmlElement("rom")]
         public Rom[]? Rom { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyAttribute]
-        public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyElement]
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

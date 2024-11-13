@@ -20,12 +20,5 @@ namespace SabreTools.Models.Hashfile
         public SHA512[]? SHA512 { get; set; }
 
         public SpamSum[]? SpamSum { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        public string[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

@@ -36,17 +36,5 @@ namespace SabreTools.Models.SoftwareList
         /// <remarks>(load16_byte|load16_word|load16_word_swap|load32_byte|load32_word|load32_word_swap|load32_dword|load64_word|load64_word_swap|reload|fill|continue|reload_plain|ignore)</remarks>
         [XmlAttribute("loadflag")]
         public string? LoadFlag { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyAttribute]
-        public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyElement]
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

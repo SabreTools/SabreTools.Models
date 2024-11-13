@@ -62,17 +62,5 @@ namespace SabreTools.Models.Listxml
         /// <remarks>Numeric</remarks>
         [XmlAttribute("vbstart")]
         public string? VBStart { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyAttribute]
-        public XmlAttribute[]? ADDITIONAL_ATTRIBUTES { get; set; }
-
-        /// <remarks>Should be empty</remarks>
-        [XmlAnyElement]
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

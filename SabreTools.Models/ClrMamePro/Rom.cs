@@ -87,12 +87,5 @@ namespace SabreTools.Models.ClrMamePro
         public string? MIA { get; set; }
 
         #endregion
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        public string[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }

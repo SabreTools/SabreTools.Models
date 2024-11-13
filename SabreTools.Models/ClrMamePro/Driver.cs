@@ -18,12 +18,5 @@ namespace SabreTools.Models.ClrMamePro
 
         /// <remarks>blit, (plain|dirty)</remarks>
         public string? Blit { get; set; }
-
-        #region DO NOT USE IN PRODUCTION
-
-        /// <remarks>Should be empty</remarks>
-        public object[]? ADDITIONAL_ELEMENTS { get; set; }
-
-        #endregion
     }
 }
