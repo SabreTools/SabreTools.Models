@@ -19,6 +19,7 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// ARM9 access control
         /// </summary>
+        /// TODO: Fix serialization issue with this type
         public ARM9AccessControl? ARM9AccessControl;
     }
 }

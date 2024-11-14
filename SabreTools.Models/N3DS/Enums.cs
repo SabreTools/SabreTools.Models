@@ -192,7 +192,7 @@ namespace SabreTools.Models.N3DS
         EllipticCurve = 0x02000000,
     }
 
-    public enum ResourceLimitCategory
+    public enum ResourceLimitCategory : byte
     {
         APPLICATION = 0,
         SYS_APPLET = 1,
