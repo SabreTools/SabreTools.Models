@@ -2,7 +2,6 @@
 
 namespace SabreTools.Models.N3DS
 {
-    // TODO: Fix this, I don't think it's correct
     [Flags]
     public enum ARM9AccessControlDescriptors : byte
     {
