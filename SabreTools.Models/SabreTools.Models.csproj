@@ -4,10 +4,10 @@
         <!-- Assembly Properties -->
         <TargetFrameworks>net20;net35;net40;net452;net462;net472;net48;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
+        <NoWarn>CS0618</NoWarn>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <Version>1.5.1</Version>
-        <WarningsNotAsErrors>CS0618</WarningsNotAsErrors>
 
         <!-- Package Properties -->
         <Authors>Matt Nadareski</Authors>
