@@ -1,8 +1,9 @@
 using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.WAD
+namespace SabreTools.Models.WAD3
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/WADFile.h"/>
+    /// <see href="https://twhl.info/wiki/page/Specification:_WAD3"/>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class Header
     {
@@ -14,13 +15,13 @@ namespace SabreTools.Models.WAD
         public string? Signature;
 
         /// <summary>
-        /// Number of lumps in the file
+        /// Number of Directory entries
         /// </summary>
-        public uint LumpCount;
+        public uint NumDirs;
 
         /// <summary>
-        /// Offset where lumps are stored
+        /// Offset from the WAD3 data's beginning for first Directory entry
         /// </summary>
-        public uint LumpOffset;
+        public uint DirOffset;
     }
 }

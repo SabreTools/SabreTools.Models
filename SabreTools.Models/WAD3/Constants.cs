@@ -1,4 +1,4 @@
-namespace SabreTools.Models.WAD
+namespace SabreTools.Models.WAD3
 {
     public static class Constants
     {

@@ -1,4 +1,4 @@
-namespace SabreTools.Models.WAD
+namespace SabreTools.Models.WAD3
 {
     /// <summary>
     /// Half-Life Texture Package File
@@ -12,13 +12,13 @@ namespace SabreTools.Models.WAD
         public Header? Header { get; set; }
 
         /// <summary>
-        /// Deserialized lumps data
+        /// Deserialized dir entry data
         /// </summary>
-        public Lump?[]? Lumps { get; set; }
+        public DirEntry?[]? DirEntries { get; set; }
 
         /// <summary>
-        /// Deserialized lump infos data
+        /// Deserialized file entry data
         /// </summary>
-        public LumpInfo?[]? LumpInfos { get; set; }
+        public FileEntry?[]? FileEntries { get; set; }
     }
 }
