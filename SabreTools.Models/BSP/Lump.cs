@@ -1,19 +1,11 @@
-using System.Runtime.InteropServices;
-
 namespace SabreTools.Models.BSP
 {
-    /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/BSPFile.h"/>
-    [StructLayout(LayoutKind.Sequential)]
-    public sealed class Lump
+    /// <summary>
+    /// Represents a common Lump type
+    /// </summary>
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    public abstract class Lump
     {
-        /// <summary>
-        /// Offset
-        /// </summary>
-        public uint Offset;
-
-        /// <summary>
-        /// Length
-        /// </summary>
-        public uint Length;
+        // No shared fields between types
     }
 }
