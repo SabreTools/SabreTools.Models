@@ -1,7 +1,7 @@
-namespace SabreTools.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.Deflate
 {
     /// <see href="https://www.rfc-editor.org/rfc/rfc1951"/>
-    public class DeflateBlockHeader
+    public class BlockHeader
     {
         /// <summary>
         /// Set if and only if this is the last block of the data set.

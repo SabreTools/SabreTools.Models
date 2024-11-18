@@ -1,4 +1,4 @@
-namespace SabreTools.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.Deflate
 {
     /// <summary>
     /// Non-compressed blocks (BTYPE=00)

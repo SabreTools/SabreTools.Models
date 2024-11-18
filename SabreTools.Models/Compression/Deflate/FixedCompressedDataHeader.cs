@@ -1,6 +1,6 @@
 using System;
 
-namespace SabreTools.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.Deflate
 {
     /// <summary>
     /// Compression with fixed Huffman codes (BTYPE=01)

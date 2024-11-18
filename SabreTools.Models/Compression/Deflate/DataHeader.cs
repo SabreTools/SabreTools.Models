@@ -1,4 +1,4 @@
-namespace SabreTools.Models.Compression.MSZIP
+namespace SabreTools.Models.Compression.Deflate
 {
     /// <summary>
     /// Base class for all data headers (BTYPE=00, BTYPE=01, or BTYPE=02)

@@ -15,12 +15,12 @@ namespace SabreTools.Models.Compression.MSZIP
         /// <summary>
         /// Deflate block (RFC-1951) header
         /// </summary>
-        public DeflateBlockHeader? Header { get; set; }
+        public Deflate.BlockHeader? Header { get; set; }
 
         /// <summary>
         /// Compression-specific data header
         /// </summary>
-        public DataHeader? DataHeader { get; set; }
+        public Deflate.DataHeader? DataHeader { get; set; }
 
         /// <summary>
         /// MSZIP data
