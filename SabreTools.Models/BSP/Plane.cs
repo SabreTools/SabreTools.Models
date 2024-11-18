@@ -18,6 +18,7 @@ namespace SabreTools.Models.BSP
     /// computations. 
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class Plane
     {

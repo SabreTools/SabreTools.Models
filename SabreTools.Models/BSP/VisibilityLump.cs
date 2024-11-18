@@ -11,8 +11,12 @@ namespace SabreTools.Models.BSP
     /// sequences of bitfields, which are run-length encoded. 
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/> 
     public sealed class VisibilityLump
     {
-        public byte[]? Data { get; set; }
+        public int NumClusters { get; set; }
+
+        /// <remarks>[numclusters][2]</remarks>
+        public int[,]? ByteOffsets { get; set; }
     }
 }

@@ -5,6 +5,7 @@ namespace SabreTools.Models.BSP
     /// They are stored as a primitve array of triples of floats. 
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/>
     public sealed class VerticesLump : Lump
     {
         /// <summary>

@@ -11,6 +11,7 @@ namespace SabreTools.Models.BSP
     /// used. 
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/>
     public sealed class SurfedgesLump : Lump
     {
         /// <summary>

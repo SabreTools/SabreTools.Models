@@ -1,6 +1,7 @@
 namespace SabreTools.Models.BSP
 {
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/> 
     public static class Constants
     {
         #region Header
@@ -8,7 +9,12 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Number of lumps in a BSP
         /// </summary>
-        public const int HEADER_LUMPS = 15;
+        public const int BSP_HEADER_LUMPS = 15;
+
+        /// <summary>
+        /// Number of lumps in a VBSP
+        /// </summary>
+        public const int VBSP_HEADER_LUMPS = 64;
 
         #endregion
 
@@ -53,6 +59,41 @@ namespace SabreTools.Models.BSP
         public const int MAXTEXTURENAME = 16;
 
         public const int MIPLEVELS = 4;
+
+        #endregion
+    
+        #region VBSP
+
+        public static readonly byte[] SignatureBytes = [0x56, 0x42, 0x53, 0x50];
+
+        public const string SignatureString = "VBSP";
+
+        public const uint SignatureUInt32 = 0x50534256;
+
+        #endregion
+
+        #region LZMA
+
+        public static readonly byte[] LzmaHeaderBytes = [0x4C, 0x5A, 0x4D, 0x41];
+
+        public const string LzmaHeaderString = "LZMA";
+
+        public const uint LzmaHeaderUInt32 = 0x414D5A4C;
+        
+        #endregion
+    
+        #region Overlay
+
+        public const int OVERLAY_BSP_FACE_COUNT = 64;
+
+        #endregion
+    
+        #region Worldlights
+
+        /// <summary>
+        /// This says that the light was put into the per-leaf ambient cubes.
+        /// </summary>
+        public const int DWL_FLAGS_INAMBIENTCUBE = 0x0001;
 
         #endregion
     }

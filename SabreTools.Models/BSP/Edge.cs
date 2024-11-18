@@ -7,6 +7,7 @@ namespace SabreTools.Models.BSP
     /// face. Each edge is pointing to the start and end vertex of the edge. 
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
+    /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class Edge
     {

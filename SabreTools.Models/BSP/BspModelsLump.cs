@@ -1,11 +1,11 @@
 namespace SabreTools.Models.BSP
 {
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(GoldSrc)"/> 
-    public sealed class ClipnodesLump : Lump
+    public sealed class BspModelsLump : Lump
     {
         /// <summary>
-        /// Clipnodes
+        /// Model
         /// </summary>
-        public Clipnode[]? Clipnodes { get; set; }
+        public BspModel[]? Models { get; set; }
     }
 }
