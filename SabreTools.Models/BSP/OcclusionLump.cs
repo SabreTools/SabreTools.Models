@@ -41,6 +41,6 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// <see cref="VertexIndexCount">
         /// </summary>
-        public int[]? VertexIndices;
+        public int[]? VertexIndicies;
     }
 }

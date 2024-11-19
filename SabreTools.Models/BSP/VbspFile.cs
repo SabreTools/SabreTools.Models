@@ -153,7 +153,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// LUMP_DISPINFO [26]
         /// </summary>
-        public DispInfosLump? DispInfoLump { get; set; }
+        public DispInfosLump? DispInfosLump { get; set; }
 
         /// <summary>
         /// LUMP_ORIGINALFACES [27]
@@ -190,7 +190,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// LUMP_DISP_VERTS [33]
         /// </summary>
-        public DispVertsLump? DispVertLump { get; set; }
+        public DispVertsLump? DispVertsLump { get; set; }
 
         /// <summary>
         /// LUMP_DISP_LIGHTMAP_SAMPLE_POSITIONS [34]
@@ -239,7 +239,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// LUMP_CUBEMAPS [42]
         /// </summary>
-        public CubemapsLump? CubemapLump { get; set; }
+        public CubemapsLump? CubemapsLump { get; set; }
 
         /// <summary>
         /// LUMP_TEXDATA_STRING_DATA [43]
@@ -304,7 +304,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// LUMP_WORLDLIGHTS_HDR [54]
         /// </summary>
-        public WorldLightsLump? WorldLightsLump { get; set; }
+        public WorldLightsLump? HDRWorldLightsLump { get; set; }
 
         /// <summary>
         /// LUMP_LEAF_AMBIENT_LIGHTING_HDR [55]
@@ -353,7 +353,7 @@ namespace SabreTools.Models.BSP
         // public PhysLevelLump? PhysLevelLump { get; set; }
 
         /// <summary>
-        /// LUMP_DISP_MULTIBLEND [64]
+        /// LUMP_DISP_MULTIBLEND [63]
         /// </summary>
         /// TODO: Find definition and implement
         // public DispMultiBlendLump? DispMultiBlendLump { get; set; }
