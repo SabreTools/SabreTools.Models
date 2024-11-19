@@ -229,8 +229,10 @@ namespace SabreTools.Models.BSP
         /// TODO: Find definition and implement
         // public PrimIndicesLump? PrimIndicesLump { get; set; }
 
-        // TODO: Implement Lump 40
-        // https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile
+        /// <summary>
+        /// LUMP_PAKFILE [40]
+        /// </summary>
+        public PakfileLump? PakfileLump { get; set; }
 
         /// <summary>
         /// LUMP_CLIPPORTALVERTS [41]
