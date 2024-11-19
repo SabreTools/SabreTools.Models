@@ -43,6 +43,6 @@ namespace SabreTools.Models.WAD3
         /// The color palette for the mipmaps (always 256 * 3 = 768 for GoldSrc)
         /// </summary>
         /// <remarks>[ColorsUsed][3]</remarks>
-        public byte[,]? Palette { get; set; }
+        public byte[][]? Palette { get; set; }
     }
 }

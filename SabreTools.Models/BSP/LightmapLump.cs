@@ -13,6 +13,6 @@ namespace SabreTools.Models.BSP
         /// Lightmap RGB values
         /// </summary>
         /// <remarks>Array of 3-byte values</remarks>
-        public byte[,]? Lightmap { get; set; }
+        public byte[][]? Lightmap { get; set; }
     }
 }

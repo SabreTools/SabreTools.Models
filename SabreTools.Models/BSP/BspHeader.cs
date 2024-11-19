@@ -17,6 +17,7 @@ namespace SabreTools.Models.BSP
         /// Lumps
         /// </summary>
         /// <remarks>15 entries</remarks>
-        public BspLumpEntry[]? Lumps { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.BSP_HEADER_LUMPS)]
+        public BspLumpEntry[]? Lumps;
     }
 }

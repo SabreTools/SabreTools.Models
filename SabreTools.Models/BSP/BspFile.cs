@@ -35,6 +35,11 @@ namespace SabreTools.Models.BSP
         public VerticesLump? VerticesLump { get; set; }
 
         /// <summary>
+        /// LUMP_VISIBILITY [4]
+        /// </summary>
+        public VisibilityLump? VisibilityLump { get; set; }
+
+        /// <summary>
         /// LUMP_NODES [5]
         /// </summary>
         public BspNodesLump? NodesLump { get; set; }

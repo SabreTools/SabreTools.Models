@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace SabreTools.Models.WAD3
 {
     /// <see href="https://twhl.info/wiki/page/Specification:_WAD3"/>
@@ -9,6 +7,6 @@ namespace SabreTools.Models.WAD3
         /// Raw image data. Each byte points to an index in the palette
         /// </summary>
         /// <remarks>[width][height]</remarks>
-        public byte[,]? Data { get; set; }
+        public byte[][]? Data { get; set; }
     }
 }

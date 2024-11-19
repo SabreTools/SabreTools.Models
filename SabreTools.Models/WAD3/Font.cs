@@ -24,7 +24,7 @@ namespace SabreTools.Models.WAD3
         public CharInfo[] FontInfo = new CharInfo[256];
 
         /// <remarks>[width][height]</remarks>
-        public byte[,]? Data;
+        public byte[][]? Data;
 
         /// <summary>
         /// Number of colors used in the palette (always 256 for GoldSrc)
@@ -35,6 +35,6 @@ namespace SabreTools.Models.WAD3
         /// The color palette for the mipmaps (always 256 * 3 = 768 for GoldSrc)
         /// </summary>
         /// <remarks>[ColorsUsed][3]</remarks>
-        public byte[,]? Palette { get; set; }
+        public byte[][]? Palette { get; set; }
     }
 }

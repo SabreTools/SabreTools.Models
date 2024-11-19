@@ -17,6 +17,6 @@ namespace SabreTools.Models.BSP
         public int NumClusters { get; set; }
 
         /// <remarks>[numclusters][2]</remarks>
-        public int[,]? ByteOffsets { get; set; }
+        public int[][]? ByteOffsets { get; set; }
     }
 }
