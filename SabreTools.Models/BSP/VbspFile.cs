@@ -166,8 +166,10 @@ namespace SabreTools.Models.BSP
         /// TODO: Find definition and implement
         // public PhysDispLump? PhysDispLump { get; set; }
 
-        // TODO: Implement Lump 29
-        // https://developer.valvesoftware.com/wiki/BSP_(Source)#Physics
+        /// <summary>
+        /// LUMP_PHYSCOLLIDE [29]
+        /// </summary>
+        public PhysCollideLump? PhysCollideLump { get; set; }
 
         /// <summary>
         /// LUMP_VERTNORMALS [30]
