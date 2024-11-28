@@ -25,7 +25,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// The planes normal vector
         /// </summary>
-        public Vector3D NormalVector;
+        public Vector3D? NormalVector;
 
         /// <summary>
         /// Plane equation is: vNormal * X = fDist

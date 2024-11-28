@@ -25,7 +25,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Start position used for orientation
         /// </summary>
-        public Vector3D StartPosition;
+        public Vector3D? StartPosition;
 
         /// <summary>
         /// Index into LUMP_DISP_VERTS.

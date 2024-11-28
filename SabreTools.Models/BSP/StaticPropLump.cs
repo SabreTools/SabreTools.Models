@@ -39,12 +39,12 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Origin
         /// </summary>
-        public Vector3D Origin;
+        public Vector3D? Origin;
 
         /// <summary>
         /// Orientation (pitch yaw roll)
         /// </summary>
-        public QAngle Angles;
+        public QAngle? Angles;
 
         #endregion
 
@@ -90,7 +90,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// For lighting
         /// </summary>
-        public Vector3D LightingOrigin;
+        public Vector3D? LightingOrigin;
 
         #endregion
 
@@ -151,7 +151,7 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Per instance color and alpha modulation
         /// </summary>
-        public ColorRGBExp32 DiffuseModulation;
+        public ColorRGBExp32? DiffuseModulation;
 
         #endregion
 

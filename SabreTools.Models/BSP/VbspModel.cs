@@ -15,17 +15,17 @@ namespace SabreTools.Models.BSP
         /// <summary>
         /// Bounding box
         /// </summary>
-        public Vector3D Mins;
+        public Vector3D? Mins;
 
         /// <summary>
         /// Bounding box
         /// </summary>
-        public Vector3D Maxs;
+        public Vector3D? Maxs;
 
         /// <summary>
         /// For sounds or lights
         /// </summary>
-        public Vector3D OriginVector;
+        public Vector3D? OriginVector;
 
         /// <summary>
         /// Index into nodes
