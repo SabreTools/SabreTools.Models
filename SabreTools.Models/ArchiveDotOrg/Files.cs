@@ -7,6 +7,6 @@ namespace SabreTools.Models.ArchiveDotOrg
     public class Files
     {
         [XmlElement("file")]
-        public File?[]? File { get; set; }
+        public File[]? File { get; set; }
     }
 }

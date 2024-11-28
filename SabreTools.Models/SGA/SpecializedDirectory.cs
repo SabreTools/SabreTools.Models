@@ -26,17 +26,17 @@ namespace SabreTools.Models.SGA
         /// <summary>
         /// Sections data
         /// </summary>
-        public TSection?[]? Sections { get; set; }
+        public TSection[]? Sections { get; set; }
 
         /// <summary>
         /// Folders data
         /// </summary>
-        public TFolder?[]? Folders { get; set; }
+        public TFolder[]? Folders { get; set; }
 
         /// <summary>
         /// Files data
         /// </summary>
-        public TFile?[]? Files { get; set; }
+        public TFile[]? Files { get; set; }
 
         /// <summary>
         /// String table data

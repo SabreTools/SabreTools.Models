@@ -40,12 +40,12 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Section table
         /// </summary>
-        public SectionHeader?[]? SectionTable { get; set; }
+        public SectionHeader[]? SectionTable { get; set; }
 
         /// <summary>
         /// COFF symbol table
         /// </summary>
-        public COFFSymbolTableEntry?[]? COFFSymbolTable { get; set; }
+        public COFFSymbolTableEntry[]? COFFSymbolTable { get; set; }
 
         /// <summary>
         /// COFF string table
@@ -55,7 +55,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Attribute certificate table
         /// </summary>
-        public AttributeCertificateTableEntry?[]? AttributeCertificateTable { get; set; }
+        public AttributeCertificateTableEntry[]? AttributeCertificateTable { get; set; }
 
         /// <summary>
         /// Delay-load directory table
@@ -71,7 +71,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Base relocation table (.reloc)
         /// </summary>
-        public BaseRelocationBlock?[]? BaseRelocationTable { get; set; }
+        public BaseRelocationBlock[]? BaseRelocationTable { get; set; }
 
         /// <summary>
         /// Debug table (.debug*)

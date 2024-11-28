@@ -14,7 +14,7 @@ namespace SabreTools.Models.PFF
         /// <summary>
         /// Segments
         /// </summary>
-        public Segment?[]? Segments { get; set; }
+        public Segment[]? Segments { get; set; }
 
         /// <summary>
         /// Footer

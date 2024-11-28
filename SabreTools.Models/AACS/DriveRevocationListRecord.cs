@@ -21,6 +21,6 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// Revocation list entries
         /// </summary>
-        public DriveRevocationSignatureBlock?[]? SignatureBlocks { get; set; }
+        public DriveRevocationSignatureBlock[]? SignatureBlocks { get; set; }
     }
 }

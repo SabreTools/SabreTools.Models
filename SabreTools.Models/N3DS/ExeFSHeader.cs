@@ -16,7 +16,7 @@
         /// <summary>
         /// File headers (10 headers maximum, 16 bytes each)
         /// </summary>
-        public ExeFSFileHeader?[]? FileHeaders { get; set; }
+        public ExeFSFileHeader[]? FileHeaders { get; set; }
 
         /// <summary>
         /// Reserved

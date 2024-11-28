@@ -56,6 +56,6 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Entry table
         /// </summary>
-        public SecuROMAddDEntry?[]? Entries { get; set; }
+        public SecuROMAddDEntry[]? Entries { get; set; }
     }
 }

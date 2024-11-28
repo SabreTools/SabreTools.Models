@@ -12,6 +12,6 @@ namespace SabreTools.Models.AACS
         /// A list of 8-byte Host Drive List Entry fields, the length of this
         /// list being equal to the number in the signature block.
         /// </summary>
-        public DriveRevocationListEntry?[]? EntryFields { get; set; }
+        public DriveRevocationListEntry[]? EntryFields { get; set; }
     }
 }

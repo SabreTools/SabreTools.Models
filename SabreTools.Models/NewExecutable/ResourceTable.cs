@@ -23,7 +23,7 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// A table of resource type information blocks follows.
         /// </summary>
-        public ResourceTypeInformationEntry?[]? ResourceTypes { get; set; }
+        public ResourceTypeInformationEntry[]? ResourceTypes { get; set; }
 
         /// <summary>
         /// Resource type and name strings are stored at the end of the

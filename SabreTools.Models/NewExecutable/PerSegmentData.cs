@@ -18,6 +18,6 @@
         /// <summary>
         /// A table of relocation records follows.
         /// </summary>
-        public RelocationRecord?[]? RelocationRecords { get; set; }
+        public RelocationRecord[]? RelocationRecords { get; set; }
     }
 }

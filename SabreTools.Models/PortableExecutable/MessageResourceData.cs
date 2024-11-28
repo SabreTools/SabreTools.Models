@@ -17,7 +17,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// An array of structures. The array is the size indicated by the NumberOfBlocks member.
         /// </summary>
-        public MessageResourceBlock?[]? Blocks { get; set; }
+        public MessageResourceBlock[]? Blocks { get; set; }
 
         /// <summary>
         /// Message resource entries

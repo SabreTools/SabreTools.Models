@@ -10,7 +10,7 @@ namespace SabreTools.Models.Compression.Quantum
         /// order in the table, and with every symbol in the table
         /// having a frequency of 1
         /// </remarks>
-        public ModelSymbol?[]? Symbols { get; set; }
+        public ModelSymbol[]? Symbols { get; set; }
 
         /// <remarks>
         /// The initial total frequency is equal to the number of entries

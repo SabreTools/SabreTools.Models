@@ -17,11 +17,11 @@
         /// <summary>
         /// One or more CFFOLDER entries
         /// </summary>
-        public CFFOLDER?[]? Folders { get; set; }
+        public CFFOLDER[]? Folders { get; set; }
 
         /// <summary>
         /// A series of one or more cabinet file (CFFILE) entries
         /// </summary>
-        public CFFILE?[]? Files { get; set; }
+        public CFFILE[]? Files { get; set; }
     }
 }

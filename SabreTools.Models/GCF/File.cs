@@ -21,7 +21,7 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Block entries data
         /// </summary>
-        public BlockEntry?[]? BlockEntries { get; set; }
+        public BlockEntry[]? BlockEntries { get; set; }
 
         /// <summary>
         /// Fragmentation map header data
@@ -31,7 +31,7 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Fragmentation map data
         /// </summary>
-        public FragmentationMap?[]? FragmentationMaps { get; set; }
+        public FragmentationMap[]? FragmentationMaps { get; set; }
 
         /// <summary>
         /// Block entry map header data
@@ -43,7 +43,7 @@ namespace SabreTools.Models.GCF
         /// Block entry map data
         /// </summary>
         /// <remarks>Part of version 5 but not version 6.</remarks>
-        public BlockEntryMap?[]? BlockEntryMaps { get; set; }
+        public BlockEntryMap[]? BlockEntryMaps { get; set; }
 
         /// <summary>
         /// Directory header data
@@ -53,7 +53,7 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Directory entries data
         /// </summary>
-        public DirectoryEntry?[]? DirectoryEntries { get; set; }
+        public DirectoryEntry[]? DirectoryEntries { get; set; }
 
         /// <summary>
         /// Directory names data
@@ -63,22 +63,22 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Directory info 1 entries data
         /// </summary>
-        public DirectoryInfo1Entry?[]? DirectoryInfo1Entries { get; set; }
+        public DirectoryInfo1Entry[]? DirectoryInfo1Entries { get; set; }
 
         /// <summary>
         /// Directory info 2 entries data
         /// </summary>
-        public DirectoryInfo2Entry?[]? DirectoryInfo2Entries { get; set; }
+        public DirectoryInfo2Entry[]? DirectoryInfo2Entries { get; set; }
 
         /// <summary>
         /// Directory copy entries data
         /// </summary>
-        public DirectoryCopyEntry?[]? DirectoryCopyEntries { get; set; }
+        public DirectoryCopyEntry[]? DirectoryCopyEntries { get; set; }
 
         /// <summary>
         /// Directory local entries data
         /// </summary>
-        public DirectoryLocalEntry?[]? DirectoryLocalEntries { get; set; }
+        public DirectoryLocalEntry[]? DirectoryLocalEntries { get; set; }
 
         /// <summary>
         /// Directory map header data
@@ -88,7 +88,7 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Directory map entries data
         /// </summary>
-        public DirectoryMapEntry?[]? DirectoryMapEntries { get; set; }
+        public DirectoryMapEntry[]? DirectoryMapEntries { get; set; }
 
         /// <summary>
         /// Checksum header data
@@ -103,12 +103,12 @@ namespace SabreTools.Models.GCF
         /// <summary>
         /// Checksum map entries data
         /// </summary>
-        public ChecksumMapEntry?[]? ChecksumMapEntries { get; set; }
+        public ChecksumMapEntry[]? ChecksumMapEntries { get; set; }
 
         /// <summary>
         /// Checksum entries data
         /// </summary>
-        public ChecksumEntry?[]? ChecksumEntries { get; set; }
+        public ChecksumEntry[]? ChecksumEntries { get; set; }
 
         /// <summary>
         /// Data block header data

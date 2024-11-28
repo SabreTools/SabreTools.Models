@@ -14,11 +14,11 @@ namespace SabreTools.Models.WAD3
         /// <summary>
         /// Deserialized dir entry data
         /// </summary>
-        public DirEntry?[]? DirEntries { get; set; }
+        public DirEntry[]? DirEntries { get; set; }
 
         /// <summary>
         /// Deserialized file entry data
         /// </summary>
-        public FileEntry?[]? FileEntries { get; set; }
+        public FileEntry[]? FileEntries { get; set; }
     }
 }

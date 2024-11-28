@@ -37,12 +37,12 @@
         /// <summary>
         /// Hash Table (optional)
         /// </summary>
-        public HashEntry?[]? HashTable { get; set; }
+        public HashEntry[]? HashTable { get; set; }
 
         /// <summary>
         /// Block Table (optional)
         /// </summary>
-        public BlockEntry?[]? BlockTable { get; set; }
+        public BlockEntry[]? BlockTable { get; set; }
 
         /// <summary>
         /// Hi-Block Table (optional)

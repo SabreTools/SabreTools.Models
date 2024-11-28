@@ -40,7 +40,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Standard file descriptors
         /// </summary>
-        public FileDescriptor?[]? FileDescriptors { get; set; }
+        public FileDescriptor[]? FileDescriptors { get; set; }
 
         #endregion
 
@@ -54,7 +54,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// File groups
         /// </summary>
-        public FileGroup?[]? FileGroups { get; set; }
+        public FileGroup[]? FileGroups { get; set; }
 
         #endregion
 
@@ -68,7 +68,7 @@ namespace SabreTools.Models.InstallShieldCabinet
         /// <summary>
         /// Components
         /// </summary>
-        public Component?[]? Components { get; set; }
+        public Component[]? Components { get; set; }
 
         #endregion
     }

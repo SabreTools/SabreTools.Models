@@ -27,7 +27,7 @@
         /// can import a symbol by using an index to this table (an ordinal) or, optionally, by
         /// using the public name that corresponds to the ordinal if a public name is defined.
         /// </summary>
-        public ExportAddressTableEntry?[]? ExportAddressTable { get; set; }
+        public ExportAddressTableEntry[]? ExportAddressTable { get; set; }
 
         /// <summary>
         /// An array of pointers to the public export names, sorted in ascending order.

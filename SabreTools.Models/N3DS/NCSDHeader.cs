@@ -46,7 +46,7 @@
         /// <summary>
         /// Offset & Length partition table, in media units
         /// </summary>
-        public PartitionTableEntry?[]? PartitionsTable { get; set; }
+        public PartitionTableEntry[]? PartitionsTable { get; set; }
 
         #endregion
 

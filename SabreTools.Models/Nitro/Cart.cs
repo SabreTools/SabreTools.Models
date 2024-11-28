@@ -28,6 +28,6 @@ namespace SabreTools.Models.Nitro
         /// <summary>
         /// File allocation table
         /// </summary>
-        public FileAllocationTableEntry?[]? FileAllocationTable { get; set; }
+        public FileAllocationTableEntry[]? FileAllocationTable { get; set; }
     }
 }

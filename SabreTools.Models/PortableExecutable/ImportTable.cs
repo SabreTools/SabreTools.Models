@@ -23,23 +23,23 @@ namespace SabreTools.Models.PortableExecutable
         /// The import information begins with the import directory table, which describes the
         /// remainder of the import information. 
         /// </summary>
-        public ImportDirectoryTableEntry?[]? ImportDirectoryTable { get; set; }
+        public ImportDirectoryTableEntry[]? ImportDirectoryTable { get; set; }
 
         /// <summary>
         /// An import lookup table is an array of 32-bit numbers for PE32 or an array of 64-bit
         /// numbers for PE32+.
         /// </summary>
-        public Dictionary<int, ImportLookupTableEntry?[]?>? ImportLookupTables { get; set; }
+        public Dictionary<int, ImportLookupTableEntry[]?>? ImportLookupTables { get; set; }
 
         /// <summary>
         /// These addresses are the actual memory addresses of the symbols, although technically
         /// they are still called "virtual addresses".
         /// </summary>
-        public Dictionary<int, ImportAddressTableEntry?[]?>? ImportAddressTables { get; set; }
+        public Dictionary<int, ImportAddressTableEntry[]?>? ImportAddressTables { get; set; }
 
         /// <summary>
         /// One hint/name table suffices for the entire import section.
         /// </summary>
-        public HintNameTableEntry?[]? HintNameTable { get; set; }
+        public HintNameTableEntry[]? HintNameTable { get; set; }
     }
 }

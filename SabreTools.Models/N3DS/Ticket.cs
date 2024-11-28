@@ -173,6 +173,6 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/Ticket#Certificate_Chain
         /// </remarks>
-        public Certificate?[]? CertificateChain { get; set; }
+        public Certificate[]? CertificateChain { get; set; }
     }
 }

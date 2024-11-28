@@ -136,13 +136,13 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// There are 64 of these records, usually only the first is used.
         /// </summary>
-        public ContentInfoRecord?[]? ContentInfoRecords { get; set; }
+        public ContentInfoRecord[]? ContentInfoRecords { get; set; }
 
         /// <summary>
         /// There is one of these for each content contained in this title.
         /// (Determined by "Content Count" in the TMD Header).
         /// </summary>
-        public ContentChunkRecord?[]? ContentChunkRecords { get; set; }
+        public ContentChunkRecord[]? ContentChunkRecords { get; set; }
 
         /// <summary>
         /// Certificate chain
@@ -150,6 +150,6 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/Title_metadata#Certificate_Chain
         /// </remarks>
-        public Certificate?[]? CertificateChain { get; set; }
+        public Certificate[]? CertificateChain { get; set; }
     }
 }

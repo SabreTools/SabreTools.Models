@@ -9,6 +9,6 @@ namespace SabreTools.Models.AACS
         /// <summary>
         /// Records
         /// </summary>
-        public Record?[]? Records { get; set; }
+        public Record[]? Records { get; set; }
     }
 }

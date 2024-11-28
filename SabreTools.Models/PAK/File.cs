@@ -14,6 +14,6 @@ namespace SabreTools.Models.PAK
         /// <summary>
         /// Deserialized directory items data
         /// </summary>
-        public DirectoryItem?[]? DirectoryItems { get; set; }
+        public DirectoryItem[]? DirectoryItems { get; set; }
     }
 }

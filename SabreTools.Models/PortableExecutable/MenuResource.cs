@@ -17,6 +17,6 @@
         /// <summary>
         /// Menu items
         /// </summary>
-        public MenuItem?[]? MenuItems { get; set; }
+        public MenuItem[]? MenuItems { get; set; }
     }
 }

@@ -12,10 +12,10 @@ namespace SabreTools.Models.PortableExecutable
         #region Group
 
         [XmlElement("assemblyIdentity")]
-        public AssemblyIdentity?[]? AssemblyIdentities { get; set; }
+        public AssemblyIdentity[]? AssemblyIdentities { get; set; }
 
         [XmlElement("noInheritable")]
-        public AssemblyNoInheritable?[]? NoInheritables { get; set; }
+        public AssemblyNoInheritable[]? NoInheritables { get; set; }
 
         #endregion
 
@@ -31,19 +31,19 @@ namespace SabreTools.Models.PortableExecutable
         //public AssemblyNoInheritable NoInheritable { get; set; }
 
         [XmlElement("comInterfaceExternalProxyStub")]
-        public AssemblyCOMInterfaceExternalProxyStub?[]? COMInterfaceExternalProxyStub { get; set; }
+        public AssemblyCOMInterfaceExternalProxyStub[]? COMInterfaceExternalProxyStub { get; set; }
 
         [XmlElement("dependency")]
-        public AssemblyDependency?[]? Dependency { get; set; }
+        public AssemblyDependency[]? Dependency { get; set; }
 
         [XmlElement("file")]
-        public AssemblyFile?[]? File { get; set; }
+        public AssemblyFile[]? File { get; set; }
 
         [XmlElement("clrClass")]
-        public AssemblyCommonLanguageRuntimeClass?[]? CLRClass { get; set; }
+        public AssemblyCommonLanguageRuntimeClass[]? CLRClass { get; set; }
 
         [XmlElement("clrSurrogate")]
-        public AssemblyCommonLanguageSurrogateClass?[]? CLRSurrogate { get; set; }
+        public AssemblyCommonLanguageSurrogateClass[]? CLRSurrogate { get; set; }
 
         #endregion
 
@@ -94,7 +94,7 @@ namespace SabreTools.Models.PortableExecutable
         public string? Description { get; set; }
 
         [XmlElement("progid")]
-        public AssemblyProgID?[]? ProgIDs { get; set; }
+        public AssemblyProgID[]? ProgIDs { get; set; }
     }
 
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/sbscs/manifest-file-schema"/>
@@ -166,7 +166,7 @@ namespace SabreTools.Models.PortableExecutable
         public string? ThreadingModel { get; set; }
 
         [XmlElement("progid")]
-        public AssemblyProgID?[]? ProgIDs { get; set; }
+        public AssemblyProgID[]? ProgIDs { get; set; }
     }
 
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/sbscs/manifest-file-schema"/>
@@ -199,7 +199,7 @@ namespace SabreTools.Models.PortableExecutable
         public AssemblyIdentity? AssemblyIdentity { get; set; }
 
         [XmlElement("bindingRedirect")]
-        public AssemblyBindingRedirect?[]? BindingRedirect { get; set; }
+        public AssemblyBindingRedirect[]? BindingRedirect { get; set; }
     }
 
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/sbscs/manifest-file-schema"/>
@@ -255,16 +255,16 @@ namespace SabreTools.Models.PortableExecutable
         #region Group
 
         [XmlElement("comClass")]
-        public AssemblyCOMClass?[]? COMClass { get; set; }
+        public AssemblyCOMClass[]? COMClass { get; set; }
 
         [XmlElement("comInterfaceProxyStub")]
-        public AssemblyCOMInterfaceProxyStub?[]? COMInterfaceProxyStub { get; set; }
+        public AssemblyCOMInterfaceProxyStub[]? COMInterfaceProxyStub { get; set; }
 
         [XmlElement("typelib")]
-        public AssemblyTypeLib?[]? Typelib { get; set; }
+        public AssemblyTypeLib[]? Typelib { get; set; }
 
         [XmlElement("windowClass")]
-        public AssemblyWindowClass?[]? WindowClass { get; set; }
+        public AssemblyWindowClass[]? WindowClass { get; set; }
 
         #endregion
     }

@@ -40,7 +40,7 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Data files (V2 only)
         /// </summary>
-        public DataFile?[]? DataFiles { get; set; }
+        public DataFile[]? DataFiles { get; set; }
 
         // After the data files is a block starting with 0x00000001
         // This block then contains highly repeating data, possible audio samples?

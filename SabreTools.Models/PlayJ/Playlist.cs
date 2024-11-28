@@ -13,6 +13,6 @@ namespace SabreTools.Models.PlayJ
         /// <summary>
         /// Embedded audio files / headers
         /// </summary>
-        public AudioFile?[]? AudioFiles { get; set; }
+        public AudioFile[]? AudioFiles { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace SabreTools.Models.PKZIP
         /// Encryption headers, may appear second in each group
         /// </summary>
         /// TODO: Determine the model for the encryption headers
-        public byte[]?[]? EncryptionHeaders { get; set; }
+        public byte[][]? EncryptionHeaders { get; set; }
 
         /// <summary>
         /// File data, appears after the encryption header
@@ -28,12 +28,12 @@ namespace SabreTools.Models.PKZIP
         /// <summary>
         /// Data descriptors, appears after the file data
         /// </summary>
-        public DataDescriptor?[]? DataDescriptors { get; set; }
+        public DataDescriptor[]? DataDescriptors { get; set; }
 
         /// <summary>
         /// ZIP64 Data descriptors, appears after the file data
         /// </summary>
-        public DataDescriptor64?[]? ZIP64DataDescriptors { get; set; }
+        public DataDescriptor64[]? ZIP64DataDescriptors { get; set; }
 
         #endregion
 

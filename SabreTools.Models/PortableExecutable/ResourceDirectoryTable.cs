@@ -54,6 +54,6 @@
         /// strings to identify Type, Name, or Language entries (depending on the
         /// level of the table).
         /// </summary>
-        public ResourceDirectoryEntry?[]? Entries { get; set; }
+        public ResourceDirectoryEntry[]? Entries { get; set; }
     }
 }

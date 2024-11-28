@@ -36,6 +36,6 @@
         /// <summary>
         /// Typically contains a list of languages that the application or DLL supports.
         /// </summary>
-        public VarData?[]? Children { get; set; }
+        public VarData[]? Children { get; set; }
     }
 }

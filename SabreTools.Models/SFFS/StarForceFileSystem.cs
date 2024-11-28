@@ -23,11 +23,11 @@
         /// <summary>
         /// Files
         /// </summary>
-        public FileEntry?[]? Files { get; set; }
+        public FileEntry[]? Files { get; set; }
 
         /// <summary>
         /// File headers
         /// </summary>
-        public FileHeader?[]? FileHeaders { get; set; }
+        public FileHeader[]? FileHeaders { get; set; }
     }
 }

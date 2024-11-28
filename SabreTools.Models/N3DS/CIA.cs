@@ -25,7 +25,7 @@ namespace SabreTools.Models.N3DS
         /// <remarks>
         /// https://www.3dbrew.org/wiki/CIA#Certificate_Chain
         /// </remarks>
-        public Certificate?[]? CertificateChain { get; set; }
+        public Certificate[]? CertificateChain { get; set; }
 
         /// <summary>
         /// Ticket
@@ -40,7 +40,7 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// Content file data
         /// </summary>
-        public NCCHHeader?[]? Partitions { get; set; }
+        public NCCHHeader[]? Partitions { get; set; }
 
         /// <summary>
         /// Content file data

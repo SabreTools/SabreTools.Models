@@ -19,11 +19,11 @@ namespace SabreTools.Models.VPK
         /// <summary>
         /// Archive hashes data
         /// </summary>
-        public ArchiveHash?[]? ArchiveHashes { get; set; }
+        public ArchiveHash[]? ArchiveHashes { get; set; }
 
         /// <summary>
         /// Directory items data
         /// </summary>
-        public DirectoryItem?[]? DirectoryItems { get; set; }
+        public DirectoryItem[]? DirectoryItems { get; set; }
     }
 }

@@ -23,21 +23,21 @@ namespace SabreTools.Models.N3DS
         /// <summary>
         /// NCCH partitions
         /// </summary>
-        public NCCHHeader?[]? Partitions { get; set; }
+        public NCCHHeader[]? Partitions { get; set; }
 
         /// <summary>
         /// NCCH extended headers
         /// </summary>
-        public NCCHExtendedHeader?[]? ExtendedHeaders { get; set; }
+        public NCCHExtendedHeader[]? ExtendedHeaders { get; set; }
 
         /// <summary>
         /// ExeFS headers associated with each partition
         /// </summary>
-        public ExeFSHeader?[]? ExeFSHeaders { get; set; }
+        public ExeFSHeader[]? ExeFSHeaders { get; set; }
 
         /// <summary>
         /// RomFS headers associated with each partition
         /// </summary>
-        public RomFSHeader?[]? RomFSHeaders { get; set; }
+        public RomFSHeader[]? RomFSHeaders { get; set; }
     }
 }

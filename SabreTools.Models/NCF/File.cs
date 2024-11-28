@@ -21,7 +21,7 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Directory entries data
         /// </summary>
-        public DirectoryEntry?[]? DirectoryEntries { get; set; }
+        public DirectoryEntry[]? DirectoryEntries { get; set; }
 
         /// <summary>
         /// Directory names data
@@ -31,22 +31,22 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Directory info 1 entries data
         /// </summary>
-        public DirectoryInfo1Entry?[]? DirectoryInfo1Entries { get; set; }
+        public DirectoryInfo1Entry[]? DirectoryInfo1Entries { get; set; }
 
         /// <summary>
         /// Directory info 2 entries data
         /// </summary>
-        public DirectoryInfo2Entry?[]? DirectoryInfo2Entries { get; set; }
+        public DirectoryInfo2Entry[]? DirectoryInfo2Entries { get; set; }
 
         /// <summary>
         /// Directory copy entries data
         /// </summary>
-        public DirectoryCopyEntry?[]? DirectoryCopyEntries { get; set; }
+        public DirectoryCopyEntry[]? DirectoryCopyEntries { get; set; }
 
         /// <summary>
         /// Directory local entries data
         /// </summary>
-        public DirectoryLocalEntry?[]? DirectoryLocalEntries { get; set; }
+        public DirectoryLocalEntry[]? DirectoryLocalEntries { get; set; }
 
         /// <summary>
         /// Unknown header data
@@ -56,7 +56,7 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Unknown entries data
         /// </summary>
-        public UnknownEntry?[]? UnknownEntries { get; set; }
+        public UnknownEntry[]? UnknownEntries { get; set; }
 
         /// <summary>
         /// Checksum header data
@@ -71,11 +71,11 @@ namespace SabreTools.Models.NCF
         /// <summary>
         /// Checksum map entries data
         /// </summary>
-        public ChecksumMapEntry?[]? ChecksumMapEntries { get; set; }
+        public ChecksumMapEntry[]? ChecksumMapEntries { get; set; }
 
         /// <summary>
         /// Checksum entries data
         /// </summary>
-        public ChecksumEntry?[]? ChecksumEntries { get; set; }
+        public ChecksumEntry[]? ChecksumEntries { get; set; }
     }
 }

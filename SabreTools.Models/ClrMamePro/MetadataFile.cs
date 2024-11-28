@@ -6,6 +6,6 @@ namespace SabreTools.Models.ClrMamePro
         public ClrMamePro? ClrMamePro { get; set; }
 
         /// <remarks>game, machine, resource, set</remarks>
-        public GameBase?[]? Game { get; set; }
+        public GameBase[]? Game { get; set; }
     }
 }

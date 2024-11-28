@@ -14,7 +14,7 @@ namespace SabreTools.Models.Quantum
         /// <summary>
         /// This is immediately followed by the list of files
         /// </summary>
-        public FileDescriptor?[]? FileList { get; set; }
+        public FileDescriptor[]? FileList { get; set; }
 
         /// <summary>
         /// Immediately following the list of files is the compressed data
