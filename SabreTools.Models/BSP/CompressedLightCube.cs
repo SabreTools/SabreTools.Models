@@ -8,7 +8,7 @@ namespace SabreTools.Models.BSP
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/> 
     [StructLayout(LayoutKind.Sequential)]
-    public struct CompressedLightCube
+    public class CompressedLightCube
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
         public ColorRGBExp32[]? Colors;

@@ -1,4 +1,6 @@
-﻿namespace SabreTools.Models.LinearExecutable
+﻿using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.LinearExecutable
 {
     /// <summary>
     /// The resident and non-resident name tables define the ASCII names and ordinal
@@ -25,6 +27,7 @@
     /// </summary>
     /// <see href="https://faydoc.tripod.com/formats/exe-LE.htm"/>
     /// <see href="http://www.edm2.com/index.php/LX_-_Linear_eXecutable_Module_Format_Description"/>
+    [StructLayout(LayoutKind.Sequential)]
     public sealed class NonResidentNamesTableEntry
     {
         /// <summary>
@@ -39,7 +42,7 @@
         /// signifies that additional information is contained in the linear EXE module and
         /// will be used in the future for parameter type checking.
         /// </remarks>
-        public byte Length { get; set; } // TODO: Remove in lieu of AnsiBStr
+        public byte Length { get; set; }
 
         /// <summary>
         /// ASCII String.

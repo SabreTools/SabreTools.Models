@@ -8,7 +8,7 @@ namespace SabreTools.Models.BSP
     /// spec and the code of the hlbsp project.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct Vector3D
+    public class Vector3D
     {
         public float X { get; set; }
         public float Y { get; set; }

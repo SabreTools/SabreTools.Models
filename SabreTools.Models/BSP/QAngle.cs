@@ -8,7 +8,7 @@ namespace SabreTools.Models.BSP
     /// from the cardinal Z axis.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct QAngle
+    public class QAngle
     {
         public float X { get; set; }
         public float Y { get; set; }

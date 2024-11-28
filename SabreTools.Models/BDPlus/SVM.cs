@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace SabreTools.Models.BDPlus
 {
     /// <see href="https://github.com/mwgoldsmith/bdplus/blob/master/src/libbdplus/bdsvm/loader.c"/>
@@ -6,40 +8,39 @@ namespace SabreTools.Models.BDPlus
         /// <summary>
         /// "BDSVM_CC"
         /// </summary>
-        /// <remarks>8 bytes</remarks>
-        public string? Signature { get; set; }
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        public string? Signature;
 
         /// <summary>
         /// Unknown data
         /// </summary>
-        /// <remarks>5 bytes</remarks>
-        public byte[]? Unknown1 { get; set; }
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 5)]
+        public byte[]? Unknown1 = new byte[5];
 
         /// <summary>
         /// Version year
         /// </summary>
-        public ushort Year { get; set; }
+        public ushort Year;
 
         /// <summary>
         /// Version month
         /// </summary>
-        public byte Month { get; set; }
+        public byte Month;
 
         /// <summary>
         /// Version day
         /// </summary>
-        public byte Day { get; set; }
+        public byte Day;
 
         /// <summary>
         /// Unknown data
         /// </summary>
-        /// <remarks>4 bytes</remarks>
-        public byte[]? Unknown2 { get; set; }
+        public uint Unknown2;
 
         /// <summary>
         /// Length
         /// </summary>
-        public uint Length { get; set; }
+        public uint Length;
 
         /// <summary>
         /// Length bytes of data

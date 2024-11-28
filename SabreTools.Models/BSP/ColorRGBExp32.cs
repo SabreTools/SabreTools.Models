@@ -7,7 +7,7 @@ namespace SabreTools.Models.BSP
     /// </summary>
     /// <see href="https://developer.valvesoftware.com/wiki/BSP_(Source)"/> 
     [StructLayout(LayoutKind.Sequential)]
-    public struct ColorRGBExp32
+    public class ColorRGBExp32
     {
         public byte Red;
 
