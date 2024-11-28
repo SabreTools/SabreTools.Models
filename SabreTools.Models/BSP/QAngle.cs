@@ -10,8 +10,8 @@ namespace SabreTools.Models.BSP
     [StructLayout(LayoutKind.Sequential)]
     public class QAngle
     {
-        public float X { get; set; }
-        public float Y { get; set; }
-        public float Z { get; set; }
+        public float X;
+        public float Y;
+        public float Z;
     }
 }
