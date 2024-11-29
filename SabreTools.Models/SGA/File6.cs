@@ -1,7 +1,7 @@
 namespace SabreTools.Models.SGA
 {
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/SGAFile.h"/>
-    public class File6 : File4
+    public sealed class File6 : File
     {
         public uint CRC32 { get; set; }
     }

@@ -1,19 +1,22 @@
 namespace SabreTools.Models.SGA
 {
-    /// <summary>
-    /// SGA game archive
-    /// </summary>
     /// <see href="https://github.com/RavuAlHemio/hllib/blob/master/HLLib/SGAFile.h"/>
-    public sealed class File
+    public abstract class File
     {
-        /// <summary>
-        ///Header data
-        /// </summary>
-        public Header? Header { get; set; }
+        public uint NameOffset { get; set; }
 
-        /// <summary>
-        /// Directory data
-        /// </summary>
-        public Directory? Directory { get; set; }
+        public string? Name { get; set; }
+
+        public uint Offset { get; set; }
+
+        public uint SizeOnDisk { get; set; }
+
+        public uint Size { get; set; }
+
+        public uint TimeModified { get; set; }
+
+        public byte Dummy0 { get; set; }
+
+        public byte Type { get; set; }
     }
 }
