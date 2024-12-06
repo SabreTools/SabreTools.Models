@@ -1,5 +1,7 @@
 # SabreTools.Models
 
+[![Build and Test](https://github.com/SabreTools/SabreTools.Models/actions/workflows/build_and_test.yml/badge.svg?branch=main)](https://github.com/SabreTools/SabreTools.Models/actions/workflows/build_and_test.yml)
+
 This library comprises of models that represent either directly serializable or representative structures for all SabreTools projects. All of the main models representing metadata files should have parsers created outside of the current code.
 
 Find the link to the Nuget package [here](https://www.nuget.org/packages/SabreTools.Models).
