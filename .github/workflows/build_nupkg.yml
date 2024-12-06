@@ -17,24 +17,21 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
-        
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Pack
-      run: dotnet pack
+
+    - name: Run publish script
+      run: ./publish-nix.sh
 
     - name: Upload build
       uses: actions/upload-artifact@v4
       with:
         name: 'Nuget Package'
-        path: 'SabreTools.Models/bin/Release/*.nupkg'
+        path: '*.nupkg'
 
     - name: Upload to rolling
       uses: ncipollo/release-action@v1.14.0
       with:
         allowUpdates: True
-        artifacts: 'SabreTools.Models/bin/Release/*.nupkg'
+        artifacts: '*.nupkg'
         body: 'Last built commit: ${{ github.sha }}'
         name: 'Rolling Release'
         prerelease: True
