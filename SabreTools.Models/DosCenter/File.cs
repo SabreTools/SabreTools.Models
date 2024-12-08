@@ -15,6 +15,9 @@ namespace SabreTools.Models.DosCenter
         [Required]
         public string? CRC { get; set; }
 
+        /// <remarks>sha1, attribute</remarks>
+        public string? SHA1 { get; set; }
+
         /// <remarks>date, attribute</remarks>
         public string? Date { get; set; }
     }
