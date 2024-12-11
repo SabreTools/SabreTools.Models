@@ -29,6 +29,7 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// Header flags to mark header extensions
         /// </summary>
+        [MarshalAs(UnmanagedType.U2)]
         public KWAJHeaderFlags HeaderFlags;
     }
 }
