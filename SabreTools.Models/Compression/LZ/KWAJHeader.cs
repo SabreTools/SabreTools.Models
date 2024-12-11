@@ -1,0 +1,34 @@
+using System.Runtime.InteropServices;
+
+namespace SabreTools.Models.Compression.LZ
+{
+    /// <summary>
+    /// LZ variant with variable compression
+    /// </summary>
+    /// <see href="https://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html"/>
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+    public sealed class KWAJHeader
+    {
+        /// <summary>
+        /// "KWAJ" signature
+        /// </summary>
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
+        public byte[]? Magic;
+
+        /// <summary>
+        /// Compression method
+        /// </summary>
+        [MarshalAs(UnmanagedType.U1)]
+        public KWAJCompressionType CompressionType;
+
+        /// <summary>
+        /// File offset of compressed data
+        /// </summary>
+        public ushort DataOffset;
+
+        /// <summary>
+        /// Header flags to mark header extensions
+        /// </summary>
+        public KWAJHeaderFlags HeaderFlags;
+    }
+}

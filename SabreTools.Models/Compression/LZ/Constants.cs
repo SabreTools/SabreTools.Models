@@ -2,17 +2,13 @@ namespace SabreTools.Models.Compression.LZ
 {
     public static class Constants
     {
-        public const int GETLEN	= 2048;
+        public static readonly byte[] KWAJSignatureBytes = [0x4B, 0x57, 0x41, 0x4A, 0x88, 0xF0, 0x27, 0xD1];
 
-        public const int LZ_MAGIC_LEN = 8;
+        public static readonly byte[] SZDDSignatureBytes = [0x53, 0x5A, 0x44, 0x44, 0x88, 0xF0, 0x27, 0x33];
 
-        public const int LZ_HEADER_LEN = 14;
+        public static readonly byte[] QBasicSignatureBytes = [0x53, 0x5A, 0x20, 0x88, 0xF0, 0x27, 0x33, 0xD1];
 
-        public static readonly byte[] MagicBytes = [0x53, 0x5a, 0x44, 0x44, 0x88, 0xf0, 0x27, 0x33];
-
-        public static readonly string MagicString = System.Text.Encoding.ASCII.GetString(MagicBytes);
-
-        public const ulong MagicUInt64 = 0x3327f08844445a53;
+        public const int GETLEN = 2048;
 
         public const int LZ_TABLE_SIZE = 0x1000;
 
