@@ -18,7 +18,7 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// Compression method
         /// </summary>
-        [MarshalAs(UnmanagedType.U1)]
+        [MarshalAs(UnmanagedType.U2)]
         public KWAJCompressionType CompressionType;
 
         /// <summary>
