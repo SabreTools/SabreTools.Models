@@ -26,8 +26,8 @@ namespace SabreTools.Models.Compression.MSZIP
         public BlockHeader? BlockHeader { get; set; }
 
         /// <summary>
-        /// Compressed blocks
+        /// Compressed data
         /// </summary>
-        public DeflateBlock[]? CompressedBlocks { get; set; }
+        public byte[]? Data { get; set; }
     }
 }
