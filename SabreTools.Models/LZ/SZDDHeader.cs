@@ -8,7 +8,7 @@ namespace SabreTools.Models.LZ
     /// <see href="https://github.com/wine-mirror/wine/blob/master/dlls/kernel32/lzexpand.c"/>
     /// <see href="https://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html"/>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public sealed class ExpandHeader
+    public sealed class SZDDHeader
     {
         /// <summary>
         /// "SZDD" signature
