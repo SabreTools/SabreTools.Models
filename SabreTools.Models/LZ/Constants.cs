@@ -1,4 +1,4 @@
-namespace SabreTools.Models.Compression.LZ
+namespace SabreTools.Models.LZ
 {
     public static class Constants
     {

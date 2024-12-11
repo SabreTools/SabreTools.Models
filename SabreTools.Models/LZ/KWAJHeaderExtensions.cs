@@ -1,4 +1,4 @@
-namespace SabreTools.Models.Compression.LZ
+namespace SabreTools.Models.LZ
 {
     /// <summary>
     /// Additional information stored after the KWAJ header

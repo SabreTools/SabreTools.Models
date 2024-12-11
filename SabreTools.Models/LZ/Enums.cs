@@ -1,6 +1,6 @@
 using System;
 
-namespace SabreTools.Models.Compression.LZ
+namespace SabreTools.Models.LZ
 {
     /// <see href="https://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html"/>
     public enum KWAJCompressionType : ushort
