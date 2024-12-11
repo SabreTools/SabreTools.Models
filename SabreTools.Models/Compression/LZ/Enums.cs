@@ -70,28 +70,13 @@ namespace SabreTools.Models.Compression.LZ
         HasAdditionalText = 0x0020,
     }
 
-    /// <see href="https://github.com/wine-mirror/wine/blob/master/include/lzexpand.h"/>
-    public enum LZERROR
-    {
-        LZERROR_OK = 1,
-        LZERROR_NOT_LZ = 0,
-        LZERROR_BADINHANDLE = -1,
-        LZERROR_BADOUTHANDLE = -2,
-        LZERROR_READ = -3,
-        LZERROR_WRITE = -4,
-        LZERROR_GLOBALLOC = -5,
-        LZERROR_GLOBLOCK = -6,
-        LZERROR_BADVALUE = -7,
-        LZERROR_UNKNOWNALG = -8,
-    }
-
     /// <see href="https://github.com/wine-mirror/wine/blob/master/dlls/kernel32/lzexpand.c"/>
     /// <see href="https://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html"/>
-    public enum SZDDCompressionType : byte
+    public enum ExpandCompressionType : byte
     {
         /// <summary>
         /// Only valid compression type: 'A'
         /// </summary>
-        LZ = 0x41,
+        A = 0x41,
     }
 }

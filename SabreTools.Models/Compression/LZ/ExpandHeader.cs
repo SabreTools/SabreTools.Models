@@ -8,7 +8,7 @@ namespace SabreTools.Models.Compression.LZ
     /// <see href="https://github.com/wine-mirror/wine/blob/master/dlls/kernel32/lzexpand.c"/>
     /// <see href="https://www.cabextract.org.uk/libmspack/doc/szdd_kwaj_format.html"/>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public sealed class SZDDHeader
+    public sealed class ExpandHeader
     {
         /// <summary>
         /// "SZDD" signature
@@ -19,9 +19,9 @@ namespace SabreTools.Models.Compression.LZ
         /// <summary>
         /// Compression mode
         /// </summary>
-        /// <remarks>Only <see cref="SZDDCompressionType.LZ"/> is supported</remarks> 
+        /// <remarks>Only <see cref="ExpandCompressionType.A"/> is supported</remarks> 
         [MarshalAs(UnmanagedType.U1)]
-        public SZDDCompressionType CompressionType;
+        public ExpandCompressionType CompressionType;
 
         /// <summary>
         /// The character missing from the end of the filename

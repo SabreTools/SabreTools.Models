@@ -7,13 +7,5 @@ namespace SabreTools.Models.Compression.LZ
         public static readonly byte[] SZDDSignatureBytes = [0x53, 0x5A, 0x44, 0x44, 0x88, 0xF0, 0x27, 0x33];
 
         public static readonly byte[] QBasicSignatureBytes = [0x53, 0x5A, 0x20, 0x88, 0xF0, 0x27, 0x33, 0xD1];
-
-        public const int GETLEN = 2048;
-
-        public const int LZ_TABLE_SIZE = 0x1000;
-
-        public const int MAX_LZSTATES = 16;
-
-        public const int LZ_MIN_HANDLE = 0x400;
     }
 }
