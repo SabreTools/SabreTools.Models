@@ -227,7 +227,7 @@ namespace SabreTools.Models.PlayStation4
         /// PKG Padding Section 3
         /// </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2896)]
-        public byte[]? Zeroes2;
+        public byte[]? Zeroes3;
         
         /// <summary>
         /// SHA256 for PKG
