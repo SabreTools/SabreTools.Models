@@ -4,7 +4,7 @@ namespace SabreTools.Models.PlayStation4
 {
     /// <see href="https://www.psdevwiki.com/ps4/PKG_files"/>
     [StructLayout(LayoutKind.Sequential)]
-    public class SFOHeader
+    public class AppPkgHeader
     {
         /// <summary>
         /// 0x7F434E54
