@@ -7,11 +7,9 @@ namespace SabreTools.Models.PlayStation4
     public class AppPkgHeader
     {
         /// <summary>
-        /// 0x7F434E54
-        /// ".CNT"
+        /// Identifying bytes for app.pkg file, "\7FCNT"
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[]? Magic;
+        public uint Magic;
 
         /// <summary>
         /// PKG Type
@@ -44,7 +42,7 @@ namespace SabreTools.Models.PlayStation4
         public ushort EntryCount2;
 
         /// <summary>
-        /// PKG Table offset
+        /// PKG File Table offset
         /// </summary>
         public uint TableOffset;
 
@@ -54,12 +52,12 @@ namespace SabreTools.Models.PlayStation4
         public uint EntryDataSize;
 
         /// <summary>
-        /// PKG Body offset
+        /// Offset of PKG Entries
         /// </summary>
         public ulong BodyOffset;
 
         /// <summary>
-        /// PKG Body size
+        /// Length of all PKG Entries
         /// </summary>
         public ulong BodySize;
 
@@ -76,13 +74,13 @@ namespace SabreTools.Models.PlayStation4
         /// <summary>
         /// PKG Content ID
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 36)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x24)]
         public string? ContentID;
         
         /// <summary>
         /// PKG Content Padding (Zeroes)
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 12)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xC)]
         public byte[]? ContentZeroes;
 
         /// <summary>
@@ -118,37 +116,37 @@ namespace SabreTools.Models.PlayStation4
         /// <summary>
         /// PKG Padding Section 1
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 120)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x78)]
         public byte[]? Zeroes1;
         
         /// <summary>
         /// PKG SHA256 for Main Entry 1
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? MainEntry1SHA256;
         
         /// <summary>
         /// PKG SHA256 for Main Entry 2
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? MainEntry2SHA256;
         
         /// <summary>
         /// PKG SHA256 for Digest Table
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? DigestTableSHA256;
         
         /// <summary>
         /// PKG SHA256 for Main Table
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? MainTableSHA256;
         
         /// <summary>
         /// PKG Padding Section 2
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 640)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x280)]
         public byte[]? Zeroes2;
 
         /// <summary>
@@ -204,13 +202,13 @@ namespace SabreTools.Models.PlayStation4
         /// <summary>
         /// SHA256 for PFS Image
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? PFSImageSHA256;
         
         /// <summary>
         /// SHA256 for PFS Signed
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? PFSSignedSHA256;
 
         /// <summary>
@@ -226,13 +224,13 @@ namespace SabreTools.Models.PlayStation4
         /// <summary>
         /// PKG Padding Section 3
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2896)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0xB50)]
         public byte[]? Zeroes3;
         
         /// <summary>
         /// SHA256 for PKG
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x20)]
         public byte[]? PKGSHA256;
     }
 }
