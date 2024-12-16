@@ -8,6 +8,7 @@ namespace SabreTools.Models.PlayStation3
         /// Identifying bytes for SFO file
         /// </summary>
         public const uint SFOMagic = 0x00505346;
+        
         /// <summary>
         /// Identifying bytes for SFB file
         /// </summary>
