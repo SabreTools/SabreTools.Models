@@ -4,6 +4,16 @@ namespace SabreTools.Models.PlayStation3
     /// <see href="https://psdevwiki.com/ps3/PS3_DISC.SFB"/> 
     public static class Constants
     {
+        /// <summary>
+        /// Identifying bytes for SFO file
+        /// </summary>
+        public const uint SFOMagic = 0x00505346;
+        
+        /// <summary>
+        /// Identifying bytes for SFB file
+        /// </summary>
+        public const uint SFBMagic = 0x2E534642;
+        
         #region Hybrid Flags
 
         /// <summary>

@@ -9,8 +9,7 @@ namespace SabreTools.Models.PlayStation3
         /// <summary>
         /// ".SFB"
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-        public byte[]? Magic;
+        public uint Magic;
 
         /// <summary>
         /// File version(?)
