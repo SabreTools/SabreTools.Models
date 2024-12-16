@@ -9,7 +9,7 @@
         <Nullable>enable</Nullable>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <Version>1.5.7</Version>
+        <Version>1.5.8</Version>
 
         <!-- Package Properties -->
         <Authors>Matt Nadareski</Authors>
