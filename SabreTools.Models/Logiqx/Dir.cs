@@ -10,6 +10,9 @@ namespace SabreTools.Models.Logiqx
         [XmlAttribute("name")]
         public string? Name { get; set; }
 
+        [XmlElement("dir", typeof(Game))]
+        public Dir[]? Subdir { get; set; }
+
         [XmlElement("game", typeof(Game))]
         [XmlElement("machine", typeof(Machine))]
         public GameBase[]? Game { get; set; }
