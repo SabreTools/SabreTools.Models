@@ -13,27 +13,6 @@ namespace SabreTools.Models.SecuROM
     public class MatroschkaPackage
     {
         /// <summary>
-        /// Number of entries
-        /// </summary>
-        public int NumberOfEntries { get; set; }
-        
-        /// <summary>
-        /// Three unknown values only observed on RC matroschka sections. They only ever seem to be 0 or 1.
-        /// </summary>
-        public int UnknownRCValueOne { get; set; }
-
-        public int UnknownRCValueTwo { get; set; }
-        
-        public int UnknownRCValueThree { get; set; }
-        
-        /// <summary>
-        /// Unknown 32-character string only observed on RC matroschka sections. Due to encryption on later 
-        /// DFA-encrypted RC executables, this is the most reliable way to identify which executables are using 
-        /// the same or a different key (even if the encrypted executables inside can be different).
-        /// </summary>
-        public string? UnknownRCString { get; set; }
-        
-        /// <summary>
         /// 1 or more entries
         /// </summary>
         public List<MatroschkaFileEntry>? Entries { get; set; }
