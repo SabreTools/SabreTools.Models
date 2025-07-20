@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SabreTools.Models.SecuROM
 {
     /// <summary>
@@ -31,5 +33,9 @@ namespace SabreTools.Models.SecuROM
         /// </summary>
         public string? UnknownRCString { get; set; }
 
+        /// <summary>
+        /// 1 or more entries
+        /// </summary>
+        public List<MatroschkaFileEntry>? Entries { get; set; }
     }
 }
