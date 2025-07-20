@@ -13,24 +13,27 @@ namespace SabreTools.Models.SecuROM
         /// program executable, or the revoker executable), 4 for the third file (seems to always be a "helper"
         /// executable or dll for the second file, such as DFA.dll for RC-encrypted executables since DFA decryption
         /// will be needed, paul.dll for PA-protected games, or remover.exe for revocation executables.
-        /// My assumption is this has something to do with load order, but that's purely a guess.
+        /// This could potentially have something to do with load order, but that's purely a guess.
         /// </summary>
-        public int UnknownValueOne { get; set; }
+        public uint UnknownValueOne { get; set; }
         
         /// <summary>
         /// Size
         /// </summary>
-        public int Size { get; set; }
+        public uint Size { get; set; }
 
         /// <summary>
         /// Offset
         /// </summary>
-        public int Offset { get; set; }
+        public uint Offset { get; set; }
 
         /// <summary>
         /// Later matroschka sections have 4 0x00 bytes here, earlier ones don't.
         /// </summary>
-        public int DummyOne { get; set; }
+        /// <remarks>
+        /// This value is valid for later instances of matroshka packages.
+        /// </remarks>
+        public uint? DummyOne { get; set; }
         
         /// <summary>
         /// File modification time, stored in NTFS filetime.
@@ -53,11 +56,11 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// MD5
         /// </summary>
-        public string? Md5 { get; set; }
+        public byte[]? Md5 { get; set; }
         
         /// <summary>
         /// Name
-        /// Doesn't seem to ever have spaces, but can contain filepaths with backslashes.
+        /// Can contain filepaths with backslashes. Null-terminated.
         /// </summary>
         public string? Name { get; set; }
     }

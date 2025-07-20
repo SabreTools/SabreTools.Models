@@ -15,16 +15,22 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// Number of entries
         /// </summary>
-        public int NumberOfEntries { get; set; }
+        public uint NumberOfEntries { get; set; }
         
         /// <summary>
-        /// Three unknown values only observed on RC matroschka sections. They only ever seem to be 0 or 1.
+        /// One of three unknown values only observed on RC matroschka sections. They only ever seem to be 0 or 1.
         /// </summary>
-        public int UnknownRCValueOne { get; set; }
+        public uint UnknownRCValueOne { get; set; }
 
-        public int UnknownRCValueTwo { get; set; }
+        /// <summary>
+        /// One of three unknown values only observed on RC matroschka sections. They only ever seem to be 0 or 1.
+        /// </summary>
+        public uint UnknownRCValueTwo { get; set; }
         
-        public int UnknownRCValueThree { get; set; }
+        /// <summary>
+        /// One of three unknown values only observed on RC matroschka sections. They only ever seem to be 0 or 1.
+        /// </summary>
+        public uint UnknownRCValueThree { get; set; }
         
         /// <summary>
         /// Unknown 32-character string only observed on RC matroschka sections. Due to encryption on later 
@@ -36,6 +42,6 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// 1 or more entries
         /// </summary>
-        public List<MatroschkaFileEntry>? Entries { get; set; }
+        public MatroschkaFileEntry[]? Entries { get; set; }
     }
 }
