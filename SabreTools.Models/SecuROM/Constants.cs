@@ -110,5 +110,13 @@ namespace SabreTools.Models.SecuROM
         #endregion
 
         #endregion
+
+        #region Matroshka
+
+        public const string MatroshkaMagicString = "MatR";
+
+        public static readonly byte[] MatroshkaMagicBytes = [0x4D, 0x61, 0x74, 0x52];
+
+        #endregion
     }
 }

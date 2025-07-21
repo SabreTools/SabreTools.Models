@@ -8,7 +8,7 @@ namespace SabreTools.Models.SecuROM
     public class DFAFile
     {
         /// <summary>
-        /// "SDFA" 0x04 0x00 0x00 0x00;
+        /// "SDFA" 0x04 0x00 0x00 0x00
         /// </summary>
         /// <remarks>8 bytes</remarks>
         public byte[]? Signature { get; set; }
