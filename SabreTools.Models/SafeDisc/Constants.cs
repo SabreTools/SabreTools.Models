@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SabreTools.Models.SafeDisc
+﻿namespace SabreTools.Models.SafeDisc
 {
     public static class Constants
     {
