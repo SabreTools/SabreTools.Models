@@ -4,10 +4,13 @@ namespace SabreTools.Models.SecuROM
     {
         /// <summary>
         /// File entry path
-        /// - Older versions are always 256 bytes
-        /// - Newer versions are always 512 bytes
         /// </summary>
-        /// <remarks>Length may be tied to unknown values in header</remarks>
+        /// <remarks>
+        /// Length may be tied to unknown values in header
+        /// - Versions without a key prefix are 256 bytes
+        /// - Versions with pre-key values of 1, 1, 1 are 256 bytes
+        /// - Versions with pre-key values of 0, 0, 1 are 512 bytes
+        /// </remarks>
         public byte[]? Path { get; set; }
 
         /// <summary>
@@ -28,6 +31,7 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// Unknown value only seen in later versions
         /// </summary>
+        /// <remarks>Possibly indicates that the offset is a 64-bit value</remarks>
         public uint? Unknown { get; set; }
 
         /// <summary>
