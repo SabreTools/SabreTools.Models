@@ -41,24 +41,22 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// One of four unknown values only observed on RC matroschka sections
         /// </summary>
-        /// <remarks>Only values of 0 or 1 have been found</remarks>
+        /// <remarks>Only a value of 1 has been found</remarks>
         public uint? UnknownRCValue3 { get; set; }
 
         /// <summary>
-        /// Unknown 32-character string only observed on RC matroschka sections.
-        /// Due to encryption on later  DFA-encrypted RC executables, this is the
-        /// most reliable way to identify which executables are using the same or
-        /// a different key (even if the encrypted executables inside can be
-        /// different).
+        /// 32-character hex string
         /// </summary>
-        public string? UnknownRCString { get; set; }
+        /// <remarks>
+        /// Due to encryption on later DFA-encrypted RC executables, this is the
+        /// most reliable way to identify which executables are using the same key.
+        /// </remarks>
+        public string? KeyHexString { get; set; }
 
         /// <summary>
-        /// One of four unknown values only observed on RC matroschka sections,
-        /// possibly padding for alignment
+        /// Padding for alignment, always 0x00000000
         /// </summary>
-        /// <remarks>Only a value of 0 have been found</remarks>
-        public uint? UnknownRCValue4 { get; set; }
+        public uint? Padding { get; set; }
 
         #endregion
 
