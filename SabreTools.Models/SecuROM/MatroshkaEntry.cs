@@ -10,6 +10,9 @@ namespace SabreTools.Models.SecuROM
         /// - Versions without a key prefix are 256 bytes
         /// - Versions with pre-key values of 1, 1, 1 are 256 bytes
         /// - Versions with pre-key values of 0, 0, 1 are 512 bytes
+        /// Length may be tied to section name
+        /// - Sections named "matrosch" are 256 bytes
+        /// - Sections named "rcpacker" are 512 bytes
         /// </remarks>
         public byte[]? Path { get; set; }
 
