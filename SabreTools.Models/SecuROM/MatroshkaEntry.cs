@@ -3,13 +3,11 @@ namespace SabreTools.Models.SecuROM
     public class MatroshkaEntry
     {
         /// <summary>
-        /// File entry path
+        /// File entry path, either 256 or 512 bytes
         /// </summary>
         /// <remarks>
-        /// Length may be tied to unknown values in header
-        /// - Versions without a key prefix are 256 bytes
-        /// - Versions with pre-key values of 1, 1, 1 are 256 bytes
-        /// - Versions with pre-key values of 0, 0, 1 are 512 bytes
+        /// Versions without a key prefix are 256 bytes.
+        /// Versions with key values either are 256 or 512 bytes.
         /// </remarks>
         public byte[]? Path { get; set; }
 
