@@ -26,6 +26,15 @@ namespace SabreTools.Models.SecuROM
 
         #region Release Control only
 
+        // The combination of the 3 following values have only been seen in
+        // one of 3 distinct patterns. The meaning of these patterns is unknown.
+        // - 0 0 1
+        // - 0 1 1
+        // - 1 1 1
+        // These values do not seem to have a link to whether the paths included
+        // in entries are 256- or 512-byte. There also do not seem to be any links
+        // between these values and the hex string values.
+
         /// <summary>
         /// One of four unknown values only observed on RC matroschka sections
         /// </summary>
