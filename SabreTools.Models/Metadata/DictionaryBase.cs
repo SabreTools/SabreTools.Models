@@ -100,7 +100,7 @@ namespace SabreTools.Models.Metadata
 
             string[]? asArray = Read<string[]>(key);
             if (asArray != null)
-#if NETFRAMEWORK
+#if NETFRAMEWORK || NETSTANDARD2_0
                 return string.Join(",", asArray);
 #else
                 return string.Join(',', asArray);
