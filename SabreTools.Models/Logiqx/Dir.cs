@@ -10,7 +10,7 @@ namespace SabreTools.Models.Logiqx
         [XmlAttribute("name")]
         public string? Name { get; set; }
 
-        [XmlElement("dir", typeof(Game))]
+        [XmlElement("dir", typeof(Dir))]
         public Dir[]? Subdir { get; set; }
 
         [XmlElement("game", typeof(Game))]
