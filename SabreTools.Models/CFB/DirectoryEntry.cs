@@ -23,16 +23,16 @@ namespace SabreTools.Models.CFB
         public string? Name;
 
         /// <summary>
-        /// This field MUST be 0x00, 0x01, 0x02, or 0x05, depending on the
-        /// actual type of object. All other values are not valid.
-        /// </summary>
-        public ushort NameLength;
-
-        /// <summary>
         /// This field MUST match the length of the Directory Entry Name Unicode
         /// string in bytes. The length MUST be a multiple of 2 and include the
         /// terminating null character in the count. This length MUST NOT exceed 64,
         /// the maximum size of the Directory Entry Name field.
+        /// </summary>
+        public ushort NameLength;
+
+        /// <summary>
+        /// This field MUST be 0x00, 0x01, 0x02, or 0x05, depending on the
+        /// actual type of object. All other values are not valid.
         /// </summary>
         [MarshalAs(UnmanagedType.U1)]
         public ObjectType ObjectType;
