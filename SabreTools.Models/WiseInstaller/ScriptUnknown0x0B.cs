@@ -10,7 +10,7 @@ namespace SabreTools.Models.WiseInstaller
     ///   0x0B 00 '%MAINDIR%\ui_mp_x86.dll'
     /// </remarks>
     /// <see href="https://codeberg.org/CYBERDEV/REWise/src/branch/master/src/wisescript.h"/> 
-    public class ScriptUnknown0x0B
+    public class ScriptUnknown0x0B : MachineStateData
     {
         /// <summary>
         /// Unknown
