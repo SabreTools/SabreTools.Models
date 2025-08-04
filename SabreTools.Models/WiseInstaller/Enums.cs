@@ -17,9 +17,9 @@ namespace SabreTools.Models.WiseInstaller
     public enum OperationCode : byte
     {
         /// <summary>
-        /// Custom deflate file header
+        /// Install a file
         /// </summary>
-        CustomDeflateFileHeader = 0x00,
+        InstallFile = 0x00,
 
         /// <summary>
         /// Unknown
@@ -32,9 +32,9 @@ namespace SabreTools.Models.WiseInstaller
         FormData = 0x04,
 
         /// <summary>
-        /// .ini file, section-name and values for that section
+        /// Edit INI File
         /// </summary>
-        IniFile = 0x05,
+        EditIniFile = 0x05,
 
         /// <summary>
         /// Deflated file just used by the installer? (No filename)
@@ -42,14 +42,14 @@ namespace SabreTools.Models.WiseInstaller
         UnknownDeflatedFile0x06 = 0x06,
 
         /// <summary>
-        /// Unknown
+        /// Execute Program
         /// </summary>
-        Unknown0x07 = 0x07,
+        ExecuteProgram = 0x07,
 
         /// <summary>
-        /// End branch
+        /// End block
         /// </summary>
-        EndBranch = 0x08,
+        EndBlock = 0x08,
 
         /// <summary>
         /// Function call ?
@@ -57,22 +57,22 @@ namespace SabreTools.Models.WiseInstaller
         FunctionCall = 0x09,
 
         /// <summary>
-        /// Unknown
+        /// Edit Registry
         /// </summary>
-        Unknown0x0A = 0x0A,
+        EditRegistry = 0x0A,
 
         /// <summary>
-        /// Unknown
+        /// Delete File
         /// </summary>
-        Unknown0x0B = 0x0B,
+        DeleteFile = 0x0B,
 
         /// <summary>
-        /// if statement (new branch)
+        /// If/While Statement
         /// </summary>
-        IfStatement = 0x0C,
+        IfWhileStatement = 0x0C,
 
         /// <summary>
-        /// else/default statement (inside if statement branch)
+        /// Else Statement
         /// </summary>
         ElseStatement = 0x0D,
 
@@ -97,19 +97,19 @@ namespace SabreTools.Models.WiseInstaller
         FileOnInstallMedium = 0x12,
 
         /// <summary>
-        /// Deflated file just used by the installer? (No filename)
+        /// Custom Dialog Set
         /// </summary>
-        UnknownDeflatedFile0x14 = 0x14,
+        CustomDialogSet = 0x14,
 
         /// <summary>
-        /// Unknown
+        /// Get System Information
         /// </summary>
-        Unknown0x15 = 0x15,
+        GetSystemInformation = 0x15,
 
         /// <summary>
-        /// Temp filename?
+        /// Get Temporary Filename
         /// </summary>
-        TempFilename = 0x16,
+        GetTemporaryFilename = 0x16,
 
         /// <summary>
         /// Unknown
@@ -117,9 +117,10 @@ namespace SabreTools.Models.WiseInstaller
         Unknown0x17 = 0x17,
 
         /// <summary>
-        /// Skip this byte? On some installers also skip next 6 bytes FIXME
+        /// New Event
         /// </summary>
-        Skip0x18 = 0x18,
+        /// <remarks>On some installers also skip next 6 bytes FIXME</remarks>
+        NewEvent = 0x18,
 
         /// <summary>
         /// Unknown
@@ -132,24 +133,28 @@ namespace SabreTools.Models.WiseInstaller
         Unknown0x1A = 0x1A,
 
         /// <summary>
-        /// Skip this byte
+        /// Include Script
         /// </summary>
-        Skip0x1B = 0x1B,
+        /// <remarks>
+        /// Acts like a no-op in the parsed script. Includes a
+        /// "Pathname" to the file to be included.
+        /// </remarks>
+        IncludeScript = 0x1B,
 
         /// <summary>
-        /// Unknown
+        /// Add Text to INSTALL.LOG
         /// </summary>
-        Unknown0x1C = 0x1C,
+        AddTextToInstallLog = 0x1C,
 
         /// <summary>
-        /// Unknown
+        /// Unknown, possibly "Move File"
         /// </summary>
         Unknown0x1D = 0x1D,
 
         /// <summary>
-        /// Unknown
+        /// Compiler Variable If
         /// </summary>
-        Unknown0x1E = 0x1E,
+        CompilerVariableIf = 0x1E,
 
         /// <summary>
         /// else if statement (inside if statement branch)
@@ -198,6 +203,9 @@ namespace SabreTools.Models.WiseInstaller
 
         WISE_FLAG_UNKNOWN_8 = 0x00000080,
 
+        /// <summary>
+        /// Indicates that PKZIP containers are used
+        /// </summary>
         WISE_FLAG_PK_ZIP = 0x00000100,
 
         WISE_FLAG_UNKNOWN_10 = 0x00000200,
@@ -217,7 +225,7 @@ namespace SabreTools.Models.WiseInstaller
         WISE_FLAG_UNKNOWN_17 = 0x00010000,
 
         /// <remarks>
-        /// Only seen in Swat 3
+        /// May indicate either install script or a valid Ocxreg32.EXE
         /// </remarks>
         WISE_FLAG_UNKNOWN_18 = 0x00020000,
 
@@ -253,6 +261,9 @@ namespace SabreTools.Models.WiseInstaller
 
         WISE_FLAG_UNKNOWN_31 = 0x40000000,
 
+        /// <remarks>
+        /// May indicate either install script or a valid Ocxreg32.EXE
+        /// </remarks>
         WISE_FLAG_UNKNOWN_32 = 0x80000000,
 
     }

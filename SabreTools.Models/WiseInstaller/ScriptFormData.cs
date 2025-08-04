@@ -1,15 +1,18 @@
 namespace SabreTools.Models.WiseInstaller
 {
+    /// <summary>
+    /// Form data?
+    /// </summary>
     /// <see href="https://codeberg.org/CYBERDEV/REWise/src/branch/master/src/wisescript.h"/> 
-    public class ScriptUnknown0x03 : MachineStateData
+    public class ScriptFormData : MachineStateData
     {
         /// <summary>
-        /// Unknown, maybe flags?
+        /// Read this struct again until 'no' == 0 ?
         /// </summary>
-        public byte Operand_0 { get; set; }
+        public byte No { get; set; }
 
         /// <summary>
-        /// Error strings, two per language (1 title and 1 message)
+        /// One string per language
         /// </summary>
         public string[]? LangStrings { get; set; }
     }

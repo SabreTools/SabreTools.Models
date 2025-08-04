@@ -1,14 +1,14 @@
 namespace SabreTools.Models.WiseInstaller
 {
     /// <summary>
-    /// TempFileName
+    /// Add Text to INSTALL.LOG
     /// </summary>
     /// <see href="https://codeberg.org/CYBERDEV/REWise/src/branch/master/src/wisescript.h"/> 
-    public class ScriptUnknown0x16 : MachineStateData
+    public class ScriptAddTextToInstallLog : MachineStateData
     {
         /// <summary>
-        /// Name
+        /// Text
         /// </summary>
-        public string? Name { get; set; }
+        public string? Text { get; set; }
     }
 }

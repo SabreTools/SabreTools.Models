@@ -1,19 +1,19 @@
 namespace SabreTools.Models.WiseInstaller
 {
     /// <summary>
-    /// Form data?
+    /// If statement comparing against a compiler variable
     /// </summary>
     /// <see href="https://codeberg.org/CYBERDEV/REWise/src/branch/master/src/wisescript.h"/> 
-    public class ScriptUnknown0x04 : MachineStateData
+    public class ScriptCompilerVariableIf : MachineStateData
     {
         /// <summary>
-        /// Read this struct again until 'no' == 0 ?
+        /// Flags, unknown values
         /// </summary>
-        public byte No { get; set; }
+        public byte Flags { get; set; }
 
         /// <summary>
-        /// One string per language
+        /// Variable name
         /// </summary>
-        public string[]? LangStrings { get; set; }
+        public string? Variable { get; set; }
     }
 }
