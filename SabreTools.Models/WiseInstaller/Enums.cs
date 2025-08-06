@@ -22,14 +22,14 @@ namespace SabreTools.Models.WiseInstaller
         InstallFile = 0x00,
 
         /// <summary>
-        /// Unknown
+        /// Display Message
         /// </summary>
-        Unknown0x03 = 0x03,
+        DisplayMessage = 0x03,
 
         /// <summary>
-        /// Form data?
+        /// User-Defined Action Step
         /// </summary>
-        FormData = 0x04,
+        UserDefinedActionStep = 0x04,
 
         /// <summary>
         /// Edit INI File
@@ -52,9 +52,9 @@ namespace SabreTools.Models.WiseInstaller
         EndBlock = 0x08,
 
         /// <summary>
-        /// Function call ?
+        /// Call DLL Function
         /// </summary>
-        FunctionCall = 0x09,
+        CallDllFunction = 0x09,
 
         /// <summary>
         /// Edit Registry
@@ -77,24 +77,25 @@ namespace SabreTools.Models.WiseInstaller
         ElseStatement = 0x0D,
 
         /// <summary>
-        /// Start form data?
+        /// Start User-Defined Action
         /// </summary>
-        StartFormData = 0x0F,
+        StartUserDefinedAction = 0x0F,
 
         /// <summary>
-        /// End form data?
+        /// End User-Defined Action
         /// </summary>
-        EndFormData = 0x10,
+        EndUserDefinedAction = 0x10,
 
         /// <summary>
-        /// Unknown
+        /// Ignore Output Files(?)
         /// </summary>
-        Unknown0x11 = 0x11,
+        /// <remarks>Unconfirmed</remarks>
+        IgnoreOutputFiles = 0x11,
 
         /// <summary>
-        /// File on install medium (CD/DVD), to copy?
+        /// Copy Local File
         /// </summary>
-        FileOnInstallMedium = 0x12,
+        CopyLocalFile = 0x12,
 
         /// <summary>
         /// Custom Dialog Set
@@ -112,14 +113,13 @@ namespace SabreTools.Models.WiseInstaller
         GetTemporaryFilename = 0x16,
 
         /// <summary>
-        /// Unknown
+        /// Play Multimedia File
         /// </summary>
-        Unknown0x17 = 0x17,
+        PlayMultimediaFile = 0x17,
 
         /// <summary>
         /// New Event
         /// </summary>
-        /// <remarks>On some installers also skip next 6 bytes FIXME</remarks>
         NewEvent = 0x18,
 
         /// <summary>
@@ -128,9 +128,9 @@ namespace SabreTools.Models.WiseInstaller
         Unknown0x19 = 0x19,
 
         /// <summary>
-        /// Unknown
+        /// Config ODBC Data Source
         /// </summary>
-        Unknown0x1A = 0x1A,
+        ConfigODBCDataSource = 0x1A,
 
         /// <summary>
         /// Include Script
@@ -147,35 +147,19 @@ namespace SabreTools.Models.WiseInstaller
         AddTextToInstallLog = 0x1C,
 
         /// <summary>
-        /// Unknown, possibly "Move File"
+        /// Rename File/Directory
         /// </summary>
-        Unknown0x1D = 0x1D,
+        RenameFileDirectory = 0x1D,
 
         /// <summary>
-        /// Compiler Variable If
+        /// Open/Close Install.log
         /// </summary>
-        CompilerVariableIf = 0x1E,
+        OpenCloseInstallLog = 0x1E,
 
         /// <summary>
-        /// else if statement (inside if statement branch)
+        /// ElseIf Statement
         /// </summary>
         ElseIfStatement = 0x23,
-
-        /// <summary>
-        /// Skip this byte? Only seen in RTCW
-        /// </summary>
-        Skip0x24 = 0x24,
-
-        /// <summary>
-        /// Skip this byte? Only seen in RTCW
-        /// </summary>
-        Skip0x25 = 0x25,
-
-        /// <summary>
-        /// Read 1 byte and 2 strings, only seen in cuteftp.exe, same
-        /// as 0x15? or maybe even 0x23?
-        /// </summary>
-        ReadByteAndStrings = 0x30,
     }
 
     /// <summary>

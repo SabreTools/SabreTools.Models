@@ -29,8 +29,34 @@ namespace SabreTools.Models.WiseInstaller
         /// <summary>
         /// Unknown
         /// </summary>
-        /// <remarks>20 bytes</remarks>
-        public byte[]? Unknown_20 { get; set; }
+        /// <remarks>2 bytes</remarks>
+        public byte[]? UnknownBytes_1 { get; set; }
+
+        /// <summary>
+        /// Start Gradient
+        /// </summary>
+        public byte[]? StartGradient { get; set; }
+
+        /// <summary>
+        /// End Gradient
+        /// </summary>
+        public byte[]? EndGradient { get; set; }
+
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        /// <remarks>4 bytes</remarks>
+        public byte[]? UnknownBytes_2 { get; set; }
+
+        /// <summary>
+        /// Points to the Exit event in the script, if it exists
+        /// </summary>
+        public uint WiseScriptExitEventOffset { get; set; }
+
+        /// <summary>
+        /// Points to the Cancel event in the script, if it exists
+        /// </summary>
+        public uint WiseScriptCancelEventOffset { get; set; }
 
         /// <summary>
         /// Inflated size of the Wise installer script
