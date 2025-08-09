@@ -13,7 +13,7 @@ namespace SabreTools.Models.WiseInstaller.Actions
     /// This acts like the start of a block if a flag is set(?).
     /// </remarks>
     /// <see href="https://www.manualslib.com/manual/404969/Symantec-Wisescript-Editor-8-0-Reference-For-Wise-Package-Studio-V1-0.html"/> 
-    public class WizardBlockLoop
+    public class WizardBlockLoop : FunctionData
     {
         /// <summary>
         /// Flags from the argument data
@@ -31,6 +31,7 @@ namespace SabreTools.Models.WiseInstaller.Actions
         /// <summary>
         /// Direction variable name
         /// </summary>
+        /// </remarks>"B" == Previous, "N" == Next</remarks>
         public string? DirectionVariable { get; set; }
 
         /// <summary>
@@ -39,19 +40,19 @@ namespace SabreTools.Models.WiseInstaller.Actions
         public string? DisplayVariable { get; set; }
 
         /// <summary>
-        /// X Position, numeric
+        /// X Position
         /// </summary>
-        public string? XPosition { get; set; }
+        public int? XPosition { get; set; }
 
         /// <summary>
         /// Y Position, numeric
         /// </summary>
-        public string? YPosition { get; set; }
+        public int? YPosition { get; set; }
 
         /// <summary>
         /// Filler Color, numeric
         /// </summary>
-        public string? FillerColor { get; set; }
+        public int? FillerColor { get; set; }
 
         /// <summary>
         /// Unknown, numeric

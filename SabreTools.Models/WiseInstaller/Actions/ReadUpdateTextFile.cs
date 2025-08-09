@@ -14,7 +14,7 @@ namespace SabreTools.Models.WiseInstaller.Actions
     /// This acts like the start of a block.
     /// </remarks>
     /// <see href="https://www.manualslib.com/manual/404969/Symantec-Wisescript-Editor-8-0-Reference-For-Wise-Package-Studio-V1-0.html"/> 
-    public class ReadUpdateTextFile
+    public class ReadUpdateTextFile : FunctionData
     {
         /// <summary>
         /// Flags from the argument data
@@ -39,8 +39,8 @@ namespace SabreTools.Models.WiseInstaller.Actions
         public string? Pathname { get; set; }
 
         /// <summary>
-        /// Unknown data, 0x20-filled in sample calls
+        /// Language Strings
         /// </summary>
-        public string? Unknown { get; set; }
+        public string? LanguageStrings { get; set; }
     }
 }

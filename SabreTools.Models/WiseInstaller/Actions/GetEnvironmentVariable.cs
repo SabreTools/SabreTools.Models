@@ -9,7 +9,7 @@ namespace SabreTools.Models.WiseInstaller.Actions
     /// This action is called through Call DLL Function and is mapped to "f17".
     /// </remarks>
     /// <see href="https://www.manualslib.com/manual/404969/Symantec-Wisescript-Editor-8-0-Reference-For-Wise-Package-Studio-V1-0.html"/> 
-    public class GetEnvironmentVariable
+    public class GetEnvironmentVariable : FunctionData
     {
         /// <summary>
         /// Flags from the argument data
@@ -17,7 +17,7 @@ namespace SabreTools.Models.WiseInstaller.Actions
         /// <remarks>
         /// Encoded as a string, binary representation in script file.
         /// Expected flags:
-        /// - Remove File Name (unknown)
+        /// - Remove File Name (non-zero value)
         /// </remarks>
         public byte DataFlags { get; set; }
 
