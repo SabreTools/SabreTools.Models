@@ -13,7 +13,7 @@ namespace SabreTools.Models.NewExecutable
         public byte SegmentNumber;
 
         /// <summary>
-        /// 0
+        /// Always 0
         /// </summary>
         public byte Reserved;
 

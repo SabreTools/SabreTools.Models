@@ -33,25 +33,25 @@
         /// <summary>
         /// INTERNALREF
         /// </summary>
-        /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.INTERNALREF"/></remarks>
+        /// <remarks>Must be null if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.INTERNALREF"/></remarks>
         public InternalRefRelocationRecord? InternalRefRelocationRecord { get; set; }
 
         /// <summary>
         /// IMPORTNAME
         /// </summary>
-        /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTNAME"/></remarks>
+        /// <remarks>Must be null if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTNAME"/></remarks>
         public ImportNameRelocationRecord? ImportNameRelocationRecord { get; set; }
 
         /// <summary>
         /// IMPORTORDINAL
         /// </summary>
-        /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTORDINAL"/></remarks>
+        /// <remarks>Must be null if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.IMPORTORDINAL"/></remarks>
         public ImportOrdinalRelocationRecord? ImportOrdinalRelocationRecord { get; set; }
 
         /// <summary>
         /// IMPORTORDINAL
         /// </summary>
-        /// <remarks>Must be <c>NULL</c> if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.OSFIXUP"/></remarks>
+        /// <remarks>Must be null if <see cref="Flags"/> is not set to <see cref="RelocationRecordFlag.OSFIXUP"/></remarks>
         public OSFixupRelocationRecord? OSFixupRelocationRecord { get; set; }
     }
 }
