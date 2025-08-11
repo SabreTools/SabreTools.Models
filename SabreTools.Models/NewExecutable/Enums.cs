@@ -148,6 +148,7 @@ namespace SabreTools.Models.NewExecutable
 
     public enum OperatingSystem : byte
     {
+        Unknown = 0x00,
         OS2 = 0x01,
         WINDOWS = 0x02,
         EU_MSDOS4 = 0x03,

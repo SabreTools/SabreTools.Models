@@ -9,6 +9,7 @@ namespace SabreTools.Models.NewExecutable
     /// The following is the structure of a segment table entry.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://wiki.osdev.org/NE"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class SegmentTableEntry
     {
@@ -17,6 +18,7 @@ namespace SabreTools.Models.NewExecutable
         /// data, relative to the beginning of the file. Zero means no
         /// file data.
         /// </summary>
+        /// <remarks>Byte offset is: Offset * (1 << <see cref="ExecutableHeader.SegmentAlignmentShiftCount"/>)</remarks>
         public ushort Offset;
 
         /// <summary>

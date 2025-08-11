@@ -7,6 +7,7 @@ namespace SabreTools.Models.NewExecutable
     /// the format of each resource (8 bytes each):
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://wiki.osdev.org/NE"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeResourceEntry
     {
@@ -16,11 +17,13 @@ namespace SabreTools.Models.NewExecutable
         /// of the alignment shift count value specified at
         /// beginning of the resource table.
         /// </summary>
+        /// <remarks>Byte offset is: Offset * (1 << <see cref="ResourceTable.AlignmentShiftCount"/>)</remarks>
         public ushort Offset;
 
         /// <summary>
         /// Length of the resource in the file (in bytes).
         /// </summary>
+        /// <remarks>Byte length is: Length * (1 << <see cref="ResourceTable.AlignmentShiftCount"/>)</remarks>
         public ushort Length;
 
         /// <summary>

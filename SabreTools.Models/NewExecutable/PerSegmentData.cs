@@ -7,7 +7,14 @@
     /// follow the segment data in the file. The relocation fixup information
     /// is defined as follows:
     /// </summary>
+    /// <remarks>
+    /// To find the relocation data for a segment, seek to:
+    ///     <see cref="SegmentTableEntry.Offset"/>
+    ///     * (1 << <see cref="ExecutableHeader.SegmentAlignmentShiftCount"/>)
+    ///     + <see cref="SegmentTableEntry.Length"/> 
+    /// </remarks>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://wiki.osdev.org/NE"/>
     public sealed class PerSegmentData
     {
         /// <summary>

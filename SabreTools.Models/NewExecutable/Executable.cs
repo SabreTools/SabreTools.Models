@@ -11,6 +11,7 @@ namespace SabreTools.Models.NewExecutable
     /// modules in the system and to support dynamic linking.
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://wiki.osdev.org/NE"/>
     public sealed class Executable
     {
         /// <summary>
@@ -57,5 +58,10 @@ namespace SabreTools.Models.NewExecutable
         /// Nonresident-Name table
         /// </summary>
         public NonResidentNameTableEntry[]? NonResidentNameTable { get; set; }
+
+        /// <summary>
+        /// Segment relocation data
+        /// </summary>
+        public PerSegmentData[]? SegmentRelocationData { get; set; }
     }
 }

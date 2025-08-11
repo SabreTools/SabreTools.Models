@@ -8,13 +8,12 @@ namespace SabreTools.Models.NewExecutable
     /// </summary>
     /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     /// <see href="https://github.com/libyal/libexe/blob/main/documentation/Executable%20(EXE)%20file%20format.asciidoc#24-ne-extended-header"/>
+    /// <see href="https://wiki.osdev.org/NE"/>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public sealed class ExecutableHeader
     {
         /// <summary>
-        /// Signature word.
-        /// "N" is low-order byte.
-        /// "E" is high-order byte.
+        /// "NE"
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
         public string? Magic;
@@ -22,20 +21,22 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Version number of the linker.
         /// </summary>
+        /// <remarks>Also known as the major linker version</remarks>
         public byte LinkerVersion;
-        
+
         /// <summary>
         /// Revision number of the linker.
         /// </summary>
+        /// <remarks>Also known as the minor linker version</remarks>
         public byte LinkerRevision;
-        
+
         /// <summary>
         /// Entry Table file offset, relative to the beginning of the segmented EXE header.
         /// </summary>
         public ushort EntryTableOffset;
-        
+
         /// <summary>
-        /// Number of bytes in the entry table.
+        /// Length of entry table in bytes
         /// </summary>
         public ushort EntryTableSize;
 
@@ -81,12 +82,15 @@ namespace SabreTools.Models.NewExecutable
         /// <summary>
         /// Segment number:offset of CS:IP.
         /// </summary>
+        /// <remarks>CS:IP entry point, CS is index into segment table</remarks>
         public uint InitialCSIPSetting;
 
         /// <summary>
         /// Segment number:offset of SS:SP.
         /// </summary>
         /// <remarks>
+        /// SS:SP initial stack pointer, SS is index into segment table
+        /// 
         /// If SS equals the automatic data segment and SP equals
         /// zero, the stack pointer is set to the top of the
         /// automatic data segment just below the additional heap
@@ -105,7 +109,7 @@ namespace SabreTools.Models.NewExecutable
         public ushort ModuleReferenceTableSize;
 
         /// <summary>
-        /// Number of bytes in the Non-Resident Name Table.
+        /// Size of non-resident names table in bytes
         /// </summary>
         public ushort NonResidentNameTableSize;
 
@@ -166,18 +170,20 @@ namespace SabreTools.Models.NewExecutable
         /// </summary>
         [MarshalAs(UnmanagedType.U1)]
         public OperatingSystem TargetOperatingSystem;
-        
+
+        #region OS/2 Specific
+
         /// <summary>
         /// Other OS/2 flags
         /// </summary>
         [MarshalAs(UnmanagedType.U1)]
         public OS2Flag AdditionalFlags;
-        
+
         /// <summary>
         /// Offset to return thunks or start of gangload area
         /// </summary>
         public ushort ReturnThunkOffset;
-        
+
         /// <summary>
         /// Offset to segment reference thunks or size of gangload area
         /// </summary>
@@ -187,15 +193,17 @@ namespace SabreTools.Models.NewExecutable
         /// Minimum code swap area size
         /// </summary>
         public ushort MinCodeSwapAreaSize;
-        
+
         /// <summary>
         /// Windows SDK revison number
         /// </summary>
         public byte WindowsSDKRevision;
-        
+
         /// <summary>
         /// Windows SDK version number
         /// </summary>
         public byte WindowsSDKVersion;
+
+        #endregion
     }
 }
