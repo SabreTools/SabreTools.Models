@@ -22,6 +22,12 @@ namespace SabreTools.Models.WiseInstaller.Actions
         /// Expected Values:
         /// - Start block if function returns true (0x02 or 0x03)
         /// - Loop while function returns true (0x02 or 0x03)
+        /// - Hide progress bar before calling function (0x04)
+        /// - Unknown (0x08) - Unset if external library call?
+        /// - Unknown (0x10) - Results in the flag being (^ 0x30)
+        /// - Unknown (0x20) - Checked for existence along with 0x08
+        ///     not existing to run a function. It also results
+        ///     in the flag value being (^ 0x30)
         /// </remarks>
         public byte Flags { get; set; }
 
@@ -50,11 +56,6 @@ namespace SabreTools.Models.WiseInstaller.Actions
         /// <summary>
         /// One entry per language count
         /// </summary>
-        /// <remarks>
-        /// TODO: Figure out if it's more appropriate to store
-        /// the string data in its unparsed form or as the concrete
-        /// class data, where possible.
-        /// </remarks>
-        public string[]? Entries { get; set; }
+        public FunctionData[]? Entries { get; set; }
     }
 }
