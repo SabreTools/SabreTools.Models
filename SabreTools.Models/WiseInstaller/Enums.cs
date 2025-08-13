@@ -76,9 +76,9 @@ namespace SabreTools.Models.WiseInstaller
         EditIniFile = 0x05,
 
         /// <summary>
-        /// Deflated file just used by the installer? (No filename)
+        /// Display billboard
         /// </summary>
-        UnknownDeflatedFile0x06 = 0x06,
+        DisplayBillboard = 0x06,
 
         /// <summary>
         /// Execute Program
@@ -216,29 +216,49 @@ namespace SabreTools.Models.WiseInstaller
         OpenCloseInstallLog = 0x1E,
 
         /// <summary>
-        /// Unknown
+        /// Invalid case
         /// </summary>
-        Unknown0x1F = 0x1F,
+        Invalid0x1F = 0x1F,
 
         /// <summary>
-        /// Unknown
+        /// Invalid case
         /// </summary>
-        Unknown0x20 = 0x20,
+        Invalid0x20 = 0x20,
 
         /// <summary>
-        /// Unknown
+        /// Invalid case
         /// </summary>
-        Unknown0x21 = 0x21,
+        Invalid0x21 = 0x21,
 
         /// <summary>
-        /// Unknown
+        /// Invalid case
         /// </summary>
-        Unknown0x22 = 0x22,
+        Invalid0x22 = 0x22,
 
         /// <summary>
         /// ElseIf Statement
         /// </summary>
         ElseIfStatement = 0x23,
+
+        /// <summary>
+        /// Enable repair?
+        /// </summary>
+        /// <remarks>
+        /// The flag used by this and <see cref="Unknown0x25"/> seems
+        /// to only be referenced in contexts where there are registry
+        /// keys read and written, specifically about repair. 
+        /// </remarks>
+        Unknown0x24 = 0x24,
+
+        /// <summary>
+        /// Disable repair?
+        /// </summary>
+        /// <remarks>
+        /// The flag used by this and <see cref="Unknown0x24"/> seems
+        /// to only be referenced in contexts where there are registry
+        /// keys read and written, specifically about repair. 
+        /// </remarks>
+        Unknown0x25 = 0x25,
 
         // Check in WISE0001.DLL suggests that there could be up
         // to opcode 0x3F. If the opcode is greater than 0x3F,
