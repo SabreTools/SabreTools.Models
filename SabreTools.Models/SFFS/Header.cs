@@ -5,7 +5,7 @@ namespace SabreTools.Models.SFFS
     /// <summary>
     /// Header
     /// </summary>
-    /// <see href="https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
+    /// <see href="https://web.archive.org/web/20231020050651/https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class Header
     {

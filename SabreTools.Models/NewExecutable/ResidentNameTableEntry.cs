@@ -7,7 +7,7 @@
     /// are case-sensitive and are not null-terminated. The following
     /// describes the format of the name strings:
     /// </summary>
-    /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://web.archive.org/web/20240422070115/http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     public sealed class ResidentNameTableEntry
     {
         /// <summary>

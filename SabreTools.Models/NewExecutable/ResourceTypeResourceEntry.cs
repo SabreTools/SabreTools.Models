@@ -6,7 +6,7 @@ namespace SabreTools.Models.NewExecutable
     /// A table of resources for this type follows. The following is
     /// the format of each resource (8 bytes each):
     /// </summary>
-    /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://web.archive.org/web/20240422070115/http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     /// <see href="https://wiki.osdev.org/NE"/>
     [StructLayout(LayoutKind.Sequential)]
     public sealed class ResourceTypeResourceEntry

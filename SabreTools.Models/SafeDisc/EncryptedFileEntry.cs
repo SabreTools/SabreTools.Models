@@ -2,7 +2,7 @@
 
 namespace SabreTools.Models.SafeDisc
 {
-    /// <see href="http://blog.w4kfu.com/tag/safedisc"/>
+    /// <see href="https://web.archive.org/web/20241008171855/http://blog.w4kfu.com/tag/safedisc"/>
     [StructLayout(LayoutKind.Sequential)]
     public class EncryptedFileEntry
     {

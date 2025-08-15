@@ -12,7 +12,7 @@
     /// containerfiles, the process uses and an application key, that is needed to
     /// decrypt headerinfos. Note that SFFS itself is completly vm-free.
     /// </summary>
-    /// <see href="https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
+    /// <see href="https://web.archive.org/web/20231020050651/https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
     public sealed class StarForceFileSystem
     {
         /// <summary>

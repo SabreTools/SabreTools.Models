@@ -6,7 +6,7 @@ namespace SabreTools.Models.NewExecutable
     /// The NE header is a relatively large structure with multiple characteristics.
     /// Because of the age of the format some items are unclear in meaning.
     /// </summary>
-    /// <see href="http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
+    /// <see href="https://web.archive.org/web/20240422070115/http://bytepointer.com/resources/win16_ne_exe_format_win3.0.htm"/>
     /// <see href="https://github.com/libyal/libexe/blob/main/documentation/Executable%20(EXE)%20file%20format.asciidoc#24-ne-extended-header"/>
     /// <see href="https://wiki.osdev.org/NE"/>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]

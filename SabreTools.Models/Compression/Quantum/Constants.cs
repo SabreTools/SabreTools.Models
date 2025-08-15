@@ -1,6 +1,6 @@
 namespace SabreTools.Models.Compression.Quantum
 {
-    /// <see href="www.russotto.net/quantumcomp.html"/>
+    /// <see href="http://www.russotto.net/quantumcomp.html"/>
     public static class Constants
     {
         public static readonly int[] PositionSlot =
