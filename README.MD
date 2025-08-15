@@ -12,14 +12,6 @@ For the most recent stable build, download the latest release here: [Releases Pa
 
 For the latest WIP build here: [Rolling Release](https://github.com/SabreTools/SabreTools.Models/releases/rolling)
 
-## Missing Metadata Models
-
-The following metadata file formats do not have models included in this library yet and, as such, do not have serializers:
-
-- Missfile
-- SabreJSON
-- SabreDAT XML
-
 ## Notable Information Sources
 
 Not all of this information was able to be gathered directly from the files in question, so here is a non-exhaustive list of sites and projects that allow this project to exist. Most of the models also have direct links to specific pages or code snippets, where available.
