@@ -32,7 +32,7 @@ namespace SabreTools.Models.WiseInstaller
         public uint UnknownValue0 { get; set; }
 
         /// <summary>
-        /// Value 1, (possibly?) the size of the second file in the file entries. This has thus far always been observed
+        /// Value 1, (possibly?) the size of the second file entry. This has thus far always been observed
         /// with non-0x00 values for values 3 and 4, and usually, but not always, value 5 as well. Thus far always been
         /// observed to be an executable, filename unknown. Likely assists with extraction. A few samples with a
         /// non-0x00 value 1 seem to have value 5 as 0x00, meaning that it being observed as the second file may just be
@@ -57,14 +57,14 @@ namespace SabreTools.Models.WiseInstaller
         public uint UnknownValue4 { get; set; }
 
         /// <summary>
-        /// Value 5, the size of the first file in the file entries. This has thus far always been observed with
+        /// Value 5, the size of the first entry. This has thus far always been observed with
         /// non-0x00 values for values 3 and 4, and guarantees the presence of one file before the main msi installer
         /// file. Thus far always been observed to be an executable, filename unknown. Likely assists with extraction.
         /// </summary>
         public uint UnknownValue5 { get; set; }
 
         /// <summary>
-        /// Value 6, the size of the "main" msi installer file. Always at the end of the file entries.
+        /// Value 6, the size of the "main" msi installer file entry. Always at the end of the file entries.
         /// </summary>
         public uint UnknownValue6 { get; set; }
 
