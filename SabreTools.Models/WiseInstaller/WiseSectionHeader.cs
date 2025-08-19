@@ -2,7 +2,7 @@ namespace SabreTools.Models.WiseInstaller
 {
     /// <summary>
     /// .WISE sections seem to be present in what virustotal calls "Self Extracting Wise Installer"s. These sections
-    /// contain a header with anywhere from seven tp eighteen 4-byte little-endian values, followed by what's possibly
+    /// contain a header with anywhere from seven to nineteen 4-byte little-endian values, followed by what's possibly
     /// a version number, then string data, and then the file entries.
     /// At some point in the header, there will be the characters "WIS" prepended by what seems to be a version number.
     /// This possible version number will be referred to from here on as just "version number", as it would be overly
@@ -12,8 +12,8 @@ namespace SabreTools.Models.WiseInstaller
     /// or five bytes long, it seems to vary.
     /// Offsets of the "W" in the "WIS" string currently observed are 32, 33, 41, 77, 78, and 82. This seems to point to
     /// 4-6 known header lengths, depending on the deal with the version number/WIS offset.
-    /// Before the version number, there are anywhere from seven to eighteen 4-byte little-endian values depending on
-    /// the length of the pre-string part of the header. These values will be described indexed from zero (0-17). The
+    /// Before the version number, there are anywhere from seven to nineteen 4-byte little-endian values depending on
+    /// the length of the pre-string part of the header. These values will be described indexed from zero (0-18). The
     /// only one of these values that's ever guaranteed not to be all 0x00 is value 6. This is the size of the "main"
     /// file in the file entry part of the section, which is the size of the file, plus 4 bytes for its following crc32.
     /// This file seems to always be an msi installer that's extracted to the TEMP directory and ran to perform the
@@ -122,6 +122,11 @@ namespace SabreTools.Models.WiseInstaller
         /// Unknown value 17.
         /// </summary>
         public uint UnknownValue17 { get; set; }
+        
+        /// <summary>
+        /// Unknown value 18. Currently unobserved in any samples.
+        /// </summary>
+        public uint UnknownValue18 { get; set; }
 
         
         /// <summary>
