@@ -6,36 +6,10 @@ namespace SabreTools.Models.PKZIP
     /// <remarks>PKZIP archives are meant to be read from the end</remarks>
     public class Archive
     {
-        #region Entries, Interleaved
-
         /// <summary>
-        /// Local file headers, always appear first in each group
+        /// Local file entries
         /// </summary>
-        public LocalFileHeader[]? LocalFileHeaders { get; set; }
-
-        /// <summary>
-        /// Encryption headers, may appear second in each group
-        /// </summary>
-        /// TODO: Determine the model for the encryption headers
-        public byte[][]? EncryptionHeaders { get; set; }
-
-        /// <summary>
-        /// File data, appears after the encryption header
-        /// if it exists or after the local file header otherwise
-        /// </summary>
-        public byte[][]? FileData { get; set; }
-
-        /// <summary>
-        /// Data descriptors, appears after the file data
-        /// </summary>
-        public DataDescriptor[]? DataDescriptors { get; set; }
-
-        /// <summary>
-        /// ZIP64 Data descriptors, appears after the file data
-        /// </summary>
-        public DataDescriptor64[]? ZIP64DataDescriptors { get; set; }
-
-        #endregion
+        public LocalFile[]? LocalFiles { get; set; }
 
         /// <summary>
         /// Optional archive decryption header, appears after all entries
