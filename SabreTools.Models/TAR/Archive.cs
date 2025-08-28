@@ -7,6 +7,6 @@ namespace SabreTools.Models.TAR
         /// <summary>
         /// 1 or more entries
         /// </summary>
-        public List<Entry>? Entries { get; set; }
+        public Entry[]? Entries { get; set; }
     }
 }

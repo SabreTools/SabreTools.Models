@@ -17,42 +17,42 @@ namespace SabreTools.Models.TAR
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
-        public byte[]? Mode;
+        public string? Mode;
 
         /// <summary>
         /// Owner's numeric user ID
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
-        public byte[]? UID;
+        public string? UID;
 
         /// <summary>
         /// Owner's numeric group ID
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
-        public byte[]? GID;
+        public string? GID;
 
         /// <summary>
         /// File size in bytes
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 12)]
-        public byte[]? Size;
+        public string? Size;
 
         /// <summary>
         /// Last modification time in numeric Unix time format
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 12)]
-        public byte[]? ModifiedTime;
+        public string? ModifiedTime;
 
         /// <summary>
         /// Checksum for header record
         /// </summary>
         /// <remarks>Octal string representation</remarks>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 8)]
-        public byte[]? Checksum;
+        public string? Checksum;
 
         /// <summary>
         /// Link indicator (file type) / Type flag
