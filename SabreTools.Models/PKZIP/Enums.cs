@@ -1003,6 +1003,18 @@ namespace SabreTools.Models.PKZIP
     }
 
     [Flags]
+    public enum RecordedTimeFlag : byte
+    {
+        None = 0,
+
+        LastModified = 1,
+
+        LastAccessed = 2,
+
+        Created = 4,
+    }
+
+    [Flags]
     public enum ZipItInternalSettings : ushort
     {
         /// <summary>
