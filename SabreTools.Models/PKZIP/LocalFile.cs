@@ -34,7 +34,7 @@ namespace SabreTools.Models.PKZIP
         /// ZIP64 Data descriptors, appears after the file data
         /// </summary>
         /// <remarks>Cannot exist if <see cref="DataDescriptor"/> is populated</remarks> 
-        public DataDescriptor64? ZIP64DataDescriptor{ get; set; }
+        public DataDescriptor64? ZIP64DataDescriptor { get; set; }
 
     }
 }
