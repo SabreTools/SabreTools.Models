@@ -19,7 +19,7 @@ namespace SabreTools.Models.PKZIP
         /// <summary>
         /// Attribute data
         /// </summary>
-        public byte[]? Vars { get; set; }
+        public byte[][]? Vars { get; set; }
 
         #endregion
     }
