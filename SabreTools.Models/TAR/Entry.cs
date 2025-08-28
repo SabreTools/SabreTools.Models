@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SabreTools.Models.TAR
 {
     public sealed class Entry
@@ -12,6 +10,6 @@ namespace SabreTools.Models.TAR
         /// <summary>
         /// 0 or more blocks representing the content
         /// </summary>
-        public List<Block>? Blocks { get; set; }
+        public Block[]? Blocks { get; set; }
     }
 }
