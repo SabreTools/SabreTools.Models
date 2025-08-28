@@ -1,6 +1,7 @@
 using System;
 
 /// <see href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"/> 
+/// <see href="https://github.com/adamhathcock/sharpcompress/blob/master/src/SharpCompress/Common/Zip/Headers/LocalEntryHeaderExtraFactory.cs"/> 
 namespace SabreTools.Models.PKZIP
 {
     [Flags]

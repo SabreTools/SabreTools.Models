@@ -49,6 +49,7 @@ Not all of this information was able to be gathered directly from the files in q
 | [PS3 Developer Wiki](https://www.psdevwiki.com/ps3/) | IRD, PlayStation3 |
 | [RanseiLink](https://github.com/Deijin27/RanseiLink) | Nitro |
 | [Reverse Engineering Wise](https://codeberg.org/CYBERDEV/REWise) | WiseInstaller |
+| [SharpCompress](https://github.com/adamhathcock/sharpcompress) | PKZIP |
 | [Source SDK 2013](https://github.com/ValveSoftware/source-sdk-2013) | BSP |
 | [Technical Committee T10](https://www.t10.org/) | PIC |
 | [The Go tools for Windows + Assembler](https://www.godevtool.com/) | PortableExecutable |
