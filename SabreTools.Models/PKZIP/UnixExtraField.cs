@@ -24,26 +24,26 @@ namespace SabreTools.Models.PKZIP
         /// <summary>
         /// File last access time
         /// </summary>
-        public uint Atime { get; set; }
+        public uint FileLastAccessTime { get; set; }
 
         /// <summary>
         /// File last modification time
         /// </summary>
-        public uint Mtime { get; set; }
+        public uint FileLastModificationTime { get; set; }
 
         /// <summary>
         /// File user ID
         /// </summary>
-        public ushort Uid { get; set; }
+        public ushort FileUserID { get; set; }
 
         /// <summary>
         /// File group ID
         /// </summary>
-        public ushort Gid { get; set; }
+        public ushort FileGroupID { get; set; }
 
         /// <summary>
         /// Variable length data field
         /// </summary>
-        public byte[]? Var { get; set; }
+        public byte[]? Data { get; set; }
     }
 }

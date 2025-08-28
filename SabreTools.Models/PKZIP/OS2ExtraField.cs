@@ -16,21 +16,21 @@ namespace SabreTools.Models.PKZIP
         /// <summary>
         /// Uncompressed Block Size
         /// </summary>
-        public uint BSize { get; set; }
+        public uint UncompressedBlockSize { get; set; }
 
         /// <summary>
         /// Compression type
         /// </summary>
-        public ushort CType { get; set; }
+        public ushort CompressionType { get; set; }
 
         /// <summary>
         /// CRC value for uncompress block
         /// </summary>
-        public uint EACRC { get; set; }
+        public uint CRC32 { get; set; }
 
         /// <summary>
         /// Compressed block
         /// </summary>
-        public byte[]? Var { get; set; }
+        public byte[]? Data { get; set; }
     }
 }
