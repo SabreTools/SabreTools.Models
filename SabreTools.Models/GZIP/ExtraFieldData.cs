@@ -7,20 +7,20 @@ namespace SabreTools.Models.GZIP
         /// SI1 and SI2 provide a subfield ID, typically two ASCII letters
         /// with some mnemonic value.
         /// </summary>
-        public byte SI1;
+        public byte SI1 { get; set; }
 
         /// <summary>
         /// SI1 and SI2 provide a subfield ID, typically two ASCII letters
         /// with some mnemonic value.
         /// </summary>
-        public byte SI2;
+        public byte SI2 { get; set; }
 
         /// <summary>
         /// LEN gives the length of the subfield data, excluding the 4
         /// initial bytes.
         /// </summary>
-        public ushort LEN;
+        public ushort Length { get; set; }
 
-        public byte[]? Data;
+        public byte[]? Data { get; set; }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SabreTools.Models.TAR
 {
     public sealed class Archive

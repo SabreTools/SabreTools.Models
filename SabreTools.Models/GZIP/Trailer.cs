@@ -13,7 +13,7 @@ namespace SabreTools.Models.GZIP
         /// ordering ISO documents. See gopher://info.itu.ch for an
         /// online version of ITU-T V.42.)
         /// </summary>
-        public uint CRC32;
+        public uint CRC32 { get; set; }
 
         /// <summary>
         /// Input SIZE
@@ -21,6 +21,6 @@ namespace SabreTools.Models.GZIP
         /// This contains the size of the original (uncompressed) input
         /// data modulo 2^32.
         /// </summary>
-        public uint ISIZE;
+        public uint InputSize { get; set; }
     }
 }

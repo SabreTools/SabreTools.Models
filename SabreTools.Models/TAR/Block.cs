@@ -2,6 +2,10 @@ namespace SabreTools.Models.TAR
 {
     public sealed class Block
     {
-        public byte[]? Data = new byte[512];
+        /// <summary>
+        /// Data
+        /// </summary>
+        /// <remarks>512 bytes</remarks>
+        public byte[]? Data { get; set; }
     }
 }

@@ -6,22 +6,22 @@ namespace SabreTools.Models.GZIP
         /// <summary>
         /// IDentification 1 (0x1F)
         /// </summary>
-        public byte ID1;
+        public byte ID1 { get; set; }
 
         /// <summary>
         /// IDentification 2 (0x8B)
         /// </summary>
-        public byte ID2;
+        public byte ID2 { get; set; }
 
         /// <summary>
         /// Compression Method
         /// </summary>
-        public CompressionMethod CM;
+        public CompressionMethod CompressionMethod { get; set; }
 
         /// <summary>
         /// FLaGs
         /// </summary>
-        public Flags FLG;
+        public Flags Flags { get; set; }
 
         /// <summary>
         /// Modification TIME
@@ -35,12 +35,12 @@ namespace SabreTools.Models.GZIP
         /// compression started.  MTIME = 0 means no time stamp is
         /// available.
         /// </summary>
-        public uint MTIME;
+        public uint LastModifiedTime { get; set; }
 
         /// <summary>
         /// eXtra FLags
         /// </summary>
-        public ExtraFlags XFL;
+        public ExtraFlags ExtraFlags { get; set; }
 
         /// <summary>
         /// Operating System
@@ -49,7 +49,7 @@ namespace SabreTools.Models.GZIP
         /// took place.  This may be useful in determining end-of-line
         /// convention for text files.
         /// </summary>
-        public OperatingSystem OS;
+        public OperatingSystem OperatingSystem { get; set; }
 
         /// <summary>
         /// eXtra LENgth
@@ -57,7 +57,7 @@ namespace SabreTools.Models.GZIP
         /// If FLG.FEXTRA is set, this gives the length of the optional
         /// extra field.
         /// </summary>
-        public ushort XLEN;
+        public ushort ExtraLength { get; set; }
 
         /// <summary>
         /// Extra field
@@ -66,23 +66,23 @@ namespace SabreTools.Models.GZIP
         /// the header, with total length XLEN bytes.  It consists of a
         /// series of subfields, each of the form <see cref="ExtraFieldData"/>.
         /// </summary>
-        public ExtraFieldData[]? ExtraField;
+        public ExtraFieldData[]? ExtraField { get; set; }
 
         /// <summary>
-        /// Original filename before compression, zero-terminated
+        /// Original filename before compression, null-terminated
         /// </summary>
-        public string? OriginalFileName;
+        public string? OriginalFileName { get; set; }
 
         /// <summary>
-        /// File comment, zero terminated
+        /// File comment, null terminated
         /// </summary>
-        public string? FileComment;
+        public string? FileComment { get; set; }
 
         /// <summary>
         ///  The CRC16 consists of the two least significant bytes of the
         ///  CRC32 for all bytes of the gzip header up to and not including
         ///  the CRC16.
         /// </summary>
-        public ushort? CRC16;
+        public ushort? CRC16 { get; set; }
     }
 }
