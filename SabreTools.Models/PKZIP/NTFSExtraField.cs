@@ -14,23 +14,9 @@ namespace SabreTools.Models.PKZIP
         /// </summary>
         public uint Reserved { get; set; }
 
-        #region Tags, Interleaved
-
         /// <summary>
-        /// NTFS attribute tag values
+        /// NTFS attribute tags
         /// </summary>
-        public ushort[]? Tags { get; set; }
-
-        /// <summary>
-        /// Size of attributes, in bytes
-        /// </summary>
-        public ushort[]? Size { get; set; }
-
-        /// <summary>
-        /// Attribute data
-        /// </summary>
-        public byte[][]? Vars { get; set; }
-
-        #endregion
+        public TagSizeVar[]? TagSizeVars { get; set; }
     }
 }
