@@ -19,12 +19,12 @@ namespace SabreTools.Models.NewExecutable
         /// file data.
         /// </summary>
         /// <remarks>Byte offset is: Offset * (1 << <see cref="ExecutableHeader.SegmentAlignmentShiftCount"/>)</remarks>
-        public ushort Offset;
+        public ushort Offset { get; set; }
 
         /// <summary>
         /// Length of the segment in the file, in bytes. Zero means 64K.
         /// </summary>
-        public ushort Length;
+        public ushort Length { get; set; }
 
         /// <summary>
         /// Flag word.
@@ -36,6 +36,25 @@ namespace SabreTools.Models.NewExecutable
         /// Minimum allocation size of the segment, in bytes. Total size
         /// of the segment. Zero means 64K.
         /// </summary>
-        public ushort MinimumAllocationSize;
+        public ushort MinimumAllocationSize { get; set; }
+
+        /// <summary>
+        /// Segment data
+        /// </summary>
+        /// <remarks>
+        /// Data is not sequential to the entry header. It lives at
+        /// the <see cref="Offset"/> and has a size of <see cref="Length"/>
+        /// </remarks>
+        public byte[]? Data { get; set; }
+
+        /// <summary>
+        /// Per-segment data
+        /// </summary>
+        /// <remarks>
+        /// This only exists if <see cref="FlagWord"/> has a flag value
+        /// of <see cref="SegmentTableEntryFlag.RELOCINFO"/>. It immediately
+        /// follows <see cref="Data"/>.
+        /// </remarks>
+        public PerSegmentData? PerSegmentData { get; set; }
     }
 }
