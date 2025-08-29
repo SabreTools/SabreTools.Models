@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// A menu resource consists of a MENUHEADER structure followed by one or more

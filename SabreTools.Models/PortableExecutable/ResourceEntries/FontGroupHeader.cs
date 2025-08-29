@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Contains the information necessary for an application to access a specific font. The structure

@@ -1,15 +1,15 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Represents the organization of data in a file-version resource. It contains version
-    /// information not dependent on a particular language and code page combination.
+    /// information that can be displayed for a particular language and code page.
     /// </summary>
-    /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/varfileinfo"/>
-    public sealed class VarFileInfo
+    /// <see href="https://learn.microsoft.com/en-us/windows/win32/menurc/stringfileinfo"/>
+    public sealed class StringFileInfo
     {
         /// <summary>
-        /// The length, in bytes, of the entire VarFileInfo block, including all structures
-        /// indicated by the Children member.
+        /// The length, in bytes, of the entire StringFileInfo block, including all
+        /// structures indicated by the Children member.
         /// </summary>
         public ushort Length { get; set; }
 
@@ -24,7 +24,7 @@
         public VersionResourceType ResourceType { get; set; }
 
         /// <summary>
-        /// The Unicode string L"VarFileInfo".
+        /// The Unicode string L"StringFileInfo".
         /// </summary>
         public string? Key { get; set; }
 
@@ -34,8 +34,10 @@
         public ushort Padding { get; set; }
 
         /// <summary>
-        /// Typically contains a list of languages that the application or DLL supports.
+        /// An array of one or more StringTable structures. Each StringTable structure's Key
+        /// member indicates the appropriate language and code page for displaying the text in
+        /// that StringTable structure.
         /// </summary>
-        public VarData[]? Children { get; set; }
+        public StringTable[]? Children { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Defines the dimensions and style of a control in a dialog box. One or more of these

@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// A block of text used by an extended dialog box template to describe the extended dialog box.

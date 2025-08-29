@@ -45,7 +45,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// COFF symbol table
         /// </summary>
-        public COFFSymbolTableEntry[]? COFFSymbolTable { get; set; }
+        public COFFSymbolTableEntries.BaseEntry[]? COFFSymbolTable { get; set; }
 
         /// <summary>
         /// COFF string table

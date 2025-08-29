@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Common base class for menu item types

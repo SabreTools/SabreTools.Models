@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Contains information about message strings with identifiers in the range indicated

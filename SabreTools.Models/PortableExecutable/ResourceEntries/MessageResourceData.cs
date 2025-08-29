@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Contains information about formatted text for display as an error message or in a message

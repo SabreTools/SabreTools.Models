@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.ResourceEntries
 {
     /// <summary>
     /// Defines a menu item in an extended menu template. This structure definition is for
