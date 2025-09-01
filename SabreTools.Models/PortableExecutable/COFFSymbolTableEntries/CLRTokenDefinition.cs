@@ -12,22 +12,22 @@ namespace SabreTools.Models.PortableExecutable.COFFSymbolTableEntries
         /// <summary>
         /// Must be IMAGE_AUX_SYMBOL_TYPE_TOKEN_DEF (1).
         /// </summary>
-        public byte AuxFormat6AuxType { get; set; }
+        public byte AuxType { get; set; }
 
         /// <summary>
         /// Reserved, must be zero.
         /// </summary>
-        public byte AuxFormat6Reserved1 { get; set; }
+        public byte Reserved1 { get; set; }
 
         /// <summary>
         /// The symbol index of the COFF symbol to which this CLR token definition refers.
         /// </summary>
-        public uint AuxFormat6SymbolTableIndex { get; set; }
+        public uint SymbolTableIndex { get; set; }
 
         /// <summary>
         /// Reserved, must be zero.
         /// </summary>
         /// <remarks>12 bytes</remarks>
-        public byte[]? AuxFormat6Reserved2 { get; set; }
+        public byte[]? Reserved2 { get; set; }
     }
 }
