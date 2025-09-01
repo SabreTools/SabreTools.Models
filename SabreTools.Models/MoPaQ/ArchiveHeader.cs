@@ -128,7 +128,7 @@
         /// <summary>
         /// Compressed size of the BET block
         /// </summary>
-        public ulong BetTablesize { get; set; }
+        public ulong BetTableSize { get; set; }
 
         /// <summary>
         /// Size of raw data chunk to calculate MD5.

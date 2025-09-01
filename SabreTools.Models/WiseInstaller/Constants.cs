@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SabreTools.Models.WiseInstaller
 {
     public static class Constants
@@ -49,5 +51,56 @@ namespace SabreTools.Models.WiseInstaller
             0x01, 0x02, 0x02, 0x01, 0x01, 0x01, 0x02, 0x00,
             0x00, 0x00, 0x00, 0x02, 0x01, 0x01, 0x00, 0x00,
         ];
+        
+        /// <summary>
+        /// "WIS" string for WiseSection 57, 49, 53
+        /// </summary>
+        public static readonly byte[] WisString =
+        [0x57, 0x49, 0x53];
+        
+        /// <summary>
+        /// List of currently observed offsets for the "WIS" string in WiseSection
+        /// </summary>
+        public static readonly int[] WisOffsets =
+        [32, 33, 41, 77, 78, 82];
+        
+        /// <summary>
+        /// Size of the header for a WiseSection
+        /// </summary>
+        public static readonly Dictionary<int, int> WiseSectionHeaderLengthDictionary = new Dictionary<int, int>()
+        {
+            {32, 6},
+            {33, 6},
+            {41, 8},
+            {77, 17},
+            {78, 17},
+            {82, 18},
+        };
+        
+        /// <summary>
+        /// Offset from "WIS" string to be used as length of version field.
+        /// </summary>
+        public static readonly Dictionary<int, int> WiseSectionVersionOffsetDictionary = new Dictionary<int, int>()
+        {
+            {32, 4},
+            {33, 5},
+            {41, 5},
+            {77, 5},
+            {78, 6},
+            {82, 6},
+        };
+        
+        /// <summary>
+        /// Size of pre-string byte array, guessed to be correlated with "WIS" string offset.
+        /// </summary>
+        public static readonly Dictionary<int, int> WiseSectionPreStringBytesSize = new Dictionary<int, int>()
+        {
+            {32, 8},
+            {33, 16},
+            {41, 18},
+            {77, 19},
+            {78, 19},
+            {82, 19}, 
+        };
     }
 }
