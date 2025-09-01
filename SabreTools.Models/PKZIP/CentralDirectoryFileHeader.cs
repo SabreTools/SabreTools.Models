@@ -107,9 +107,9 @@ namespace SabreTools.Models.PKZIP
         public string? FileName { get; set; }
 
         /// <summary>
-        /// Extra field (variable size)
+        /// Extra fields (variable size)
         /// </summary>
-        public ExtensibleDataField? ExtraField { get; set; }
+        public ExtensibleDataField[]? ExtraFields { get; set; }
 
         /// <summary>
         /// File comment (variable size)
