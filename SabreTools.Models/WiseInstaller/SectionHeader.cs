@@ -75,6 +75,7 @@ namespace SabreTools.Models.WiseInstaller
         /// <summary>
         /// Unknown value 7. Currently unobserved in any samples.
         /// </summary>
+        /// TODO: From this entry onward the values are not guaranteed
         public uint UnknownValue7 { get; set; }
 
         /// <summary>
