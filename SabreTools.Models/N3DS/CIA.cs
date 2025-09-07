@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SabreTools.Models.N3DS
 {
     /// <summary>
