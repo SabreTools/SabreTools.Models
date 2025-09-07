@@ -226,4 +226,19 @@ namespace SabreTools.Models.N3DS
         Optional = 0x4000,
         Shared = 0x8000,
     }
+
+    /// <summary>
+    /// Item types for each file in the CIA
+    /// Used to track what item is at each offset
+    /// With many CIAs having multiple Content files.
+    /// </summary>
+    public enum ItemTypes
+    {
+        Header = 0x00,
+        CertChain = 0x01,
+        Ticket = 0x02,
+        TMD = 0x03,
+        Content = 0x04,
+        Meta = 0x05,
+    }
 }

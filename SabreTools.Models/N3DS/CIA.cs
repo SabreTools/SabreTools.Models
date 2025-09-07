@@ -15,6 +15,11 @@ namespace SabreTools.Models.N3DS
     public class CIA
     {
         /// <summary>
+        /// Offset records for each file in the CIA
+        /// </summary>
+        public List<CIAOffsets>? Offsets { get; set; }
+
+        /// <summary>
         /// CIA header
         /// </summary>
         public CIAHeader? Header { get; set; }
