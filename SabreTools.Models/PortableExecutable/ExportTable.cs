@@ -15,6 +15,13 @@
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     public sealed class ExportTable
     {
+        // TODO: Look into splitting this up
+        // Technically speaking, even though all of these should live in the same
+        // section, there is nothing in the spec that guarantees that they are together
+        // outside of the obvious logical grouping. The directory table is more obviously
+        // directly a part of the executable, while the other 4 structures are all based
+        // on information from that one-row table.
+
         /// <summary>
         /// A table with just one row (unlike the debug directory). This table indicates the
         /// locations and sizes of the other export tables.

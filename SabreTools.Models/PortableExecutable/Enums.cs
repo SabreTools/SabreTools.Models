@@ -494,9 +494,17 @@ namespace SabreTools.Models.PortableExecutable
     public enum ExtendedDllCharacteristics : ushort
     {
         /// <summary>
-        /// Image is CET compatible.
+        /// Image is Control-flow Enforcement Technology (CET) Shadow Stack compatible
         /// </summary>
         IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT = 0x0001,
+
+        /// <summary>
+        /// All branch targets in all image code sections are annotated with forward-edge
+        /// control flow integrity guard instructions such as x86 CET-Indirect Branch
+        /// Tracking (IBT) or ARM Branch Target Identification (BTI) instructions.
+        /// This bit is not used by Windows.
+        /// </summary>
+        IMAGE_DLLCHARACTERISTICS_EX_FORWARD_CFI_COMPAT = 0x0040,
     }
 
     [Flags]
