@@ -2746,8 +2746,11 @@ namespace SabreTools.Models.PortableExecutable
         IMAGE_SYM_CLASS_CLR_TOKEN = 0x6A,
     }
 
+    [Flags]
     public enum SymbolType : ushort
     {
+        #region Simple (Base) Data Type
+
         /// <summary>
         /// No type information or unknown base type. Microsoft tools use this setting
         /// </summary>
@@ -2828,10 +2831,26 @@ namespace SabreTools.Models.PortableExecutable
         /// </summary>
         IMAGE_SYM_TYPE_DWORD = 0x0F,
 
+        #endregion
+
+        #region Complex Type
+
         /// <summary>
-        /// A function pointer
+        /// The symbol is a pointer to base type
         /// </summary>
-        IMAGE_SYM_TYPE_FUNC = 0x20,
+        IMAGE_SYM_DTYPE_POINTER = 0x10,
+
+        /// <summary>
+        /// The symbol is a function that returns a base type
+        /// </summary>
+        IMAGE_SYM_DTYPE_FUNCTION = 0x20,
+
+        /// <summary>
+        /// The symbol is an array of base type
+        /// </summary>
+        IMAGE_SYM_DTYPE_ARRAY = 0x30,
+
+        #endregion
     }
 
     public enum SymbolDerivedType : byte
