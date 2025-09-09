@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.SecuROM
 {
     /// <summary>
     /// Overlay data associated with SecuROM executables
@@ -11,7 +11,7 @@ namespace SabreTools.Models.PortableExecutable
     /// is protected by SecuROM.
     /// </remarks>
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-    public sealed class SecuROMAddDEntry
+    public sealed class AddDEntry
     {
         /// <summary>
         /// Physical offset of the embedded file
