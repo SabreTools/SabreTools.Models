@@ -3,8 +3,6 @@
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     public sealed class TLSDirectory
     {
-        #region RawDataStartVA
-
         /// <summary>
         /// The starting address of the TLS template. The template is a block of data
         /// that is used to initialize TLS data. The system copies all of this data
@@ -12,70 +10,31 @@
         /// address is not an RVA; it is an address for which there should be a base
         /// relocation in the .reloc section.
         /// </summary>
-        public uint RawDataStartVA_PE32 { get; set; }
-
-        /// <summary>
-        /// The starting address of the TLS template. The template is a block of data
-        /// that is used to initialize TLS data. The system copies all of this data
-        /// each time a thread is created, so it must not be corrupted. Note that this
-        /// address is not an RVA; it is an address for which there should be a base
-        /// relocation in the .reloc section.
-        /// </summary>
-        public ulong RawDataStartVA_PE32Plus { get; set; }
-
-        #endregion
-
-        #region RawDataEndVA
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong RawDataStartVA { get; set; }
 
         /// <summary>
         /// The address of the last byte of the TLS, except for the zero fill. As
         /// with the Raw Data Start VA field, this is a VA, not an RVA.
         /// </summary>
-        public uint RawDataEndVA_PE32 { get; set; }
-
-        /// <summary>
-        /// The address of the last byte of the TLS, except for the zero fill. As
-        /// with the Raw Data Start VA field, this is a VA, not an RVA.
-        /// </summary>
-        public ulong RawDataEndVA_PE32Plus { get; set; }
-
-        #endregion
-
-        #region AddressOfIndex
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong RawDataEndVA { get; set; }
 
         /// <summary>
         /// The location to receive the TLS index, which the loader assigns. This
         /// location is in an ordinary data section, so it can be given a symbolic
         /// name that is accessible to the program.
         /// </summary>
-        public uint AddressOfIndex_PE32 { get; set; }
-
-        /// <summary>
-        /// The location to receive the TLS index, which the loader assigns. This
-        /// location is in an ordinary data section, so it can be given a symbolic
-        /// name that is accessible to the program.
-        /// </summary>
-        public ulong AddressOfIndex_PE32Plus { get; set; }
-
-        #endregion
-
-        #region AddressOfCallbacks
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong AddressOfIndex { get; set; }
 
         /// <summary>
         /// The pointer to an array of TLS callback functions. The array is
         /// null-terminated, so if no callback function is supported, this field
         /// points to 4 bytes set to zero.
         /// </summary>
-        public uint AddressOfCallbacks_PE32 { get; set; }
-
-        /// <summary>
-        /// The pointer to an array of TLS callback functions. The array is
-        /// null-terminated, so if no callback function is supported, this field
-        /// points to 4 bytes set to zero.
-        /// </summary>
-        public ulong AddressOfCallbacks_PE32Plus { get; set; }
-
-        #endregion
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong AddressOfCallbacks { get; set; }
 
         /// <summary>
         /// The size in bytes of the template, beyond the initialized data delimited
