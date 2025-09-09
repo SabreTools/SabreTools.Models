@@ -3,6 +3,7 @@ namespace SabreTools.Models.PortableExecutable
     // TODO: Add more constants around sizes
     // - COFF File Header size is a constant value of 20 (0x14)
     // - Section Header size is a constant value of 40 (0x28)
+    // - COFF Symbol Table entry size is a constant value of 18 (0x12)
     public static class Constants
     {
         public static readonly byte[] SignatureBytes = [0x50, 0x45, 0x00, 0x00];
