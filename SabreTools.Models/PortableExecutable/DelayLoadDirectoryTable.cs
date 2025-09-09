@@ -30,7 +30,7 @@ namespace SabreTools.Models.PortableExecutable
         /// The name of the DLL to be delay-loaded resides in the read-only data
         /// section of the image. It is referenced through the szName field.
         /// </remarks>
-        public uint Name;
+        public uint NameRVA;
 
         /// <summary>
         /// The RVA of the module handle (in the data section of the image) of the DLL
