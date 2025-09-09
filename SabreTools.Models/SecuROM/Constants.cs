@@ -3,6 +3,14 @@ namespace SabreTools.Models.SecuROM
 {
     public static class Constants
     {
+        #region AddD
+
+        public const string AddDMagicString = "AddD";
+
+        public static readonly byte[] AddDMagicBytes = [0x41, 0x64, 0x64, 0x44];
+
+        #endregion
+
         #region DFA
 
         public static readonly string DFAMagicString = "SDFA" + (char)0x04 + (char)0x00 + (char)0x00 + (char)0x00;
