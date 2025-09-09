@@ -95,25 +95,14 @@
 
         #region Windows-Specific Fields (Image Only)
 
-        #region ImageBase
-
         /// <summary>
         /// The preferred address of the first byte of image when loaded into memory { get; set; }
         /// must be a multiple of 64 K. The default for DLLs is 0x10000000. The default
         /// for Windows CE EXEs is 0x00010000. The default for Windows NT, Windows 2000,
         /// Windows XP, Windows 95, Windows 98, and Windows Me is 0x00400000.
         /// </summary>
-        public uint ImageBase_PE32 { get; set; }
-
-        /// <summary>
-        /// The preferred address of the first byte of image when loaded into memory { get; set; }
-        /// must be a multiple of 64 K. The default for DLLs is 0x10000000. The default
-        /// for Windows CE EXEs is 0x00010000. The default for Windows NT, Windows 2000,
-        /// Windows XP, Windows 95, Windows 98, and Windows Me is 0x00400000.
-        /// </summary>
-        public ulong ImageBase_PE32Plus { get; set; }
-
-        #endregion
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong ImageBase { get; set; }
 
         /// <summary>
         /// The alignment (in bytes) of sections when they are loaded into memory. It must
@@ -195,67 +184,32 @@
         /// </summary>
         public DllCharacteristics DllCharacteristics { get; set; }
 
-        #region SizeOfStackReserve
-
         /// <summary>
         /// The size of the stack to reserve. Only SizeOfStackCommit is committed; the rest
         /// is made available one page at a time until the reserve size is reached.
         /// </summary>
-        public uint SizeOfStackReserve_PE32 { get; set; }
-
-        /// <summary>
-        /// The size of the stack to reserve. Only SizeOfStackCommit is committed; the rest
-        /// is made available one page at a time until the reserve size is reached.
-        /// </summary>
-        public ulong SizeOfStackReserve_PE32Plus { get; set; }
-
-        #endregion
-
-        #region SizeOfStackCommit
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong SizeOfStackReserve { get; set; }
 
         /// <summary>
         /// The size of the stack to commit. 
         /// </summary>
-        public uint SizeOfStackCommit_PE32 { get; set; }
-
-        /// <summary>
-        /// The size of the stack to commit. 
-        /// </summary>
-        public ulong SizeOfStackCommit_PE32Plus { get; set; }
-
-        #endregion
-
-        #region SizeOfHeapReserve
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong SizeOfStackCommit { get; set; }
 
         /// <summary>
         /// The size of the local heap space to reserve. Only SizeOfHeapCommit is
         /// committed; the rest is made available one page at a time until the reserve
         /// size is reached.
         /// </summary>
-        public uint SizeOfHeapReserve_PE32 { get; set; }
-
-        /// <summary>
-        /// The size of the local heap space to reserve. Only SizeOfHeapCommit is
-        /// committed; the rest is made available one page at a time until the reserve
-        /// size is reached.
-        /// </summary>
-        public ulong SizeOfHeapReserve_PE32Plus { get; set; }
-
-        #endregion
-
-        #region SizeOfHeapCommit
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong SizeOfHeapReserve { get; set; }
 
         /// <summary>
         /// The size of the local heap space to commit.
         /// </summary>
-        public uint SizeOfHeapCommit_PE32 { get; set; }
-
-        /// <summary>
-        /// The size of the local heap space to commit.
-        /// </summary>
-        public ulong SizeOfHeapCommit_PE32Plus { get; set; }
-
-        #endregion
+        /// <remarks>This value is 32-bit if PE32 and 64-bit if PE32+</remarks>
+        public ulong SizeOfHeapCommit { get; set; }
 
         /// <summary>
         /// Reserved, must be zero.
