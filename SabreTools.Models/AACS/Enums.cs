@@ -27,6 +27,12 @@ namespace SabreTools.Models.AACS
         /// Section 3.2.5.2, which are only processed by Class II Licensed Products.
         /// </summary>
         Type10 = 0x000A1003,
+
+        /// <summary>
+        /// This is the Media Key Block Type found on pre-recorded "UHD" media (AACS v2).
+        /// Needs research, seems to be UHD media equivalent of Type 4 ?
+        /// </summary>
+        Type4_UHD = 0x48141003,
     }
 
     public enum RecordType : byte
@@ -42,5 +48,12 @@ namespace SabreTools.Models.AACS
 
         // Not documented
         Copyright = 0x7F,
+
+        // Record types found in UHD media (AACS v2) - needs research
+        Unknown64Bytes28 = 0x28,
+        Unknown64Bytes30 = 0x30,
+        Unknown64Bytes31 = 0x31,
+        Unknown16Bytes86 = 0x86,
+        EmptyRecordF8 = 0xF8,
     }
 }
