@@ -27,6 +27,20 @@ namespace SabreTools.Models.AACS
         /// Section 3.2.5.2, which are only processed by Class II Licensed Products.
         /// </summary>
         Type10 = 0x000A1003,
+
+        /// <summary>
+        /// Type 2.0 Category C.
+        /// This is the Media Key Block Type found on "UHD" media (AACS v2.0)
+        /// https://code.videolan.org/videolan/libaacs/-/blob/master/src/libaacs/mkb.h
+        /// </summary>
+        Type20 = 0x48141003,
+
+        /// <summary>
+        /// Type 2.1 Category C.
+        /// This is the Media Key Block Type found on "UHD" media (AACS v2.1)
+        /// https://code.videolan.org/videolan/libaacs/-/blob/master/src/libaacs/mkb.h
+        /// </summary>
+        Type21 = 0x48151003,
     }
 
     public enum RecordType : byte
@@ -35,6 +49,7 @@ namespace SabreTools.Models.AACS
         ExplicitSubsetDifference = 0x04,
         MediaKeyData = 0x05,
         SubsetDifferenceIndex = 0x07,
+        MediaKeyVariantData = 0x0C,
         TypeAndVersion = 0x10,
         DriveRevocationList = 0x20,
         HostRevocationList = 0x21,
@@ -42,5 +57,13 @@ namespace SabreTools.Models.AACS
 
         // Not documented
         Copyright = 0x7F,
+
+        // Record types only found in UHD media (AACS v2)
+        // https://code.videolan.org/videolan/libaacs/-/blob/master/src/devtools/mkb_dump.c
+        Unknown0x28_AACS2 = 0x28,
+        DriveRevocationList_AACS2 = 0x30,
+        HostRevocationList_AACS2 = 0x31,
+        VerifyMediaKey_AACS2 = 0x86,
+        EmptyRecord0xF8_AACS2 = 0xF8,
     }
 }
