@@ -37,6 +37,7 @@ Not all of this information was able to be gathered directly from the files in q
 | [IETF](https://www.ietf.org/) | GZIP |
 | [Independent Commodore Library](https://petlibrary.tripod.com/) | PKZIP |
 | [Ladislav Zezula](http://zezula.net/en/tools/main.html) | MoPaQ |
+| [libaacs](https://code.videolan.org/videolan/libaacs/) | AACS |
 | [libbdplus](https://github.com/mwgoldsmith/bdplus) | BD+ |
 | [libexe](https://github.com/libyal/libexe/) | NewExecutable |
 | [MAME](https://github.com/mamedev/mame/) | CHD |
