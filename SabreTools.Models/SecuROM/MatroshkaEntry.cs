@@ -55,5 +55,10 @@ namespace SabreTools.Models.SecuROM
         /// </summary>
         /// <remarks>16 bytes</remarks>
         public byte[]? MD5 { get; set; }
+                
+        /// <summary>
+        /// The file data, stored as a byte array
+        /// </summary>
+        public byte[]? fileData { get; set; }
     }
 }
