@@ -111,5 +111,13 @@ namespace SabreTools.Models.Logiqx
         /// <remarks>MAME extension</remarks>
         [XmlElement("softwarelist")]
         public SoftwareList[]? SoftwareList { get; set; }
+
+        /// <remarks>RetroAchievements extension</remarks>
+        [XmlAttribute("url")]
+        public string? Url { get; set; }
+
+        /// <remarks>RetroAchievements extension</remarks>
+        [XmlAttribute("hash")]
+        public string? Hash { get; set; }
     }
 }

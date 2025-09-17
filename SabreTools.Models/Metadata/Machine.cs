@@ -114,6 +114,9 @@ namespace SabreTools.Models.Metadata
         public const string GenMSXIDKey = "genmsxid";
 
         /// <remarks>string</remarks>
+        public const string HashKey = "hash";
+
+        /// <remarks>string</remarks>
         public const string HistoryKey = "history";
 
         /// <remarks>string</remarks>
@@ -259,6 +262,9 @@ namespace SabreTools.Models.Metadata
         /// <remarks>Trurip</remarks>
         [NoFilter]
         public const string TruripKey = "trurip";
+
+        /// <remarks>string</remarks>
+        public const string UrlKey = "url";
 
         /// <remarks>Video[]</remarks>
         [NoFilter]
