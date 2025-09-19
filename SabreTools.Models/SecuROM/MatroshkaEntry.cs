@@ -8,8 +8,9 @@ namespace SabreTools.Models.SecuROM
         /// <remarks>
         /// Versions without a key prefix are 256 bytes.
         /// Versions with key values either are 256 or 512 bytes.
+        /// Stored as a string as the rest of the 256/512 bytes are just padding.
         /// </remarks>
-        public byte[]? Path { get; set; }
+        public string? Path { get; set; }
 
         /// <summary>
         /// Type of the entry data
@@ -29,7 +30,7 @@ namespace SabreTools.Models.SecuROM
         /// <summary>
         /// Unknown value only seen in later versions
         /// </summary>
-        /// <remarks>Possibly indicates that the offset is a 64-bit value</remarks>
+        /// <remarks>Does not indicate that the offset is or isn't a 64-bit value</remarks>
         public uint? Unknown { get; set; }
 
         /// <summary>
