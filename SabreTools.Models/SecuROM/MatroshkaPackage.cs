@@ -63,7 +63,7 @@ namespace SabreTools.Models.SecuROM
         /// </summary>
         /// <remarks>
         /// This is all zeroes for all observed longer header non-RC matroschka sections. For RC sections, this is
-        /// always 630A411277DE8A4B9BB8DF2A14AC4C28, with the exception of the executables for Crysis Wars and Crysis
+        /// always 630A411277DE8A4B9BB8DF2A14AC4C28, except for the executables for Crysis Wars and Crysis
         /// Warhead, which are 9D2593B31A01E041AF6EDC15AEF5B969. Those two are noteworthy as they appear to be the
         /// earliest known RC games, have a strange key in the encrypted executable, and are the only games that cannot
         /// currently be manually unlocked (and thus, cannot be unlocked at all at the moment). So, this may indicate
