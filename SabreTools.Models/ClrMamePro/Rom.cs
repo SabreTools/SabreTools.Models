@@ -34,6 +34,18 @@ namespace SabreTools.Models.ClrMamePro
 
         #region Hash Extensions
 
+        /// <remarks>md2; Appears after CRC</remarks>
+        public string? MD2 { get; set; }
+
+        /// <remarks>md4; Appears after MD2</remarks>
+        public string? MD4 { get; set; }
+
+        /// <remarks>ripemd128; Appears after MD5</remarks>
+        public string? RIPEMD128 { get; set; }
+
+        /// <remarks>ripemd160; Appears after RIPEMD128</remarks>
+        public string? RIPEMD160 { get; set; }
+
         /// <remarks>sha256; Also in No-Intro spec; Appears after SHA1</remarks>
         public string? SHA256 { get; set; }
 

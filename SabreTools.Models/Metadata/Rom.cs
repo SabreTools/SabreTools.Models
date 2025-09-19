@@ -182,6 +182,12 @@ namespace SabreTools.Models.Metadata
         /// <remarks>string; OpenMSX.RomBase</remarks>
         public const string RemarkKey = "remark";
 
+        /// <remarks>string</remarks>
+        public const string RIPEMD128Key = "ripemd128";
+
+        /// <remarks>string</remarks>
+        public const string RIPEMD160Key = "ripemd160";
+
         /// <remarks>string, possibly long; ArchiveDotOrg.File</remarks>
         public const string RotationKey = "rotation";
 

@@ -11,6 +11,10 @@ namespace SabreTools.Models.Hashfile
 
         public MD5[]? MD5 { get; set; }
 
+        public RIPEMD128[]? RIPEMD128 { get; set; }
+
+        public RIPEMD160[]? RIPEMD160 { get; set; }
+
         public SHA1[]? SHA1 { get; set; }
 
         public SHA256[]? SHA256 { get; set; }

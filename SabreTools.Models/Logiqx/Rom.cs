@@ -17,8 +17,24 @@ namespace SabreTools.Models.Logiqx
         [XmlAttribute("crc")]
         public string? CRC { get; set; }
 
+        /// <remarks>Hash extension</remarks>
+        [XmlAttribute("md2")]
+        public string? MD2 { get; set; }
+
+        /// <remarks>Hash extension</remarks>
+        [XmlAttribute("md4")]
+        public string? MD4 { get; set; }
+
         [XmlAttribute("md5")]
         public string? MD5 { get; set; }
+
+        /// <remarks>Hash extension</remarks>
+        [XmlAttribute("ripemd128")]
+        public string? RIPEMD128 { get; set; }
+
+        /// <remarks>Hash extension</remarks>
+        [XmlAttribute("ripemd160")]
+        public string? RIPEMD160 { get; set; }
 
         [XmlAttribute("sha1")]
         public string? SHA1 { get; set; }
