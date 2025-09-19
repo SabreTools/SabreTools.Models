@@ -26,7 +26,7 @@ namespace SabreTools.Models.SecuROM
         /// </summary>
         public uint EntryCount { get; set; }
 
-        #region Release Control only
+        #region Longer Header only
 
         // The combination of the 4 following values have only been seen in
         // one of 4 distinct patterns. The meaning of these patterns is unknown.
@@ -41,19 +41,19 @@ namespace SabreTools.Models.SecuROM
         // 0x00 values and 256-byte paths.
 
         /// <summary>
-        /// One of four unknown values only observed on RC matroschka sections
+        /// One of four unknown values only observed on longer header matroschka sections
         /// </summary>
         /// <remarks>Only values of 0 or 1 have been found</remarks>
         public uint? UnknownRCValue1 { get; set; }
 
         /// <summary>
-        /// One of four unknown values only observed on RC matroschka sections
+        /// One of four unknown values only observed on longer header matroschka sections
         /// </summary>
         /// <remarks>Only values of 0 or 1 have been found</remarks>
         public uint? UnknownRCValue2 { get; set; }
 
         /// <summary>
-        /// One of four unknown values only observed on RC matroschka sections
+        /// One of four unknown values only observed on longer header matroschka sections
         /// </summary>
         /// <remarks>Only values of 0 or 1 have been found</remarks>
         public uint? UnknownRCValue3 { get; set; }
@@ -62,8 +62,12 @@ namespace SabreTools.Models.SecuROM
         /// 32-character hex string
         /// </summary>
         /// <remarks>
-        /// Due to encryption on later DFA-encrypted RC executables, this is the
-        /// most reliable way to identify which executables are using the same key.
+        /// This is all zeroes for all observed longer header non-RC matroschka sections. For RC sections, this is
+        /// always 630A411277DE8A4B9BB8DF2A14AC4C28, with the exception of the executables for Crysis Wars and Crysis
+        /// Warhead, which are 9D2593B31A01E041AF6EDC15AEF5B969. Those two are noteworthy as they appear to be the
+        /// earliest known RC games, have a strange key in the encrypted executable, and are the only games that cannot
+        /// currently be manually unlocked (and thus, cannot be unlocked at all at the moment). So, this may indicate
+        /// something about version, functionality, or otherwise?
         /// </remarks>
         public string? KeyHexString { get; set; }
 
