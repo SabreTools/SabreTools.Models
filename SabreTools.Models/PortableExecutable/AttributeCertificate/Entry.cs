@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.AttributeCertificate
 {
     /// <summary>
     /// Attribute certificates can be associated with an image by adding an attribute
@@ -37,7 +37,7 @@
     /// the remainder of this section.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class AttributeCertificateTableEntry
+    public sealed class Entry
     {
         /// <summary>
         /// Specifies the length of the attribute certificate entry.

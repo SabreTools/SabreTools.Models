@@ -55,7 +55,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Attribute certificate table
         /// </summary>
-        public AttributeCertificateTableEntry[]? AttributeCertificateTable { get; set; }
+        public AttributeCertificate.Entry[]? AttributeCertificateTable { get; set; }
 
         /// <summary>
         /// Delay-load directory table
