@@ -1,4 +1,4 @@
-namespace SabreTools.Models.SFFS
+namespace SabreTools.Models.StarForce
 {
     public static class Constants
     {

@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.SFFS
+﻿namespace SabreTools.Models.StarForce
 {
     /// <summary>
     /// SFFS consists of 2 major parts: the container files that contain the game
@@ -13,7 +13,7 @@
     /// decrypt headerinfos. Note that SFFS itself is completly vm-free.
     /// </summary>
     /// <see href="https://web.archive.org/web/20231020050651/https://forum.xentax.com/viewtopic.php?f=21&t=2084"/>
-    public sealed class StarForceFileSystem
+    public sealed class FileSystem
     {
         /// <summary>
         /// Header
