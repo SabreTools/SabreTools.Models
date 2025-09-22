@@ -27,7 +27,7 @@ namespace SabreTools.Models.PortableExecutable
         public COFF.FileHeader? FileHeader { get; set; }
 
         /// <summary>
-        /// Optional header
+        /// Microsoft extended optional header
         /// </summary>
         public OptionalHeader? OptionalHeader { get; set; }
 
