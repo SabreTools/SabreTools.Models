@@ -2,6 +2,8 @@ namespace SabreTools.Models.CHD
 {
     public static class Constants
     {
+        public static readonly byte[] SignatureBytes = [0x4D, 0x43, 0x6F, 0x6D, 0x70, 0x72, 0x48, 0x44];
+
         public const string SignatureString = "MComprHD";
 
         #region Header Sizes

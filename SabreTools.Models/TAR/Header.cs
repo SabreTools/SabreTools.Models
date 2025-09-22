@@ -68,9 +68,9 @@ namespace SabreTools.Models.TAR
         #region USTAR Extension
 
         /// <summary>
-        /// UStar indicator, "ustar", then NUL
+        /// UStar indicator, "ustar"
         /// </summary>
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 6)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 5)]
         public string? Magic;
 
         /// <summary>
