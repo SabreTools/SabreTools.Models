@@ -1,4 +1,4 @@
-namespace SabreTools.Models.RealArcades
+namespace SabreTools.Models.RealArcade
 {
     public static class Constants
     {
