@@ -1,7 +1,7 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.TLS
 {
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class TLSDirectory
+    public sealed class Directory
     {
         /// <summary>
         /// The starting address of the TLS template. The template is a block of data
