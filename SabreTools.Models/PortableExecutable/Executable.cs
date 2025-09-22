@@ -33,12 +33,6 @@ namespace SabreTools.Models.PortableExecutable
         /// </summary>
         public OptionalHeader? OptionalHeader { get; set; }
 
-        // TODO: Support grouped sections in section reading and parsing
-        // https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#grouped-sections-object-only
-        // Grouped sections are ordered and mean that the data in the sections contributes
-        // to the "base" section (the one without the "$X" suffix). This may negatively impact
-        // the use of some of the different types of executables.
-
         /// <summary>
         /// Section table
         /// </summary>
@@ -205,6 +199,12 @@ namespace SabreTools.Models.PortableExecutable
         #endregion
 
         #region Named Sections
+
+        // TODO: Support grouped sections in section reading and parsing
+        // https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#grouped-sections-object-only
+        // Grouped sections are ordered and mean that the data in the sections contributes
+        // to the "base" section (the one without the "$X" suffix). This may negatively impact
+        // the use of some of the different types of executables.
 
         // .cormeta - CLR metadata is stored in this section. It is used to indicate that
         // the object file contains managed code. The format of the metadata is not
