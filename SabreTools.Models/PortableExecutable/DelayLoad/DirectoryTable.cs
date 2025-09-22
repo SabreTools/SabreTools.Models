@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.DelayLoad
 {
     /// <summary>
     /// The delay-load directory table is the counterpart to the import directory
@@ -9,7 +9,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     [StructLayout(LayoutKind.Sequential)]
-    public sealed class DelayLoadDirectoryTable
+    public sealed class DirectoryTable
     {
         /// <summary>
         /// Must be zero.

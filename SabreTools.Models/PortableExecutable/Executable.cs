@@ -60,7 +60,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Delay-load directory table
         /// </summary>
-        public DelayLoadDirectoryTable? DelayLoadDirectoryTable { get; set; }
+        public DelayLoad.DirectoryTable? DelayLoadDirectoryTable { get; set; }
 
         #region Named Sections
 
