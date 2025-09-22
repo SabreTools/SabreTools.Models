@@ -76,7 +76,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Debug table (.debug*)
         /// </summary>
-        public DebugTable? DebugTable { get; set; }
+        public DebugData.Table? DebugTable { get; set; }
 
         // .drectve - A section is a directive section if it has the IMAGE_SCN_LNK_INFO
         // flag set in the section header and has the .drectve section name. The linker
