@@ -100,11 +100,11 @@
         /// <summary>
         /// COFF Relocations (Object Only)
         /// </summary>
-        public COFFRelocation[]? COFFRelocations { get; set; }
+        public COFF.Relocation[]? COFFRelocations { get; set; }
 
         /// <summary>
         /// COFF Line Numbers (Deprecated)
         /// </summary>
-        public COFFLineNumber[]? COFFLineNumbers { get; set; }
+        public COFF.LineNumber[]? COFFLineNumbers { get; set; }
     }
 }

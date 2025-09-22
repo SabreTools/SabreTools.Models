@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.COFF
 {
     /// <summary>
     /// At the beginning of an object file, or immediately after the signature
@@ -9,7 +9,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     [StructLayout(LayoutKind.Sequential)]
-    public sealed class COFFFileHeader
+    public sealed class FileHeader
     {
         /// <summary>
         /// The number that identifies the type of target machine.

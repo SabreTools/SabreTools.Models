@@ -1,4 +1,4 @@
-namespace SabreTools.Models.PortableExecutable.COFFSymbolTableEntries
+namespace SabreTools.Models.COFF.SymbolTableEntries
 {
     /// <summary>
     /// Auxiliary Format 1: Function Definitions

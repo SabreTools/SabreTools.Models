@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.COFF
 {
     /// <summary>
     /// COFF line numbers are no longer produced and, in the future, will
@@ -17,7 +17,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     [StructLayout(LayoutKind.Explicit)]
-    public sealed class COFFLineNumber
+    public sealed class LineNumber
     {
         /// <summary>
         /// Used when Linenumber is zero: index to symbol table entry for a function.

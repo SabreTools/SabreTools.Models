@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.COFF
 {
     /// <summary>
     /// Immediately following the COFF symbol table is the COFF string table. The
@@ -6,7 +6,7 @@
     /// COFF header and adding the number of symbols multiplied by the size of a symbol.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class COFFStringTable
+    public sealed class StringTable
     {
         /// <summary>
         /// At the beginning of the COFF string table are 4 bytes that contain the

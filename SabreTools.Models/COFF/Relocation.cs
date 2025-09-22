@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.COFF
 {
     /// <summary>
     /// Object files contain COFF relocations, which specify how the section data
@@ -18,7 +18,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     [StructLayout(LayoutKind.Sequential)]
-    public sealed class COFFRelocation
+    public sealed class Relocation
     {
         /// <summary>
         /// The address of the item to which relocation is applied. This is the
