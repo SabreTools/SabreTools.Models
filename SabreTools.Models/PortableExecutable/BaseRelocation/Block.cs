@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.BaseRelocation
 {
     /// <summary>
     /// The base relocation table contains entries for all base relocations in
@@ -18,7 +18,7 @@
     /// relocations do not have to be applied.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class BaseRelocationBlock
+    public sealed class Block
     {
         /// <summary>
         /// The image base plus the page RVA is added to each offset to create
@@ -46,6 +46,6 @@
         ///                    in the Page RVA field for the block. This offset
         ///                    specifies where the base relocation is to be applied. 
         /// </summary>
-        public BaseRelocationTypeOffsetFieldEntry[]? TypeOffsetFieldEntries { get; set; }
+        public TypeOffsetFieldEntry[]? TypeOffsetFieldEntries { get; set; }
     }
 }

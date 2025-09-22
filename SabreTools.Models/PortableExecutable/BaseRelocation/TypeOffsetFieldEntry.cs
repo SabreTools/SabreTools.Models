@@ -1,10 +1,10 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.BaseRelocation
 {
     /// <summary>
     /// Type or Offset field entry is a WORD (2 bytes).
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class BaseRelocationTypeOffsetFieldEntry
+    public sealed class TypeOffsetFieldEntry
     {
         /// <summary>
         /// Stored in the high 4 bits of the WORD, a value that indicates the type

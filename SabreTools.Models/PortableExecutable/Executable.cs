@@ -71,7 +71,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Base relocation table (.reloc)
         /// </summary>
-        public BaseRelocationBlock[]? BaseRelocationTable { get; set; }
+        public BaseRelocation.Block[]? BaseRelocationTable { get; set; }
 
         /// <summary>
         /// Debug table (.debug*)
