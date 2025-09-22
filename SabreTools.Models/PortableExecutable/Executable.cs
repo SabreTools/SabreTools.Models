@@ -48,11 +48,6 @@ namespace SabreTools.Models.PortableExecutable
         /// </summary>
         public COFF.StringTable? StringTable { get; set; }
 
-        /// <summary>
-        /// Delay-load directory table
-        /// </summary>
-        public DelayLoad.DirectoryTable? DelayLoadDirectoryTable { get; set; }
-
         #region Data Directories
 
         /// <summary>
@@ -192,7 +187,16 @@ namespace SabreTools.Models.PortableExecutable
         // TODO: Thread Local Storage (.tls)
         // TODO: Load Configuration Table
         // TODO: Bound Import Table
-        // TODO: Delay Import Descriptor
+
+        #region Delay Load Table
+
+        /// <summary>
+        /// Delay-load directory table
+        /// </summary>
+        public DelayLoad.DirectoryTable? DelayLoadDirectoryTable { get; set; }
+
+        #endregion
+
         // TODO: CLR Runtime Header (.cormeta)
         // TODO: Reserved
 
