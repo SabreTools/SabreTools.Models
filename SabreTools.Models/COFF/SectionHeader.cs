@@ -29,7 +29,8 @@
         /// characters. Long names in object files are truncated if they are emitted
         /// to an executable file. 
         /// </summary>
-        public byte[]? Name { get; set; } = new byte[8];
+        /// <remarks>8 bytes</remarks>
+        public byte[]? Name { get; set; }
 
         /// <summary>
         /// The total size of the section when loaded into memory. If this value is
