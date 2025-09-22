@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.COFF
 {
     /// <summary>
     /// Each row of the section table is, in effect, a section header. This table
@@ -100,11 +100,11 @@
         /// <summary>
         /// COFF Relocations (Object Only)
         /// </summary>
-        public COFF.Relocation[]? COFFRelocations { get; set; }
+        public Relocation[]? COFFRelocations { get; set; }
 
         /// <summary>
         /// COFF Line Numbers (Deprecated)
         /// </summary>
-        public COFF.LineNumber[]? COFFLineNumbers { get; set; }
+        public LineNumber[]? COFFLineNumbers { get; set; }
     }
 }

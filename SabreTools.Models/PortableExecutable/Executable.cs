@@ -24,7 +24,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// COFF file header
         /// </summary>
-        public COFF.FileHeader? COFFFileHeader { get; set; }
+        public COFF.FileHeader? FileHeader { get; set; }
 
         /// <summary>
         /// Optional header
@@ -40,17 +40,17 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Section table
         /// </summary>
-        public SectionHeader[]? SectionTable { get; set; }
+        public COFF.SectionHeader[]? SectionTable { get; set; }
 
         /// <summary>
         /// COFF symbol table
         /// </summary>
-        public COFF.SymbolTableEntries.BaseEntry[]? COFFSymbolTable { get; set; }
+        public COFF.SymbolTableEntries.BaseEntry[]? SymbolTable { get; set; }
 
         /// <summary>
         /// COFF string table
         /// </summary>
-        public COFF.StringTable? COFFStringTable { get; set; }
+        public COFF.StringTable? StringTable { get; set; }
 
         /// <summary>
         /// Attribute certificate table
