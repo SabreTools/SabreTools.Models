@@ -102,7 +102,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Import table (.idata)
         /// </summary>
-        public ImportTable? ImportTable { get; set; }
+        public Import.Table? ImportTable { get; set; }
 
         /// <summary>
         /// Resource directory table (.rsrc)

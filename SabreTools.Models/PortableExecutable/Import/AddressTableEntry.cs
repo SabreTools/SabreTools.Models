@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Import
 {
     /// <summary>
     /// The structure and content of the import address table are identical to those of
@@ -9,7 +9,7 @@
     /// called "virtual addresses." The loader typically processes the binding.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ImportAddressTableEntry
+    public sealed class AddressTableEntry
     {
         /// <summary>
         /// If this bit is set, import by ordinal. Otherwise, import by name. Bit is

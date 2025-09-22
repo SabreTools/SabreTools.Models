@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Import
 {
     /// <summary>
     /// An import lookup table is an array of 32-bit numbers for PE32 or an array of
@@ -9,7 +9,7 @@
     /// (NULL) to indicate the end of the table.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ImportLookupTableEntry
+    public sealed class LookupTableEntry
     {
         /// <summary>
         /// If this bit is set, import by ordinal. Otherwise, import by name. Bit is
