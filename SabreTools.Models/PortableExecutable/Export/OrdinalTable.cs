@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Export
 {
     /// <summary>
     /// The export ordinal table is an array of 16-bit unbiased indexes into the export address table.
@@ -32,7 +32,7 @@
     ///     name = ExportNameTable[i];
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ExportOrdinalTable
+    public sealed class OrdinalTable
     {
         /// <summary>
         /// An array of 16-bit unbiased indexes into the export address table

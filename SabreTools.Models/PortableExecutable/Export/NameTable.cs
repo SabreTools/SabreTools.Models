@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Export
 {
     /// <summary>
     /// The export name table contains the actual string data that was pointed to by the export
@@ -17,7 +17,7 @@
     /// of variable length.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ExportNameTable
+    public sealed class NameTable
     {
         /// <summary>
         /// A series of null-terminated ASCII strings of variable length.

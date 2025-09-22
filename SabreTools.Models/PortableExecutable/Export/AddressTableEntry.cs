@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SabreTools.Models.PortableExecutable
+namespace SabreTools.Models.PortableExecutable.Export
 {
     /// <summary>
     /// The export address table contains the address of exported entry points
@@ -16,7 +16,7 @@ namespace SabreTools.Models.PortableExecutable
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
     [StructLayout(LayoutKind.Explicit)]
-    public sealed class ExportAddressTableEntry
+    public sealed class AddressTableEntry
     {
         /// <summary>
         /// The address of the exported symbol when loaded into memory, relative to

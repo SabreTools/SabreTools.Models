@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Export
 {
     /// <summary>
     /// The export data section, named .edata, contains information about symbols that other images
@@ -13,7 +13,7 @@
     /// exist to support use of export names.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ExportTable
+    public sealed class Table
     {
         // TODO: Look into splitting this up
         // Technically speaking, even though all of these should live in the same
@@ -26,7 +26,7 @@
         /// A table with just one row (unlike the debug directory). This table indicates the
         /// locations and sizes of the other export tables.
         /// </summary>
-        public ExportDirectoryTable? ExportDirectoryTable { get; set; }
+        public DirectoryTable? ExportDirectoryTable { get; set; }
 
         /// <summary>
         /// An array of RVAs of exported symbols. These are the actual addresses of the exported
@@ -34,12 +34,12 @@
         /// can import a symbol by using an index to this table (an ordinal) or, optionally, by
         /// using the public name that corresponds to the ordinal if a public name is defined.
         /// </summary>
-        public ExportAddressTableEntry[]? ExportAddressTable { get; set; }
+        public AddressTableEntry[]? ExportAddressTable { get; set; }
 
         /// <summary>
         /// An array of pointers to the public export names, sorted in ascending order.
         /// </summary>
-        public ExportNamePointerTable? NamePointerTable { get; set; }
+        public NamePointerTable? NamePointerTable { get; set; }
 
         /// <summary>
         /// An array of the ordinals that correspond to members of the name pointer table. The
@@ -47,7 +47,7 @@
         /// must have the same number of members. Each ordinal is an index into the export address
         /// table.
         /// </summary>
-        public ExportOrdinalTable? OrdinalTable { get; set; }
+        public OrdinalTable? OrdinalTable { get; set; }
 
         /// <summary>
         /// A series of null-terminated ASCII strings. Members of the name pointer table point into
@@ -55,6 +55,6 @@
         /// exported; they are not necessarily the same as the private names that are used within
         /// the image file. 
         /// </summary>
-        public ExportNameTable? ExportNameTable { get; set; }
+        public NameTable? ExportNameTable { get; set; }
     }
 }

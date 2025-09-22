@@ -97,7 +97,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Export table (.edata)
         /// </summary>
-        public ExportTable? ExportTable { get; set; }
+        public Export.Table? ExportTable { get; set; }
 
         /// <summary>
         /// Import table (.idata)

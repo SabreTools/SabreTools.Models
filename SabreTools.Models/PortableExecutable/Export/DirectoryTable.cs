@@ -1,4 +1,4 @@
-﻿namespace SabreTools.Models.PortableExecutable
+﻿namespace SabreTools.Models.PortableExecutable.Export
 {
     /// <summary>
     /// The export symbol information begins with the export directory table,
@@ -7,7 +7,7 @@
     /// imports to the entry points within this image.
     /// </summary>
     /// <see href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"/>
-    public sealed class ExportDirectoryTable
+    public sealed class DirectoryTable
     {
         /// <summary>
         /// Reserved, must be 0.
