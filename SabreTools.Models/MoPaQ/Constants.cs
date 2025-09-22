@@ -68,8 +68,6 @@ namespace SabreTools.Models.MoPaQ
         
         #region Encryption
 
-        public const uint MPQ_HASH_KEY2_MIX = 0x400;
-
         /// <summary>
         /// Obtained by HashString("(block table)", MPQ_HASH_FILE_KEY)
         /// </summary>
@@ -79,8 +77,6 @@ namespace SabreTools.Models.MoPaQ
         /// Obtained by HashString("(hash table)", MPQ_HASH_FILE_KEY)
         /// </summary>
         public const uint MPQ_KEY_HASH_TABLE = 0xC3AF3770;
-
-        public const uint STORM_BUFFER_SIZE = 0x500;
 
         #endregion
     }
