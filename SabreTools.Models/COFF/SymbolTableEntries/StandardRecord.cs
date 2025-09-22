@@ -37,7 +37,7 @@ namespace SabreTools.Models.COFF.SymbolTableEntries
         /// The signed integer that identifies the section, using a one-based index
         /// into the section table. Some values have special meaning.
         /// </summary>
-        public ushort SectionNumber { get; set; }
+        public SectionNumber SectionNumber { get; set; }
 
         /// <summary>
         /// A number that represents type. Microsoft tools set this field to 0x20

@@ -1021,15 +1021,6 @@ namespace SabreTools.Models.PortableExecutable
         MFS_DEFAULT = MF_DEFAULT,
     }
 
-    public enum OptionalHeaderMagicNumber : ushort
-    {
-        ROMImage = 0x0107,
-
-        PE32 = 0x010B,
-
-        PE32Plus = 0x020B,
-    }
-
     public enum ResourceType : uint
     {
         RT_NEWRESOURCE = 0x2000,
@@ -1146,30 +1137,6 @@ namespace SabreTools.Models.PortableExecutable
         RT_NEWBITMAP = (RT_BITMAP | RT_NEWRESOURCE),
         RT_NEWMENU = (RT_MENU | RT_NEWRESOURCE),
         RT_NEWDIALOG = (RT_DIALOG | RT_NEWRESOURCE),
-    }
-
-    public enum SectionNumber
-    {
-        /// <summary>
-        /// The symbol record is not yet assigned a section. A value of
-        /// zero indicates that a reference to an external symbol is
-        /// defined elsewhere. A value of non-zero is a common symbol
-        /// with a size that is specified by the value. 
-        /// </summary>
-        IMAGE_SYM_UNDEFINED = 0,
-
-        /// <summary>
-        /// The symbol has an absolute (non-relocatable) value and
-        /// is not an address. 
-        /// </summary>
-        IMAGE_SYM_ABSOLUTE = -1,
-
-        /// <summary>
-        /// The symbol provides general type or debugging information
-        /// but does not correspond to a section. Microsoft tools use
-        /// this setting along with .file records (storage class FILE). 
-        /// </summary>
-        IMAGE_SYM_DEBUG = -2,
     }
 
     public enum SymbolDerivedType : byte

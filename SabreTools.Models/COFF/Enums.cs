@@ -240,6 +240,15 @@ namespace SabreTools.Models.COFF
         IMAGE_FILE_MACHINE_WCEMIPSV2 = 0x0169,
     }
 
+    public enum OptionalHeaderMagicNumber : ushort
+    {
+        ROMImage = 0x0107,
+
+        PE32 = 0x010B,
+
+        PE32Plus = 0x020B,
+    }
+
     public enum RelocationType : ushort
     {
         #region x64 Processors
@@ -1429,6 +1438,30 @@ namespace SabreTools.Models.COFF
         /// The section can be written to. 
         /// </summary>
         IMAGE_SCN_MEM_WRITE = 0x80000000,
+    }
+
+    public enum SectionNumber : short
+    {
+        /// <summary>
+        /// The symbol record is not yet assigned a section. A value of
+        /// zero indicates that a reference to an external symbol is
+        /// defined elsewhere. A value of non-zero is a common symbol
+        /// with a size that is specified by the value. 
+        /// </summary>
+        IMAGE_SYM_UNDEFINED = 0,
+
+        /// <summary>
+        /// The symbol has an absolute (non-relocatable) value and
+        /// is not an address. 
+        /// </summary>
+        IMAGE_SYM_ABSOLUTE = -1,
+
+        /// <summary>
+        /// The symbol provides general type or debugging information
+        /// but does not correspond to a section. Microsoft tools use
+        /// this setting along with .file records (storage class FILE). 
+        /// </summary>
+        IMAGE_SYM_DEBUG = -2,
     }
 
     public enum StorageClass : byte
