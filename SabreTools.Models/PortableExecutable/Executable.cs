@@ -107,7 +107,7 @@ namespace SabreTools.Models.PortableExecutable
         /// <summary>
         /// Resource directory table (.rsrc)
         /// </summary>
-        public ResourceDirectoryTable? ResourceDirectoryTable { get; set; }
+        public Resource.DirectoryTable? ResourceDirectoryTable { get; set; }
 
         // .sxdata - The valid exception handlers of an object are listed in the .sxdata
         // section of that object. The section is marked IMAGE_SCN_LNK_INFO. It contains
