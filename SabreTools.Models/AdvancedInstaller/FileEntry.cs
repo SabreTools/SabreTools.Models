@@ -10,9 +10,9 @@ namespace SabreTools.Models.AdvancedInstaller
         /// </summary>
         /// <remarks>
         /// Observed values:
-        /// - 05 00 00 00 (DLL)
-        /// - 01 00 00 00 (MSI, CAB)
         /// - 00 00 00 00 (INI)
+        /// - 01 00 00 00 (MSI, CAB)
+        /// - 05 00 00 00 (DLL)
         /// </remarks>
         public uint Unknown0 { get; set; }
 
@@ -21,10 +21,10 @@ namespace SabreTools.Models.AdvancedInstaller
         /// </summary>
         /// <remarks>
         /// Observed values:
-        /// - 0C 00 00 00 (DLL)
         /// - 00 00 00 00 (MSI)
         /// - 01 00 00 00 (CAB)
         /// - 03 00 00 00 (INI)
+        /// - 0C 00 00 00 (DLL)
         /// </remarks>
         public uint Unknown1 { get; set; }
 
