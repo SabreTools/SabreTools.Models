@@ -53,18 +53,23 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Null-terminated hex string that looks
         /// like a key or other identifier.
         /// </summary>
-        /// <remarks>Sizes of 34 bytes has been observed</remarks>
+        /// <remarks>32 bytes</remarks>
         public string? KeyString { get; set; }
 
         /// <summary>
-        /// Unknown, always zero?
+        /// Relative offset pointer to <see cref="FileDataStart"/> 
         /// </summary>
-        public ushort Unknown2 { get; set; }
+        /// <remarks>Relative to the end of the signature</remarks>
+        public uint FileDataStartPointer { get; set; }
 
         /// <summary>
-        /// "ADVINSTSFX", null terminated
+        /// "ADVINSTSFX"
         /// </summary>
-        /// <remarks>May have another trailing null after?</remarks>
         public string? Signature { get; set; }
+
+        /// <summary>
+        /// Unknown, always 0? Padding?
+        /// </summary>
+        public ushort? Unknown3 { get; set; }
     }
 }
