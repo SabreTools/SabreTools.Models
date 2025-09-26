@@ -28,6 +28,17 @@ namespace SabreTools.Models.AdvancedInstaller
         public string? OriginalFilename { get; set; }
 
         /// <summary>
+        /// Unknown, possibly a string count?
+        /// </summary>
+        /// <remarks>
+        /// Only seen when the preceeding two fields exist
+        /// 
+        /// Observed values:
+        /// - 01 00 00 00
+        /// </remarks>
+        public uint? Unknown1 { get; set; }
+
+        /// <summary>
         /// Pointer to <see cref="Unknown0"/>?
         /// </summary>
         public uint FooterOffset { get; set; }
@@ -44,7 +55,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Observed values:
         /// - 64 00 00 00
         /// </remarks>
-        public uint Unknown1 { get; set; }
+        public uint Unknown2 { get; set; }
 
         /// <summary>
         /// Pointer to <see cref="Unknown0"/> or <see cref="EntryCount"/> ?
@@ -74,6 +85,8 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Relative to the end of the signature
         /// 
         /// At least one case where this does not point correctly?
+        /// Invalid cases have a value of 531 but unknown if this
+        /// is coincidental or not.
         /// </remarks>
         public uint FileDataStartPointer { get; set; }
 
