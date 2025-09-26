@@ -83,16 +83,15 @@ namespace SabreTools.Models.AdvancedInstaller
         public string? HexString { get; set; }
 
         /// <summary>
-        /// Relative offset pointer to <see cref="FileDataStart"/> 
+        /// Unknown
         /// </summary>
         /// <remarks>
-        /// Relative to the end of the signature
-        /// 
-        /// At least one case where this does not point correctly?
-        /// Invalid cases have a value of 531 but unknown if this
-        /// is coincidental or not.
+        /// Relative offset pointer to <see cref="FileDataStart"/>
+        /// relative to the end of the signature if no filename
+        /// exists.
+        /// Unknown value of 531 if the filenmae exists.
         /// </remarks>
-        public uint FileDataStartPointer { get; set; }
+        public uint Unknown3 { get; set; }
 
         /// <summary>
         /// "ADVINSTSFX"
@@ -102,6 +101,6 @@ namespace SabreTools.Models.AdvancedInstaller
         /// <summary>
         /// Unknown, always 0? Padding?
         /// </summary>
-        public ushort? Unknown3 { get; set; }
+        public ushort? Unknown4 { get; set; }
     }
 }
