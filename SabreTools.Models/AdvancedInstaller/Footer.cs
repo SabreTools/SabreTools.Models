@@ -16,6 +16,18 @@ namespace SabreTools.Models.AdvancedInstaller
         public uint Unknown0 { get; set; }
 
         /// <summary>
+        /// Size of the original filename?
+        /// </summary>
+        /// <remarks>Doesn't exist in some cases?</remarks>
+        public uint? OriginalFilenameSize { get; set; }
+
+        /// <summary>
+        /// Unicode-encoded original filename?
+        /// </summary>
+        /// <remarks>Doesn't exist in some cases?</remarks>
+        public string? OriginalFilename { get; set; }
+
+        /// <summary>
         /// Pointer to <see cref="Unknown0"/>?
         /// </summary>
         public uint FooterOffset { get; set; }
@@ -35,9 +47,9 @@ namespace SabreTools.Models.AdvancedInstaller
         public uint Unknown1 { get; set; }
 
         /// <summary>
-        /// Pointer to <see cref="Unknown0"/>?
+        /// Pointer to <see cref="Unknown0"/> or <see cref="EntryCount"/> ?
         /// </summary>
-        public uint FooterOffset2 { get; set; }
+        public uint UnknownOffset { get; set; }
 
         /// <summary>
         /// Offset of the start of the file table
@@ -58,7 +70,11 @@ namespace SabreTools.Models.AdvancedInstaller
         /// <summary>
         /// Relative offset pointer to <see cref="FileDataStart"/> 
         /// </summary>
-        /// <remarks>Relative to the end of the signature</remarks>
+        /// <remarks>
+        /// Relative to the end of the signature
+        /// 
+        /// At least one case where this does not point correctly?
+        /// </remarks>
         public uint FileDataStartPointer { get; set; }
 
         /// <summary>

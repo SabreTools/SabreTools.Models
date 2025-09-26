@@ -10,7 +10,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// </summary>
         /// <remarks>
         /// Observed values:
-        /// - 00 00 00 00 (INI)
+        /// - 00 00 00 00 (INI, MSI)
         /// - 01 00 00 00 (MSI, CAB)
         /// - 05 00 00 00 (DLL)
         /// </remarks>
@@ -26,7 +26,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// - 03 00 00 00 (INI)
         /// - 0C 00 00 00 (DLL)
         /// </remarks>
-        public uint Unknown1 { get; set; }
+        public uint? Unknown1 { get; set; }
 
         /// <summary>
         /// Unknown, always 0?
@@ -35,7 +35,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Observed values:
         /// - 00 00 00 00 (DLL, MSI, CAB, INI)
         /// </remarks>
-        public uint Unknown2 { get; set; }
+        public uint? Unknown2 { get; set; }
 
         /// <summary>
         /// Size of the file
