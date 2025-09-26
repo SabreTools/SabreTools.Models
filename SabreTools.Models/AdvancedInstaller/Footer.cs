@@ -89,7 +89,10 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Offset pointer to <see cref="FileDataStart"/>
         /// relative to the end of the signature if no filename
         /// exists.
-        /// Unknown value of 531 if the filenmae exists.
+        /// 
+        /// Observed values:
+        /// - 32 00 00 00 (No original filename)
+        /// - 13 02 00 00 (Original filename)
         /// </remarks>
         public uint Unknown3 { get; set; }
 
