@@ -86,7 +86,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Unknown
         /// </summary>
         /// <remarks>
-        /// Relative offset pointer to <see cref="FileDataStart"/>
+        /// Offset pointer to <see cref="FileDataStart"/>
         /// relative to the end of the signature if no filename
         /// exists.
         /// Unknown value of 531 if the filenmae exists.
