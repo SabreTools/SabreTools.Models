@@ -50,11 +50,10 @@ namespace SabreTools.Models.AdvancedInstaller
         public uint FileDataStart { get; set; }
 
         /// <summary>
-        /// Null-terminated hex string that looks
-        /// like a key or other identifier.
+        /// Hex string that looks like a key or other identifier
         /// </summary>
         /// <remarks>32 bytes</remarks>
-        public string? KeyString { get; set; }
+        public string? HexString { get; set; }
 
         /// <summary>
         /// Relative offset pointer to <see cref="FileDataStart"/> 
