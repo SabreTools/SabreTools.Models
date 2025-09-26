@@ -58,8 +58,12 @@ namespace SabreTools.Models.AdvancedInstaller
         public uint Unknown2 { get; set; }
 
         /// <summary>
-        /// Pointer to <see cref="Unknown0"/> or <see cref="EntryCount"/> ?
+        /// Unknown offset
         /// </summary>
+        /// <remarks>
+        /// Points to <see cref="Unknown0"/> if no original filename.
+        /// Points to <see cref="EntryCount"/> if contains an original filename.
+        /// </remarks>
         public uint UnknownOffset { get; set; }
 
         /// <summary>
