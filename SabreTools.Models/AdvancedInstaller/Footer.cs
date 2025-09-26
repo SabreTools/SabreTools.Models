@@ -53,6 +53,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// Null-terminated hex string that looks
         /// like a key or other identifier.
         /// </summary>
+        /// <remarks>Sizes of 34 bytes has been observed</remarks>
         public string? KeyString { get; set; }
 
         /// <summary>
