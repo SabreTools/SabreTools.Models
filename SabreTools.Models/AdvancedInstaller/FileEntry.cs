@@ -10,7 +10,7 @@ namespace SabreTools.Models.AdvancedInstaller
         /// </summary>
         /// <remarks>
         /// Observed values:
-        /// - 00 00 00 00 (INI, MSI)
+        /// - 00 00 00 00 (INI)
         /// - 01 00 00 00 (MSI, CAB)
         /// - 05 00 00 00 (DLL)
         /// </remarks>
