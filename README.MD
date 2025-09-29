@@ -2,7 +2,7 @@
 
 [![Build and Test](https://github.com/SabreTools/SabreTools.Models/actions/workflows/build_and_test.yml/badge.svg?branch=main)](https://github.com/SabreTools/SabreTools.Models/actions/workflows/build_and_test.yml)
 
-**NOTICE**: This library will be depreceated in the future. All models that used to be included in this library are now going to live as a separate namespace in [SabreTools.Serialization](https://github.com/SabreTools/SabreTools.Serialization).
+**NOTICE**: This library has been deprecated. All functionality formerly in this library is in [SabreTools.Serialization](https://github.com/SabreTools/SabreTools.Serialization) as of version 2.0.0.
 
 This library comprises of models that represent either directly serializable or representative structures for all SabreTools projects. All of the main models representing metadata files should have parsers created outside of the current code.
 
